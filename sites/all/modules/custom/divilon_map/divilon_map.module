@@ -1,0 +1,469 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function divilon_map_menu() {
+  $items['node/%node/allowed'] = array(
+    'title' => t('Vocabularies'),
+    'page callback' => 'divilon_map_vocabularies_page',
+    'page arguments' => array(1),
+    'access callback' => 'divilon_map_vocabularies_access',
+    'access arguments' => array(1),
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 5,
+  );
+  $items['node/%node/allowed/%'] = array(
+    'title' => t('Terms'),
+    'page callback' => 'divilon_map_terms_page',
+    'page arguments' => array(1, 3),
+    'access callback' => 'divilon_map_terms_access',
+    'access arguments' => array(1),
+    'type' => MENU_CALLBACK,
+    'weight' => 5,
+  );
+  $items['delete/%'] = array(
+    'title' => t('Delete vocabulary'),
+    'page callback' => 'divilon_map_vocabularies_delete',
+    'page arguments' => array(1),
+    'access arguments' => array('create divilon_map content'),
+    'type' => MENU_CALLBACK,
+    'weight' => 5,
+  );
+  return $items;
+}
+
+function divilon_map_vocabularies_access($node) {
+  return node_access('update', $node) && ($node->type === 'divilon_map');
+}
+
+function divilon_map_terms_access($node) {
+  return node_access('update', $node) && ($node->type === 'divilon_map');
+}
+
+function divilon_map_vocabularies_page($node) {
+  return drupal_get_form('divilon_map_vocabularies_form', $node);
+}
+
+function divilon_map_vocabularies_form($form, $form_state, $node) {
+  $form = array();
+  $form['addvoc'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Add vocabulary')
+  );
+  $vocabularies = db_select('dm_vocs', 'v')
+    ->fields('v', array('vid', 'name'))
+    ->execute()
+    ->fetchAll();
+
+  $selected = db_select('dm_allowed', 'a')
+    ->fields('a', array('vid'))
+    ->condition('a.nid', $node->nid)
+    ->execute()
+    ->fetchAllAssoc('vid');
+
+  $options = array();
+  foreach($vocabularies as $voc) {
+    $options[$voc->vid] = array( 
+      'name' => l($voc->name, 'node/' . $node->nid . '/allowed/' . $voc->vid), 
+      'op' => l( t('Delete'), 'delete/' . $voc->vid, 
+      array(
+        'query' => drupal_get_destination()
+        )
+      )
+    );
+  }
+  $header = array('name' => t('Name'), 'op' => t('Delete'));
+  $form['table'] = array(
+    '#type' => 'tableselect',
+    '#header' => $header,
+    '#options' => $options,
+    '#empty' => t('No users found'),
+    '#default_value' => $selected
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save'),
+  );
+  $form['delete'] = array(
+    '#type' => 'submit',
+    '#value' => t('Delete selected'),
+    '#attributes' => array('class' => array('btn-danger'))
+  );
+  $form['insert'] = array(
+    '#type' => 'submit',
+    '#value' => t('Insert vocabulary'),
+    '#attributes' => array('class' => array('btn-primary'))
+  );
+  return $form;
+}
+
+function divilon_map_vocabularies_form_validate($form, $form_state) {
+  if ($form_state['clicked_button']['#value'] == t('Insert vocabulary') && $form_state['values']['addvoc'] == '') {
+    form_set_error('addvoc', t('Enter vocabulary name'));
+  }
+}
+function divilon_map_vocabularies_form_submit($form, $form_state) {
+  switch( $form_state['clicked_button']['#value'] ) {
+    case t('Insert vocabulary'):
+      $item = array(
+        'name' => $form_state['values']['addvoc']
+      );
+      drupal_write_record('dm_vocs', $item);
+      break;
+    case t('Save'):
+      $values = array();
+      db_delete('dm_allowed')
+        ->condition('nid', arg(1))
+        ->execute();
+    
+      foreach($form_state['values']['table'] as $key => $val) {
+        if ((int)$val > 0) {
+          $values[] = array('nid' => arg(1), 'vid' => $key);
+        }
+      }
+      $query = db_insert('dm_allowed')->fields(array('nid', 'vid'));
+      foreach ($values as $record) {
+        $query->values($record);
+      }
+      $query->execute();
+      break;
+    case t('Delete selected'):
+      foreach($form_state['values']['table'] as $key => $val) {
+        if ((int)$val > 0) {
+          $values[] = $key;
+        }
+      }
+      db_delete('dm_allowed')
+        ->condition('nid', arg(1))
+        ->condition('vid', $values, 'IN')
+        ->execute();
+      break;
+  }
+}
+
+
+function divilon_map_terms_page($node) {
+  return drupal_get_form('divilon_map_terms_form', $node);
+}
+
+function divilon_map_terms_form($form, $form_state, $node) {
+  $form = array();
+  $form['addterm'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Add term')
+  );
+  // $vocabularies = db_select('dm_vocs', 'v')
+  //   ->fields('v', array('vid', 'name'))
+  //   ->condition
+  //   ->execute()
+  //   ->fetchAll();
+
+  $query = db_select('dm_terms', 't');
+  $query->fields('t', array('tid', 'vid', 'pid', 'name'));
+  $query->orderBy('t.weight', 'ASC');
+  $query->leftJoin('dm_vocs', 'v', 't.vid = v.vid');
+  $query->fields('v', array('name'));
+  $query->leftJoin('dm_allowed', 'a', 't.vid = a.vid');
+  $query->condition('a.nid', $node->nid);
+  $query->condition('t.vid', arg(3));
+
+  $result = $query->execute()->fetchAll();
+
+  $options = array();
+  foreach($result as $term) {
+    $options[$term->tid] = array( 'name' => $term->name );
+  }
+  $selected = array();
+  $header = array('name' => t('Name'));
+  $form['table'] = array(
+    '#type' => 'tableselect',
+    '#header' => $header,
+    '#options' => $options,
+    '#empty' => t('No terms found'),
+    '#default_value' => $selected
+  );
+
+  $form['delete'] = array(
+    '#type' => 'submit',
+    '#value' => t('Delete selected'),
+    '#attributes' => array('class' => array('btn-danger'))
+  );
+  $form['insert'] = array(
+    '#type' => 'submit',
+    '#value' => t('Insert term'),
+    '#attributes' => array('class' => array('btn-primary'))
+  );
+  return $form;
+}
+
+function divilon_map_terms_form_submit($form, $form_state) {
+  switch( $form_state['clicked_button']['#value'] ) {
+    case t('Insert term'):
+    $item = array(
+      'vid' => arg(3),
+      'name' => $form_state['values']['addterm']
+    );
+    drupal_write_record('dm_terms', $item);
+    break;
+    case t('Delete selected'):
+      foreach($form_state['values']['table'] as $key => $val) {
+        if ((int)$val > 0) {
+          $values[] = $key;
+        }
+      }
+      db_delete('dm_terms')
+        ->condition('tid', $values, 'IN')
+        ->execute();
+        break;
+  }
+}
+
+/**
+ * Implements hook_node_info().
+ *
+ * We use hook_node_info() to define our node content type.
+ */
+function divilon_map_node_info() {
+  // We define the node type as an associative array.
+  return array(
+    'divilon_map' => array(
+      'name' => t('Map layer'),
+      'base' => 'divilon_map',
+      'description' => t('Map node type.'),
+      'title_label' => t('Title map layer'),
+      'locked' => TRUE,
+    ),
+    'map_marker' => array(
+      'name' => t('Marker'),
+      'base' => 'map_marker',
+      'description' => t('Marker node type.'),
+      'title_label' => t('Marker'),
+      'locked' => TRUE,
+    ),
+  );
+}
+
+/**
+ * Implements hook_node_type_insert().
+ *
+ */
+function divilon_map_node_type_insert($content_type) {
+  if ($content_type->type == 'divilon_map') {
+  }
+  if ($content_type->type == 'map_marker') {
+    $body_instance = node_add_body_field($content_type, t('Marker description'));
+    field_update_instance($body_instance);
+    foreach (_divilon_map_installed_fields() as $field) {
+      field_create_field($field);
+    }
+    foreach (_divilon_map_installed_instances() as $instance) {
+      $instance['entity_type'] = 'node';
+      $instance['bundle'] = 'map_marker';
+      field_create_instance($instance);
+    }
+  }
+}
+
+/**
+ * Implements hook_form().
+ */
+function divilon_map_form($node, $form_state) {
+  return node_content_form($node, $form_state);
+}
+
+/**
+ * Implements hook_form().
+ */
+function map_marker_form($node, $form_state) {
+  return node_content_form($node, $form_state);
+}
+
+/**
+ * Define the fields for our content type.
+ *
+ * This big array is factored into this function for readability.
+ *
+ * @return array
+ *   An associative array specifying the fields we wish to add to our
+ *   new node type.
+ */
+function _divilon_map_installed_fields() {
+  return array(
+    'divilon_map_g' => array(
+      'field_name' => 'divilon_map_g',
+      'cardinality' => 1,
+      'type'        => 'geofield',
+    )
+  );
+}
+
+/**
+ * Define the field instances for our content type.
+ */
+function _divilon_map_installed_instances() {
+  return array(
+    'divilon_map_g' => array(
+      'field_name' => 'divilon_map_g',
+      'label'       => t('Coordiantes'),
+      'widget'      => array(
+        'type'    => 'geofield_gmap',
+      )
+    )
+  );
+}
+
+/**
+ * Implements hook_theme().
+ */
+function divilon_map_theme() {
+  return array(
+    'dm_view'  => array(
+      'path' => drupal_get_path('module', 'divilon_map') . '/tpl',
+      'template' => 'dm_view',
+      'variables' => array(
+        'title' => null,
+        'vocs' => null,
+        'markers' => null,
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_node_view_alter().
+ */
+function divilon_map_node_view_alter(&$build) {
+  if ($build['#node']->type === 'divilon_map') {
+    $nid = $build['#node']->nid;
+    if (true) {
+      drupal_add_js( array('markers' => _build_markers($nid)), 'setting' );
+      drupal_add_js( '//maps.google.com/maps/api/js?sensor=true&language=uk&key=' . variable_get('geofield_gmap_google_api_key', '') );
+      drupal_add_js( 'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js' );
+      drupal_add_js( drupal_get_path( 'module', 'divilon_map' ) . '/lib/gmaps.min.js' );
+      drupal_add_js( drupal_get_path( 'module', 'divilon_map' ) . '/lib/divilon_map.js' );
+      drupal_add_css( drupal_get_path( 'module', 'divilon_map' ) . '/lib/divilon_map.scss' );
+      $build['addWork'] = array(
+        '#type' => 'markup',
+        '#markup' => theme('dm_view', array( 
+            'title' =>  $build['#node']->title,
+            'vocs' => _build_vocs($nid),
+            'markers' => _build_markers($nid)
+        )),
+        '#weight' => 10
+      );
+    }
+  }
+}
+
+
+function _build_vocs($nid) {
+  $query = db_select('dm_terms', 't');
+  $query->fields('t', array('tid', 'vid', 'pid', 'name'));
+  $query->orderBy('t.weight', 'ASC');
+  $query->leftJoin('dm_vocs', 'v', 't.vid = v.vid');
+  $query->fields('v', array('name'));
+  $query->leftJoin('dm_allowed', 'a', 't.vid = a.vid');
+  $query->condition('a.nid', $nid);
+  $items = $query->execute()->fetchAll();
+  
+  $output = array();
+  foreach($items as $item) {
+    if (!isset($output[$item->vid])) {
+      $output[$item->vid] = array();
+    }
+    $output[$item->vid]['title'] = $item->v_name;
+    $output[$item->vid]['items'][$item->tid] = array( 'id' => $item->tid, 'title' => $item->name );
+  }
+  return $output;
+}
+
+function _build_markers($nid) {
+  $output = array();
+  $children = _nodehierarchy_get_children_menu_links($nid, FALSE);
+  $icon = url(drupal_get_path( 'module', 'divilon_map' ) . '/lib/marker.png');
+  foreach($children as $c) {
+    $marker = node_load($c['nid']);
+    $output[] = array(
+      'id' => $marker->nid,
+      'title' => $marker->title,
+      'body' => isset($marker->body[LANGUAGE_NONE]) ? $marker->body[LANGUAGE_NONE][0]['safe_value'] : '',
+      'coord' => $marker->divilon_map_g[LANGUAGE_NONE][0],
+      'icon' => $icon,
+      'types' => _get_types($marker->nid)
+    );
+  }
+  return $output;
+}
+
+function _get_types($nid) {
+  $query = db_select('dm_node', 'n');
+  $query->fields('n', array('tid'));
+  $query->condition('n.nid', $nid);
+  return $query->execute()->fetchCol();
+}
+
+function divilon_map_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id === 'map_marker_node_form0') {
+    if ($form['nid'] && $form['nid']['#value']) {
+      $parent = nodehierarchy_get_node_parent( $form['nid']['#value'] );
+      $options = array();
+      $query = db_select('dm_terms', 't');
+      $query->fields('t', array('tid', 'name'));
+      $query->orderBy('t.weight', 'ASC');
+      $query->leftJoin('dm_vocs', 'v', 't.vid = v.vid');
+      //$query->fields('v', array('name'));
+      $query->leftJoin('dm_allowed', 'a', 't.vid = a.vid');
+      $query->condition('a.nid', $parent->nid);
+      $options = $query->execute()->fetchAllKeyed();
+      //var_dump($options); exit;
+
+      $selected = db_select('dm_node', 'n')
+        ->fields('n', array('tid'))
+        ->condition('n.nid', $form['nid']['#value'])
+        ->execute()
+        ->fetchCol();
+
+      $form['terms'] = array(
+        '#type' => 'fieldset', 
+        '#title' => t('Terms'),
+        '#weight' => 3,
+        '#collapsible' => TRUE,
+        '#collapsed' => FALSE,
+      );
+      $form['terms']['items'] = array(
+        '#type' => 'checkboxes',
+        '#title' => t('Select terms'),
+        '#options' => $options,
+        '#default_value' => $selected
+      );
+      $form['#submit'][] = '_update_terms';
+    }
+  }
+}
+
+function _update_terms($form, $form_state) {
+  db_delete('dm_node')
+    ->condition('nid', $form_state['values']['nid'])
+    ->execute();
+  $values = array();
+  foreach($form_state['values']['items'] as $key => $val) {
+    if ((int)$val > 0) {
+      $values[] = array('tid' => $key, 'nid' => $form_state['values']['nid']);
+    }
+  }
+  $query = db_insert('dm_node')->fields(array('nid', 'tid'));
+  foreach ($values as $record) {
+    $query->values($record);
+  }
+  $query->execute();
+}
+
+function divilon_map_vocabularies_delete($vid) {
+  db_delete('dm_vocs')
+    ->condition('vid', $vid)
+    ->execute();
+  drupal_goto($_GET['destination']);
+
+}

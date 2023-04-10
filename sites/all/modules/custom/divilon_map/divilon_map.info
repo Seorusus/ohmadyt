@@ -1,0 +1,8 @@
+name = Divilon map
+description = Create map node type.
+package = Divilon modules
+core = 7.x
+dependencies[] = nodehierarchy
+dependencies[] = geofield_gmap
+
+# files[] = node_example.test

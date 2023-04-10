@@ -1,0 +1,4 @@
+name = Divilon Temperature map
+description = Show TempMap.
+core = 7.x
+package = Divilon modules

@@ -1,0 +1,53 @@
+<?php
+
+// function divilon_theme_init() {
+//   drupal_add_js( drupal_get_path('module', 'divilon_theme') . '/divilon_theme.js' );
+// }
+
+function divilon_theme_block_info() {
+  $blocks = array();
+  $blocks['search_counts'] = array(
+    'info' => t('Search node counts'),
+//    'cache' => DRUPAL_NO_CACHE,
+  );
+  return $blocks;
+}
+
+function divilon_theme_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'search_counts':
+      $block['content'] = divilon_theme_search_cnt();
+  }
+  return $block;
+}
+
+function divilon_theme_search_cnt() {
+  $output = [];
+  $get = $_GET;
+  $curType = $get['type'];
+  unset($_GET['type']);
+  foreach(views_get_view_result('sitesearch', 'page_1') as $item) {
+    if (!isset($output[$item->node_type])) {
+      $output[$item->node_type] = 0;
+    }
+    $output[$item->node_type]++;
+  }
+  $_GET = $get;
+  $list = [];
+
+  unset($get['q']);
+  
+  $exclude = ['simplenews'];
+
+  foreach($output as $type => $cnt) {
+    if (!in_array($type, $exclude)) {
+      $get['type'] = $type;
+
+      $list[] = l(t(ucfirst($type) . " (@d)", ['@d' => $cnt]), "sitesearch", ['query' => $get, 'attributes' => ['class' => [ $type === $curType ? 'current' : '' ]]]);
+    }
+  }
+
+  return theme('item_list', ['items' => $list]);
+}

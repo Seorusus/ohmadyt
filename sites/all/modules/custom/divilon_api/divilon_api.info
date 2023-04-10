@@ -1,0 +1,4 @@
+name = API module
+description = Module for work with different system.
+package = Divilon modules
+core = 7.x

@@ -1,0 +1,97 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+
+ function divilon_map_schema() {
+
+  $schema['dm_vocs'] = array(
+    'fields' => array(
+      'vid'  => array(
+        'type' => 'serial',
+        'not null' => TRUE
+      ),
+      'name' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => ''
+      )
+    ),
+    'primary key' => array('vid')
+  );
+
+  $schema['dm_terms'] = array(
+    'fields' => array(
+      'tid'  => array(
+        'type' => 'serial',
+        'not null' => TRUE
+      ),
+      'vid' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0
+      ),
+      'pid' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0
+      ),
+      'weight' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0
+      ),
+      'name' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => ''
+      ),
+    ),
+    'primary key' => array('tid')
+  );
+
+  $schema['dm_allowed'] = array(
+    'fields' => array(
+      'id'  => array(
+        'type' => 'serial',
+        'not null' => TRUE
+      ),
+      'nid' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0
+      ),
+      'vid' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0
+      )
+    ),
+    'primary key' => array('id')
+  );
+
+  $schema['dm_node'] = array(
+    'fields' => array(
+      'id'  => array(
+        'type' => 'serial',
+        'not null' => TRUE
+      ),
+      'nid' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0
+      ),
+      'tid' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0
+      )
+    ),
+    'primary key' => array('id')
+  );
+
+  return $schema;
+}

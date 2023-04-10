@@ -1,0 +1,18 @@
+name = "UkrainianStemmer"
+description = "Implements the Ukrainian stemming algorithm to improve Ukrainian-language searching."
+core = 7.x
+
+files[] = rustemmer.module
+
+; Information added by drupal.org packaging script on 2010-07-16
+version = "7.x-1.0-alpha1"
+core = "7.x"
+project = "Stemmer"
+datestamp = "1279288507"
+
+; Information added by drupal.org packaging script on 2010-12-20
+version = "7.x-2.1-beta2"
+core = "7.x"
+project = "ukstemmer"
+datestamp = "1292843775"
+

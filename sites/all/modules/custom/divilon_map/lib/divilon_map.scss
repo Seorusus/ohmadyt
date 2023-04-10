@@ -1,0 +1,147 @@
+$yellow: #ffd746;
+$blue: #045ba7;
+
+
+#divilon_map {
+     height: 700px;
+     background: #aeaeae;
+}
+.map-sidebar .bb {
+ 	padding: 15px;
+ 	color: #fbfbfb;
+	// font-size: 1.6em;
+	overflow: auto;
+	max-height: 700px;
+	.toggle-selection {
+	 	font-size: 1.8em;
+	 	padding-bottom: 0.6em;
+	 	border-bottom: 1px solid;
+	 	cursor: pointer;
+	 	margin-bottom: 15px;
+	 	display: block;
+	 }
+ 	ul {
+ 		margin: 0;
+ 		padding: 5px 0;
+ 		list-style-type: none;
+ 		border-bottom: 1px solid #cccccc;
+ 		li {
+ 			margin: 0;
+ 			padding: 0;
+ 			&.title {
+ 				font-size: 1.05em;
+ 				margin-bottom: 0.2em;
+ 				label {
+					 font-weight: bold;
+					 cursor: pointer;
+ 				}
+ 			}
+ 		}
+ 	}
+ 	.select-items {
+ 		margin-bottom: 0.5em;
+ 		&:last-child {
+ 			margin-bottom: 0;
+ 		}
+	 }
+ 	.form-type-checkbox {
+		label {
+			position: relative;
+			cursor: pointer;
+			padding-left: 30px;
+			user-select: none;
+			font-weight: normal;
+			color: #ccc;
+			&:before {
+				content: '';
+				width: 23px;
+				height: 23px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				border: 1px solid #fbfbfb;
+				border-radius: 1px;
+				background: $blue;
+			}
+			&:after {
+				content: '';
+				width: 11px;
+				height: 13px;
+				position: absolute;
+				top: 5px;
+				left: 6px;
+				background: $yellow;
+				opacity: 0;
+			}
+			&:hover::after {
+				opacity: 0.3;
+			}
+		}
+		input[type=checkbox] {
+			visibility: hidden;
+			display: none;
+			&:checked + label:after {
+				opacity: 1;
+			}   
+		}
+		&.collapsed {
+			display: none;
+		}
+	}
+}
+
+.gm-style {
+	.gm-style-iw {
+		background: $blue;
+		color: #d1d1d1;
+		top: 0 !important;
+		left: 0 !important;
+		right: 0 !important;
+		width: auto !important;
+		height: auto !important;
+		padding: 10px 15px;
+		margin: -10px -15px;
+		bottom: 10px;
+		& + div {
+			display: none;
+		}
+		h3 {
+			color: #fbfbfb;
+			font-weight: bold;
+			font-size: 1.4em;
+			margin: 0;
+		}
+	}
+	div div div div div div div div {
+		display: none;
+	}
+}
+.overlay {
+  padding: 15px 15px 45px;
+  color: white;
+  width: 258px;
+  h3 {
+  	font-size: 1.8em;
+  }
+  a {
+  	color: $yellow;
+  	&:hover {
+  		color: #fff;
+  	}
+  }
+  div {
+  	margin: 2px;
+  }
+  .close {
+  	color: $yellow;
+  	text-shadow:none;
+  	opacity: 0.5;
+  	font-size: 16px;
+    font-weight: normal;
+  	&:hover, 
+  	&:focus {
+  		opacity: 0.8;
+  		color: $yellow;
+  	}
+  }
+}

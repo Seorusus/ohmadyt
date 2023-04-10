@@ -1,0 +1,37 @@
+name = Divilon Bootstrap
+description = Bootstrap Sub-Theme, created by Divilon (http://divilon.com)
+core = 7.x
+base theme = bootstrap
+php = 5.3.0
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[submenu]        = 'Submenu'
+regions[sidebar]        = 'Sidebar'
+regions[highlighted_bottom]    = 'Highlighted bottom'
+
+regions[footer_left]    = 'Footer Left'
+regions[footer_right]   = 'Footer Right'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+; stylesheets[all][] = css/jcarousel.css
+stylesheets[all][] = css/flex.scss
+stylesheets[all][] = css/notsass.css
+stylesheets[all][] = css/style.scss
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+
+scripts[] = 'js/divilon-bootstrap.behaviors.js'

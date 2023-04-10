@@ -1,0 +1,67 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+function divilon_tempmap_init() {
+}
+
+/**
+ * Implements hook_menu().
+ */
+function divilon_tempmap_menu() {
+  $items['temperature'] = array(
+    'page callback' => 'divilon_tempmap_show',
+    'title' => 'Temperature map',
+    'access arguments' => array('access content'),
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'divilon_tempmap.pages.inc'
+  );
+  $items['temperature/load/%'] = array(
+    'page callback' => 'divilon_tempmap_load',
+    'title' => 'Load',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+    'page arguments' => array( 2 ),
+    'file' => 'divilon_tempmap.pages.inc',
+    'delivery callback' => 'drupal_json_output'
+  );
+  return $items;
+}
+
+function divilon_tempmap_inline_entity_form_table_fields_alter(&$fields, $context) {
+  if ( $context['entity_type'] == 'maps' ) {
+    unset($fields['id']);
+    $fields['field_fr'] = array(
+      'type' => 'field',
+      'label' => t('From'),
+      'weight' => 1
+    );
+    $fields['field_to'] = array(
+      'type' => 'field',
+      'label' => t('To'),
+      'weight' => 2
+    );
+    $fields['field_color'] = array(
+      'type' => 'field',
+      'label' => t('Color'),
+      'weight' => 0,
+      'formatter' => 'color_field_swatch'
+    );
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function divilon_tempmap_theme() {
+  return array(
+    'temperature_map'  => array(
+      'path' => drupal_get_path('module', 'divilon_tempmap') . '/tpl',
+      'template' => 'divilon_tempmap',
+      'variables' => array(
+        'item' => null,
+      ),
+    ),
+  );
+}

@@ -1,0 +1,266 @@
+<?php global $language; ?>
+<header id="navbar" role="banner">
+  <div class="<?php print $container_class; ?>">
+    <div class="row">
+      <div class="col-sm-3">
+        <a class="gov_ua" href="#" data-toggle="modal" data-target="#govModal">
+          <div class="icon"></div>
+          <div class="gov_ua_text">
+              <span>gov.ua</span>
+              <span class="light"><?php print t('State sites of Ukraine'); ?></span>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6">
+        <a class="logo" href="<?php print $front_page; ?>" title="<?php print $site_name; ?>">
+          <img src="/<?php print $directory; ?>/img/logo.png" alt="<?php print $site_name; ?>" class="img-responsive center-block" />
+        </a>
+      </div>
+      <div class="col-sm-3 right-panel">
+        <div class="scale" id="zoom">
+          <button><?php print t('Low vision version'); ?></button>
+          <div class="zoom-panel">
+            <div class="color">
+              <button class="wb" data-color="wb">WB</button>
+              <button class="bw" data-color="bw">BW</button>
+              <br>
+              <button class="restore" data-color="restore"><?php print t('Reset'); ?></button>
+            </div>
+            <div class="zoom">
+              <button class="minus" data-zoom="-"><span class="glyphicon glyphicon-minus-sign"></span></button>
+              <button class="plus" data-zoom="+"><span class="glyphicon glyphicon-plus-sign"></span></button>
+            </div>
+          </div>
+        </div>
+        <div class="lang">
+          <?php $block = module_invoke('locale', 'block_view', 'language');
+            echo render($block['content']); ?>
+        </div>
+        <div class="old">
+          <i class="fas fa-history"></i>
+          <a href="#"><?php print t('Old Version') ?></a>
+        </div>
+        <div class="clearfix mob-hide"></div>
+        <div class="search pull-right">
+          <?php print l(t('Search'), 'search'); ?>
+        </div>
+        <div class="pull-right socials">
+          <?php if($instagram) print('<a href="' . $instagram . '" class="soc-link" target="_blank"><i class="fab fa-instagram"></i></a>'); ?>
+          <?php if($twitter) print('<a href="' . $twitter . '" class="soc-link" target="_blank"><i class="fab fa-twitter"></i></a>'); ?>
+          <?php if($facebook) print('<a href="' . $facebook . '" class="soc-link" target="_blank"><i class="fab fa-facebook-square"></i></a>'); ?>
+          <?php if($linkedin) print('<a href="' . $linkedin . '" class="soc-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>'); ?>
+          <?php if($youtube) print('<a href="' . $youtube . '" class="soc-link" target="_blank"><i class="fab fa-youtube"></i></a>'); ?>
+          <?php if($telegram) print('<a href="' . $telegram . '" class="soc-link" target="_blank"><i class="fab fa-telegram-plane"></i></a>'); ?>
+        </div>
+      </div>
+    </div>
+    
+
+    <?php if (!empty($primary_nav) || !empty($secondary_nav)): ?>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    <?php endif; ?>
+    <?php if (!empty($secondary_nav)): ?>
+      <div class="navbar-secondary pull-right">
+        <nav role="navigation">
+          <?php print render($secondary_nav); ?>            
+        </nav>
+      </div>
+    <?php endif; ?>
+  </div>
+
+  <div class="clearfix topnav">
+    <div class="<?php print $container_class; ?>">
+      <?php if (!empty($primary_nav)): ?>
+        <div class="navbar-collapse collapse pull-left" id="navbar-collapse">
+          <nav role="navigation">
+            <?php print render($primary_nav); ?>
+          </nav>
+        </div>
+      <?php endif; ?>
+    </div>
+  </div>
+</header>
+
+<div class="pr">
+  <div id="search-block" class="pa">
+    <div class="<?php print $container_class; ?>">
+    <div class="close">X</div>
+    <div class="search-title"><?php print t('Enter the word to search'); ?></div>
+      <?php $block = module_invoke('search', 'block_view', 'form');
+        echo render($block['content']); ?>
+      
+      <!-- <form class="form-search content-search" action="find" method="post" id="search-block-formm" accept-charset="UTF-8">
+        <h2 class="element-invisible">Пошукова форма</h2>
+        <div>
+          <div>
+            <div class="input-group">
+              <input title="Введіть терміни, які необхідно знайти......" placeholder="" class="form-control form-text" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128">
+            </div>
+            <div class="form-actions form-wrapper form-group">
+              <button class="btn btn-default form-submit" type="submit" id="edit-submit" name="op" value="<i class=&quot;fas fa-search&quot;></i> Шукати"><i class="fas fa-search"></i> Шукати</button>
+            </div>
+          </div>
+        </div>
+      </form> -->
+
+    </div>
+  </div>
+</div>
+
+<?php if (!empty($page['header'])): ?>
+  <header role="banner" id="page-header" class="<?php print $container_class; ?>">
+    <?php print render($page['header']); ?>
+  </header>
+<?php endif; ?>
+
+<div class="main-container <?php print $container_class; ?>">
+  <div class="clearfix">
+    <?php if (!empty($breadcrumb)): print $breadcrumb;
+    endif;?>
+    <a id="main-content"></a>
+    <?php print render($title_prefix); ?>
+    <?php if (!empty($title) && !$is_front): ?>
+      <h1 class="page-header"><?php print $title; ?></h1>
+    <?php endif; ?>
+    <?php print render($title_suffix); ?>
+    <?php print $messages; ?>
+    <?php if (!empty($page['highlighted'])): ?>
+      <div class="highlighted"><?php print render($page['highlighted']); ?></div>
+    <?php endif; ?>
+  </div>
+  <div class="row">
+    <section class="<?php print (empty($page['sidebar']))? 'col-sm-12' : 'col-sm-8'; ?>">
+      <?php if (!empty($title) && $is_front): ?>
+        <h1 class="page-header"><?php print $title; ?></h1>
+      <?php endif; ?>
+      <?php if (!empty($tabs)): ?>
+        <?php print render($tabs); ?>
+      <?php endif; ?>
+      <?php if (!empty($page['help'])): ?>
+        <?php print render($page['help']); ?>
+      <?php endif; ?>
+      <?php if (!empty($action_links)): ?>
+        <ul class="action-links"><?php print render($action_links); ?></ul>
+      <?php endif; ?>
+      <?php print render($page['content']); ?>
+    </section>
+
+    <?php if (!empty($page['sidebar'])): ?>
+      <aside class="col-sm-4 sidebar" role="complementary">
+        <?php print render($page['sidebar']); ?>
+      </aside>
+    <?php endif; ?>
+
+  </div>
+</div>
+
+<?php if ($is_front && false): ?>
+  <div id="bottom_dark">
+    <div class="<?php print $container_class; ?>">
+      <section id="block-simplenews-1" class="block block-simplenews contextual-links-region clearfix">
+        <h2 class="block-title"><?php print t('Get an update'); ?></h2>
+        <div class="block-content">
+        <?php $block = module_invoke('simplenews', 'block_view', 1);
+          echo render($block['content']); ?>
+        </div>
+      </section>
+    </div>
+  </div>
+<?php endif; ?>
+
+<?php if (!empty($page['bottom_white'])): ?>
+  <div id="bottom_white">
+    <div class="<?php print $container_class; ?>"><?php print render($page['bottom_white']); ?></div>
+  </div>
+<?php endif; ?>
+
+<?php if (!empty($page['bottom_blue'])): ?>
+  <div id="bottom_blue">
+    <div class="<?php print $container_class; ?>"><?php print render($page['bottom_blue']); ?></div>
+  </div>
+<?php endif; ?>
+
+
+<footer id="footer">
+  <div id="search-block-2" class="pa">
+    <div class="<?php print $container_class; ?>">
+    <div class="close">X</div>
+    <div class="search-title"><?php print t('Enter the word to search'); ?></div>
+    <?php $block = module_invoke('search', 'block_view', 'form');
+        echo render($block['content']); ?>
+    </div>
+  </div>
+  <div class="<?php print $container_class; ?>">
+    <a href="#" data-toggle="modal" data-target="#govModal">
+      <img src="/sites/all/themes/divilon_bootstrap/img/gov-<?php print $language->language ?>.png" alt="gov.ua" class="img-responsive pull-left govua" />
+    </a>
+    <div class="pull-right right-panel">
+      <div class="scale pull-right" id="zoombot">
+        <button><?php print t('Low vision version'); ?></button>
+        <div class="zoom-panel">
+          <div class="color">
+            <button class="wb" data-color="wb">WB</button>
+            <button class="bw" data-color="bw">BW</button>
+            <br>
+            <button class="restore" data-color="restore"><?php print t('Reset'); ?></button>
+          </div>
+          <div class="zoom">
+            <button class="minus" data-zoom="-"><span class="glyphicon glyphicon-minus-sign"></span></button>
+            <button class="plus" data-zoom="+"><span class="glyphicon glyphicon-plus-sign"></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="search pull-right">
+        <?php print l(t('Search'), 'search'); ?>
+      </div>
+      <div class="lang pull-right">
+        <?php $block = module_invoke('locale', 'block_view', 'language');
+          echo render($block['content']); ?>
+      </div>
+    </div>
+    <div class="pull-right socials">
+      <?php if($instagram) print('<a href="' . $instagram . '" class="soc-link" target="_blank"><i class="fab fa-instagram"></i></a>'); ?>
+      <?php if($twitter) print('<a href="' . $twitter . '" class="soc-link" target="_blank"><i class="fab fa-twitter"></i></a>'); ?>
+      <?php if($facebook) print('<a href="' . $facebook . '" class="soc-link" target="_blank"><i class="fab fa-facebook-f"></i></a>'); ?>
+      <?php if($linkedin) print('<a href="' . $linkedin . '" class="soc-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>'); ?>
+      <?php if($youtube) print('<a href="' . $youtube . '" class="soc-link" target="_blank"><i class="fab fa-youtube"></i></a>'); ?>
+      <?php if($telegram) print('<a href="' . $telegram . '" class="soc-link" target="_blank"><i class="fab fa-telegram-plane"></i></a>'); ?>
+    </div>
+  </div>
+  <div class="bot-links">
+    <div class="<?php print $container_class; ?>">
+      <div class="clearfix">
+        <?php $block = module_invoke('views', 'block_view', 'links-block');
+          echo render($block['content']); ?>
+      </div>
+      <div class="copy clearfix">
+        <?php print date('Y') . ' &copy; ' . $site_name; ?><br />
+        <?php print t('All content is available under a Creative Commons Attribution 4.0 International license, unless otherwise noted.'); ?>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal fade" id="govModal" tabindex="-1" role="dialog" aria-labelledby="govModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="govModalLabel"><?php print t('State sites of Ukraine'); ?></h4>
+      </div>
+      <div class="modal-body">
+      <?php if (!empty($page['gov_ua'])): ?>
+        <?php print render($page['gov_ua']); ?>
+      <?php endif; ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><?php print t('Close'); ?></button>
+      </div>
+    </div>
+  </div>
+</div>
