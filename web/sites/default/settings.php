@@ -33,48 +33,21 @@ if (file_exists($local_settings)) {
   include $local_settings;
 }
 
-/*
-* Environment Indicator module settings.
-* see: https://docs.pantheon.io/guides/environment-configuration/environment-indicator
-*/
+if (defined('PANTHEON_ENVIRONMENT')) {
+  if ($_ENV['PANTHEON_ENVIRONMENT'] === 'dev') {
+    $config['environment_indicator.indicator']['bg_color'] = '#5d2888';
+    $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+    $config['environment_indicator.indicator']['name'] = 'Pantheon Dev';
+  }
+  if ($_ENV['PANTHEON_ENVIRONMENT'] === 'test') {
+    $config['environment_indicator.indicator']['bg_color'] = '#fffe00';
+    $config['environment_indicator.indicator']['fg_color'] = '#320000';
+    $config['environment_indicator.indicator']['name'] = 'Pantheon Test';
 
-$conf['environment_indicator_overwrite'] = TRUE;
-$conf['environment_indicator_overwritten_position'] = 'top';
-$conf['environment_indicator_overwritten_fixed'] = FALSE;
-
-if (!defined('PANTHEON_ENVIRONMENT')) {
-  $conf['environment_indicator_overwritten_name'] = 'Local';
-  $conf['environment_indicator_overwritten_color'] = '#505050';
-  $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
-}
-// Pantheon Env Specific Config
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  switch ($_ENV['PANTHEON_ENVIRONMENT']) {
-    case 'lando': // Localdev or Lando environments
-      $config['environment_indicator.indicator']['name'] = 'Local Dev';
-      $config['environment_indicator.indicator']['bg_color'] = '#990055';
-      $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
-      break;
-    case 'dev':
-      $conf['environment_indicator_overwritten_name'] = 'Dev';
-      $conf['environment_indicator_overwritten_color'] = '#307b24';
-      $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
-      break;
-    case 'test':
-      $conf['environment_indicator_overwritten_name'] = 'Test';
-      $conf['environment_indicator_overwritten_color'] = '#b85c00';
-      $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
-      break;
-    case 'live':
-      $conf['environment_indicator_overwritten_name'] = 'Live!';
-      $conf['environment_indicator_overwritten_color'] = '#e7131a';
-      $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
-      break;
-    default:
-      //Multidev catchall
-      $conf['environment_indicator_overwritten_name'] = 'Multidev';
-      $conf['environment_indicator_overwritten_color'] = '#e7131a';
-      $conf['environment_indicator_overwritten_text_color'] = '#000000';
-      break;
+  }
+  if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
+    $config['environment_indicator.indicator']['bg_color'] = '#f70b0b';
+    $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+    $config['environment_indicator.indicator']['name'] = 'Pantheon Production';
   }
 }
