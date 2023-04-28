@@ -11,4 +11,4 @@ deploy:dev:
     - terminus remote:drush $PANTHEON_SITE.dev -- updb
     - terminus remote:drush $PANTHEON_SITE.dev -- cim
   only:
-    - merge_requests
+    - main
