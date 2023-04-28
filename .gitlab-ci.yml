@@ -1,3 +1,5 @@
+image: php:8.1
+
 before_script:
   # See https://docs.gitlab.com/ee/ci/ssh_keys/
   - eval $(ssh-agent -s)
@@ -5,6 +7,11 @@ before_script:
   - mkdir -p $HOME/.ssh && echo "StrictHostKeyChecking no" >> "$HOME/.ssh/config"
   - git config --global user.email "$GITLAB_USER_EMAIL"
   - git config --global user.name "Gitlab CI"
+  # Install Terminus
+  - curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
+  - 'which terminus'
+  - export PATH=$PATH:$HOME/.terminus/bin
+  - terminus auth:login --machine-token=${PANTHEON_MACHINE_TOKEN}
 
 deploy:dev:
   stage: deploy
