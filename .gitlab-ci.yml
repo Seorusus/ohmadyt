@@ -29,8 +29,7 @@ deploy:dev:
     - git push pantheon main:master --force
 
     - terminus remote:drush $PANTHEON_SITE.dev -- cr
-    - terminus remote:drush $PANTHEON_SITE.dev -- updb
-    - terminus remote:drush $PANTHEON_SITE.dev -- cim
-    - terminus remote:drush $PANTHEON_SITE.dev -- yes
+    - terminus remote:drush $PANTHEON_SITE.dev -- updb -y
+    - terminus remote:drush $PANTHEON_SITE.dev -- cim -y
   only:
     - main
