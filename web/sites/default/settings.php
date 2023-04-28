@@ -38,9 +38,9 @@ if (file_exists($local_settings)) {
 * see: https://docs.pantheon.io/guides/environment-configuration/environment-indicator
 */
 
-$conf['environment_indicator_overwrite'] = true;
+$conf['environment_indicator_overwrite'] = TRUE;
 $conf['environment_indicator_overwritten_position'] = 'top';
-$conf['environment_indicator_overwritten_fixed'] = false;
+$conf['environment_indicator_overwritten_fixed'] = FALSE;
 
 if (!defined('PANTHEON_ENVIRONMENT')) {
   $conf['environment_indicator_overwritten_name'] = 'Local';
@@ -50,7 +50,7 @@ if (!defined('PANTHEON_ENVIRONMENT')) {
 // Pantheon Env Specific Config
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   switch ($_ENV['PANTHEON_ENVIRONMENT']) {
-    case 'local': // Localdev or Lando environments
+    case 'lando': // Localdev or Lando environments
       $config['environment_indicator.indicator']['name'] = 'Local Dev';
       $config['environment_indicator.indicator']['bg_color'] = '#990055';
       $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
