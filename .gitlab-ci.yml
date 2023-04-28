@@ -31,5 +31,6 @@ deploy:dev:
     - terminus remote:drush $PANTHEON_SITE.dev -- cr
     - terminus remote:drush $PANTHEON_SITE.dev -- updb
     - terminus remote:drush $PANTHEON_SITE.dev -- cim
+    - terminus remote:drush $PANTHEON_SITE.dev -- yes
   only:
     - main
