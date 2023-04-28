@@ -1,4 +1,7 @@
-image: php:7.4
+image: registry.gitlab.com/ataylorme/pantheon-gitlab-blog-demo:latest
+
+stages:
+  - deploy
 
 before_script:
   # See https://docs.gitlab.com/ee/ci/ssh_keys/
