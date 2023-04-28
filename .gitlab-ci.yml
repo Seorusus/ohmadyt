@@ -1,4 +1,4 @@
-image: registry.gitlab.com/ataylorme/pantheon-gitlab-blog-demo:latest
+image: kreminskyi/ohmatdyt-8-1:latest
 
 stages:
   - deploy
