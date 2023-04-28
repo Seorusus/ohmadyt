@@ -12,6 +12,9 @@ deploy:dev:
     name: dev
     url: https://dev-$PANTHEON_SITE.pantheonsite.io/
   script:
+    - git clone $CI_REPOSITORY_URL repo
+    - cd repo
+    - git checkout main
     - git remote add pantheon $PANTHEON_GIT_URL
     - git push pantheon main:master --force
 
