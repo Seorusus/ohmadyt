@@ -1,0 +1,13 @@
+uuid: 33da5c3c-869b-4ef7-b51b-f621e2453936
+langcode: en
+status: true
+dependencies:
+  module:
+    - domain
+_core:
+  default_config_hash: dHl27Ind2610Z4RQ5fCivdUGZ9NP8mQu3_TbNXTZmiY
+id: domain_enable_action
+label: 'Enable domain record'
+type: domain
+plugin: domain_enable_action
+configuration: {  }
