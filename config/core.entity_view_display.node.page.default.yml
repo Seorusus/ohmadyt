@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_domain_access
+    - field.field.node.page.field_domain_all_affiliates
     - node.type.page
   module:
     - text
@@ -26,4 +28,6 @@ content:
     weight: 101
     region: content
 hidden:
+  field_domain_access: true
+  field_domain_all_affiliates: true
   langcode: true
