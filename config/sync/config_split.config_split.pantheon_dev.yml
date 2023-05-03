@@ -1,0 +1,16 @@
+uuid: 2a266c4d-9f31-4859-9e61-586b1157464c
+langcode: en
+status: true
+dependencies: {  }
+id: pantheon_dev
+label: pantheon_dev
+description: 'Pantheon dev environment'
+weight: 1
+stackable: false
+storage: folder
+folder: ../config/split/dev
+module:
+  domain: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }

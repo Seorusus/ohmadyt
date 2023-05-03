@@ -45,6 +45,7 @@ deploy:dev:
     - git remote add pantheon $PANTHEON_GIT_URL
     - git push pantheon main:master --force
 
+    - terminus remote:drush $PANTHEON_SITE.dev -- config-split-import config_dev -y
     - terminus remote:drush $PANTHEON_SITE.dev -- deploy -y
     - terminus remote:drush $PANTHEON_SITE.dev -- cr -y
   only:
