@@ -1,0 +1,23 @@
+uuid: 17665225-ab68-42cb-931e-1b2b6d66d903
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.announce
+  module:
+    - text
+id: node.announce.body
+field_name: body
+entity_type: node
+bundle: announce
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

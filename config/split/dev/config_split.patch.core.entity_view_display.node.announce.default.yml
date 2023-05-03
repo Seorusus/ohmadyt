@@ -1,0 +1,7 @@
+adding:
+  dependencies:
+    config:
+      - field.field.node.announce.field_domain_access
+  hidden:
+    field_domain_access: true
+removing: {  }

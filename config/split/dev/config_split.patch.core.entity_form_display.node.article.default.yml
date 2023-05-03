@@ -1,0 +1,12 @@
+adding:
+  dependencies:
+    config:
+      - field.field.node.article.field_domain_access
+  content:
+    field_domain_access:
+      type: options_buttons
+      weight: 40
+      region: content
+      settings: {  }
+      third_party_settings: {  }
+removing: {  }
