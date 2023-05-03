@@ -57,3 +57,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
       break;
   }
 }
+
+$config_directories = array(
+  CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config/sync',
+);
