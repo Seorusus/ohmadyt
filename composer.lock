@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3feb29d78b6ae985658201fa466e9e31",
+    "content-hash": "ec6d7075cc580f777edd70fd876f17dd",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1275,6 +1275,84 @@
             }
         },
         {
+            "name": "drupal/config_split",
+            "version": "2.0.0-rc4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/config_split.git",
+                "reference": "2.0.0-rc4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_split-2.0.0-rc4.zip",
+                "reference": "2.0.0-rc4",
+                "shasum": "d4c06efbadd34793b0c9b71772162057afa58111"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "conflict": {
+                "drush/drush": "<10"
+            },
+            "require-dev": {
+                "drupal/config_filter": "^1||^2"
+            },
+            "suggest": {
+                "drupal/chosen": "Chosen uses the Chosen jQuery plugin to make the <select> elements more user-friendly.",
+                "drupal/select2_all": "Applies the Select2 library to all select fields on the site similar to the Chosen module."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-rc4",
+                    "datestamp": "1662235380",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^10 || ^11"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Fabian Bircher",
+                    "homepage": "https://www.drupal.org/u/bircher",
+                    "email": "opensource@fabianbircher.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Nuvole Web",
+                    "homepage": "http://nuvole.org",
+                    "email": "info@nuvole.org",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "pescetti",
+                    "homepage": "https://www.drupal.org/user/436244"
+                }
+            ],
+            "description": "Configuration filter for importing and exporting extra config",
+            "homepage": "https://www.drupal.org/project/config_split",
+            "keywords": [
+                "Drupal",
+                "configuration",
+                "configuration management"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/config_split",
+                "issues": "https://www.drupal.org/project/issues/config_split",
+                "slack": "https://drupal.slack.com/archives/C45342CDD"
+            }
+        },
+        {
             "name": "drupal/core",
             "version": "10.0.8",
             "source": {
@@ -1701,6 +1779,97 @@
             "homepage": "https://www.drupal.org/project/domain",
             "support": {
                 "source": "https://git.drupalcode.org/project/domain"
+            }
+        },
+        {
+            "name": "drupal/domain_access",
+            "version": "dev-2.0.x",
+            "require": {
+                "drupal/core": "^9 || ^10",
+                "drupal/domain": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.0.x": "2.0.x-dev"
+                },
+                "drupal": {
+                    "version": "2.0.x-dev",
+                    "datestamp": "1677511247",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "agentrickard",
+                    "homepage": "https://www.drupal.org/user/20975"
+                },
+                {
+                    "name": "nonsie",
+                    "homepage": "https://www.drupal.org/user/29899"
+                }
+            ],
+            "description": "Domain-based access control for content.",
+            "homepage": "https://www.drupal.org/project/domain",
+            "support": {
+                "source": "https://git.drupalcode.org/project/domain"
+            }
+        },
+        {
+            "name": "drupal/domain_entity",
+            "version": "1.0.0-rc1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/domain_entity.git",
+                "reference": "8.x-1.0-rc1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/domain_entity-8.x-1.0-rc1.zip",
+                "reference": "8.x-1.0-rc1",
+                "shasum": "e0e05c2f6e345416b8c6869f9fe76ede48af5ef3"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/domain": "*",
+                "drupal/domain_access": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-rc1",
+                    "datestamp": "1664388388",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "andypost",
+                    "homepage": "https://www.drupal.org/user/118908"
+                },
+                {
+                    "name": "delta",
+                    "homepage": "https://www.drupal.org/user/1270276"
+                }
+            ],
+            "description": "Defines Domain access for entities",
+            "homepage": "https://www.drupal.org/project/domain_entity",
+            "support": {
+                "source": "https://git.drupalcode.org/project/domain_entity"
             }
         },
         {
@@ -11228,13 +11397,15 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "pantheon-upstreams/upstream-configuration": 20,
         "drupal/domain": 20,
         "drupal/title_length": 5,
         "drupal/gin_toolbar": 5,
-        "drupal/gin": 5
+        "drupal/gin": 5,
+        "drupal/domain_entity": 5,
+        "drupal/config_split": 5
     },
     "prefer-stable": true,
     "prefer-lowest": false,

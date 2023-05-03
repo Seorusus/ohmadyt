@@ -1,0 +1,34 @@
+uuid: 1b8b22d9-baf2-48fb-9448-eb2ae409105b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.announce.body
+    - field.field.node.announce.field_domain_all_affiliates
+    - node.type.announce
+  module:
+    - text
+    - user
+id: node.announce.teaser
+targetEntityType: node
+bundle: announce
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_domain_all_affiliates: true
+  langcode: true
+  search_api_excerpt: true
