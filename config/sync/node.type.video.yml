@@ -1,0 +1,17 @@
+uuid: d4535080-da79-484b-9840-6cc7f8819756
+langcode: uk
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Відео
+type: video
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

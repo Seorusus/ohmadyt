@@ -45,8 +45,6 @@ display:
             group_items:
               1:
                 title: Опубліковано
-              2:
-                title: Неопубліковано
         type:
           expose:
             label: Тип
@@ -80,8 +78,6 @@ display:
             group_items:
               1:
                 title: Опубліковано
-              2:
-                title: Неопубліковано
         type:
           expose:
             label: Тип
@@ -103,8 +99,6 @@ display:
             group_items:
               1:
                 title: Опубліковано
-              2:
-                title: Неопубліковано
         type:
           expose:
             label: Тип

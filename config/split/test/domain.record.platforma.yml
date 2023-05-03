@@ -4,8 +4,8 @@ status: true
 dependencies: {  }
 id: platforma
 domain_id: 4418646
-hostname: 'platforma.test-ohmatdyt.pantheonsite.io'
+hostname: 'platforma.ohmatdyt.docksal:8083'
 name: Platforma
-scheme: https
+scheme: http
 weight: 1
 is_default: false

@@ -179,7 +179,7 @@ display:
           settings:
             format: custom
             format_custom_false: Blocked
-            format_custom_true: Active
+            format_custom_true: Blocked
         roles_target_id:
           id: roles_target_id
           table: user__roles
@@ -611,7 +611,7 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Active
+                title: Blocked
                 operator: '='
                 value: '1'
               2:

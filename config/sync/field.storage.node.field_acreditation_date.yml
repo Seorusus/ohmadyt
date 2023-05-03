@@ -1,0 +1,20 @@
+uuid: c13a53d5-03a6-4a66-bd9f-ff49efad0e14
+langcode: uk
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_acreditation_date
+field_name: field_acreditation_date
+entity_type: node
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

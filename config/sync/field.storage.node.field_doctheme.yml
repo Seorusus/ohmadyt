@@ -1,0 +1,20 @@
+uuid: c8b7a6b2-1be8-470f-a78f-1304982f32c0
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_doctheme
+field_name: field_doctheme
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

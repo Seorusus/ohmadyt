@@ -51,8 +51,6 @@ display:
             group_items:
               1:
                 title: Published
-              2:
-                title: Unpublished
         type:
           expose:
             label: Type
@@ -89,8 +87,6 @@ display:
             group_items:
               1:
                 title: Published
-              2:
-                title: Unpublished
         type:
           expose:
             label: Type
@@ -115,8 +111,6 @@ display:
             group_items:
               1:
                 title: Published
-              2:
-                title: Unpublished
         type:
           expose:
             label: Type

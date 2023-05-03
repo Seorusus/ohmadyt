@@ -70,8 +70,6 @@ display:
             group_items:
               1:
                 title: Active
-              2:
-                title: Blocked
       title: People
       empty:
         area_text_custom:
@@ -112,8 +110,6 @@ display:
             group_items:
               1:
                 title: Active
-              2:
-                title: Blocked
         field_domain_access_target_id:
           expose:
             label: Domain

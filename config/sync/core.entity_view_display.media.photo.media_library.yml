@@ -1,0 +1,34 @@
+uuid: 6278e010-efc0-49cd-aa89-2786884c6c8e
+langcode: uk
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.photo.field_media_image_1
+    - image.style.medium
+    - media.type.photo
+  module:
+    - image
+id: media.photo.media_library
+targetEntityType: media
+bundle: photo
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_image_1: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  uid: true

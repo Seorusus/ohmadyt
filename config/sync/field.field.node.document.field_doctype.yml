@@ -1,0 +1,29 @@
+uuid: 1ac115a4-29e1-44bb-8697-84250b57d477
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doctype
+    - node.type.document
+    - taxonomy.vocabulary.doctype
+id: node.document.field_doctype
+field_name: field_doctype
+entity_type: node
+bundle: document
+label: 'Тип документу'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      doctype: doctype
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,28 @@
+uuid: f113e736-b8b2-4b1c-b9be-54780934f573
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_interval
+    - node.type.anonsy_podiy
+  module:
+    - smart_date
+id: node.anonsy_podiy.field_date_interval
+field_name: field_date_interval
+entity_type: node
+bundle: anonsy_podiy
+label: Дата
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_duration: 60
+    default_duration_increments: "30\r\n60|1 hour\r\n90\r\n120|2 hours\r\ncustom"
+    default_date_type: ''
+    default_date: ''
+    min: ''
+    max: ''
+default_value_callback: ''
+settings: {  }
+field_type: smartdate

@@ -464,7 +464,7 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Неопубліковано
+                title: Опубліковано
                 operator: '='
                 value: '0'
               0:
@@ -798,7 +798,7 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Неопубліковано
+                title: Опубліковано
                 operator: '='
                 value: '0'
               0:
@@ -1012,7 +1012,7 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Неопубліковано
+                title: Опубліковано
                 operator: '='
                 value: '0'
               0:

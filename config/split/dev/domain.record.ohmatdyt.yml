@@ -4,8 +4,8 @@ status: true
 dependencies: {  }
 id: ohmatdyt
 domain_id: 10953833
-hostname: 'dev-ohmatdyt.pantheonsite.io'
+hostname: 'ohmatdyt.docksal:8083'
 name: Ohmatdyt
-scheme: https
+scheme: http
 weight: 0
 is_default: true
