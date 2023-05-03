@@ -1,0 +1,21 @@
+uuid: 8b50a45d-401c-4af2-a2b2-5b41cf50e000
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_domain_all_affiliates
+    - node.type.anonsy_podiy
+id: node.anonsy_podiy.field_domain_all_affiliates
+field_name: field_domain_all_affiliates
+entity_type: node
+bundle: anonsy_podiy
+label: 'Send to all affiliates'
+description: 'Make this content available on all domains.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

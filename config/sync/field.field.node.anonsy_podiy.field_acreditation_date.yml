@@ -1,0 +1,24 @@
+uuid: 67819ade-6c51-45b3-9e1f-7f1d9a7dc7f6
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acreditation_date
+    - node.type.anonsy_podiy
+  module:
+    - datetime
+id: node.anonsy_podiy.field_acreditation_date
+field_name: field_acreditation_date
+entity_type: node
+bundle: anonsy_podiy
+label: 'Акредитація відкрита з'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

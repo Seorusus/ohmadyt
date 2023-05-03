@@ -764,7 +764,7 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Заблоковано
+                title: Активно
                 operator: '='
                 value: '0'
               0:
@@ -1211,7 +1211,7 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Заблоковано
+                title: Активно
                 operator: '='
                 value: '0'
               0:

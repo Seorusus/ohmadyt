@@ -1,0 +1,8 @@
+uuid: e5451de4-1c1f-4ab9-bc95-8b68a914ab5a
+langcode: uk
+status: true
+dependencies: {  }
+name: 'Інформаційний бюлетень'
+vid: newsletter
+description: ''
+weight: 0

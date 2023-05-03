@@ -1,0 +1,11 @@
+uuid: 469ceabe-567a-4c62-9026-5f6af1bb7044
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.video
+id: node.video
+target_entity_type_id: node
+target_bundle: video
+default_langcode: site_default
+language_alterable: false

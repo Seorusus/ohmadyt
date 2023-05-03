@@ -1,0 +1,23 @@
+uuid: ab2db52d-0968-4567-8790-1186d6b6b8bc
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number
+    - node.type.document
+id: node.document.field_number
+field_name: field_number
+entity_type: node
+bundle: document
+label: Номер
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

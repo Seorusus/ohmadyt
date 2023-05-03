@@ -1,0 +1,23 @@
+uuid: 5d2864f6-51bb-419a-b024-c486f8fa0c72
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.anonsy_podiy
+  module:
+    - text
+id: node.anonsy_podiy.body
+field_name: body
+entity_type: node
+bundle: anonsy_podiy
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

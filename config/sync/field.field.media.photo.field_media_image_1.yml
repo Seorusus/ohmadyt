@@ -1,0 +1,45 @@
+uuid: 845aa763-5fcf-4813-b847-27896ec51af2
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_image_1
+    - media.type.photo
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: media.photo.field_media_image_1
+field_name: field_media_image_1
+entity_type: media
+bundle: photo
+label: Image
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: field/photo
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: 5MB
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

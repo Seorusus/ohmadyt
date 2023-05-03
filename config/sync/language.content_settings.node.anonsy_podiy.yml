@@ -1,0 +1,11 @@
+uuid: 5ed13793-1f11-4933-915c-18f2863b711b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.anonsy_podiy
+id: node.anonsy_podiy
+target_entity_type_id: node
+target_bundle: anonsy_podiy
+default_langcode: site_default
+language_alterable: false

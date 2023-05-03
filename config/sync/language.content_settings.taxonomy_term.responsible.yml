@@ -1,0 +1,11 @@
+uuid: b547afe4-05be-4231-a750-3254fec8dfb6
+langcode: uk
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.responsible
+id: taxonomy_term.responsible
+target_entity_type_id: taxonomy_term
+target_bundle: responsible
+default_langcode: site_default
+language_alterable: false

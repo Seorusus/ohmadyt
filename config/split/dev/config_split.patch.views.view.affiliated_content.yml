@@ -115,8 +115,6 @@ adding:
               group_items:
                 -
                   title: Published
-                -
-                  title: Unpublished
           type:
             expose:
               label: Type
@@ -138,8 +136,6 @@ adding:
               group_items:
                 -
                   title: Published
-                -
-                  title: Unpublished
           type:
             expose:
               label: Type
@@ -165,8 +161,6 @@ adding:
               group_items:
                 -
                   title: Published
-                -
-                  title: Unpublished
           type:
             expose:
               label: Type
@@ -230,8 +224,6 @@ removing:
               group_items:
                 -
                   title: Опубліковано
-                -
-                  title: Неопубліковано
           type:
             expose:
               label: Тип
@@ -253,8 +245,6 @@ removing:
               group_items:
                 -
                   title: Опубліковано
-                -
-                  title: Неопубліковано
           type:
             expose:
               label: Тип
@@ -280,8 +270,6 @@ removing:
               group_items:
                 -
                   title: Опубліковано
-                -
-                  title: Неопубліковано
           type:
             expose:
               label: Тип

@@ -1,0 +1,18 @@
+uuid: 1bdda658-5063-4f46-9e01-c03b6f8ae0f9
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.anonsy_podiy
+id: node.anonsy_podiy.title
+field_name: title
+entity_type: node
+bundle: anonsy_podiy
+label: Заголовок
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

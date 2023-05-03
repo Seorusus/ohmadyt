@@ -18,7 +18,7 @@ adding:
             label: Status
             settings:
               format_custom_false: Blocked
-              format_custom_true: Active
+              format_custom_true: Blocked
           roles_target_id:
             label: Roles
           field_domain_access:
@@ -129,8 +129,6 @@ adding:
               label: Status
               group_items:
                 -
-                  title: Active
-                -
                   title: Blocked
         use_more_text: more
     page_1:
@@ -161,8 +159,6 @@ adding:
             group_info:
               label: Status
               group_items:
-                -
-                  title: Active
                 -
                   title: Blocked
           field_domain_access_target_id:
@@ -234,8 +230,6 @@ removing:
               group_items:
                 -
                   title: Активно
-                -
-                  title: Заблоковано
         use_more_text: ще
     page_1:
       display_options:
@@ -267,8 +261,6 @@ removing:
               group_items:
                 -
                   title: Активно
-                -
-                  title: Заблоковано
           field_domain_access_target_id:
             expose:
               label: Домен

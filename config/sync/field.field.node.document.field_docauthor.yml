@@ -1,0 +1,29 @@
+uuid: 83ec9658-5a15-42b9-bf09-81f8c5e854cf
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_docauthor
+    - node.type.document
+    - taxonomy.vocabulary.author
+id: node.document.field_docauthor
+field_name: field_docauthor
+entity_type: node
+bundle: document
+label: 'Видавник документа'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      author: author
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

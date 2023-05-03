@@ -1,0 +1,18 @@
+uuid: 03e2cc20-2875-473b-8ef8-d051b0a46e80
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.document
+id: node.document.title
+field_name: title
+entity_type: node
+bundle: document
+label: Заголовок
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

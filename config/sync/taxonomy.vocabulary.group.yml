@@ -1,0 +1,8 @@
+uuid: 8c6a3833-ce85-4e1b-aee6-9c2d63063e98
+langcode: uk
+status: true
+dependencies: {  }
+name: 'Група (персон)'
+vid: group
+description: ''
+weight: 0

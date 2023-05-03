@@ -1,0 +1,17 @@
+uuid: 81d6db0c-6795-47e7-8886-48d62d4b65f2
+langcode: uk
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Документ
+type: document
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

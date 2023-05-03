@@ -67,8 +67,6 @@ display:
             group_items:
               1:
                 title: Активно
-              2:
-                title: Заблоковано
       title: Люди
       empty:
         area_text_custom:
@@ -104,8 +102,6 @@ display:
             group_items:
               1:
                 title: Активно
-              2:
-                title: Заблоковано
         field_domain_access_target_id:
           expose:
             label: Домен
