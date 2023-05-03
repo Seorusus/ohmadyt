@@ -58,6 +58,4 @@ if (defined('PANTHEON_ENVIRONMENT')) {
   }
 }
 
-$config_directories = array(
-  CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config/sync',
-);
+$settings['config_sync_directory'] = '../config/sync';
