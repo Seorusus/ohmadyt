@@ -1,0 +1,11 @@
+uuid: 66477f6f-ac32-46e2-857a-193d2afae541
+langcode: en
+status: true
+dependencies: {  }
+id: ohmatdyt
+domain_id: 10953833
+hostname: 'test-ohmatdyt.pantheonsite.io'
+name: Ohmatdyt
+scheme: https
+weight: 0
+is_default: true

@@ -1,0 +1,14 @@
+uuid: a7af3db1-f339-4143-9d90-f9ecaa7a851b
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.platforma
+  module:
+    - domain_access
+id: domain_access_add_editor_action.platforma
+label: 'Add editors to the Platforma domain'
+type: user
+plugin: domain_access_add_editor_action
+configuration:
+  domain_id: platforma

@@ -34,20 +34,26 @@ if (file_exists($local_settings)) {
 }
 
 if (defined('PANTHEON_ENVIRONMENT')) {
-  if ($_ENV['PANTHEON_ENVIRONMENT'] === 'dev') {
-    $config['environment_indicator.indicator']['bg_color'] = '#5d2888';
-    $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
-    $config['environment_indicator.indicator']['name'] = 'Pantheon Dev';
-  }
-  if ($_ENV['PANTHEON_ENVIRONMENT'] === 'test') {
-    $config['environment_indicator.indicator']['bg_color'] = '#fffe00';
-    $config['environment_indicator.indicator']['fg_color'] = '#320000';
-    $config['environment_indicator.indicator']['name'] = 'Pantheon Test';
+  switch ($_ENV['PANTHEON_ENVIRONMENT']) {
+    case 'dev':
+      $config['config_split.config_split.pantheon_dev']['status'] = TRUE;
+      $config['environment_indicator.indicator']['bg_color'] = '#5d2888';
+      $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+      $config['environment_indicator.indicator']['name'] = 'Pantheon Dev';
+      break;
 
-  }
-  if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
-    $config['environment_indicator.indicator']['bg_color'] = '#f70b0b';
-    $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
-    $config['environment_indicator.indicator']['name'] = 'Pantheon Production';
+    case 'test':
+      $config['config_split.config_split.pantheon_test']['status'] = TRUE;
+      $config['environment_indicator.indicator']['bg_color'] = '#fffe00';
+      $config['environment_indicator.indicator']['fg_color'] = '#320000';
+      $config['environment_indicator.indicator']['name'] = 'Pantheon Test';
+      break;
+
+    case 'live':
+      $config['config_split.config_split.pantheon_live']['status'] = TRUE;
+      $config['environment_indicator.indicator']['bg_color'] = '#f70b0b';
+      $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+      $config['environment_indicator.indicator']['name'] = 'Pantheon Production';
+      break;
   }
 }

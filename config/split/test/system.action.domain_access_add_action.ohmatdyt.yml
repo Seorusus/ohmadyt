@@ -1,0 +1,14 @@
+uuid: f4e6444c-95b8-4121-a918-db28717390c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.ohmatdyt
+  module:
+    - domain_access
+id: domain_access_add_action.ohmatdyt
+label: 'Add selected content to the Ohmatdyt domain'
+type: node
+plugin: domain_access_add_action
+configuration:
+  domain_id: ohmatdyt

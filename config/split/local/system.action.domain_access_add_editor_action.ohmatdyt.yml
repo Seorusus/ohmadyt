@@ -1,0 +1,14 @@
+uuid: 95fac22e-49ac-4a7f-9f6e-ed16f47dadf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.ohmatdyt
+  module:
+    - domain_access
+id: domain_access_add_editor_action.ohmatdyt
+label: 'Add editors to the Ohmatdyt domain'
+type: user
+plugin: domain_access_add_editor_action
+configuration:
+  domain_id: ohmatdyt

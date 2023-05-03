@@ -1,0 +1,14 @@
+uuid: 43dff885-24f3-404f-93a0-8ada0bf91dac
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.ohmatdyt
+  module:
+    - domain_access
+id: domain_access_remove_action.ohmatdyt
+label: 'Remove selected content from the Ohmatdyt domain'
+type: node
+plugin: domain_access_remove_action
+configuration:
+  domain_id: ohmatdyt
