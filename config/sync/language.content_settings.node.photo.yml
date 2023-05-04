@@ -1,0 +1,11 @@
+uuid: 4eb301a9-c273-4e35-8de4-a0186117d546
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.photo
+id: node.photo
+target_entity_type_id: node
+target_bundle: photo
+default_langcode: site_default
+language_alterable: false

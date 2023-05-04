@@ -1,0 +1,20 @@
+uuid: 3ad8b9fc-89ac-44df-a96d-8f3c7d63fc6e
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_degree
+  module:
+    - user
+id: user.user.field_degree
+field_name: field_degree
+entity_type: user
+bundle: user
+label: 'Науковий ступень'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: 7fe3bd6b-d2d5-49af-aa44-afdc543ba7a4
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_origin_id
+  module:
+    - user
+id: user.user.field_origin_id
+field_name: field_origin_id
+entity_type: user
+bundle: user
+label: 'Origin ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

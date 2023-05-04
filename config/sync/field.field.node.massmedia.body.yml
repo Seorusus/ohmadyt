@@ -1,0 +1,23 @@
+uuid: 4ff19469-c2d5-4b95-a950-51d0d8073c87
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.massmedia
+  module:
+    - text
+id: node.massmedia.body
+field_name: body
+entity_type: node
+bundle: massmedia
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

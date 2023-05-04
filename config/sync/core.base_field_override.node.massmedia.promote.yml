@@ -1,0 +1,22 @@
+uuid: 835fe9b1-b58b-4626-bde6-15c0938cc0fd
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.massmedia
+id: node.massmedia.promote
+field_name: promote
+entity_type: node
+bundle: massmedia
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

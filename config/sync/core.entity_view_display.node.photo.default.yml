@@ -1,0 +1,50 @@
+uuid: 42c05ddf-a30e-47cb-bcac-c7a882c462f5
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.node.photo.body
+    - field.field.node.photo.field_domain_all_affiliates
+    - field.field.node.photo.field_photos
+    - field.field.node.photo.field_tags
+    - node.type.photo
+  module:
+    - text
+    - user
+id: node.photo.default
+targetEntityType: node
+bundle: photo
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_photos:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_domain_all_affiliates: true
+  langcode: true
+  search_api_excerpt: true

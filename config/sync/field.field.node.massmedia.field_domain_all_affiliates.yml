@@ -1,0 +1,21 @@
+uuid: 203e6b2b-b2f3-43d7-ac08-ef27f07011ef
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_domain_all_affiliates
+    - node.type.massmedia
+id: node.massmedia.field_domain_all_affiliates
+field_name: field_domain_all_affiliates
+entity_type: node
+bundle: massmedia
+label: 'Send to all affiliates'
+description: 'Make this content available on all domains.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

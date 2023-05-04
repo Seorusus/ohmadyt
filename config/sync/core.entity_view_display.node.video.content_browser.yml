@@ -1,0 +1,40 @@
+uuid: de2dd706-edb8-4252-8fe4-10872c91a7d4
+langcode: uk
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.content_browser
+    - field.field.node.video.body
+    - field.field.node.video.field_domain_all_affiliates
+    - field.field.node.video.field_online
+    - field.field.node.video.field_tags
+    - field.field.node.video.field_youtube
+    - node.type.video
+  module:
+    - text
+    - user
+id: node.video.content_browser
+targetEntityType: node
+bundle: video
+mode: content_browser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_domain_all_affiliates: true
+  field_online: true
+  field_tags: true
+  field_youtube: true
+  langcode: true
+  search_api_excerpt: true

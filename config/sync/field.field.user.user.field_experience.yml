@@ -1,0 +1,20 @@
+uuid: fcb5d34a-4826-4e5a-812f-52b33147dc0f
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_experience
+  module:
+    - user
+id: user.user.field_experience
+field_name: field_experience
+entity_type: user
+bundle: user
+label: Стаж
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

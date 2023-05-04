@@ -1,0 +1,30 @@
+uuid: 776a89e3-bf31-4e79-b3e6-add298077d3d
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_group
+    - taxonomy.vocabulary.group
+  module:
+    - user
+id: user.user.field_group
+field_name: field_group
+entity_type: user
+bundle: user
+label: Група
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      group: group
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

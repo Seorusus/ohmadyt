@@ -1,0 +1,20 @@
+uuid: ab40db32-ee9b-48bd-8b4e-e35c26d616fc
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_publish
+field_name: field_publish
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,11 @@
+uuid: de7526f2-3b96-4615-9b96-b0a4b4bf98bf
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.massmedia
+id: node.massmedia
+target_entity_type_id: node
+target_bundle: massmedia
+default_langcode: site_default
+language_alterable: false

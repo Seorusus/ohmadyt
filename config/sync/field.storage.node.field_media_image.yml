@@ -1,17 +1,17 @@
-uuid: c13a53d5-03a6-4a66-bd9f-ff49efad0e14
+uuid: d8e395ef-126a-4e3c-b9f3-cb6384080119
 langcode: uk
 status: true
 dependencies:
   module:
-    - datetime
+    - media
     - node
-id: node.field_acreditation_date
-field_name: field_acreditation_date
+id: node.field_media_image
+field_name: field_media_image
 entity_type: node
-type: datetime
+type: entity_reference
 settings:
-  datetime_type: datetime
-module: datetime
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true
