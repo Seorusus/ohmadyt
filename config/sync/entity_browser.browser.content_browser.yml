@@ -1,0 +1,31 @@
+uuid: 345430a8-892e-40a1-85fb-d573d95a7a88
+langcode: uk
+status: true
+dependencies:
+  config:
+    - views.view.media_entity_browser
+  module:
+    - views
+name: content_browser
+label: 'Content Photo browser'
+display: iframe
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: "Виберіть об'єкти"
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  8b2c6ee4-8202-429f-a97d-6f62655431b9:
+    id: view
+    uuid: 8b2c6ee4-8202-429f-a97d-6f62655431b9
+    label: view
+    weight: 2
+    settings:
+      submit_text: 'Select entities'
+      auto_select: false
+      view: media_entity_browser
+      view_display: media_browser_all

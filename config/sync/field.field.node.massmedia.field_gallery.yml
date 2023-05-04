@@ -1,0 +1,29 @@
+uuid: 63ff4d6f-4b37-427a-8b16-b8f67713ff81
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gallery
+    - node.type.massmedia
+    - node.type.photo
+id: node.massmedia.field_gallery
+field_name: field_gallery
+entity_type: node
+bundle: massmedia
+label: Фотогалерея
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      photo: photo
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

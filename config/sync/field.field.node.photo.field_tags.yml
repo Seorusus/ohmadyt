@@ -1,0 +1,29 @@
+uuid: 99c5159f-2576-4fff-a667-e81e5f09d660
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.photo
+    - taxonomy.vocabulary.tags
+id: node.photo.field_tags
+field_name: field_tags
+entity_type: node
+bundle: photo
+label: Теґи
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

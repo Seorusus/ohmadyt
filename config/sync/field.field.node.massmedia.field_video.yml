@@ -1,0 +1,29 @@
+uuid: 870387d2-6313-46d1-ae69-dfcb646cff58
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video
+    - node.type.massmedia
+    - node.type.video
+id: node.massmedia.field_video
+field_name: field_video
+entity_type: node
+bundle: massmedia
+label: Відео
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

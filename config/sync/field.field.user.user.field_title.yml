@@ -1,0 +1,20 @@
+uuid: f8c50160-9996-4661-99a8-3b496ed52560
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_title
+  module:
+    - user
+id: user.user.field_title
+field_name: field_title
+entity_type: user
+bundle: user
+label: ПІБ
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

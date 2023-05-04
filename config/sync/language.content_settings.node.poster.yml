@@ -1,0 +1,11 @@
+uuid: c38b8f40-0f6e-4704-83d0-b9296b27878f
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.poster
+id: node.poster
+target_entity_type_id: node
+target_bundle: poster
+default_langcode: site_default
+language_alterable: false

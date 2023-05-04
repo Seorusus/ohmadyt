@@ -1,0 +1,17 @@
+uuid: 87b61e79-52b3-4230-8dca-f8c8d9396a7b
+langcode: uk
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Матеріали ЗМІ'
+type: massmedia
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

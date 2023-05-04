@@ -1,0 +1,21 @@
+uuid: 0cd0a3ef-97b8-455a-9029-204a7800c093
+langcode: uk
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_lead
+field_name: field_lead
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

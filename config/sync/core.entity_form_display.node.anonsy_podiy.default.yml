@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.anonsy_podiy.body
-    - field.field.node.anonsy_podiy.field_acreditation_date
     - field.field.node.anonsy_podiy.field_address
     - field.field.node.anonsy_podiy.field_date_interval
     - field.field.node.anonsy_podiy.field_domain_all_affiliates
@@ -13,7 +12,6 @@ dependencies:
     - node.type.anonsy_podiy
   module:
     - address
-    - datetime
     - media_library
     - path
     - smart_date
@@ -36,12 +34,6 @@ content:
   created:
     type: datetime_timestamp
     weight: 9
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_acreditation_date:
-    type: datetime_default
-    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }

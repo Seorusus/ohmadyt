@@ -1,0 +1,29 @@
+uuid: b60db839-a4d1-4112-98ea-850ebe46b1b4
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gallery
+    - node.type.news
+    - node.type.photo
+id: node.news.field_gallery
+field_name: field_gallery
+entity_type: node
+bundle: news
+label: Фотогалерея
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      photo: photo
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 53577e15-2082-44f3-8f99-c886ece0e6f0
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_biography
+  module:
+    - text
+    - user
+id: user.user.field_biography
+field_name: field_biography
+entity_type: user
+bundle: user
+label: Біографія
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

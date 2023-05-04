@@ -1,0 +1,18 @@
+uuid: 7cfb0cb7-aac2-4ac2-8639-aed603676ccf
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.photo
+id: node.photo.title
+field_name: title
+entity_type: node
+bundle: photo
+label: Заголовок
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

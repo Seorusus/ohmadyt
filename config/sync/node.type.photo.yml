@@ -1,0 +1,17 @@
+uuid: 41aa56ee-a673-4151-ad90-36f51be344a0
+langcode: uk
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Фото
+type: photo
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

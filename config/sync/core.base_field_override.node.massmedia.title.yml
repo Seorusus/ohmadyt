@@ -1,0 +1,18 @@
+uuid: cbac3e7a-2990-4a1a-bedf-f87f353555d3
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.massmedia
+id: node.massmedia.title
+field_name: title
+entity_type: node
+bundle: massmedia
+label: Заголовок
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

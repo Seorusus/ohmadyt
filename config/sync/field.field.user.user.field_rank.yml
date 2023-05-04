@@ -1,0 +1,20 @@
+uuid: d6de1c2e-df5f-4c19-a34c-dae761e93733
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_rank
+  module:
+    - user
+id: user.user.field_rank
+field_name: field_rank
+entity_type: user
+bundle: user
+label: 'Кваліфікаційна категорія'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

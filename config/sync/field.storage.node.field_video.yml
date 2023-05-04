@@ -1,0 +1,19 @@
+uuid: c6b8a961-9477-42f8-af04-68a1b97e366b
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_video
+field_name: field_video
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
