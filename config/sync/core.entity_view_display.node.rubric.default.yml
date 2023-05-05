@@ -1,0 +1,50 @@
+uuid: 2c099fe8-7ad3-46b1-9ada-11c16934b674
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.node.rubric.body
+    - field.field.node.rubric.field_children
+    - field.field.node.rubric.field_domain_all_affiliates
+    - field.field.node.rubric.field_layout
+    - node.type.rubric
+  module:
+    - options
+    - text
+    - user
+id: node.rubric.default
+targetEntityType: node
+bundle: rubric
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_children:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_layout:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_domain_all_affiliates: true
+  langcode: true
+  search_api_excerpt: true

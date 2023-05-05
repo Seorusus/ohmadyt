@@ -1,0 +1,17 @@
+uuid: fe9b89b6-86b8-4f7b-9546-c7f436037325
+langcode: uk
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Рубріка
+type: rubric
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

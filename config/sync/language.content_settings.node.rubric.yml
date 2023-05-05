@@ -1,0 +1,11 @@
+uuid: 25daa9b9-f948-458e-a6fd-d9f5523ba5f2
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.rubric
+id: node.rubric
+target_entity_type_id: node
+target_bundle: rubric
+default_langcode: site_default
+language_alterable: false

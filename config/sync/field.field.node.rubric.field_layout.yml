@@ -1,0 +1,23 @@
+uuid: 1eb6f1d4-02b7-4c15-a61c-3524c3f35d86
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_layout
+    - node.type.rubric
+  module:
+    - options
+id: node.rubric.field_layout
+field_name: field_layout
+entity_type: node
+bundle: rubric
+label: 'Відображення дочірніх'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: list
+default_value_callback: ''
+settings: {  }
+field_type: list_string

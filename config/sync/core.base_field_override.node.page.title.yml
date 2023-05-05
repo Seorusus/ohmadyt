@@ -1,0 +1,18 @@
+uuid: 8946e1c7-c7dd-446e-a230-71e8ecf2c510
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.page
+id: node.page.title
+field_name: title
+entity_type: node
+bundle: page
+label: Заголовок
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

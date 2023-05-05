@@ -6,6 +6,9 @@ dependencies:
     - core.entity_view_mode.node.content_browser
     - field.field.node.page.body
     - field.field.node.page.field_domain_all_affiliates
+    - field.field.node.page.field_files
+    - field.field.node.page.field_lead
+    - field.field.node.page.field_media_image
     - node.type.page
   module:
     - text
@@ -30,5 +33,8 @@ content:
     region: content
 hidden:
   field_domain_all_affiliates: true
+  field_files: true
+  field_lead: true
+  field_media_image: true
   langcode: true
   search_api_excerpt: true

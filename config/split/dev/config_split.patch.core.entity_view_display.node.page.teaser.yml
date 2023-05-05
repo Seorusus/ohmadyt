@@ -4,6 +4,4 @@ adding:
       - field.field.node.page.field_domain_access
   hidden:
     field_domain_access: true
-removing:
-  hidden:
-    search_api_excerpt: true
+removing: {  }

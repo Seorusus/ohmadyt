@@ -1,0 +1,18 @@
+uuid: 04b98597-1eba-46d9-8cda-bb9ce5096f36
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.statistics
+id: node.statistics.title
+field_name: title
+entity_type: node
+bundle: statistics
+label: Заголовок
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

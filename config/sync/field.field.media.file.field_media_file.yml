@@ -1,0 +1,27 @@
+uuid: 6de8849d-c908-4ec6-8a15-16b482a2dfa2
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_file
+    - media.type.file
+  module:
+    - file
+id: media.file.field_media_file
+field_name: field_media_file
+entity_type: media
+bundle: file
+label: Файл
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: field/file
+  file_extensions: 'txt pdf doc docx xls xlsx ppt pptx'
+  max_filesize: 5MB
+  description_field: false
+field_type: file

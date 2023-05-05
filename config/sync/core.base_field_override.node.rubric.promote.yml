@@ -1,0 +1,22 @@
+uuid: cd05cd4c-697e-4d9a-8097-58a7fb25b93a
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.rubric
+id: node.rubric.promote
+field_name: promote
+entity_type: node
+bundle: rubric
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
