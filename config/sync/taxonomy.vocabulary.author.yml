@@ -5,4 +5,4 @@ dependencies: {  }
 name: 'Видавник документа'
 vid: author
 description: ''
-weight: 0
+weight: -8

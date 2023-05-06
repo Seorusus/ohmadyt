@@ -1,0 +1,29 @@
+uuid: 4cc9d67d-0216-4eb3-a1a4-2eca097902f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_photos
+    - media.type.photo
+    - node.type.anonsy_podiy_platform
+id: node.anonsy_podiy_platform.field_photos
+field_name: field_photos
+entity_type: node
+bundle: anonsy_podiy_platform
+label: Фото
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      photo: photo
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

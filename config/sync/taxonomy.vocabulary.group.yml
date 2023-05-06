@@ -5,4 +5,4 @@ dependencies: {  }
 name: 'Група (персон)'
 vid: group
 description: ''
-weight: 0
+weight: -5

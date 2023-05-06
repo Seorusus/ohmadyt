@@ -5,4 +5,4 @@ dependencies: {  }
 name: Видання
 vid: publish
 description: ''
-weight: 0
+weight: -7

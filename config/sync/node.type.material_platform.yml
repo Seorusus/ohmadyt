@@ -1,0 +1,17 @@
+uuid: b325fade-9ca1-49c2-9c5b-e83806d59c93
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Видання
+type: material_platform
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

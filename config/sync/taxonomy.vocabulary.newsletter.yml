@@ -5,4 +5,4 @@ dependencies: {  }
 name: 'Інформаційний бюлетень'
 vid: newsletter
 description: ''
-weight: 0
+weight: -9

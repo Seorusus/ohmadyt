@@ -1,0 +1,26 @@
+uuid: 3d8106a6-e397-4702-b0b5-d1cf8be7416c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.domain_source
+  module:
+    - domain_entity
+    - menu_link_content
+third_party_settings:
+  domain_entity:
+    exclude_routes: {  }
+id: menu_link_content.menu_link_content.domain_source
+field_name: domain_source
+entity_type: menu_link_content
+bundle: menu_link_content
+label: 'Domain Source'
+description: 'Select the canonical domain for this entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: domain_entity_field_default_domains
+settings:
+  handler: 'default:domain'
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: deb187f5-0380-4084-8a30-d9ff86c1c60d
+langcode: uk
+status: true
+dependencies: {  }
+name: 'Видавництво Платформа'
+vid: publishing_platform
+description: ''
+weight: 0

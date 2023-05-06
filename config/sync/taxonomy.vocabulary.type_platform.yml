@@ -1,0 +1,8 @@
+uuid: 228f182b-249b-4323-83ed-4c6c26fc6c93
+langcode: uk
+status: true
+dependencies: {  }
+name: 'Тип Платформа'
+vid: type_platform
+description: ''
+weight: 3

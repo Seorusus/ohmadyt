@@ -20,6 +20,7 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
+  default_content_deploy: 0
   domain_access: 0
   domain_config: 0
   domain_config_ui: 0
@@ -39,6 +40,7 @@ module:
   file: 0
   filter: 0
   gin_toolbar: 0
+  hal: 0
   help: 0
   history: 0
   image: 0
@@ -62,6 +64,7 @@ module:
   search_api: 0
   search_api_block: 0
   search_api_page: 0
+  serialization: 0
   shortcut: 0
   smart_date: 0
   standard: 0
