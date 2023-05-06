@@ -15,10 +15,12 @@ dependencies:
     - field.field.user.user.field_experience
     - field.field.user.user.field_group
     - field.field.user.user.field_lead
+    - field.field.user.user.field_name
     - field.field.user.user.field_origin_id
     - field.field.user.user.field_phone
     - field.field.user.user.field_rank
-    - field.field.user.user.field_title
+    - field.field.user.user.field_second_name
+    - field.field.user.user.field_surname
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -54,10 +56,12 @@ hidden:
   field_experience: true
   field_group: true
   field_lead: true
+  field_name: true
   field_origin_id: true
   field_phone: true
   field_rank: true
-  field_title: true
+  field_second_name: true
+  field_surname: true
   langcode: true
   member_for: true
   search_api_excerpt: true

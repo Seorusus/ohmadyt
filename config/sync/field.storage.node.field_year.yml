@@ -1,12 +1,12 @@
-uuid: d498dcfc-8fa4-4aa0-8f56-56dd0c6e2941
-langcode: uk
+uuid: f1155e27-60b7-49f7-af65-f564a7e26d6c
+langcode: en
 status: true
 dependencies:
   module:
-    - user
-id: user.field_title
-field_name: field_title
-entity_type: user
+    - node
+id: node.field_year
+field_name: field_year
+entity_type: node
 type: string
 settings:
   max_length: 255

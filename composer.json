@@ -44,7 +44,8 @@
         "drupal/content_browser": "^1.1",
         "drupal/libraries": "^4.0",
         "drupal/telephone_formatter": "^1.2",
-        "drupal/email_formatter": "^2.0@RC"
+        "drupal/email_formatter": "^2.0@RC",
+        "drupal/default_content_deploy": "^2.0"
     },
     "require-dev": {
         "drupal/core-dev": "^10"

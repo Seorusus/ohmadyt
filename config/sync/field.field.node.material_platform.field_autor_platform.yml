@@ -1,0 +1,29 @@
+uuid: 4bb14ecc-9375-49a6-b16f-8713fb6e63b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autor_platform
+    - node.type.material_platform
+    - taxonomy.vocabulary.autor_platform
+id: node.material_platform.field_autor_platform
+field_name: field_autor_platform
+entity_type: node
+bundle: material_platform
+label: Автор
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      autor_platform: autor_platform
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -5,4 +5,4 @@ dependencies: {  }
 name: Відповідальний
 vid: responsible
 description: ''
-weight: 0
+weight: -6

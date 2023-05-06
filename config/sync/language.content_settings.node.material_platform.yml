@@ -1,0 +1,11 @@
+uuid: 82e6f683-4f0d-4102-a391-716e1cf668a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.material_platform
+id: node.material_platform
+target_entity_type_id: node
+target_bundle: material_platform
+default_langcode: site_default
+language_alterable: false

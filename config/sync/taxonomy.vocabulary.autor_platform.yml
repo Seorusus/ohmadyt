@@ -1,0 +1,8 @@
+uuid: 3e2aa5c7-acd0-4240-8529-425561c403ac
+langcode: uk
+status: true
+dependencies: {  }
+name: 'Автор Платформа'
+vid: autor_platform
+description: ''
+weight: -1

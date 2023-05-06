@@ -1,0 +1,8 @@
+uuid: 0b54a0a7-6188-4d36-b390-5ef41062b622
+langcode: uk
+status: true
+dependencies: {  }
+name: 'Tags Платформа'
+vid: tags_platform
+description: ''
+weight: -2

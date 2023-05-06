@@ -5,6 +5,9 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_domain_all_affiliates
+    - field.field.node.page.field_files
+    - field.field.node.page.field_lead
+    - field.field.node.page.field_media_image
     - node.type.page
   module:
     - text
@@ -22,6 +25,29 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 100
+    region: content
+  field_files:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_lead:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_media_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
     region: content
   links:
     weight: 101

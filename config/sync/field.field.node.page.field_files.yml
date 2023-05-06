@@ -1,0 +1,29 @@
+uuid: bbf3f3f7-14df-49f5-8d22-54e44561d3b4
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_files
+    - media.type.file
+    - node.type.page
+id: node.page.field_files
+field_name: field_files
+entity_type: node
+bundle: page
+label: Файли
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: document
+field_type: entity_reference

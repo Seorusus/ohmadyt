@@ -1,0 +1,29 @@
+uuid: 710ad9a5-cd7d-4632-9cc3-d426addc9214
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organizer
+    - node.type.webinar
+    - taxonomy.vocabulary.organizer_platform
+id: node.webinar.field_organizer
+field_name: field_organizer
+entity_type: node
+bundle: webinar
+label: Організатори
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      organizer_platform: organizer_platform
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

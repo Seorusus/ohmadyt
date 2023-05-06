@@ -1,0 +1,8 @@
+uuid: b297f692-38ab-411c-a48e-ae9131784a9b
+langcode: uk
+status: true
+dependencies: {  }
+id: main-nav-ohmatdyt
+label: 'Основна навігація'
+description: 'Основна навігація Охматдiт'
+locked: false

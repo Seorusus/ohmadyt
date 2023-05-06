@@ -59,3 +59,4 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 }
 
 $settings['config_sync_directory'] = '../config/sync';
+$settings['default_content_deploy_content_directory'] = '../config/sync/content';

@@ -5,7 +5,7 @@ adding:
   content:
     field_domain_access:
       type: options_buttons
-      weight: 40
+      weight: 11
       region: content
       settings: {  }
       third_party_settings: {  }
