@@ -1,0 +1,23 @@
+uuid: 97959a48-2daf-422f-be5e-e78eade45038
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_online
+    - node.type.video_platform
+id: node.video_platform.field_online
+field_name: field_online
+entity_type: node
+bundle: video_platform
+label: 'Онлайн трансляція'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

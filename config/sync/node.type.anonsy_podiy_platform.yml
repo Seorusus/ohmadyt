@@ -8,7 +8,7 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: 'Анонси подій'
+name: 'Анонси подій Платформа'
 type: anonsy_podiy_platform
 description: Платформа
 help: ''

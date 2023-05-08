@@ -1,0 +1,17 @@
+uuid: 78c91f4b-bfce-438f-811f-9fda99171f64
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Відео Платформа'
+type: video_platform
+description: Платформа
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,15 @@
+adding:
+  dependencies:
+    config:
+      - field.field.node.page_platform.domain_access
+      - field.field.node.page_platform.field_domain_access
+  content:
+    domain_access:
+      type: options_buttons
+      weight: 26
+      region: content
+      settings: {  }
+      third_party_settings: {  }
+  hidden:
+    field_domain_access: true
+removing: {  }
