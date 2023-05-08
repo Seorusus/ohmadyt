@@ -1,0 +1,14 @@
+uuid: 76f8b2b4-0030-4639-8231-1ab3625ef580
+langcode: uk
+status: true
+dependencies:
+  config:
+    - user.role.content_editor_platform
+  module:
+    - user
+id: user_add_role_action.content_editor_platform
+label: 'Додати роль Редактор Платформа до вибраних користувачів'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: content_editor_platform

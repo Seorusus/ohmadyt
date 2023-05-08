@@ -1,0 +1,21 @@
+uuid: d5dff3fd-8c23-4a03-9cc0-5e40189f7ff5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.domain_access
+    - taxonomy.vocabulary.responsible
+id: taxonomy_term.responsible.domain_access
+field_name: domain_access
+entity_type: taxonomy_term
+bundle: responsible
+label: 'Domain Access'
+description: 'Select the affiliate domain(s). If nothing was selected: Affiliated to all domains.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: domain_entity_field_default_domains
+settings:
+  handler: 'default:domain'
+  handler_settings: {  }
+field_type: entity_reference

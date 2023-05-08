@@ -1,0 +1,9 @@
+uuid: f8e5b269-f03c-4b15-ba34-352086e3617e
+langcode: uk
+status: true
+dependencies: {  }
+id: authorized_platform_user
+label: 'Авторизований користувач Платформи'
+weight: -4
+is_admin: null
+permissions: {  }

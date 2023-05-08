@@ -1,8 +1,15 @@
 adding:
   dependencies:
     config:
+      - field.field.node.page.domain_access
       - field.field.node.page.field_domain_access
   content:
+    domain_access:
+      type: options_buttons
+      weight: 26
+      region: content
+      settings: {  }
+      third_party_settings: {  }
     field_domain_access:
       type: options_buttons
       weight: 12

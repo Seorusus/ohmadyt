@@ -42,6 +42,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  domain_access:
+    settings: {  }
+    third_party_settings: {  }
   field_date_iso:
     type: datetime_default
     weight: 4
