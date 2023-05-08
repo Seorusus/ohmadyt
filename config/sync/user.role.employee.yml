@@ -1,0 +1,9 @@
+uuid: 3b36f7d3-bc0c-45cf-ba96-8feafb6ff562
+langcode: uk
+status: true
+dependencies: {  }
+id: employee
+label: Співробітник
+weight: -8
+is_admin: null
+permissions: {  }

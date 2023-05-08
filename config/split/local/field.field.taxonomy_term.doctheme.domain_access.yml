@@ -1,0 +1,21 @@
+uuid: b909a31b-c58b-484a-935a-655612c2ecc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.domain_access
+    - taxonomy.vocabulary.doctheme
+id: taxonomy_term.doctheme.domain_access
+field_name: domain_access
+entity_type: taxonomy_term
+bundle: doctheme
+label: 'Domain Access'
+description: 'Select the affiliate domain(s). If nothing was selected: Affiliated to all domains.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: domain_entity_field_default_domains
+settings:
+  handler: 'default:domain'
+  handler_settings: {  }
+field_type: entity_reference

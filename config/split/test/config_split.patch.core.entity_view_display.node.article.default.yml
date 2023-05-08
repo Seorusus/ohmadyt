@@ -1,9 +1,0 @@
-adding:
-  dependencies:
-    config:
-      - field.field.node.article.field_domain_access
-  hidden:
-    field_domain_access: true
-removing:
-  hidden:
-    search_api_excerpt: true

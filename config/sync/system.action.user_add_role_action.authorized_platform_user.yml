@@ -1,0 +1,14 @@
+uuid: f974c55a-ff6e-40ab-a7da-9815aad9e425
+langcode: uk
+status: true
+dependencies:
+  config:
+    - user.role.authorized_platform_user
+  module:
+    - user
+id: user_add_role_action.authorized_platform_user
+label: 'Додати роль Авторизований користувач Платформи до вибраних користувачів'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: authorized_platform_user

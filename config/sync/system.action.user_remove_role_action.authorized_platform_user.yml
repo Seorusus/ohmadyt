@@ -1,0 +1,14 @@
+uuid: cc275c5c-2487-424a-89e3-54ccc6447dc5
+langcode: uk
+status: true
+dependencies:
+  config:
+    - user.role.authorized_platform_user
+  module:
+    - user
+id: user_remove_role_action.authorized_platform_user
+label: 'Вилучити роль Авторизований користувач Платформи у вибраних користувачів'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: authorized_platform_user

@@ -1,0 +1,9 @@
+uuid: 38550ad2-e8a7-4f48-90cf-0ab669886776
+langcode: uk
+status: true
+dependencies: {  }
+id: content_editor_platform
+label: 'Редактор Платформа'
+weight: -6
+is_admin: null
+permissions: {  }

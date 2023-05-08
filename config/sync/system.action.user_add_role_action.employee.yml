@@ -1,0 +1,14 @@
+uuid: a7e97c85-30f8-4aa7-aeeb-fcf357ccccc6
+langcode: uk
+status: true
+dependencies:
+  config:
+    - user.role.employee
+  module:
+    - user
+id: user_add_role_action.employee
+label: 'Додати роль Співробітник до вибраних користувачів'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: employee

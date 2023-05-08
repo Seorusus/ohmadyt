@@ -34,6 +34,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  domain_access:
+    settings: {  }
+    third_party_settings: {  }
   field_children:
     type: inline_entity_form_complex
     weight: 4

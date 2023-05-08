@@ -1,0 +1,14 @@
+uuid: be91e7e3-e5df-41e2-bf4d-786d9cede3a1
+langcode: uk
+status: true
+dependencies:
+  config:
+    - user.role.manager
+  module:
+    - user
+id: user_remove_role_action.manager
+label: 'Вилучити роль Керівник у вибраних користувачів'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: manager

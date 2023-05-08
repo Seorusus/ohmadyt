@@ -1,0 +1,21 @@
+uuid: 5469c394-0d1d-4f01-9aca-d6f624178dc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.domain_access
+    - taxonomy.vocabulary.tags_platform
+id: taxonomy_term.tags_platform.domain_access
+field_name: domain_access
+entity_type: taxonomy_term
+bundle: tags_platform
+label: 'Domain Access'
+description: 'Select the affiliate domain(s). If nothing was selected: Affiliated to all domains.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: domain_entity_field_default_domains
+settings:
+  handler: 'default:domain'
+  handler_settings: {  }
+field_type: entity_reference

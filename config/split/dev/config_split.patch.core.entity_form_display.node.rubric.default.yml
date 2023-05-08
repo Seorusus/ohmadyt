@@ -1,8 +1,15 @@
 adding:
   dependencies:
     config:
+      - field.field.node.rubric.domain_access
       - field.field.node.rubric.field_domain_access
   content:
+    domain_access:
+      type: options_buttons
+      weight: 26
+      region: content
+      settings: {  }
+      third_party_settings: {  }
     field_domain_access:
       type: entity_reference_autocomplete
       weight: 1
