@@ -15,9 +15,46 @@ dependencies:
     - field.field.node.material_platform.field_year
     - node.type.material_platform
   module:
+    - field_group
     - media_library
     - path
     - text
+third_party_settings:
+  field_group:
+    group_avtor:
+      children:
+        - field_autor_platform
+        - field_subject
+        - field_publishing
+        - field_year
+      label: 'Автор | Тематика | Рік видання | Видавництво'
+      region: content
+      parent_name: ''
+      weight: 6
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_media:
+      children:
+        - field_media_image
+        - field_files
+      label: Медiа
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
 id: node.material_platform.default
 targetEntityType: node
 bundle: material_platform
@@ -35,63 +72,63 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 12
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_autor_platform:
     type: entity_reference_autocomplete_tags
-    weight: 3
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
-      match_limit: 10
+      match_limit: 1
       size: 60
-      placeholder: ''
+      placeholder: 'Починайте писати...'
     third_party_settings: {  }
   field_files:
-    type: media_library_widget
-    weight: 6
-    region: content
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
-  field_media_image:
     type: media_library_widget
     weight: 5
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-  field_publishing:
-    type: entity_reference_autocomplete_tags
-    weight: 8
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_subject:
-    type: entity_reference_autocomplete_tags
+  field_media_image:
+    type: media_library_widget
     weight: 4
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
-  field_tags:
+  field_publishing:
     type: entity_reference_autocomplete_tags
-    weight: 9
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
-      match_limit: 10
+      match_limit: 1
       size: 60
-      placeholder: ''
+      placeholder: 'Починайте писати...'
+    third_party_settings: {  }
+  field_subject:
+    type: entity_reference_autocomplete_tags
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 1
+      size: 60
+      placeholder: 'Починайте писати...'
+    third_party_settings: {  }
+  field_tags:
+    type: entity_reference_autocomplete_tags
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 1
+      size: 60
+      placeholder: 'Починайте писати...'
     third_party_settings: {  }
   field_type:
     type: entity_reference_autocomplete_tags
@@ -99,9 +136,9 @@ content:
     region: content
     settings:
       match_operator: CONTAINS
-      match_limit: 10
+      match_limit: 1
       size: 60
-      placeholder: ''
+      placeholder: 'Починайте писати...'
     third_party_settings: {  }
   field_year:
     type: string_textfield
@@ -113,34 +150,34 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 10
+    weight: 8
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 15
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 13
+    weight: 11
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 16
+    weight: 14
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 14
+    weight: 12
     region: content
     settings:
       display_label: true
@@ -155,7 +192,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 11
+    weight: 9
     region: content
     settings:
       match_operator: CONTAINS

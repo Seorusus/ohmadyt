@@ -1,0 +1,11 @@
+uuid: 12cc83b8-c1cc-4c1b-a2eb-9b2e9e698c1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.video_platform
+id: node.video_platform
+target_entity_type_id: node
+target_bundle: video_platform
+default_langcode: site_default
+language_alterable: false

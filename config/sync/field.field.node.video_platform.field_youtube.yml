@@ -1,0 +1,29 @@
+uuid: 8ebd3363-734d-4898-8b43-d3bd4efb04c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_youtube
+    - media.type.remote_video
+    - node.type.video_platform
+id: node.video_platform.field_youtube
+field_name: field_youtube
+entity_type: node
+bundle: video_platform
+label: Youtube
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      remote_video: remote_video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
