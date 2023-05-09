@@ -1,18 +1,18 @@
-uuid: fdedd905-958e-4b8c-a15d-a3422c72a4f9
+uuid: 50c7e4a3-27b2-44e0-b44c-f1a98d207ebe
 langcode: uk
-status: true
+status: false
 dependencies:
   config:
     - system.menu.main
   module:
     - system
   theme:
-    - bootstrap5
+    - ohmatdyt
 _core:
   default_config_hash: Fm7sDs2U1u99MaVOZEZqa-QOJrrUiQMWJb1jMozYO48
-id: bootstrap5_main_navigation
-theme: bootstrap5
-region: nav_main
+id: ohmatdyt_main_navigation
+theme: ohmatdyt
+region: sidebar_first
 weight: 0
 provider: null
 plugin: 'system_menu_block:main'

@@ -1,15 +1,15 @@
-uuid: fc243597-7b4f-4ae0-9b40-acb3dec9c80d
+uuid: 9ac15f53-d67e-4588-a3dd-f7f4d907c3b5
 langcode: uk
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bootstrap5
+    - ohmatdyt
 _core:
   default_config_hash: VShtwe72J2j41BJzApoNbs8l554EpngM5RTObxM7yiw
-id: bootstrap5_breadcrumbs
-theme: bootstrap5
+id: ohmatdyt_breadcrumbs
+theme: ohmatdyt
 region: breadcrumb
 weight: 0
 provider: null

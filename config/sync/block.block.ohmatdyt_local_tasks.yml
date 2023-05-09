@@ -1,13 +1,13 @@
-uuid: 30fb2882-dd39-484f-9b1c-5ede27c2372e
+uuid: 10e33286-a97a-45e9-ad80-e454fa0ed3d2
 langcode: uk
 status: true
 dependencies:
   theme:
-    - bootstrap5
+    - ohmatdyt
 _core:
   default_config_hash: yX9o6NcntZnXRDfbJoHY1pJwuXlumW44m5AMs347NN4
-id: bootstrap5_local_tasks
-theme: bootstrap5
+id: ohmatdyt_local_tasks
+theme: ohmatdyt
 region: content
 weight: -4
 provider: null

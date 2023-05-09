@@ -1,15 +1,15 @@
-uuid: 2746c494-32fb-46d8-b657-eeb6ee631d4b
+uuid: 17f21da8-4f57-4a77-858f-f4c9ce94bade
 langcode: uk
 status: true
 dependencies:
   theme:
-    - gin
+    - ohmatdyt
 _core:
-  default_config_hash: OQ9aJ-4qVwK1x00o9EOYK4eFDjQr_HLpbPiJaPSVZiQ
-id: gin_local_actions
-theme: gin
+  default_config_hash: MBqG1B5mr5-fPSCDyTR6z2zVTRxZ10XeS_pAw6C7za4
+id: ohmatdyt_local_actions
+theme: ohmatdyt
 region: content
-weight: -10
+weight: -2
 provider: null
 plugin: local_actions_block
 settings:

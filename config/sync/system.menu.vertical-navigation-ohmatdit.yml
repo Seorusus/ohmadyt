@@ -1,0 +1,8 @@
+uuid: 784407c4-0fa5-4e28-8206-7a6c0beb0275
+langcode: uk
+status: true
+dependencies: {  }
+id: vertical-navigation-ohmatdit
+label: 'Вертикальна навiгацiя Охматдiт'
+description: ''
+locked: false

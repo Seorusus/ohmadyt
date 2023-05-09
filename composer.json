@@ -46,7 +46,10 @@
         "drupal/telephone_formatter": "^1.2",
         "drupal/email_formatter": "^2.0@RC",
         "drupal/default_content_deploy": "^2.0",
-        "drupal/domain_login_restrict": "^1.2"
+        "drupal/domain_login_restrict": "^1.2",
+        "drupal/simple_menu_icons": "3.0.x-dev@dev",
+        "drupal/menu_item_extras": "^2.19",
+        "drupal/svg_image_field": "^2.2"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
@@ -84,7 +87,12 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "enable-patching": true
+        "enable-patching": true,
+			"patches": {
+				"drupal/simple_menu_icons": {
+					"Error: Undefined constant FILE_STATUS_PERMANENT in simple_menu_icons_menu_link_content_form_submit()": "https://www.drupal.org/files/issues/2023-02-07/3328904-5.patch"
+				}
+			}
     },
     "autoload": {
         "classmap": ["upstream-configuration/scripts/ComposerScripts.php"]

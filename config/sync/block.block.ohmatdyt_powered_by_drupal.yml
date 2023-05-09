@@ -1,15 +1,15 @@
-uuid: c8f3f25d-6012-408e-b77c-f3082982a4f4
+uuid: f9d2a53c-a8d1-42d9-b901-68fec23eb4ad
 langcode: uk
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bootstrap5
+    - ohmatdyt
 _core:
   default_config_hash: 2_xxaOb8b_0AUgYFdJLxIBDDwufyh6YozhGfBd97p38
-id: bootstrap5_powered_by_drupal
-theme: bootstrap5
+id: ohmatdyt_powered_by_drupal
+theme: ohmatdyt
 region: footer
 weight: 0
 provider: null

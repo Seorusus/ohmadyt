@@ -1,15 +1,15 @@
-uuid: b8d11e18-bda3-40dc-a3ab-696b4f04e491
+uuid: e0bf754f-0e27-4c45-9d9f-354a931d8541
 langcode: uk
 status: true
 dependencies:
   theme:
-    - gin
+    - ohmatdyt
 _core:
-  default_config_hash: HLQY2xgby8K3vN_98hiOSasOhm9pdCsH234-s0duJ8Q
-id: gin_page_title
-theme: gin
-region: header
-weight: -30
+  default_config_hash: qYppfxaWSy6BwGNKdMch1PeUA24PlRTt39jQft6A6Kg
+id: ohmatdyt_page_title
+theme: ohmatdyt
+region: content
+weight: -6
 provider: null
 plugin: page_title_block
 settings:

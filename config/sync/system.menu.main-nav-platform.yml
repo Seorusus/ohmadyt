@@ -3,6 +3,6 @@ langcode: uk
 status: true
 dependencies: {  }
 id: main-nav-platform
-label: 'Основна навігація Платформи'
+label: 'Навігація Платформи'
 description: 'Основна навігація Платформи'
 locked: false

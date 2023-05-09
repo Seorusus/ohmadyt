@@ -1,4 +1,4 @@
-uuid: cb65aeeb-8653-4b92-9c68-c1c0b10e6696
+uuid: ae46ba35-c1f6-420c-b31a-5f545f6159ea
 langcode: uk
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - system
   theme:
-    - bootstrap5
+    - ohmatdyt
 _core:
   default_config_hash: xBR1vgpnqSUW4pA2LC3rfhu27FQUox9zZEYsdAFM2Sg
-id: bootstrap5_footer
-theme: bootstrap5
+id: ohmatdyt_footer
+theme: ohmatdyt
 region: footer
 weight: -6
 provider: null
