@@ -1,0 +1,47 @@
+uuid: 2a6d25d8-0781-480f-a232-f7f03bb7583d
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.vertical-navigation-ohmatdit.field_svg_icon
+    - system.menu.vertical-navigation-ohmatdit
+  module:
+    - link
+    - menu_item_extras
+    - svg_image_field
+id: menu_link_content.vertical-navigation-ohmatdit.default
+targetEntityType: menu_link_content
+bundle: vertical-navigation-ohmatdit
+mode: default
+content:
+  field_svg_icon:
+    type: svg_image_field_widget
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_max_width: 300
+      preview_image_max_height: 300
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  view_mode:
+    type: menu_item_extras_view_mode_selector_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

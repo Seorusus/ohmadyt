@@ -1,0 +1,25 @@
+uuid: 6e5e1318-e3e3-4e36-bc79-4b84da6f5817
+langcode: uk
+status: true
+dependencies:
+  config:
+    - system.menu.vertical-navigation-ohmatdit
+  module:
+    - system
+  theme:
+    - bootstrap5
+id: vertikalnanavigaciyaokhmatdit
+theme: bootstrap5
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'system_menu_block:vertical-navigation-ohmatdit'
+settings:
+  id: 'system_menu_block:vertical-navigation-ohmatdit'
+  label: 'Вертикальна навiгацiя Охматдiт'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,133 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/ohmatdyt.docksal\/uk\/admin\/structure\/menu\/item\/14\/edit?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/menu_link_content\/vertical-navigation-ohmatdit"
+        },
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/menu_link_content\/vertical-navigation-ohmatdit\/field_svg_icon": [
+            {
+                "href": "http:\/\/ohmatdyt.docksal\/sites\/default\/files\/2023-05\/calendar.svg"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 14
+        }
+    ],
+    "uuid": [
+        {
+            "value": "b950bf9a-b2ba-4e32-8a7d-960fdd2a6c13"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "uk",
+            "lang": "uk"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "vertical-navigation-ohmatdit"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2023-05-09T09:59:35+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "enabled": [
+        {
+            "value": true
+        }
+    ],
+    "title": [
+        {
+            "value": "\u041a\u0430\u043b\u0435\u043d\u0434\u0430\u0440 \u043f\u043e\u0434\u0456\u0439",
+            "lang": "uk"
+        }
+    ],
+    "menu_name": [
+        {
+            "value": "vertical-navigation-ohmatdit"
+        }
+    ],
+    "link": [
+        {
+            "uri": "internal:\/calendar-created",
+            "title": "",
+            "options": {
+                "menu_icon": {
+                    "fid": false
+                }
+            }
+        }
+    ],
+    "external": [
+        {
+            "value": false
+        }
+    ],
+    "rediscover": [
+        {
+            "value": true
+        }
+    ],
+    "weight": [
+        {
+            "value": -48
+        }
+    ],
+    "expanded": [
+        {
+            "value": false
+        }
+    ],
+    "changed": [
+        {
+            "value": "2023-05-09T19:11:30+00:00",
+            "lang": "uk",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "view_mode": [
+        {
+            "value": "default",
+            "lang": "uk"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/menu_link_content\/vertical-navigation-ohmatdit\/field_svg_icon": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/ohmatdyt.docksal\/sites\/default\/files\/2023-05\/calendar.svg"
+                    },
+                    "type": {
+                        "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "27a230f1-0bed-4d75-b065-8d5bcd0968bb"
+                    }
+                ]
+            }
+        ]
+    }
+}

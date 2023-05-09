@@ -1,0 +1,38 @@
+uuid: 8d167316-a352-4c6e-96b7-16d4b116090b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.rubric_platform.body
+    - field.field.node.rubric_platform.field_children_platform
+    - field.field.node.rubric_platform.field_domain_all_affiliates
+    - field.field.node.rubric_platform.field_layout
+    - node.type.rubric_platform
+  module:
+    - text
+    - user
+id: node.rubric_platform.teaser
+targetEntityType: node
+bundle: rubric_platform
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_children_platform: true
+  field_domain_all_affiliates: true
+  field_layout: true
+  langcode: true
+  search_api_excerpt: true

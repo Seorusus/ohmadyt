@@ -1,0 +1,22 @@
+uuid: f9d2a53c-a8d1-42d9-b901-68fec23eb4ad
+langcode: uk
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ohmatdyt
+_core:
+  default_config_hash: 2_xxaOb8b_0AUgYFdJLxIBDDwufyh6YozhGfBd97p38
+id: ohmatdyt_powered_by_drupal
+theme: ohmatdyt
+region: footer
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Працює на Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

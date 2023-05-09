@@ -1,0 +1,34 @@
+uuid: 42c4779d-7ce8-488f-9fc2-5e899afa72f4
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_svg_icon
+    - system.menu.vertical-navigation-ohmatdit
+  module:
+    - svg_image_field
+id: menu_link_content.vertical-navigation-ohmatdit.field_svg_icon
+field_name: field_svg_icon
+entity_type: menu_link_content
+bundle: vertical-navigation-ohmatdit
+label: 'SVG icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: svg
+  max_filesize: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+field_type: svg_image_field

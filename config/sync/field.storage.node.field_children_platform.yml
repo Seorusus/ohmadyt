@@ -1,0 +1,19 @@
+uuid: 8783bc47-ccfb-444c-a593-98ec9c57f59e
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_children_platform
+field_name: field_children_platform
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

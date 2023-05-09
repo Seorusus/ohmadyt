@@ -1,0 +1,37 @@
+uuid: 7f739175-e03f-45ed-b859-0ca7c1137453
+langcode: uk
+status: true
+dependencies:
+  config:
+    - system.menu.child-activities-okhmatdyt
+  module:
+    - domain
+    - system
+  theme:
+    - ohmatdyt
+id: dochernezakhodiokhmatdit
+theme: ohmatdyt
+region: content
+weight: -7
+provider: null
+plugin: 'system_menu_block:child-activities-okhmatdyt'
+settings:
+  id: 'system_menu_block:child-activities-okhmatdyt'
+  label: 'Дочерне Заходи Охматдiт'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  domain:
+    id: domain
+    negate: false
+    context_mapping:
+      domain: '@domain.current_domain_context:domain'
+    domains:
+      ohmatdyt: ohmatdyt
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/rubric/zahody\r\n/rubric/plany-osnovnyh-organizaciynyh-zahodiv\r\n/rubric/grafiky-zahodiv-dlya-ditey\r\n/rubric/zaplanovani-naukovi-forumy"

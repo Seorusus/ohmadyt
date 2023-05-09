@@ -5,6 +5,13 @@ dependencies:
   config:
     - field.storage.node.domain_access
     - node.type.video_platform
+  module:
+    - domain_entity
+third_party_settings:
+  domain_entity:
+    domains:
+      platforma: platforma
+    behavior: auto
 id: node.video_platform.domain_access
 field_name: domain_access
 entity_type: node

@@ -9,9 +9,8 @@ dependencies:
     - menu_link_content
 third_party_settings:
   domain_entity:
-    domains:
-      ohmatdyt: ohmatdyt
-    behavior: user
+    domains: {  }
+    behavior: auto
 id: menu_link_content.menu_link_content.domain_access
 field_name: domain_access
 entity_type: menu_link_content

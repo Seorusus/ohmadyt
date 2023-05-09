@@ -1,0 +1,8 @@
+uuid: 62f3e0bc-1c8c-40ab-b6c0-db8a6ae73849
+langcode: uk
+status: true
+dependencies: {  }
+id: child-statistic-ohmatdyt
+label: "Дочерне Статистика Охматдiт\t"
+description: ''
+locked: false

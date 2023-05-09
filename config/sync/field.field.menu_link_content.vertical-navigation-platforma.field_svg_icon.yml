@@ -1,0 +1,41 @@
+uuid: 31d522fc-a280-4be1-89c6-7294bac9c625
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_svg_icon
+    - system.menu.vertical-navigation-platforma
+  module:
+    - content_translation
+    - svg_image_field
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: menu_link_content.vertical-navigation-platforma.field_svg_icon
+field_name: field_svg_icon
+entity_type: menu_link_content
+bundle: vertical-navigation-platforma
+label: 'SVG icon'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: svg
+  max_filesize: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+field_type: svg_image_field

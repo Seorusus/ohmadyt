@@ -1,0 +1,22 @@
+uuid: 5094bd3e-5934-45cf-aa97-6c7e73f21fed
+langcode: uk
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ohmatdyt
+_core:
+  default_config_hash: 9LdMj38y4GDi23GrIUtIZIV1bJEn1C47N19jrswvcLc
+id: ohmatdyt_messages
+theme: ohmatdyt
+region: content
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Повідомлення
+  label_display: '0'
+  provider: system
+visibility: {  }
