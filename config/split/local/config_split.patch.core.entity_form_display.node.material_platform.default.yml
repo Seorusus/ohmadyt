@@ -3,13 +3,7 @@ adding:
     config:
       - field.field.node.material_platform.domain_access
       - field.field.node.material_platform.field_domain_access
-  content:
-    domain_access:
-      type: options_buttons
-      weight: 26
-      region: content
-      settings: {  }
-      third_party_settings: {  }
   hidden:
+    domain_access: true
     field_domain_access: true
 removing: {  }
