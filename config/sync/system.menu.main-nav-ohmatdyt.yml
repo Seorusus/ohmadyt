@@ -3,6 +3,6 @@ langcode: uk
 status: true
 dependencies: {  }
 id: main-nav-ohmatdyt
-label: 'Навігація Охматдiт'
+label: 'Дочерне Медiа Охматдiт'
 description: 'Основна навігація Охматдiт'
 locked: false

@@ -1,0 +1,37 @@
+uuid: cc6af965-6b6e-47ba-a4b1-0db7af947836
+langcode: uk
+status: true
+dependencies:
+  config:
+    - system.menu.child-statistic-ohmatdyt
+  module:
+    - domain
+    - system
+  theme:
+    - ohmatdyt
+id: dochernestatistikaokhmatdit
+theme: ohmatdyt
+region: content
+weight: -6
+provider: null
+plugin: 'system_menu_block:child-statistic-ohmatdyt'
+settings:
+  id: 'system_menu_block:child-statistic-ohmatdyt'
+  label: "Дочерне Статистика Охматдiт\t"
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  domain:
+    id: domain
+    negate: false
+    context_mapping:
+      domain: '@domain.current_domain_context:domain'
+    domains:
+      ohmatdyt: ohmatdyt
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/statistics/zvit-forma-007o\r\n/rubric/pokaznyky-vykorystannya-lizhkovogo-fondu\r\n/rubric/grafik-chergovyh-vidpovidalnyh-administratoriv\r\n/rubric/zalyshky-likarskyh-zasobiv\r\n/rubric/zalyshky-krovi\r\n/rubric/rozklad-operaciy\r\n"
