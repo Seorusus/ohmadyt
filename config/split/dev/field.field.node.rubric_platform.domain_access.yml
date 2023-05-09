@@ -1,21 +1,14 @@
-uuid: 0462f473-ec1e-4680-b14d-257fa2e99fa7
-langcode: en
+uuid: 18db85b4-a0ec-4a10-a50b-1ea1a4ff720e
+langcode: uk
 status: true
 dependencies:
   config:
     - field.storage.node.domain_access
-    - node.type.document
-  module:
-    - domain_entity
-third_party_settings:
-  domain_entity:
-    domains:
-      ohmatdyt: ohmatdyt
-    behavior: auto
-id: node.document.domain_access
+    - node.type.rubric_platform
+id: node.rubric_platform.domain_access
 field_name: domain_access
 entity_type: node
-bundle: document
+bundle: rubric_platform
 label: 'Domain Access'
 description: 'Select the affiliate domain(s). If nothing was selected: Affiliated to all domains.'
 required: false

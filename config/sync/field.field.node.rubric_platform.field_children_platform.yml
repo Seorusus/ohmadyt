@@ -1,0 +1,30 @@
+uuid: 9c60eb28-caef-4f3f-aeb1-1875b63b8bb1
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_children_platform
+    - node.type.page_platform
+    - node.type.rubric_platform
+id: node.rubric_platform.field_children_platform
+field_name: field_children_platform
+entity_type: node
+bundle: rubric_platform
+label: Дочірні
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      rubric_platform: rubric_platform
+      page_platform: page_platform
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: rubric_platform
+field_type: entity_reference

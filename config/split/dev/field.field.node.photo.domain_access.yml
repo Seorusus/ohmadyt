@@ -5,6 +5,13 @@ dependencies:
   config:
     - field.storage.node.domain_access
     - node.type.photo
+  module:
+    - domain_entity
+third_party_settings:
+  domain_entity:
+    domains:
+      ohmatdyt: ohmatdyt
+    behavior: auto
 id: node.photo.domain_access
 field_name: domain_access
 entity_type: node

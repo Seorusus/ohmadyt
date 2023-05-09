@@ -1,14 +1,14 @@
-uuid: fcbfbf62-2ffc-460f-a749-0cac0cd5850f
+uuid: 16b25610-c256-4b1d-9a9a-26caa1ee4a38
 langcode: uk
 status: true
 dependencies:
   config:
     - entity_browser.browser.browse_content_iframe
-    - field.field.node.rubric.body
-    - field.field.node.rubric.field_children
-    - field.field.node.rubric.field_domain_all_affiliates
-    - field.field.node.rubric.field_layout
-    - node.type.rubric
+    - field.field.node.rubric_platform.body
+    - field.field.node.rubric_platform.field_children_platform
+    - field.field.node.rubric_platform.field_domain_all_affiliates
+    - field.field.node.rubric_platform.field_layout
+    - node.type.rubric_platform
   module:
     - entity_browser
     - field_group
@@ -19,7 +19,7 @@ third_party_settings:
     group_child_materials:
       children:
         - field_layout
-        - field_children
+        - field_children_platform
       label: 'Дочірні матерiали'
       region: content
       parent_name: ''
@@ -32,9 +32,9 @@ third_party_settings:
         open: false
         description: ''
         required_fields: true
-id: node.rubric.default
+id: node.rubric_platform.default
 targetEntityType: node
-bundle: rubric
+bundle: rubric_platform
 mode: default
 content:
   body:
@@ -53,7 +53,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_children:
+  field_children_platform:
     type: entity_browser_entity_reference
     weight: 4
     region: content

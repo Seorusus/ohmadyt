@@ -1,0 +1,17 @@
+uuid: e92d1190-0ef9-4864-b35a-6e0c8fdf1282
+langcode: uk
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Рубріка Платформа'
+type: rubric_platform
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
