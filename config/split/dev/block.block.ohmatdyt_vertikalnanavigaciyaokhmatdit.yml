@@ -5,6 +5,7 @@ dependencies:
   config:
     - system.menu.vertical-navigation-ohmatdit
   module:
+    - domain
     - system
   theme:
     - ohmatdyt
@@ -22,4 +23,11 @@ settings:
   level: 1
   depth: 0
   expand_all_items: false
-visibility: {  }
+visibility:
+  domain:
+    id: domain
+    negate: false
+    context_mapping:
+      domain: '@domain.current_domain_context:domain'
+    domains:
+      ohmatdyt: ohmatdyt

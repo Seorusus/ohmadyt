@@ -47,7 +47,6 @@
         "drupal/email_formatter": "^2.0@RC",
         "drupal/default_content_deploy": "^2.0",
         "drupal/domain_login_restrict": "^1.2",
-        "drupal/simple_menu_icons": "3.0.x-dev@dev",
         "drupal/menu_item_extras": "^2.19",
         "drupal/svg_image_field": "^2.2"
     },

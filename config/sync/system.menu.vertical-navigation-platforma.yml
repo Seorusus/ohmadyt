@@ -1,0 +1,8 @@
+uuid: 5c17c279-0145-4e75-b710-bd85b113a5da
+langcode: uk
+status: true
+dependencies: {  }
+id: vertical-navigation-platforma
+label: 'Вертикальна навiгацiя Платформа'
+description: ''
+locked: false
