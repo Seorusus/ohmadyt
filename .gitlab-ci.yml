@@ -48,5 +48,7 @@ deploy:dev:
     - terminus remote:drush $PANTHEON_SITE.dev -- config-split:import pantheon_dev -y
     - terminus remote:drush $PANTHEON_SITE.dev -- deploy -y
     - terminus remote:drush $PANTHEON_SITE.dev -- cr -y
+    - terminus remote:drush $PANTHEON_SITE.dev -- dcdi -y
+    - terminus remote:drush $PANTHEON_SITE.dev -- updb -y
   only:
     - main
