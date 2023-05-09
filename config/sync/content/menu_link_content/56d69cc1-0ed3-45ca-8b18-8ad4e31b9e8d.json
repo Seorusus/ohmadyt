@@ -1,0 +1,133 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/ohmatdyt.docksal\/uk\/admin\/structure\/menu\/item\/16\/edit?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/menu_link_content\/vertical-navigation-ohmatdit"
+        },
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/menu_link_content\/vertical-navigation-ohmatdit\/field_svg_icon": [
+            {
+                "href": "http:\/\/ohmatdyt.docksal\/sites\/default\/files\/2023-05\/statistics.svg"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 16
+        }
+    ],
+    "uuid": [
+        {
+            "value": "56d69cc1-0ed3-45ca-8b18-8ad4e31b9e8d"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "uk",
+            "lang": "uk"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "vertical-navigation-ohmatdit"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2023-05-09T10:48:51+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "enabled": [
+        {
+            "value": true
+        }
+    ],
+    "title": [
+        {
+            "value": "\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u0447\u043d\u0456 \u0434\u0430\u043d\u0456 \u043f\u043e \u0432\u0456\u0434\u0434\u0456\u043b\u0435\u043d\u043d\u044f\u043c",
+            "lang": "uk"
+        }
+    ],
+    "menu_name": [
+        {
+            "value": "vertical-navigation-ohmatdit"
+        }
+    ],
+    "link": [
+        {
+            "uri": "internal:\/statistics\/zvit-forma-007o",
+            "title": "",
+            "options": {
+                "menu_icon": {
+                    "fid": false
+                }
+            }
+        }
+    ],
+    "external": [
+        {
+            "value": false
+        }
+    ],
+    "rediscover": [
+        {
+            "value": true
+        }
+    ],
+    "weight": [
+        {
+            "value": -46
+        }
+    ],
+    "expanded": [
+        {
+            "value": false
+        }
+    ],
+    "changed": [
+        {
+            "value": "2023-05-09T19:12:31+00:00",
+            "lang": "uk",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "view_mode": [
+        {
+            "value": "default",
+            "lang": "uk"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/menu_link_content\/vertical-navigation-ohmatdit\/field_svg_icon": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/ohmatdyt.docksal\/sites\/default\/files\/2023-05\/statistics.svg"
+                    },
+                    "type": {
+                        "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "154390f4-4642-4d90-87f6-9db1c4461286"
+                    }
+                ]
+            }
+        ]
+    }
+}

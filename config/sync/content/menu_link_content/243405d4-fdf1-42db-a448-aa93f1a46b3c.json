@@ -1,0 +1,109 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/ohmatdyt.docksal\/uk\/admin\/structure\/menu\/item\/30\/edit?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/menu_link_content\/child-statistic-ohmatdyt"
+        }
+    },
+    "id": [
+        {
+            "value": 30
+        }
+    ],
+    "uuid": [
+        {
+            "value": "243405d4-fdf1-42db-a448-aa93f1a46b3c"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "uk",
+            "lang": "uk"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "child-statistic-ohmatdyt"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2023-05-09T16:38:41+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "enabled": [
+        {
+            "value": true
+        }
+    ],
+    "title": [
+        {
+            "value": "\u041f\u0435\u0440\u0435\u043b\u0456\u043a \u043e\u043f\u0435\u0440\u0430\u0446\u0456\u0439",
+            "lang": "uk"
+        }
+    ],
+    "menu_name": [
+        {
+            "value": "child-statistic-ohmatdyt"
+        }
+    ],
+    "link": [
+        {
+            "uri": "internal:\/rubric\/rozklad-operaciy",
+            "title": "",
+            "options": {
+                "menu_icon": {
+                    "fid": false
+                }
+            }
+        }
+    ],
+    "external": [
+        {
+            "value": false
+        }
+    ],
+    "rediscover": [
+        {
+            "value": true
+        }
+    ],
+    "weight": [
+        {
+            "value": -45
+        }
+    ],
+    "expanded": [
+        {
+            "value": false
+        }
+    ],
+    "changed": [
+        {
+            "value": "2023-05-09T16:39:03+00:00",
+            "lang": "uk",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "view_mode": [
+        {
+            "value": "default",
+            "lang": "uk"
+        }
+    ]
+}
