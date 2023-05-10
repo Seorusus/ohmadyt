@@ -1,20 +1,20 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/ohmatdyt.docksal\/uk\/admin\/structure\/menu\/item\/1\/edit?_format=hal_json"
+            "href": "http:\/\/ohmatdyt.docksal\/uk\/admin\/structure\/menu\/item\/33\/edit?_format=hal_json"
         },
         "type": {
-            "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/menu_link_content\/menu_link_content"
+            "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/menu_link_content\/vertical-navigation-ohmatdit"
         }
     },
     "id": [
         {
-            "value": 1
+            "value": 33
         }
     ],
     "uuid": [
         {
-            "value": "e3aeb033-10c0-4a78-80da-52deb2b9cc34"
+            "value": "53a3691f-fde4-4859-995c-80bf1afe5a5b"
         }
     ],
     "langcode": [
@@ -25,12 +25,12 @@
     ],
     "bundle": [
         {
-            "value": "menu_link_content"
+            "target_id": "vertical-navigation-ohmatdit"
         }
     ],
     "revision_created": [
         {
-            "value": "2023-05-05T16:02:27+00:00",
+            "value": "2023-05-10T09:21:30+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -41,18 +41,18 @@
     ],
     "title": [
         {
-            "value": "\u0413\u043e\u043b\u043e\u0432\u043d\u0430 \u0441\u0442\u043e\u0440\u0456\u043d\u043a\u0430",
+            "value": "\u041d\u043e\u0432\u0438\u043d\u0438",
             "lang": "uk"
         }
     ],
     "menu_name": [
         {
-            "value": "main"
+            "value": "vertical-navigation-ohmatdit"
         }
     ],
     "link": [
         {
-            "uri": "internal:\/",
+            "uri": "internal:\/news",
             "title": "",
             "options": []
         }
@@ -69,7 +69,7 @@
     ],
     "weight": [
         {
-            "value": 0
+            "value": -49
         }
     ],
     "expanded": [
@@ -77,9 +77,14 @@
             "value": false
         }
     ],
+    "parent": [
+        {
+            "value": "menu_link_content:a669ef04-210f-4de1-9ed0-a06e9c2e5066"
+        }
+    ],
     "changed": [
         {
-            "value": "2023-05-05T16:02:27+00:00",
+            "value": "2023-05-10T09:22:09+00:00",
             "lang": "uk",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -93,6 +98,12 @@
     "revision_translation_affected": [
         {
             "value": true,
+            "lang": "uk"
+        }
+    ],
+    "view_mode": [
+        {
+            "value": "default",
             "lang": "uk"
         }
     ]

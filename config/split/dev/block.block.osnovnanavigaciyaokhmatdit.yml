@@ -1,4 +1,4 @@
-uuid: 28536b66-ae46-456b-aff9-bec80325ea8e
+uuid: 9005a5e4-728d-40e4-8996-dceef3060053
 langcode: uk
 status: true
 dependencies:
@@ -9,19 +9,19 @@ dependencies:
     - system
   theme:
     - ohmatdyt
-id: ohmatdyt_vertikalnanavigaciyaokhmatdit
+id: osnovnanavigaciyaokhmatdit
 theme: ohmatdyt
-region: sidebar_first
+region: content
 weight: -6
 provider: null
 plugin: 'system_menu_block:vertical-navigation-ohmatdit'
 settings:
   id: 'system_menu_block:vertical-navigation-ohmatdit'
-  label: 'Вертикальна навiгацiя Охматдiт'
+  label: 'Основна навiгацiя Охматдiт'
   label_display: '0'
   provider: system
-  level: 1
-  depth: 1
+  level: 2
+  depth: 2
   expand_all_items: false
 visibility:
   domain:
@@ -31,3 +31,7 @@ visibility:
       domain: '@domain.current_domain_context:domain'
     domains:
       ohmatdyt: ohmatdyt
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/news\r\n/posters\r\n/rubric/zahody\r\n/media\r\n/photo\r\n/video\r\n/statistics/zvit-forma-007o\r\n/rubric/pokaznyky-vykorystannya-lizhkovogo-fondu\r\n/rubric/grafik-chergovyh-vidpovidalnyh-administratoriv\r\n/rubric/zalyshky-likarskyh-zasobiv\r\n/rubric/zalyshky-krovi\r\n/rubric/rozklad-operaciy"
