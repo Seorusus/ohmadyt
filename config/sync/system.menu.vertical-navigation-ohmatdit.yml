@@ -3,6 +3,6 @@ langcode: uk
 status: true
 dependencies: {  }
 id: vertical-navigation-ohmatdit
-label: 'Вертикальна навiгацiя Охматдiт'
+label: 'Основна навiгацiя Охматдiт'
 description: ''
 locked: false

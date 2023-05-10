@@ -1,8 +1,0 @@
-uuid: 938f3b94-dba0-400d-ae0d-b736f8d4dd0e
-langcode: uk
-status: true
-dependencies: {  }
-id: main-nav-platform
-label: 'Навігація Платформи'
-description: 'Основна навігація Платформи'
-locked: false

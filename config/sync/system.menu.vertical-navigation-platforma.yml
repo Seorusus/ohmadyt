@@ -3,6 +3,6 @@ langcode: uk
 status: true
 dependencies: {  }
 id: vertical-navigation-platforma
-label: 'Вертикальна навiгацiя Платформа'
+label: 'Основна навiгацiя Платформа'
 description: ''
 locked: false
