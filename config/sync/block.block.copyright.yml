@@ -1,0 +1,25 @@
+uuid: 6845fab8-4004-4bae-b51e-14d1704c2486
+langcode: uk
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:cb37dad8-16e1-46e8-98dc-25f2d7e929f6'
+  module:
+    - block_content
+  theme:
+    - ohmatdyt
+id: copyright
+theme: ohmatdyt
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:cb37dad8-16e1-46e8-98dc-25f2d7e929f6'
+settings:
+  id: 'block_content:cb37dad8-16e1-46e8-98dc-25f2d7e929f6'
+  label: Copyright
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

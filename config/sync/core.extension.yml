@@ -55,6 +55,7 @@ module:
   media_library: 0
   menu_item_extras: 0
   menu_link_content: 0
+  menu_token: 0
   menu_ui: 0
   mysql: 0
   node: 0
@@ -78,8 +79,10 @@ module:
   text: 0
   title_length: 0
   token: 0
+  token_filter: 0
   toolbar: 0
   tour: 0
+  twig_tweak: 0
   update: 0
   user: 0
   views_infinite_scroll: 0
