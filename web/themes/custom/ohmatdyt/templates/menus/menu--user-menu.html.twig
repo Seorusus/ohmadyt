@@ -19,11 +19,8 @@
  */
 #}
 {% import _self as menus %}
+{#{% use '@twig_tweak/twig_tweak.twig' %}#}
 
-{#
-  We call a macro which calls itself to render the full tree.
-  @see https://twig.symfony.com/doc/3.x/tags/macro.html
-#}
 {% set current_user = drupal_entity('user', user.id()) %}
 {% set field_value = current_user.field_name.value %}
 
@@ -33,28 +30,33 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass(['nav navbar-nav']) }}>
+<ul{{ attributes.addClass(['nav', 'navbar-nav']) }}>
     {% else %}
-      <ul>
-    {% endif %}
-    {% for item in items %}
-      {%
-        set classes_link = [
-          'nav-link',
-          item.is_expanded ? 'dropdown-toggle',
-          item.is_collapsed ? 'dropdown-toggle',
-          item.in_active_trail ? 'active',
-        ]
-      %}
-      <li{{ item.attributes.addClass('nav-item') }}>
-          {% set title_with_token = item.title %}
-          {% set title_replaced = title_with_token|token_replace %}
-          {{ link(title_replaced, item.url, { 'class': classes_link }) }}
-          {% if item.below %}
-          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
         {% endif %}
-      </li>
-    {% endfor %}
+        {% for item in items %}
+            {% set has_children = item.below|length > 0 %}
+            {% set classes_link = [
+                'nav-link',
+                item.in_active_trail ? 'active',
+            ] %}
+            {% if has_children %}
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle {{ classes_link|join(' ') }}" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        {% set title_with_token = item.title %}
+                        {% set title_replaced = title_with_token|token_replace %}
+                        {# {{ link(title_replaced, item.url, { 'class': classes_link }) }} #}
+                        {% set title_replaced = title_with_token|token_replace %}
+                        {{ title_replaced }}
+                    </a>
+                    {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    {{ link(item.title, item.url, { 'class': classes_link }) }}
+                </li>
+            {% endif %}
+        {% endfor %}
     </ul>
-  {% endif %}
-{% endmacro %}
+    {% endif %}
+    {% endmacro %}

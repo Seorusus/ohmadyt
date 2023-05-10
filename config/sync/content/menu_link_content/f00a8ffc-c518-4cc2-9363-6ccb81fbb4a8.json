@@ -91,12 +91,12 @@
     ],
     "expanded": [
         {
-            "value": false
+            "value": true
         }
     ],
     "changed": [
         {
-            "value": "2023-05-10T14:47:42+00:00",
+            "value": "2023-05-10T15:14:44+00:00",
             "lang": "uk",
             "format": "Y-m-d\\TH:i:sP"
         }
