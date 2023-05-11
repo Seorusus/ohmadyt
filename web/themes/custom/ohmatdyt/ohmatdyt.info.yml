@@ -7,6 +7,8 @@ core_version_requirement: ^9.4 || ^10
 libraries:
   - ohmatdyt/global-styling
 
+logo: 'themes/custom/ohmatdyt/images/logo.png'
+
 regions:
   header: Header
   nav_branding: 'Navigation branding region'
