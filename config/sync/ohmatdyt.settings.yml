@@ -5,7 +5,7 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: themes/custom/ohmatdyt/images/logo.png
+  path: themes/custom/ohmatdyt/images/logo.svg
 favicon:
   use_default: 1
 b5_top_container: container

@@ -14,7 +14,7 @@ const autoprefixerOptions = {
 
 gulp.task('sass', function () {
   return gulp
-    .src('./sass/**/*.scss')
+    .src('./sass/style.scss')
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer(autoprefixerOptions))

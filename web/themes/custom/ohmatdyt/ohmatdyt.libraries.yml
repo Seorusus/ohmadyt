@@ -2,3 +2,13 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+
+tweet-selected-text:
+  css:
+    theme:
+      css/tweet-selected-text.min.css: {}
+
+fontawesome:
+  css:
+    theme:
+      css/fontawesome.css: {}

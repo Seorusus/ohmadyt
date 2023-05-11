@@ -6,6 +6,7 @@ core_version_requirement: ^9.4 || ^10
 
 libraries:
   - ohmatdyt/global-styling
+  - ohmatdyt/fontawesome
 
 logo: 'themes/custom/ohmatdyt/images/logo.png'
 

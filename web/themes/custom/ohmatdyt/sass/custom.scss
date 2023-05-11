@@ -1,0 +1,42 @@
+.text-right {
+  text-align: right;
+
+  .menu--user-menu {
+    float: right;
+
+    .nav-link {
+      &.dropdown-toggle {
+        &:before {
+          display: inline-block;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          font-family: var(--fa-font-solid);
+          content: "\e905";
+          color: white;
+          background-color: var(--o-red);
+          border-radius: 50%;
+          margin-right: 0.5em;
+          line-height: 25px;
+          padding: 0.429em 0.643em;
+        }
+        &:after {
+          content: "\e90a";
+          font-family: var(--fa-font-solid);
+          color: var(--o-red);
+          margin-left: 1em;
+          margin-top: -2px;
+        }
+      }
+    }
+  }
+}
+
+.site-logo {
+  &.d-block {
+    margin: 0 auto;
+
+    img {
+      margin: 0;
+    }
+  }
+}
