@@ -6,6 +6,7 @@ dependencies:
     - system.menu.account
   module:
     - system
+    - user
   theme:
     - ohmatdyt
 _core:
@@ -13,7 +14,7 @@ _core:
 id: ohmatdyt_account_menu
 theme: ohmatdyt
 region: nav_main
-weight: -7
+weight: -8
 provider: null
 plugin: 'system_menu_block:account'
 settings:
@@ -24,4 +25,11 @@ settings:
   level: 1
   depth: 0
   expand_all_items: false
-visibility: {  }
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
