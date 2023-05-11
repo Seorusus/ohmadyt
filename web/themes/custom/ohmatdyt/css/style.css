@@ -952,6 +952,44 @@
   flex: 3;
 }
 
+.text-right {
+  text-align: right;
+}
+
+.text-right .menu--user-menu {
+  float: right;
+}
+
+.text-right .menu--user-menu .nav-link.dropdown-toggle:before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--fa-font-solid);
+  content: "\e905";
+  color: white;
+  background-color: var(--o-red);
+  border-radius: 50%;
+  margin-right: 0.5em;
+  line-height: 25px;
+  padding: 0.429em 0.643em;
+}
+
+.text-right .menu--user-menu .nav-link.dropdown-toggle:after {
+  content: "\e90a";
+  font-family: var(--fa-font-solid);
+  color: var(--o-red);
+  margin-left: 1em;
+  margin-top: -2px;
+}
+
+.site-logo.d-block {
+  margin: 0 auto;
+}
+
+.site-logo.d-block img {
+  margin: 0;
+}
+
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
@@ -964,6 +1002,10 @@
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
+}
+
+:root {
+  --fa-font-solid: 'Font Awesome 6 Free';
 }
 
 :root {
@@ -980,7 +1022,6 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-size: 62.5%;
   margin: 0;
   padding: 0;
   background: #dee4e7;

@@ -13,8 +13,8 @@ _core:
   default_config_hash: YRZjNp4d68NjJAVhrrUrXKwpV12i7OFWg4MY6Bsd0mw
 id: ohmatdyt_account_menu
 theme: ohmatdyt
-region: nav_main
-weight: -8
+region: content
+weight: -6
 provider: null
 plugin: 'system_menu_block:account'
 settings:

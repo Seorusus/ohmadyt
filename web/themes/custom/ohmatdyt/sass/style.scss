@@ -4,6 +4,7 @@
 @import "icomoon";
 @import "responsive";
 @import "flex";
+@import "custom";
 
 @font-face {
   font-family: 'Montserrat';
@@ -20,6 +21,10 @@
 }
 
 :root {
+  --fa-font-solid: 'Font Awesome 6 Free';
+}
+
+:root {
     --o-red: #DA393B;
     --o-blue: #3953A4;
     --o-gray: #EAF0F8;
@@ -33,7 +38,6 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 62.5%;
     margin: 0;
     padding: 0;
     background: #dee4e7;

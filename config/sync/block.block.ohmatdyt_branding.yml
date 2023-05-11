@@ -10,7 +10,7 @@ _core:
   default_config_hash: nuW1Z5MdvzbCCEZ9RQojaEWB6Zni32zTq-v5OWbS2sc
 id: ohmatdyt_branding
 theme: ohmatdyt
-region: nav_branding
+region: sidebar_first
 weight: -6
 provider: null
 plugin: system_branding_block
