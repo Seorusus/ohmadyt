@@ -1,3 +1,24 @@
+@import "views";
+@import "variables";
+@import "mixins";
+@import "icomoon";
+@import "responsive";
+@import "flex";
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2')
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Montserrat-Bold.woff2') format('woff2')
+}
+
 :root {
     --o-red: #DA393B;
     --o-blue: #3953A4;
@@ -5,9 +26,6 @@
     --o-dgray: #525760;
     --o-black: #1D222A;
 }
-@import "variables.scss";
-@import url('http://fonts.cdnfonts.com/css/montserrat');
-@import "mixins.scss";
 
 html {
     font-size: 16px;
@@ -103,7 +121,7 @@ header {
             &::before,
             &::after {
                 display: inline-block;
-                font-family: "icomoon";
+              font-family: "icomoon", sans-serif;
                 vertical-align: middle;
                 font-size: 1.75em;
                 font-weight: 400;
@@ -204,7 +222,7 @@ header {
                         // margin-left: 13px;
                         padding-top: 10px;
                         margin-bottom: 7px;
-                        font-family: 'icomoon' !important;
+                      font-family: 'icomoon', sans-serif !important;
                         font-size: 3em;
                         font-weight: normal;
                         line-height: 1.5em;
@@ -385,7 +403,7 @@ header {
         align-items: center;
 
         &:before {
-            font-family: 'icomoon' !important;
+          font-family: 'icomoon', sans-serif !important;
             font-size: 2rem;
             line-height: 2rem;
             content: "\e921";
@@ -450,7 +468,7 @@ header {
             }
 
             &:after {
-                font-family: 'icomoon' !important;
+              font-family: 'icomoon', sans-serif !important;
                 content: "\e90c";
                 position: absolute;
                 right: 10px;
@@ -537,7 +555,7 @@ body.page-node {
                     padding: 0 0 0.6em 0;
 
                     &:after {
-                        font-family: 'icomoon' !important;
+                      font-family: 'icomoon', sans-serif !important;
                         content: "\e90c";
                         font-size: 0.8em;
                         display: inline-block;
@@ -604,6 +622,3 @@ body.page-node {
     }
 }
 
-@import "icomoon.scss";
-@import "views.scss";
-@import "responsive.scss";
