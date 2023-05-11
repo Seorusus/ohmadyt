@@ -1,0 +1,110 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/ohmatdyt.docksal\/uk\/admin\/structure\/menu\/item\/47\/edit?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/menu_link_content\/user-menu"
+        }
+    },
+    "id": [
+        {
+            "value": 47
+        }
+    ],
+    "uuid": [
+        {
+            "value": "1f8de938-07aa-4b65-95ea-095eb8a37445"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "uk",
+            "lang": "uk"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "user-menu"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2023-05-10T14:39:11+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "enabled": [
+        {
+            "value": true
+        }
+    ],
+    "title": [
+        {
+            "value": "\u0412\u0438\u0445\u0456\u0434",
+            "lang": "uk"
+        }
+    ],
+    "menu_name": [
+        {
+            "value": "user-menu"
+        }
+    ],
+    "link": [
+        {
+            "uri": "internal:\/user\/logout",
+            "title": "",
+            "options": []
+        }
+    ],
+    "external": [
+        {
+            "value": false
+        }
+    ],
+    "rediscover": [
+        {
+            "value": true
+        }
+    ],
+    "weight": [
+        {
+            "value": -48
+        }
+    ],
+    "expanded": [
+        {
+            "value": false
+        }
+    ],
+    "parent": [
+        {
+            "value": "menu_link_content:f00a8ffc-c518-4cc2-9363-6ccb81fbb4a8"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2023-05-10T14:39:25+00:00",
+            "lang": "uk",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "view_mode": [
+        {
+            "value": "default",
+            "lang": "uk"
+        }
+    ]
+}
