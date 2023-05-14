@@ -3,7 +3,7 @@
 @import "mixins";
 @import "icomoon";
 @import "responsive";
-@import "flex";
+//@import "flex";
 @import "custom";
 
 @font-face {
@@ -112,8 +112,8 @@ header {
     .top-nav {
         border-bottom: 1px solid #ECF2F5;
         margin-bottom: 40px;
-        padding-top: 30px;
-        padding-bottom: 40px;
+        padding-top: 0;
+        padding-bottom: 70px;
 
         .personal {
             color: var(--o-dgray);

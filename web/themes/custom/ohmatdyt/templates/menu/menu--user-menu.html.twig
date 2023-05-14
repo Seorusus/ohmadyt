@@ -19,8 +19,6 @@
  */
 #}
 {% import _self as menus %}
-{#{% use '@twig_tweak/twig_tweak.twig' %}#}
-
 {% set current_user = drupal_entity('user', user.id()) %}
 {% set field_value = current_user.field_name.value %}
 
@@ -45,7 +43,6 @@
                     <a class="dropdown-toggle {{ classes_link|join(' ') }}" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                         {% set title_with_token = item.title %}
                         {% set title_replaced = title_with_token|token_replace %}
-                        {# {{ link(title_replaced, item.url, { 'class': classes_link }) }} #}
                         {% set title_replaced = title_with_token|token_replace %}
                         {{ title_replaced }}
                     </a>
