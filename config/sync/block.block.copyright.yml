@@ -10,8 +10,8 @@ dependencies:
     - ohmatdyt
 id: copyright
 theme: ohmatdyt
-region: content
-weight: 3
+region: footer
+weight: -6
 provider: null
 plugin: 'block_content:cb37dad8-16e1-46e8-98dc-25f2d7e929f6'
 settings:

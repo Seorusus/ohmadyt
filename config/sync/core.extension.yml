@@ -18,15 +18,19 @@ module:
   contact: 0
   content_browser: 0
   contextual: 0
+  ctools: 0
   datetime: 0
   dblog: 0
   default_content_deploy: 0
+  devel: 0
+  devel_generate: 0
   domain_access: 0
   domain_config: 0
   domain_config_ui: 0
   domain_content: 0
   domain_entity: 0
   domain_login_restrict: 0
+  draggableviews: 0
   dynamic_page_cache: 0
   editor: 0
   email_formatter: 0
@@ -69,6 +73,7 @@ module:
   search_api_page: 0
   serialization: 0
   shortcut: 0
+  simple_menu_icons: 0
   smart_date: 0
   standard: 0
   svg_image_field: 0

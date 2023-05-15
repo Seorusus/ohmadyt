@@ -26,7 +26,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 2
     region: content
   field_date:
     type: datetime_default
@@ -35,7 +35,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 103
+    weight: 4
     region: content
   field_online:
     type: boolean
@@ -45,7 +45,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 102
+    weight: 3
     region: content
   field_organizer:
     type: entity_reference_label
@@ -53,7 +53,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 105
+    weight: 6
     region: content
   field_subject:
     type: entity_reference_label
@@ -61,7 +61,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 104
+    weight: 5
     region: content
   field_tags_platform:
     type: entity_reference_label
@@ -69,20 +69,21 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 107
+    weight: 7
     region: content
   field_youtube:
-    type: entity_reference_label
-    label: above
+    type: entity_reference_entity_view
+    label: hidden
     settings:
-      link: true
+      view_mode: full
+      link: false
     third_party_settings: {  }
-    weight: 106
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
   field_domain_all_affiliates: true

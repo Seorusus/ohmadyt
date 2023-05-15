@@ -3,6 +3,7 @@
 
   .menu--user-menu {
     float: right;
+    margin-top: 25px;
 
     .nav-link {
       &.dropdown-toggle {
@@ -57,9 +58,14 @@
      }
 
      .menu-item {
+       width: 50%;
+       margin: 20px auto;
+
        a {
+         background: none;
+
          &::before {
-           content: "" !important;
+           //content: "" !important;
          }
        }
 
@@ -76,4 +82,31 @@
 
 .region-sidebar-first {
   padding: 0;
+}
+
+.branding {
+  .field--name-body {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+
+    p {
+      margin-bottom: 0;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+
+      &:first-of-type {
+        color: $brandblue;
+      }
+
+      &:nth-of-type(2) {
+        color: $brandred;
+      }
+    }
+  }
+}
+
+.navbar-brand {
+  margin-top: 35px;
 }

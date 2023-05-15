@@ -113,7 +113,7 @@ header {
         border-bottom: 1px solid #ECF2F5;
         margin-bottom: 40px;
         padding-top: 0;
-        padding-bottom: 70px;
+        padding-bottom: 30px;
 
         .personal {
             color: var(--o-dgray);
@@ -166,7 +166,7 @@ header {
             &::before {
                 display: block;
                 content: "";
-                background: url(../img/logo.png) no-repeat 0 0;
+                background: url(../images/logo.png) no-repeat 0 0;
                 width: 43px;
                 height: 43px;
                 margin: 35px auto 5px;
@@ -175,7 +175,7 @@ header {
             &::after {
                 display: block;
                 content: "";
-                background: url(../img/sitename.png) no-repeat 0 0;
+                background: url(../images/sitename.png) no-repeat 0 0;
                 width: 120px;
                 height: 43px;
                 margin: 0 auto 25px;
@@ -194,19 +194,20 @@ header {
                 }
 
                 a {
-                    font-size: 10px;
-                    font-weight: 700;
-                    line-height: 12px;
-                    text-align: center;
-                    text-transform: uppercase;
-                    color: #525760;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    margin: 0 24px;
+                  font-size: 10px;
+                  font-weight: 700;
+                  line-height: 12px;
+                  text-align: center;
+                  text-transform: uppercase;
+                  color: #525760;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+                  margin: 0 24px;
+                  text-decoration: none;
 
-                    &.active,
+                    &.is-active,
                     &:hover,
                     &:focus {
                         color: var(--o-red);
