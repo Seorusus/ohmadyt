@@ -24,6 +24,9 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
+  domain_access:
+    settings: {  }
+    third_party_settings: {  }
   info:
     type: string_textfield
     weight: -5
