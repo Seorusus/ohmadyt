@@ -881,11 +881,11 @@
   border-radius: 50%;
   margin-right: 0.5em;
   line-height: 25px;
-  padding: 10px 10px;
+  padding: 11px 15px;
   display: inline-block;
   font-family: "icomoon", sans-serif;
   vertical-align: middle;
-  font-size: 1.75em;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -938,6 +938,10 @@
   padding: 0;
 }
 
+.branding a {
+  text-decoration: none;
+}
+
 .branding .field--name-body {
   text-transform: uppercase;
   text-align: center;
@@ -961,6 +965,142 @@
 
 .navbar-brand {
   margin-top: 35px;
+}
+
+.node--type-news .field--name-field-media-image {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.view-media {
+  margin-bottom: 10px;
+}
+
+.view-media a {
+  font-weight: bolder;
+}
+
+.view-media a::after {
+  background-image: url(../images/vector.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  content: "";
+  font-size: 20px;
+  padding-left: 11px;
+  margin-left: 5px;
+}
+
+.field.field--name-field-tags {
+  margin: 70px 0;
+}
+
+.field.field--name-field-tags a {
+  text-decoration: none;
+  background-color: var(--o-gray);
+  border-radius: 80px;
+  color: #3953A4;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 900;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.field.field--name-field-tags a:hover {
+  color: white;
+  background-color: #DA393B;
+}
+
+.external-systems-title {
+  color: #3953A4;
+  text-transform: uppercase;
+  font-size: 13.5px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.external-systems {
+  width: 23%;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+
+.external-systems.document-flow {
+  background-color: #3953A4;
+}
+
+.external-systems.document-flow .field--name-field-svg-image {
+  background-color: #4969CC;
+}
+
+.external-systems.med-system {
+  background-color: #DA393B;
+}
+
+.external-systems.med-system .field--name-field-svg-image {
+  background-color: #FF808B;
+}
+
+.external-systems.a-five {
+  background-color: #4969CC;
+}
+
+.external-systems.a-five .field--name-field-svg-image {
+  background-color: #3953A4;
+}
+
+.external-systems.a-five .field--name-body {
+  font-size: 36px;
+}
+
+.external-systems.external-account {
+  background-color: #FF808B;
+}
+
+.external-systems.external-account .field--name-field-svg-image {
+  background-color: #DA393B;
+}
+
+.external-systems .field--name-field-svg-image {
+  text-align: center;
+  margin: 40px auto;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.external-systems .field--name-field-svg-image img {
+  display: inline-block;
+  padding: 13px 10px;
+  width: 64px;
+  height: 64px;
+  margin-top: 9px;
+}
+
+.external-systems .field--name-body {
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 21px;
+  font-weight: 900;
+  min-height: 65px;
+}
+
+.external-systems .field--name-field-link-to-content {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
 
 @font-face {
