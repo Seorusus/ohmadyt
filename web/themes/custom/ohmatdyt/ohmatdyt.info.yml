@@ -11,12 +11,13 @@ libraries:
 logo: 'themes/custom/ohmatdyt/images/logo.png'
 
 regions:
-  header: Header
+  header: 'Header'
   nav_branding: 'Navigation branding region'
   nav_main: 'Main navigation region'
   nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
-  breadcrumb: Breadcrumbs
+  breadcrumb: 'Breadcrumbs'
   content: 'Main content'
+  content_bottom: 'Content bottom'
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
-  footer: Footer
+  footer: 'Footer'

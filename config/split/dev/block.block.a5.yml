@@ -1,0 +1,45 @@
+uuid: 567f57d7-87e2-4c5e-af90-61330afea90a
+langcode: uk
+status: true
+dependencies:
+  content:
+    - 'block_content:text_image:de8fbeed-6518-43bb-8db1-4ca2a45f952a'
+  module:
+    - block_class
+    - block_content
+    - domain
+    - node
+  theme:
+    - ohmatdyt
+third_party_settings:
+  block_class:
+    classes: 'external-systems col-12 col-lg-3 a-five'
+id: a5
+theme: ohmatdyt
+region: content_bottom
+weight: -6
+provider: null
+plugin: 'block_content:de8fbeed-6518-43bb-8db1-4ca2a45f952a'
+settings:
+  id: 'block_content:de8fbeed-6518-43bb-8db1-4ca2a45f952a'
+  label: a5
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  domain:
+    id: domain
+    negate: false
+    context_mapping:
+      domain: '@domain.current_domain_context:domain'
+    domains:
+      ohmatdyt: ohmatdyt
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      news: news

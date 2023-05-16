@@ -1,0 +1,87 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/ohmatdyt.docksal\/sites\/default\/files\/2023-05\/account.svg"
+        },
+        "type": {
+            "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/file\/file"
+        },
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/file\/file\/uid": [
+            {
+                "href": "http:\/\/ohmatdyt.docksal\/en\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "fid": [
+        {
+            "value": 53
+        }
+    ],
+    "uuid": [
+        {
+            "value": "12fe10f7-440c-4df5-975f-2df3524bfbc9"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "uk"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/file\/file\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/ohmatdyt.docksal\/en\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4ed408e4-03a5-4b13-a221-79969d1b503b"
+                    }
+                ]
+            }
+        ]
+    },
+    "filename": [
+        {
+            "value": "account.svg"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2023-05\/account.svg",
+            "url": "\/sites\/default\/files\/2023-05\/account.svg"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/svg+xml"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 1062
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2023-05-15T20:57:39+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2023-05-15T20:57:49+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}

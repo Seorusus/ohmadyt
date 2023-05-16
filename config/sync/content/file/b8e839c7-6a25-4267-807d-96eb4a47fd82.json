@@ -1,0 +1,87 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/ohmatdyt.docksal\/sites\/default\/files\/menu_icons\/base_0.svg"
+        },
+        "type": {
+            "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/file\/file"
+        },
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/file\/file\/uid": [
+            {
+                "href": "http:\/\/ohmatdyt.docksal\/en\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "fid": [
+        {
+            "value": 47
+        }
+    ],
+    "uuid": [
+        {
+            "value": "b8e839c7-6a25-4267-807d-96eb4a47fd82"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "uk"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/file\/file\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/ohmatdyt.docksal\/en\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4ed408e4-03a5-4b13-a221-79969d1b503b"
+                    }
+                ]
+            }
+        ]
+    },
+    "filename": [
+        {
+            "value": "base_0.svg"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/menu_icons\/base_0.svg",
+            "url": "\/sites\/default\/files\/menu_icons\/base_0.svg"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/svg+xml"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 1685
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2023-05-15T13:03:26+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2023-05-15T13:03:29+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}

@@ -5,9 +5,13 @@ dependencies:
   content:
     - 'block_content:basic:cb37dad8-16e1-46e8-98dc-25f2d7e929f6'
   module:
+    - block_class
     - block_content
   theme:
     - ohmatdyt
+third_party_settings:
+  block_class:
+    classes: 'col-12 col-lg-8 offset-lg-2'
 id: copyright
 theme: ohmatdyt
 region: footer

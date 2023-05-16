@@ -1,0 +1,8 @@
+uuid: 85ec25d7-3126-41f0-9562-6d67b91c200a
+langcode: uk
+status: true
+dependencies: {  }
+id: text_image
+label: 'Text and image and link'
+revision: 0
+description: ''

@@ -1,0 +1,87 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/ohmatdyt.docksal\/sites\/default\/files\/oembed_thumbnails\/2023-05\/S3L4zmOcPpDlckKGnDsqzb3iLpegJGJCMAOPSm-U_Y8.jpg"
+        },
+        "type": {
+            "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/file\/file"
+        },
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/file\/file\/uid": [
+            {
+                "href": "http:\/\/ohmatdyt.docksal\/en\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "fid": [
+        {
+            "value": 41
+        }
+    ],
+    "uuid": [
+        {
+            "value": "2ad0783e-4cee-47e2-9ab5-8a60312fbe89"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "uk"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/file\/file\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/ohmatdyt.docksal\/en\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4ed408e4-03a5-4b13-a221-79969d1b503b"
+                    }
+                ]
+            }
+        ]
+    },
+    "filename": [
+        {
+            "value": "S3L4zmOcPpDlckKGnDsqzb3iLpegJGJCMAOPSm-U_Y8.jpg"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/oembed_thumbnails\/2023-05\/S3L4zmOcPpDlckKGnDsqzb3iLpegJGJCMAOPSm-U_Y8.jpg",
+            "url": "\/sites\/default\/files\/oembed_thumbnails\/2023-05\/S3L4zmOcPpDlckKGnDsqzb3iLpegJGJCMAOPSm-U_Y8.jpg"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/jpeg"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 20586
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2023-05-13T11:28:36+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2023-05-13T11:28:36+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}
