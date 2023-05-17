@@ -80,6 +80,38 @@
   }
 }
 
+.menu--vertical-navigation-platforma {
+  .menu {
+    &.menu-level-0 {
+      margin: 0;
+
+      .menu-item--collapsed {
+        list-style: none;
+      }
+
+      .menu-item {
+        width: 50%;
+        margin: 20px auto;
+
+        a {
+          background: none;
+
+          &::before {
+            //content: "" !important;
+          }
+        }
+
+        .field--name-field-svg-icon img {
+          display: inline-block;
+          position: absolute;
+          left: 77px;
+          top: -64px;
+        }
+      }
+    }
+  }
+}
+
 .region-sidebar-first {
   padding: 0;
 }
@@ -178,10 +210,38 @@
   width: 23%;
   margin: 0 10px;
   border-radius: 10px;
+  position: relative;
+
+  a {
+    text-decoration: none;
+
+    &::before {
+      background-image: url(../images/arrow.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      content: "";
+      font-size: 20px;
+      padding-left: 11px;
+      margin-left: 5px;
+      position: absolute;
+      top: 4px;
+      left: 203px;
+      width: 9%;
+      height: 10%;
+      z-index: 1;
+    }
+  }
+
+  .link-title {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 20px;
+  }
 
   &.document-flow {
     background-color: $brandblue;
-
 
     .field--name-field-svg-image {
       background-color: $brandlightblue;
@@ -193,6 +253,11 @@
 
     .field--name-field-svg-image {
       background-color: $branddeeppink;
+      margin-bottom: 20px;
+    }
+
+    .link-title {
+      line-height: 18px;
     }
   }
 
@@ -201,6 +266,11 @@
 
     .field--name-field-svg-image {
       background-color: $brandblue;
+      margin-bottom: 20px;
+    }
+
+    .link-title {
+      line-height: 18px;
     }
 
     .field--name-body {
@@ -252,5 +322,22 @@
     text-transform: uppercase;
     color: #FFFFFF;
   }
+}
 
+.region-content-bottom {
+  .line-container {
+    display: flex;
+    justify-content: space-between;
+
+    .line-bottom {
+      width: 77%;
+      border-bottom: 3px solid #EAF0F8;
+    }
+
+    .line-bottom-red {
+      margin-top: 80px;
+      width: 23%;
+      border: 2px solid $brandred;
+    }
+  }
 }
