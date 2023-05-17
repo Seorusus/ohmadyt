@@ -934,6 +934,30 @@
   top: -64px;
 }
 
+.menu--vertical-navigation-platforma .menu.menu-level-0 {
+  margin: 0;
+}
+
+.menu--vertical-navigation-platforma .menu.menu-level-0 .menu-item--collapsed {
+  list-style: none;
+}
+
+.menu--vertical-navigation-platforma .menu.menu-level-0 .menu-item {
+  width: 50%;
+  margin: 20px auto;
+}
+
+.menu--vertical-navigation-platforma .menu.menu-level-0 .menu-item a {
+  background: none;
+}
+
+.menu--vertical-navigation-platforma .menu.menu-level-0 .menu-item .field--name-field-svg-icon img {
+  display: inline-block;
+  position: absolute;
+  left: 77px;
+  top: -64px;
+}
+
 .region-sidebar-first {
   padding: 0;
 }
@@ -1028,6 +1052,35 @@
   width: 23%;
   margin: 0 10px;
   border-radius: 10px;
+  position: relative;
+}
+
+.external-systems a {
+  text-decoration: none;
+}
+
+.external-systems a::before {
+  background-image: url(../images/arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  content: "";
+  font-size: 20px;
+  padding-left: 11px;
+  margin-left: 5px;
+  position: absolute;
+  top: 4px;
+  left: 203px;
+  width: 9%;
+  height: 10%;
+  z-index: 1;
+}
+
+.external-systems .link-title {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 20px;
 }
 
 .external-systems.document-flow {
@@ -1044,6 +1097,11 @@
 
 .external-systems.med-system .field--name-field-svg-image {
   background-color: #FF808B;
+  margin-bottom: 20px;
+}
+
+.external-systems.med-system .link-title {
+  line-height: 18px;
 }
 
 .external-systems.a-five {
@@ -1052,6 +1110,11 @@
 
 .external-systems.a-five .field--name-field-svg-image {
   background-color: #3953A4;
+  margin-bottom: 20px;
+}
+
+.external-systems.a-five .link-title {
+  line-height: 18px;
 }
 
 .external-systems.a-five .field--name-body {
@@ -1101,6 +1164,26 @@
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+
+.region-content-bottom .line-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.region-content-bottom .line-container .line-bottom {
+  width: 77%;
+  border-bottom: 3px solid #EAF0F8;
+}
+
+.region-content-bottom .line-container .line-bottom-red {
+  margin-top: 80px;
+  width: 23%;
+  border: 2px solid #DA393B;
 }
 
 @font-face {
