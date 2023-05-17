@@ -1,0 +1,10 @@
+uuid: 65c0b3d7-36ed-49af-9602-37f3944e40a2
+langcode: uk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: z9ULI9nj9yt73YKI3ZE8v9yXhkVfvQsDJToEDzijcxY
+id: access_token
+label: 'Токен доступу'
+description: 'The access token type.'
+locked: true
