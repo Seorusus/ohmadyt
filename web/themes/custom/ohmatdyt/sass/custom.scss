@@ -5,6 +5,7 @@ h1 {
 
 .block-page-title-block {
   .field--name-title {
+    position: relative;
 
     &:after {
       content: '';
@@ -14,7 +15,7 @@ h1 {
       background-color: $brandred;
       border-radius: 50%;
       top: 50%;
-      left: 95%;
+      left: 110%;
     }
   }
 }

@@ -870,6 +870,10 @@ h1 {
   font-size: 32px;
 }
 
+.block-page-title-block .field--name-title {
+  position: relative;
+}
+
 .block-page-title-block .field--name-title:after {
   content: '';
   position: absolute;
@@ -878,7 +882,7 @@ h1 {
   background-color: #DA393B;
   border-radius: 50%;
   top: 50%;
-  left: 95%;
+  left: 110%;
 }
 
 .text-right {

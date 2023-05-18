@@ -1,0 +1,5 @@
+name: Ohmatdyt Domain
+description: Custom module for different homepages per domain
+package: Custom
+type: module
+core_version_requirement: ^9.2 || ^10
