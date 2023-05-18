@@ -1,0 +1,88 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/ohmatdyt.docksal\/uk\/block\/3?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/block_content\/basic"
+        }
+    },
+    "id": [
+        {
+            "value": 3
+        }
+    ],
+    "uuid": [
+        {
+            "value": "0ee32c2d-e9f5-4a82-97fe-593fa0487b8c"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "uk",
+            "lang": "uk"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2023-05-15T15:06:02+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "info": [
+        {
+            "value": "Brand Platform ",
+            "lang": "uk"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2023-05-15T15:06:02+00:00",
+            "lang": "uk",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "reusable": [
+        {
+            "value": true
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>\u041e\u0441\u0432i\u0442\u043d\u044f<\/p><p>\u041f\u043b\u0430\u0442\u0444\u043e\u0440\u043c\u0430<\/p>",
+            "format": "full_html",
+            "processed": "<p>\u041e\u0441\u0432i\u0442\u043d\u044f<\/p><p>\u041f\u043b\u0430\u0442\u0444\u043e\u0440\u043c\u0430<\/p>",
+            "summary": "",
+            "lang": "uk"
+        }
+    ],
+    "domain_access": [
+        {
+            "target_id": "platforma",
+            "lang": "uk"
+        }
+    ]
+}

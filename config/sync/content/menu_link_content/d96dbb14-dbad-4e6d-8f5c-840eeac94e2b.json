@@ -5,12 +5,7 @@
         },
         "type": {
             "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/menu_link_content\/vertical-navigation-ohmatdit"
-        },
-        "http:\/\/ohmatdyt.docksal\/rest\/relation\/menu_link_content\/vertical-navigation-ohmatdit\/field_svg_icon": [
-            {
-                "href": "http:\/\/ohmatdyt.docksal\/sites\/default\/files\/2023-05\/home_1.svg"
-            }
-        ]
+        }
     },
     "id": [
         {
@@ -61,7 +56,8 @@
             "title": "",
             "options": {
                 "menu_icon": {
-                    "fid": false
+                    "uri": "public:\/\/menu_icons\/home_1.svg",
+                    "fid": "42"
                 }
             }
         }
@@ -88,7 +84,7 @@
     ],
     "changed": [
         {
-            "value": "2023-05-09T19:09:51+00:00",
+            "value": "2023-05-15T14:46:10+00:00",
             "lang": "uk",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -110,24 +106,5 @@
             "value": "default",
             "lang": "uk"
         }
-    ],
-    "_embedded": {
-        "http:\/\/ohmatdyt.docksal\/rest\/relation\/menu_link_content\/vertical-navigation-ohmatdit\/field_svg_icon": [
-            {
-                "_links": {
-                    "self": {
-                        "href": "http:\/\/ohmatdyt.docksal\/sites\/default\/files\/2023-05\/home_1.svg"
-                    },
-                    "type": {
-                        "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/file\/file"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "95d4ba2a-49b6-4bee-a262-d8728a0b1943"
-                    }
-                ]
-            }
-        ]
-    }
+    ]
 }
