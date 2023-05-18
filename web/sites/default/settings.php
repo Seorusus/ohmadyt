@@ -60,3 +60,9 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 $settings['config_sync_directory'] = '../config/sync';
 $settings['default_content_deploy_content_directory'] = '../config/sync/content';
+
+// Set Site system settings for domains.
+$config['domain.config.ohmatdyt.system.site']['name'] = "Портал";
+$config['domain.config.platforma.system.site']['name'] = "Освiтня платформа";
+$config['domain.config.ohmatdyt.system.site']['page']['front'] = '/user/login';
+$config['domain.config.platforma.system.site']['page']['front'] = '/home';
