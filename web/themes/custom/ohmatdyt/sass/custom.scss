@@ -3,6 +3,22 @@ h1 {
   font-size: 32px;
 }
 
+.block-page-title-block {
+  .field--name-title {
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      background-color: $brandred;
+      border-radius: 50%;
+      top: 50%;
+      left: 95%;
+    }
+  }
+}
+
 .text-right {
   text-align: right;
 
