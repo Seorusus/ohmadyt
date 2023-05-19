@@ -4,7 +4,6 @@ h1 {
 }
 
 .block-page-title-block {
-  .field--name-title {
     position: relative;
 
     &:after {
@@ -15,10 +14,10 @@ h1 {
       background-color: $brandred;
       border-radius: 50%;
       top: 50%;
-      left: 110%;
+      left: 100%;
     }
-  }
 }
+
 
 .text-right {
   text-align: right;
@@ -344,6 +343,10 @@ h1 {
     text-transform: uppercase;
     color: #FFFFFF;
   }
+}
+
+.region-content {
+  position: relative;
 }
 
 .region-content-bottom {

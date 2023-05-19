@@ -870,11 +870,11 @@ h1 {
   font-size: 32px;
 }
 
-.block-page-title-block .field--name-title {
+.block-page-title-block {
   position: relative;
 }
 
-.block-page-title-block .field--name-title:after {
+.block-page-title-block:after {
   content: '';
   position: absolute;
   width: 11px;
@@ -882,7 +882,7 @@ h1 {
   background-color: #DA393B;
   border-radius: 50%;
   top: 50%;
-  left: 110%;
+  left: 100%;
 }
 
 .text-right {
@@ -1184,6 +1184,10 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+
+.region-content {
+  position: relative;
 }
 
 .region-content-bottom .line-container {

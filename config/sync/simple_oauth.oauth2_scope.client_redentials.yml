@@ -1,0 +1,22 @@
+uuid: 0e986d0a-bc98-4fcc-a7f8-0cc446c3126f
+langcode: en
+status: true
+dependencies: {  }
+id: client_redentials
+name: client_redentials
+description: 'Client credentials'
+grant_types:
+  refresh_token:
+    status: false
+    description: ''
+  client_credentials:
+    status: true
+    description: ''
+  authorization_code:
+    status: false
+    description: ''
+umbrella: false
+parent: _none
+granularity: permission
+permission: 'access content'
+role: ''

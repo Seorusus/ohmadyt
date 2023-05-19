@@ -1,0 +1,18 @@
+uuid: f0429bcf-8568-4aac-8580-b1c3d37acb3c
+langcode: en
+status: true
+dependencies: {  }
+id: portal
+label: portal
+plugin: generic
+settings:
+  client_id: portal
+  client_secret: portal
+  iss_allowed_domains: 'https://platforma.ohmatdyt.docksal:8443'
+  issuer_url: 'https://ohmatdyt.docksal:8083'
+  authorization_endpoint: 'https://ohmatdyt.docksal:8443/oauth/authorize'
+  token_endpoint: 'https://ohmatdyt.docksal:8443/oauth/token'
+  userinfo_endpoint: 'https://ohmatdyt.docksal:8443/oauth/userinfo'
+  end_session_endpoint: ''
+  scopes:
+    - employee

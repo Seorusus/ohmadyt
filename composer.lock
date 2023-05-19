@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd1e39cd5043bc49ed0b617d4de65f31",
+    "content-hash": "a080ccea61fd2e6478cbcfb4038911e1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4399,17 +4399,11 @@
         },
         {
             "name": "drupal/simple_oauth",
-            "version": "6.0.0-beta4",
+            "version": "dev-6.0.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/simple_oauth.git",
-                "reference": "6.0.0-beta4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/simple_oauth-6.0.0-beta4.zip",
-                "reference": "6.0.0-beta4",
-                "shasum": "6e24faca858725e0c04781cb6ca95bce6c1898cf"
+                "reference": "5ae9975d58b3ef7370b856e16e12774e032126fc"
             },
             "require": {
                 "drupal/consumers": "^1.15",
@@ -4424,12 +4418,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-6.0.x": "6.0.x-dev"
+                },
                 "drupal": {
-                    "version": "6.0.0-beta4",
-                    "datestamp": "1681831446",
+                    "version": "6.0.0-beta4+2-dev",
+                    "datestamp": "1683192976",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 },
                 "drush": {
@@ -14713,7 +14710,7 @@
         "drupal/media_entity_browser": 15,
         "drupal/email_formatter": 5,
         "drupal/menu_token": 20,
-        "drupal/simple_oauth": 10,
+        "drupal/simple_oauth": 20,
         "drupal/openid_connect": 15
     },
     "prefer-stable": true,
