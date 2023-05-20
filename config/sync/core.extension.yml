@@ -83,6 +83,7 @@ module:
   smart_date: 0
   standard: 0
   svg_image_field: 0
+  symfony_mailer: 0
   system: 0
   taxonomy: 0
   telephone: 0

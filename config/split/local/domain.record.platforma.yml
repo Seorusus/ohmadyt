@@ -6,6 +6,6 @@ id: platforma
 domain_id: 4418646
 hostname: 'platforma.ohmatdyt.docksal:8443'
 name: Platforma
-scheme: http
+scheme: https
 weight: 1
 is_default: false
