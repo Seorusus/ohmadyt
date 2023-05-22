@@ -1,0 +1,21 @@
+uuid: 128f733a-e99e-4128-9f28-a945974ffce6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address_geolocation
+    - node.type.anonsy_podiy_platform
+  module:
+    - geolocation
+id: node.anonsy_podiy_platform.field_address_geolocation
+field_name: field_address_geolocation
+entity_type: node
+bundle: anonsy_podiy_platform
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

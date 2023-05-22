@@ -66,3 +66,8 @@ $config['domain.config.ohmatdyt.system.site']['name'] = "Портал";
 $config['domain.config.platforma.system.site']['name'] = "Освiтня платформа";
 $config['domain.config.ohmatdyt.system.site']['page']['front'] = '/user/login';
 $config['domain.config.platforma.system.site']['page']['front'] = '/home';
+
+/**
+* Redefine the login base url.
+*/
+$settings['custom_login_pattern'] = 'enter-portal/user/';

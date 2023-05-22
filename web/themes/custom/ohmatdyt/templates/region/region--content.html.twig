@@ -19,12 +19,16 @@
   ]
 %}
 {% if content %}
-  <div{{ attributes.addClass(classes) }}>
-      <div class="row">
-          <div class="col-12 text-right top-nav">
-              {{ drupal_block('system_menu_block:user-menu') }}
-          </div>
-      </div>
-    {{ content }}
-  </div>
+    <div{{ attributes.addClass(classes) }}>
+        <div class="row">
+            <div class="col-12 text-right top-nav">
+                {% if logged_in %}
+                    {{ drupal_block('system_menu_block:user-menu') }}
+                {% else %}
+                    {{ drupal_block('system_menu_block:account') }}
+                {% endif %}
+            </div>
+        </div>
+        {{ content }}
+    </div>
 {% endif %}

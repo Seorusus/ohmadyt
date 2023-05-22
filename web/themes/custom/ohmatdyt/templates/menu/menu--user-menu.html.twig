@@ -55,5 +55,9 @@
             {% endif %}
         {% endfor %}
     </ul>
+    {% if user_picture_url %}
+        <img src="{{ file_url(user_picture_url) }}" alt="User Picture">
+    {% endif %}
+    {{ dump(user_picture_url) }}
     {% endif %}
     {% endmacro %}
