@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Ohmatdyt theme file.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for block templates.
+ */
+function ohmatdyt_preprocess_menu(&$variables) {
+  $current_user = \Drupal::currentUser();
+  $user_picture_url = '';
+
+  if ($current_user->isAuthenticated()) {
+    $user = \Drupal\user\Entity\User::load($current_user->id());
+    if ($user->hasField('user_picture')) {
+      $user_picture = $user->get('user_picture')->entity;
+      if ($user_picture) {
+        $user_picture_url = $user_picture->getFileUri();
+      }
+    }
+  }
+
+  $variables['user_picture_url'] = $user_picture_url;
+}

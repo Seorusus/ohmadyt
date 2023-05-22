@@ -3,7 +3,7 @@ _core:
 langcode: uk
 google_map_api_key: AIzaSyCqOz1GHv2NvxRVyfNmz11L033_0aai_DA
 google_map_api_server_key: ''
-use_current_language: true
+use_current_language: false
 china_mode: false
 google_maps_base_url: ''
 google_map_custom_url_parameters:

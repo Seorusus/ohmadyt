@@ -5,7 +5,7 @@ always_save_userinfo: true
 connect_existing_users: false
 override_registration_settings: true
 end_session_enabled: true
-user_login_display: below
+user_login_display: hidden
 redirect_login: /home
 redirect_logout: /home
 userinfo_mappings:
