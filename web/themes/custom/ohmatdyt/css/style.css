@@ -1243,6 +1243,46 @@ h1 {
   border: 2px solid #DA393B;
 }
 
+.path-enter-portal .block-page-title-block {
+  display: none;
+}
+
+.path-enter-portal .block-local-tasks-block {
+  display: none;
+}
+
+.align-items-center.password-enter {
+  margin: 0 auto;
+}
+
+.align-items-center.password-enter input {
+  display: block;
+  margin: 0 auto;
+  width: 187px;
+  height: 54px;
+  border-radius: 30px;
+  background: #3953A4;
+}
+
+.forgot-password-link {
+  font-size: 12px;
+  color: #3953A4;
+  display: block;
+  margin: 35px auto;
+  width: 30%;
+  text-align: center;
+}
+
+.user-login-form .form-type-textfield {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.user-login-form .form-type-password {
+  width: 30%;
+  margin: 0 auto;
+}
+
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;

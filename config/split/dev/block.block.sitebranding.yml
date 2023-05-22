@@ -1,29 +1,27 @@
-uuid: 8671c6cd-413b-4f81-8c6c-3118a57d4d24
-langcode: uk
+uuid: 5cdd4140-151d-4209-a57d-ec041869a664
+langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:a8adb505-e064-4b4f-8a9c-dfcc1fd3a7f6'
   module:
-    - block_content
     - domain
+    - system
     - user
   theme:
     - ohmatdyt
-id: brandohmatdyt
+id: sitebranding
 theme: ohmatdyt
 region: sidebar_first
-weight: -6
+weight: -7
 provider: null
-plugin: 'block_content:a8adb505-e064-4b4f-8a9c-dfcc1fd3a7f6'
+plugin: system_branding_block
 settings:
-  id: 'block_content:a8adb505-e064-4b4f-8a9c-dfcc1fd3a7f6'
-  label: 'Brand Ohmatdyt '
+  id: system_branding_block
+  label: 'Site branding'
   label_display: '0'
-  provider: block_content
-  status: true
-  info: ''
-  view_mode: full
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
 visibility:
   domain:
     id: domain

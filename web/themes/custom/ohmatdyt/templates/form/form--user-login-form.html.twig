@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+<div class="navbar-brand d-flex align-items-center">
+    <a href="/en" title="Home" rel="home" class="site-logo d-block">
+        <img src="/themes/custom/ohmatdyt/images/logo.svg" alt="Home">
+    </a>
+</div>
+<div class="branding">
+    <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+        <p>Внутрiшнiй</p><p>Портал</p>
+    </div>
+</div>
+<form{{ attributes }}>
+  {{ children }}
+</form>
+

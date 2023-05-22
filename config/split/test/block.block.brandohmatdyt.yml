@@ -7,12 +7,13 @@ dependencies:
   module:
     - block_content
     - domain
+    - user
   theme:
     - ohmatdyt
 id: brandohmatdyt
 theme: ohmatdyt
 region: sidebar_first
-weight: -5
+weight: -6
 provider: null
 plugin: 'block_content:a8adb505-e064-4b4f-8a9c-dfcc1fd3a7f6'
 settings:
@@ -31,3 +32,13 @@ visibility:
       domain: '@domain.current_domain_context:domain'
     domains:
       ohmatdyt: ohmatdyt
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      manager: manager
+      employee: employee
+      content_editor: content_editor
