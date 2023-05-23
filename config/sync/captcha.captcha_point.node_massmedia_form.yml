@@ -1,0 +1,7 @@
+uuid: 3d52ed05-027d-4cb2-ba50-62e5c57c18bd
+langcode: uk
+status: false
+dependencies: {  }
+formId: node_massmedia_form
+captchaType: default
+label: node_massmedia_form

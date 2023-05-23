@@ -1,0 +1,7 @@
+uuid: 47ce3ad2-f33c-4055-8e28-ed1b7b0cd099
+langcode: uk
+status: false
+dependencies: {  }
+formId: node_rubric_platform_form
+captchaType: default
+label: node_rubric_platform_form
