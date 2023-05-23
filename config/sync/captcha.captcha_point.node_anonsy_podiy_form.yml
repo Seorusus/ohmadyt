@@ -1,0 +1,7 @@
+uuid: e0728c7b-0415-41f4-a222-98602da28bb2
+langcode: uk
+status: false
+dependencies: {  }
+formId: node_anonsy_podiy_form
+captchaType: default
+label: node_anonsy_podiy_form

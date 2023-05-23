@@ -1,0 +1,70 @@
+uuid: 92831289-b97f-4720-a04f-d58217d651e4
+langcode: uk
+status: true
+dependencies:
+  module:
+    - honeypot
+_core:
+  default_config_hash: A_dlRbNEX9_hOqUkQ5m4AskEmat7VEA8qvFt7tVeufQ
+id: honeypot
+label: Honeypot
+module: honeypot
+routes:
+  -
+    route_name: honeypot.config
+tips:
+  honeypot-configuration:
+    id: honeypot-configuration
+    plugin: text
+    label: Honeypot
+    weight: -10
+    position: top-start
+    body: "Вітаємо вас з установкою Honeypot на вашому сайті! За допомогою всього лише кількох клацань миші, ви можете надійно захистити сайт від автоматичних спам-ботів. \r\n\r\nНатисніть Далі, щоб переглянути цю сторінку конфігурації."
+  protect-all-forms:
+    id: protect-all-forms
+    plugin: text
+    label: 'Захистити усі форми'
+    weight: -9
+    position: bottom-start
+    selector: '#edit-protect-all-forms'
+    body: "Захист всіх форм це найпростіший спосіб швидко скоротити кількість спаму на сайті, але при цьому вимикається системне кешування Drupal для кожної сторінки з формою.\r\n\r\nПримітка: Якщо в honeypot увімкнено обмеження часу, це може призвести до складнощів з формами товарів модуля  Drupal Commerce або аналогічно побудованими формами, які здатні завершуватися протягом дуже короткого проміжку часу."
+  log-blocked-form-submissions:
+    id: log-blocked-form-submissions
+    plugin: text
+    label: 'Записувати в журнал надсилання заблокованих форм'
+    weight: -8
+    position: bottom-start
+    selector: '#edit-log'
+    body: 'Встановіть цей прапорець, щоб реєструвати кожне надсилання форми за допомогою сторожа. Якщо у вас увімкнена  функція ведення журналу бази даних, ви можете переглянути ці записи журналу на сторінці останніх записів журналу в розділі Звіти.'
+  honeypot-element-name:
+    id: honeypot-element-name
+    plugin: text
+    label: 'Назва елементу Honeypot'
+    weight: -7
+    position: top-start
+    selector: '#edit-element-name'
+    body: "Спам-роботи, як правило, заповнюють всі поля, котрі на їхню думку допоможуть отримати посилання на свій сайт, тому спокусивши їх полем з назвою на кшталт url', 'homepage' або 'link' ще більше підбадьорить їх заповнити це поле і допоможе впіймати їх в пастку і відмовити в надсиланні форми!"
+  honeypot-time-limit:
+    id: honeypot-time-limit
+    plugin: text
+    label: 'Обмеження часу Honeypot'
+    weight: -6
+    position: top-start
+    selector: '#edit-time-limit'
+    body: 'Якщо ввести позитивне значення, Honeypot вимагатиме, щоб всі захищені форми заповнювались стільки, скільки зазначено секунд. Більшість форм заповнюються не менше 5-10 секунд (для дорослої людини), тому встановлення тут значення < 5 допоможе захистити форму від спамерів. Для вимкнення встановіть рівним 0.'
+  honeypot-expire:
+    id: honeypot-expire
+    plugin: text
+    label: 'Honeypot Expire'
+    weight: -5
+    position: top-start
+    selector: '#edit-expire'
+    body: 'Якщо ввести позитивне значення, Honeypot вимагатиме, щоб всі захищені форми заповнювались стільки, скільки зазначено секунд. Більшість форм заповнюються не менше 5-10 секунд (для дорослої людини), тому встановлення тут значення < 5 допоможе захистити форму від спамерів. Для вимкнення встановіть рівним 0.'
+  honeypot-form-specific-settings:
+    id: honeypot-form-specific-settings
+    plugin: text
+    label: 'Налаштування Honeypot, що стосуються форм'
+    weight: -4
+    position: top-start
+    selector: '#edit-form-settings'
+    body: 'Якщо ви хотіли б вибрати конкретні форми для їх захисту за допомогою Honeypot, позначте прапорцем форми, які ви хочете захистити в цьому розділі. Найбільш поширені типи форм доступні для захисту.'

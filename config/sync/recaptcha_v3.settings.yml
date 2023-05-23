@@ -1,0 +1,10 @@
+_core:
+  default_config_hash: f_cE25HlJ00Q8jiZpIeuqQ-wE2B_t9x8k25pxqtw2k4
+langcode: uk
+site_key: 6LeXfTImAAAAAExkQmDqNohxovsRGCEccSfIFqCa
+secret_key: 6LeXfTImAAAAAEP3XkLrlFm0upsewGjYLgTRqN59
+verify_hostname: false
+default_challenge: ''
+error_message: 'Antibot verification failed.'
+cacheable: false
+library_use_recaptcha_net: false

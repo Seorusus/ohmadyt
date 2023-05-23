@@ -1,0 +1,8 @@
+uuid: 370c90e1-50de-47e1-869b-e002af978566
+langcode: uk
+status: true
+dependencies: {  }
+id: login
+label: Login
+threshold: 0.5
+challenge: default
