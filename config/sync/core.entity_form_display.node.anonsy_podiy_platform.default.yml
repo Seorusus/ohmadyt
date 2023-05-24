@@ -5,6 +5,7 @@ dependencies:
   config:
     - entity_browser.browser.browse_content_iframe
     - field.field.node.anonsy_podiy_platform.body
+    - field.field.node.anonsy_podiy_platform.field_address_additional
     - field.field.node.anonsy_podiy_platform.field_address_geolocation
     - field.field.node.anonsy_podiy_platform.field_date_interval
     - field.field.node.anonsy_podiy_platform.field_domain_all_affiliates
@@ -24,7 +25,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 2
+    weight: 3
     region: content
     settings:
       rows: 9
@@ -34,9 +35,17 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_address_additional:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_address_geolocation:
     type: geolocation_googlegeocoder
@@ -46,7 +55,7 @@ content:
       auto_client_location: ''
       auto_client_location_marker: '1'
       allow_override_map_settings: 0
-      hide_textfield_form: false
+      hide_textfield_form: true
       centre:
         client_location:
           enable: true
@@ -91,12 +100,12 @@ content:
               position: TOP_LEFT
               geocoder: google_geocoding_api
               settings:
-                label: Address
-                description: 'Enter an address to be localized.'
+                label: Адреса
+                description: 'Введіть адресу для локалізації.'
                 autocomplete_min_length: 1
                 component_restrictions:
                   route: ''
-                  country: ''
+                  country: Ukraine
                   administrative_area: ''
                   locality: ''
                   postal_code: ''
@@ -112,7 +121,7 @@ content:
             enabled: false
           client_location_indicator:
             weight: 0
-            enabled: false
+            enabled: true
           context_popup:
             weight: 0
             settings:
@@ -131,19 +140,6 @@ content:
               polygon: false
               fillColor: '#FF0000'
               fillOpacity: '0.35'
-            enabled: false
-          geolocation_google_maps_control_directions:
-            weight: 0
-            settings:
-              position: RIGHT_CENTER
-              behavior: default
-              origin_source: exposed
-              origin_static_value: ''
-              destination_source: exposed
-              destination_static_value: ''
-              travel_mode: exposed
-              directions_container: below
-              directions_container_custom_id: ''
             enabled: false
           map_disable_tilt:
             weight: 0
@@ -334,6 +330,19 @@ content:
           google_maps_layer_transit:
             weight: 0
             enabled: false
+          geolocation_google_maps_control_directions:
+            weight: 0
+            settings:
+              position: RIGHT_CENTER
+              behavior: default
+              origin_source: exposed
+              origin_static_value: ''
+              destination_source: exposed
+              destination_static_value: ''
+              travel_mode: exposed
+              directions_container: below
+              directions_container_custom_id: ''
+            enabled: false
         type: ROADMAP
         zoom: 10
         minZoom: 0
@@ -344,7 +353,7 @@ content:
     third_party_settings: {  }
   field_date_interval:
     type: smartdate_inline
-    weight: 4
+    weight: 5
     region: content
     settings:
       modal: false
@@ -362,7 +371,7 @@ content:
     third_party_settings: {  }
   field_photos:
     type: entity_browser_entity_reference
-    weight: 3
+    weight: 4
     region: content
     settings:
       entity_browser: browse_content_iframe
@@ -376,7 +385,7 @@ content:
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
-    weight: 5
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
@@ -386,34 +395,34 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 6
+    weight: 7
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 9
+    weight: 10
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 12
+    weight: 13
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 10
+    weight: 11
     region: content
     settings:
       display_label: true
@@ -428,7 +437,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 8
     region: content
     settings:
       match_operator: CONTAINS

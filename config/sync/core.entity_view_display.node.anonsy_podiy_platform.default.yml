@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.anonsy_podiy_platform.body
+    - field.field.node.anonsy_podiy_platform.field_address_additional
     - field.field.node.anonsy_podiy_platform.field_address_geolocation
     - field.field.node.anonsy_podiy_platform.field_date_interval
     - field.field.node.anonsy_podiy_platform.field_domain_all_affiliates
@@ -28,12 +29,20 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_address_additional:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_address_geolocation:
     type: geolocation_map
     label: hidden
     settings:
       set_marker: true
-      show_label: false
+      show_label: true
       common_map: true
       show_delta_label: false
       use_overridden_map_settings: false
@@ -43,7 +52,7 @@ content:
         format: plain_text
       centre:
         fit_bounds:
-          enable: true
+          enable: false
           weight: -101
           settings:
             reset_zoom: true
@@ -105,19 +114,6 @@ content:
               fillColor: '#FF0000'
               fillOpacity: '0.35'
             enabled: false
-          geolocation_google_maps_control_directions:
-            weight: 0
-            settings:
-              position: RIGHT_CENTER
-              behavior: default
-              origin_source: exposed
-              origin_static_value: ''
-              destination_source: exposed
-              destination_static_value: ''
-              travel_mode: exposed
-              directions_container: below
-              directions_container_custom_id: ''
-            enabled: false
           map_disable_tilt:
             weight: 0
             enabled: false
@@ -153,7 +149,7 @@ content:
               position: TOP_LEFT
               geocoder: google_geocoding_api
               settings:
-                label: Address
+                label: Адреса
                 description: 'Enter an address to be localized.'
                 autocomplete_min_length: 1
                 component_restrictions:
@@ -280,8 +276,8 @@ content:
             weight: 0
             settings:
               info_window_solitary: true
-              disable_auto_pan: true
-              info_auto_display: false
+              disable_auto_pan: false
+              info_auto_display: true
               max_width: null
             enabled: true
           marker_label:
@@ -329,6 +325,19 @@ content:
           google_maps_layer_transit:
             weight: 0
             enabled: false
+          geolocation_google_maps_control_directions:
+            weight: 0
+            settings:
+              position: RIGHT_CENTER
+              behavior: default
+              origin_source: exposed
+              origin_static_value: ''
+              destination_source: exposed
+              destination_static_value: ''
+              travel_mode: exposed
+              directions_container: below
+              directions_container_custom_id: ''
+            enabled: false
         type: ROADMAP
         zoom: 10
         minZoom: 0
@@ -360,7 +369,7 @@ content:
         decimals: 2
         suffix: h
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_photos:
     type: entity_reference_label
@@ -368,7 +377,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_tags:
     type: entity_reference_label
@@ -376,7 +385,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   links:
     settings: {  }
