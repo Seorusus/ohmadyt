@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "06c3b1356752749539ae5aa8183862ab",
+    "content-hash": "dbefe8c015d8b2faae587ea2a490f41b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2874,17 +2874,11 @@
         },
         {
             "name": "drupal/domain_entity",
-            "version": "1.0.0-rc1",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/domain_entity.git",
-                "reference": "8.x-1.0-rc1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/domain_entity-8.x-1.0-rc1.zip",
-                "reference": "8.x-1.0-rc1",
-                "shasum": "e0e05c2f6e345416b8c6869f9fe76ede48af5ef3"
+                "reference": "61878fef74b32f0abe15bf6a58d054aceb86b819"
             },
             "require": {
                 "drupal/core": "^8 || ^9 || ^10",
@@ -2893,12 +2887,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-1.0-rc1",
-                    "datestamp": "1664388388",
+                    "version": "8.x-1.0-beta8+1-dev",
+                    "datestamp": "1659140330",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -15522,7 +15519,7 @@
         "drupal/title_length": 5,
         "drupal/gin_toolbar": 5,
         "drupal/gin": 5,
-        "drupal/domain_entity": 5,
+        "drupal/domain_entity": 20,
         "drupal/config_split": 5,
         "drupal/media_entity_browser": 15,
         "drupal/email_formatter": 5,
