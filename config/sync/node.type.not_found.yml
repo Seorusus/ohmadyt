@@ -1,0 +1,17 @@
+uuid: ab64899e-9b83-4b7e-9bbc-1de7c6b6fb98
+langcode: uk
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Not found'
+type: not_found
+description: 'For 404, 403 pages'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

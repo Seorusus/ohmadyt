@@ -1,0 +1,22 @@
+uuid: 4ffc7748-45e1-4ba5-ad4a-c3a4f27faeeb
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.not_found
+id: node.not_found.promote
+field_name: promote
+entity_type: node
+bundle: not_found
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

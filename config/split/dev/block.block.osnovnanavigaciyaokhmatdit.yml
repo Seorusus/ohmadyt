@@ -12,7 +12,7 @@ dependencies:
 id: osnovnanavigaciyaokhmatdit
 theme: ohmatdyt
 region: content
-weight: -7
+weight: -8
 provider: null
 plugin: 'system_menu_block:vertical-navigation-ohmatdit'
 settings:

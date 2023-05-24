@@ -6,9 +6,9 @@ name: Портал
 mail: seorusus@gmail.com
 slogan: ''
 page:
-  403: ''
-  404: ''
-  front: /user/login
+  403: /node/168
+  404: /node/167
+  front: /node/13
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: uk

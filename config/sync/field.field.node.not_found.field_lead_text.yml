@@ -1,0 +1,21 @@
+uuid: b612c5ca-2dce-4623-b380-73e96b86716a
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_text
+    - node.type.not_found
+  module:
+    - text
+id: node.not_found.field_lead_text
+field_name: field_lead_text
+entity_type: node
+bundle: not_found
+label: 'Lead text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

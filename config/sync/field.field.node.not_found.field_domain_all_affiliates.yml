@@ -1,0 +1,21 @@
+uuid: a20b93d1-ed0e-439c-be54-3fb08ac22764
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_domain_all_affiliates
+    - node.type.not_found
+id: node.not_found.field_domain_all_affiliates
+field_name: field_domain_all_affiliates
+entity_type: node
+bundle: not_found
+label: 'Send to all affiliates'
+description: 'Make this content available on all domains.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
