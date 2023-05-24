@@ -1,0 +1,21 @@
+uuid: d707a228-5cfe-4d0a-bcc3-c7dc28fb626a
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_address_additional
+field_name: field_address_additional
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

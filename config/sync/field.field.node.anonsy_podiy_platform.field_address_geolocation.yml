@@ -11,7 +11,7 @@ id: node.anonsy_podiy_platform.field_address_geolocation
 field_name: field_address_geolocation
 entity_type: node
 bundle: anonsy_podiy_platform
-label: Address
+label: Адреса
 description: ''
 required: false
 translatable: false
