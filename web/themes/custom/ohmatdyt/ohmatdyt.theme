@@ -55,6 +55,14 @@ function ohmatdyt_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
       ],
     ];
   }
+
+  if ($form_id === 'user_pass') {
+    $form["name"]["#title"] = t('Введiть Логiн або адресу електронної пошти');
+    $form["mail"]["#markup"] = t('Інструкції щодо зміни пароля будуть надіслані на вашу електронну адресу, якщо вона зареєстрована.');
+    $form['actions']['submit']['#value'] = t('Надiслати');
+    $form['actions']['#attributes']['class'] = ['align-items-center password-enter'];
+    $form['mail']['#attributes']['class'] = ['mail-markup'];
+  }
 }
 
 function ohmatdyt_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
