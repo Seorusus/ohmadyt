@@ -1223,7 +1223,7 @@ h1 {
   position: relative;
 }
 
-.region-content-bottom .line-container {
+.line-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1232,12 +1232,12 @@ h1 {
   justify-content: space-between;
 }
 
-.region-content-bottom .line-container .line-bottom {
+.line-container .line-bottom {
   width: 77%;
   border-bottom: 3px solid #EAF0F8;
 }
 
-.region-content-bottom .line-container .line-bottom-red {
+.line-container .line-bottom-red {
   margin-top: 80px;
   width: 23%;
   border: 2px solid #DA393B;
@@ -1293,7 +1293,7 @@ h1 {
   -ms-flex-align: center;
   align-items: center;
   border-color: #3953A4;
-  border-right: solid 1px;
+  border-right: solid 1px #3953A4;
 }
 
 .user-login-form .form-type-textfield input {
@@ -1322,7 +1322,7 @@ h1 {
   -ms-flex-align: center;
   align-items: center;
   border-color: #3953A4;
-  border-right: solid 1px;
+  border-right: solid 1px #3953A4;
 }
 
 .user-login-form .form-type-password input {

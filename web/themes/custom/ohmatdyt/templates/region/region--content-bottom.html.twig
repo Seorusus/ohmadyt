@@ -19,17 +19,19 @@
   ]
 %}
 {% if content %}
-  <div{{ attributes.addClass(classes) }}>
-      <div class="external-systems-title">
-          {{ 'Перейти до систем' | t }}
-      </div>
-      <div class="row">
-          {{ content }}
-      </div>
-      <div class="line-container">
-          <div class="line-bottom-red"></div>
-          <div class="line-bottom"></div>
-      </div>
-  </div>
+    {% if logged_in %}
+        <div{{ attributes.addClass(classes) }}>
+          <div class="external-systems-title">
+              {{ 'Перейти до систем' | t }}
+          </div>
+    {% endif %}
+          <div class="row">
+              {{ content }}
+          </div>
+          <div class="line-container">
+              <div class="line-bottom-red"></div>
+              <div class="line-bottom"></div>
+          </div>
+        </div>
 {% endif %}
 

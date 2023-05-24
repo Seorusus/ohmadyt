@@ -382,21 +382,19 @@ h1 {
   position: relative;
 }
 
-.region-content-bottom {
-  .line-container {
-    display: flex;
-    justify-content: space-between;
+.line-container {
+  display: flex;
+  justify-content: space-between;
 
-    .line-bottom {
-      width: 77%;
-      border-bottom: 3px solid #EAF0F8;
-    }
+  .line-bottom {
+    width: 77%;
+    border-bottom: 3px solid #EAF0F8;
+  }
 
-    .line-bottom-red {
-      margin-top: 80px;
-      width: 23%;
-      border: 2px solid $brandred;
-    }
+  .line-bottom-red {
+    margin-top: 80px;
+    width: 23%;
+    border: 2px solid $brandred;
   }
 }
 
@@ -454,15 +452,12 @@ h1 {
       -ms-flex-align: center;
       align-items: center;
       border-color: $brandblue;
-      border-right: solid 1px;
+      border-right: solid 1px $brandblue;
     }
 
     input {
       display: block;
       width: 75%;
-      //border-top-left-radius: 0;
-      //border-bottom-left-radius: 0;
-      //border-color: $brandblue;
       border: none;
       padding: 12px;
     }
@@ -485,18 +480,13 @@ h1 {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      //border-top-left-radius: 0;
-      //border-bottom-left-radius: 0;
       border-color: $brandblue;
-      border-right: solid 1px;
+      border-right: solid 1px $brandblue;
     }
 
     input {
       display: block;
       width: 75%;
-      //border-top-left-radius: 0;
-      //border-bottom-left-radius: 0;
-      //border-color: $brandblue;
       border: none;
       padding: 12px;
     }
