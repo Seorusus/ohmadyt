@@ -441,38 +441,20 @@ h1 {
     border: solid 1px $brandblue;
     border-radius: 8px;
     margin-bottom: 20px;
+    min-height: 50px;
 
     label {
-      display: block;
       width: 25%;
       float: left;
-      padding: 0 10px;
-    }
-
-    input {
-      display: block;
-      width: 75%;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+      padding: 12px 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       border-color: $brandblue;
-    }
-  }
-
-  .form-type-password {
-    width: 30%;
-    margin: 0 auto;
-    border: solid 1px $brandblue;
-    border-radius: 8px;
-
-    label {
-      display: block;
-      width: 25%;
-      float: left;
-      clear: both;
-      //border-top-left-radius: 0;
-      //border-bottom-left-radius: 0;
-      border-color: $brandblue;
-      border-left: solid 1px;
+      border-right: solid 1px;
     }
 
     input {
@@ -482,6 +464,41 @@ h1 {
       //border-bottom-left-radius: 0;
       //border-color: $brandblue;
       border: none;
+      padding: 12px;
+    }
+  }
+
+  .form-type-password {
+    width: 30%;
+    margin: 0 auto;
+    border: solid 1px $brandblue;
+    border-radius: 8px;
+    min-height: 50px;
+
+    label {
+      width: 25%;
+      float: left;
+      padding: 12px 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      //border-top-left-radius: 0;
+      //border-bottom-left-radius: 0;
+      border-color: $brandblue;
+      border-right: solid 1px;
+    }
+
+    input {
+      display: block;
+      width: 75%;
+      //border-top-left-radius: 0;
+      //border-bottom-left-radius: 0;
+      //border-color: $brandblue;
+      border: none;
+      padding: 12px;
     }
   }
 }
