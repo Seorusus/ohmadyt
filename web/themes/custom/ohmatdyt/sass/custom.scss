@@ -433,8 +433,31 @@ h1 {
 }
 
 .user-login-form {
+  width: 30%;
+  margin: 0 auto;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    /* Другие стили для мобильных устройств */
+    &> p {
+      font-size: 16px;
+    }
+
+    .form-type-textfield {
+      font-size: 13px;
+    }
+
+    .form-type-password {
+      font-size: 13px;
+    }
+
+    .forgot-password-link {
+      width: 100%;
+      font-size: 13px;
+    }
+  }
+
   .form-type-textfield {
-    width: 30%;
     margin: 0 auto;
     border: solid 1px $brandblue;
     border-radius: 8px;
@@ -464,7 +487,6 @@ h1 {
   }
 
   .form-type-password {
-    width: 30%;
     margin: 0 auto;
     border: solid 1px $brandblue;
     border-radius: 8px;
@@ -489,6 +511,56 @@ h1 {
       width: 75%;
       border: none;
       padding: 12px;
+    }
+  }
+}
+
+//.user-pass {
+//  width: 30%;
+//  margin: 0 auto;
+//
+//  &> p {
+//    color: $brandblue;
+//    font-style: italic;
+//    font-size: 14px;
+//  }
+//
+//  input {
+//    margin: 0 auto;
+//    border: solid 1px #3953A4;
+//    border-radius: 8px;
+//    margin-bottom: 20px;
+//    min-height: 50px;
+//  }
+//}
+
+.user-pass {
+  width: 30%;
+  margin: 0 auto;
+
+  &> p {
+    color: $brandblue;
+    font-style: italic;
+    font-size: 14px;
+  }
+
+  input {
+    margin: 0 auto;
+    border: solid 1px #3953A4;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    min-height: 50px;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    /* Другие стили для мобильных устройств */
+    &> p {
+      font-size: 16px;
+    }
+
+    input {
+      /* Изменения для input на мобильных устройствах */
     }
   }
 }
