@@ -1223,7 +1223,7 @@ h1 {
   position: relative;
 }
 
-.region-content-bottom .line-container {
+.line-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1232,12 +1232,12 @@ h1 {
   justify-content: space-between;
 }
 
-.region-content-bottom .line-container .line-bottom {
+.line-container .line-bottom {
   width: 77%;
   border-bottom: 3px solid #EAF0F8;
 }
 
-.region-content-bottom .line-container .line-bottom-red {
+.line-container .line-bottom-red {
   margin-top: 80px;
   width: 23%;
   border: 2px solid #DA393B;
@@ -1273,8 +1273,32 @@ h1 {
   text-align: center;
 }
 
-.user-login-form .form-type-textfield {
+.user-login-form {
   width: 30%;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .user-login-form {
+    width: 100%;
+    /* Другие стили для мобильных устройств */
+  }
+  .user-login-form > p {
+    font-size: 16px;
+  }
+  .user-login-form .form-type-textfield {
+    font-size: 13px;
+  }
+  .user-login-form .form-type-password {
+    font-size: 13px;
+  }
+  .user-login-form .forgot-password-link {
+    width: 100%;
+    font-size: 13px;
+  }
+}
+
+.user-login-form .form-type-textfield {
   margin: 0 auto;
   border: solid 1px #3953A4;
   border-radius: 8px;
@@ -1293,7 +1317,7 @@ h1 {
   -ms-flex-align: center;
   align-items: center;
   border-color: #3953A4;
-  border-right: solid 1px;
+  border-right: solid 1px #3953A4;
 }
 
 .user-login-form .form-type-textfield input {
@@ -1304,7 +1328,6 @@ h1 {
 }
 
 .user-login-form .form-type-password {
-  width: 30%;
   margin: 0 auto;
   border: solid 1px #3953A4;
   border-radius: 8px;
@@ -1322,7 +1345,7 @@ h1 {
   -ms-flex-align: center;
   align-items: center;
   border-color: #3953A4;
-  border-right: solid 1px;
+  border-right: solid 1px #3953A4;
 }
 
 .user-login-form .form-type-password input {
@@ -1330,6 +1353,38 @@ h1 {
   width: 75%;
   border: none;
   padding: 12px;
+}
+
+.user-pass {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.user-pass > p {
+  color: #3953A4;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.user-pass input {
+  margin: 0 auto;
+  border: solid 1px #3953A4;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  min-height: 50px;
+}
+
+@media (max-width: 767px) {
+  .user-pass {
+    width: 100%;
+    /* Другие стили для мобильных устройств */
+  }
+  .user-pass > p {
+    font-size: 16px;
+  }
+  .user-pass input {
+    /* Изменения для input на мобильных устройствах */
+  }
 }
 
 @font-face {

@@ -52,7 +52,7 @@
     ],
     "link": [
         {
-            "uri": "internal:\/user",
+            "uri": "internal:\/enter-portal\/user",
             "title": "",
             "options": {
                 "menu_token": {
@@ -70,6 +70,9 @@
                         "none",
                         0
                     ]
+                },
+                "menu_icon": {
+                    "fid": false
                 }
             }
         }
@@ -101,7 +104,7 @@
     ],
     "changed": [
         {
-            "value": "2023-05-10T14:21:33+00:00",
+            "value": "2023-05-24T10:20:47+00:00",
             "lang": "uk",
             "format": "Y-m-d\\TH:i:sP"
         }

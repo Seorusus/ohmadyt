@@ -382,21 +382,19 @@ h1 {
   position: relative;
 }
 
-.region-content-bottom {
-  .line-container {
-    display: flex;
-    justify-content: space-between;
+.line-container {
+  display: flex;
+  justify-content: space-between;
 
-    .line-bottom {
-      width: 77%;
-      border-bottom: 3px solid #EAF0F8;
-    }
+  .line-bottom {
+    width: 77%;
+    border-bottom: 3px solid #EAF0F8;
+  }
 
-    .line-bottom-red {
-      margin-top: 80px;
-      width: 23%;
-      border: 2px solid $brandred;
-    }
+  .line-bottom-red {
+    margin-top: 80px;
+    width: 23%;
+    border: 2px solid $brandred;
   }
 }
 
@@ -435,8 +433,31 @@ h1 {
 }
 
 .user-login-form {
+  width: 30%;
+  margin: 0 auto;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    /* Другие стили для мобильных устройств */
+    &> p {
+      font-size: 16px;
+    }
+
+    .form-type-textfield {
+      font-size: 13px;
+    }
+
+    .form-type-password {
+      font-size: 13px;
+    }
+
+    .forgot-password-link {
+      width: 100%;
+      font-size: 13px;
+    }
+  }
+
   .form-type-textfield {
-    width: 30%;
     margin: 0 auto;
     border: solid 1px $brandblue;
     border-radius: 8px;
@@ -454,22 +475,18 @@ h1 {
       -ms-flex-align: center;
       align-items: center;
       border-color: $brandblue;
-      border-right: solid 1px;
+      border-right: solid 1px $brandblue;
     }
 
     input {
       display: block;
       width: 75%;
-      //border-top-left-radius: 0;
-      //border-bottom-left-radius: 0;
-      //border-color: $brandblue;
       border: none;
       padding: 12px;
     }
   }
 
   .form-type-password {
-    width: 30%;
     margin: 0 auto;
     border: solid 1px $brandblue;
     border-radius: 8px;
@@ -485,20 +502,65 @@ h1 {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      //border-top-left-radius: 0;
-      //border-bottom-left-radius: 0;
       border-color: $brandblue;
-      border-right: solid 1px;
+      border-right: solid 1px $brandblue;
     }
 
     input {
       display: block;
       width: 75%;
-      //border-top-left-radius: 0;
-      //border-bottom-left-radius: 0;
-      //border-color: $brandblue;
       border: none;
       padding: 12px;
+    }
+  }
+}
+
+//.user-pass {
+//  width: 30%;
+//  margin: 0 auto;
+//
+//  &> p {
+//    color: $brandblue;
+//    font-style: italic;
+//    font-size: 14px;
+//  }
+//
+//  input {
+//    margin: 0 auto;
+//    border: solid 1px #3953A4;
+//    border-radius: 8px;
+//    margin-bottom: 20px;
+//    min-height: 50px;
+//  }
+//}
+
+.user-pass {
+  width: 30%;
+  margin: 0 auto;
+
+  &> p {
+    color: $brandblue;
+    font-style: italic;
+    font-size: 14px;
+  }
+
+  input {
+    margin: 0 auto;
+    border: solid 1px #3953A4;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    min-height: 50px;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    /* Другие стили для мобильных устройств */
+    &> p {
+      font-size: 16px;
+    }
+
+    input {
+      /* Изменения для input на мобильных устройствах */
     }
   }
 }

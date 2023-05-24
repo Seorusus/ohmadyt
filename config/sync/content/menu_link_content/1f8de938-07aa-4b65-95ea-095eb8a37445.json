@@ -52,9 +52,13 @@
     ],
     "link": [
         {
-            "uri": "internal:\/user\/logout",
+            "uri": "internal:\/enter-portal\/user\/logout",
             "title": "",
-            "options": []
+            "options": {
+                "menu_icon": {
+                    "fid": false
+                }
+            }
         }
     ],
     "external": [
@@ -84,7 +88,7 @@
     ],
     "changed": [
         {
-            "value": "2023-05-10T14:39:25+00:00",
+            "value": "2023-05-24T10:21:31+00:00",
             "lang": "uk",
             "format": "Y-m-d\\TH:i:sP"
         }
