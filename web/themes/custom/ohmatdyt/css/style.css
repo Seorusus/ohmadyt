@@ -1377,14 +1377,48 @@ h1 {
 @media (max-width: 767px) {
   .user-pass {
     width: 100%;
-    /* Другие стили для мобильных устройств */
   }
   .user-pass > p {
     font-size: 16px;
   }
-  .user-pass input {
-    /* Изменения для input на мобильных устройствах */
-  }
+}
+
+/*
+* Page 403-404
+ */
+.page-node-type-not-found .field--name-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 146px;
+  text-align: center;
+  color: #3953A4;
+  margin: 0 auto;
+  margin-top: 140px;
+  display: block;
+}
+
+.page-node-type-not-found .field--name-field-lead-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  color: #3953A4;
+  margin: 25px;
+}
+
+.page-node-type-not-found .field--name-field-cta-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+}
+
+.page-node-type-not-found .field--name-field-cta-text a {
+  color: #3953A4;
+  text-decoration: none;
 }
 
 @font-face {

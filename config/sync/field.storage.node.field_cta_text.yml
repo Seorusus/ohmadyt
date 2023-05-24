@@ -1,0 +1,20 @@
+uuid: a5e4b7f9-19b3-4075-a56d-639f1a37aef6
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_cta_text
+field_name: field_cta_text
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

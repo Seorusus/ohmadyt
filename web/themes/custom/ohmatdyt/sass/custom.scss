@@ -515,25 +515,6 @@ h1 {
   }
 }
 
-//.user-pass {
-//  width: 30%;
-//  margin: 0 auto;
-//
-//  &> p {
-//    color: $brandblue;
-//    font-style: italic;
-//    font-size: 14px;
-//  }
-//
-//  input {
-//    margin: 0 auto;
-//    border: solid 1px #3953A4;
-//    border-radius: 8px;
-//    margin-bottom: 20px;
-//    min-height: 50px;
-//  }
-//}
-
 .user-pass {
   width: 30%;
   margin: 0 auto;
@@ -554,13 +535,49 @@ h1 {
 
   @media (max-width: 767px) {
     width: 100%;
-    /* Другие стили для мобильных устройств */
+
     &> p {
       font-size: 16px;
     }
+  }
+}
 
-    input {
-      /* Изменения для input на мобильных устройствах */
+/*
+* Page 403-404
+ */
+.page-node-type-not-found {
+  .field--name-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 146px;
+    text-align: center;
+    color: $brandblue;
+    margin: 0 auto;
+    margin-top: 140px;
+    display: block;
+  }
+
+  .field--name-field-lead-text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    color: $brandblue;
+    margin: 25px;
+  }
+
+  .field--name-field-cta-text {
+    a {
+      color: $brandblue;
+      text-decoration: none;
     }
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+
   }
 }

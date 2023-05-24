@@ -1,0 +1,31 @@
+uuid: 469771a3-8335-4cd9-9c09-77b8e3d51e11
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+  theme:
+    - ohmatdyt
+id: sitebranding_2
+theme: ohmatdyt
+region: content
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Not found Logo'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      not_found: not_found
