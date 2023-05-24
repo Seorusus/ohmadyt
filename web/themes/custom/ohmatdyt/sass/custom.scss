@@ -438,10 +438,50 @@ h1 {
   .form-type-textfield {
     width: 30%;
     margin: 0 auto;
+    border: solid 1px $brandblue;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      width: 25%;
+      float: left;
+      padding: 0 10px;
+    }
+
+    input {
+      display: block;
+      width: 75%;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-color: $brandblue;
+    }
   }
 
   .form-type-password {
     width: 30%;
     margin: 0 auto;
+    border: solid 1px $brandblue;
+    border-radius: 8px;
+
+    label {
+      display: block;
+      width: 25%;
+      float: left;
+      clear: both;
+      //border-top-left-radius: 0;
+      //border-bottom-left-radius: 0;
+      border-color: $brandblue;
+      border-left: solid 1px;
+    }
+
+    input {
+      display: block;
+      width: 75%;
+      //border-top-left-radius: 0;
+      //border-bottom-left-radius: 0;
+      //border-color: $brandblue;
+      border: none;
+    }
   }
 }
