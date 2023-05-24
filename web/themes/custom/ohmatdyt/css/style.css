@@ -1386,6 +1386,10 @@ h1 {
 /*
 * Page 403-404
  */
+.page-node-type-not-found .node--type-not-found {
+  margin-bottom: 150px;
+}
+
 .page-node-type-not-found .field--name-title {
   font-style: normal;
   font-weight: 700;

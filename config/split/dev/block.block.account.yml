@@ -8,7 +8,7 @@ dependencies:
     - block_class
     - block_content
     - domain
-    - node
+    - user
   theme:
     - ohmatdyt
 third_party_settings:
@@ -36,10 +36,10 @@ visibility:
       domain: '@domain.current_domain_context:domain'
     domains:
       ohmatdyt: ohmatdyt
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
+  user_role:
+    id: user_role
     negate: false
     context_mapping:
-      node: '@node.node_route_context:node'
-    bundles:
-      news: news
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
