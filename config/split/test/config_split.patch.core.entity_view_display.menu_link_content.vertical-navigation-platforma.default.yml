@@ -1,7 +1,0 @@
-adding:
-  dependencies:
-    config:
-      - field.field.menu_link_content.vertical-navigation-platforma.domain_access
-  hidden:
-    domain_access: true
-removing: {  }

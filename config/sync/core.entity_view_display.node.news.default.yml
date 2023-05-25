@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.news.body
+    - field.field.node.news.domain_access
+    - field.field.node.news.field_domain_access
     - field.field.node.news.field_domain_all_affiliates
     - field.field.node.news.field_gallery
     - field.field.node.news.field_media_image
@@ -64,6 +66,8 @@ content:
     weight: 0
     region: content
 hidden:
+  domain_access: true
+  field_domain_access: true
   field_domain_all_affiliates: true
   langcode: true
   search_api_excerpt: true

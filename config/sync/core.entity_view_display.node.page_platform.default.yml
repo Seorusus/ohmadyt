@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.page_platform.body
+    - field.field.node.page_platform.domain_access
+    - field.field.node.page_platform.field_domain_access
     - field.field.node.page_platform.field_domain_all_affiliates
     - field.field.node.page_platform.field_files
     - field.field.node.page_platform.field_lead
@@ -55,6 +57,8 @@ content:
     weight: 4
     region: content
 hidden:
+  domain_access: true
+  field_domain_access: true
   field_domain_all_affiliates: true
   langcode: true
   search_api_excerpt: true

@@ -1,7 +1,0 @@
-adding:
-  dependencies:
-    config:
-      - field.field.node.not_found.field_domain_access
-  hidden:
-    field_domain_access: true
-removing: {  }

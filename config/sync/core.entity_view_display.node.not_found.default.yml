@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.not_found.field_cta_text
+    - field.field.node.not_found.field_domain_access
     - field.field.node.not_found.field_domain_all_affiliates
     - field.field.node.not_found.field_lead_text
     - node.type.not_found
@@ -35,6 +36,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_domain_access: true
   field_domain_all_affiliates: true
   langcode: true
   search_api_excerpt: true

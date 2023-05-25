@@ -28,6 +28,7 @@ module:
   default_content_deploy: 0
   devel: 0
   devel_generate: 0
+  domain: 0
   domain_access: 0
   domain_config: 0
   domain_config_ui: 0

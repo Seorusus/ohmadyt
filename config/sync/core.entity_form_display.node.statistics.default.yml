@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.statistics.body
+    - field.field.node.statistics.domain_access
     - field.field.node.statistics.field_date
+    - field.field.node.statistics.field_domain_access
     - field.field.node.statistics.field_domain_all_affiliates
     - field.field.node.statistics.field_file
     - node.type.statistics
@@ -100,4 +102,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  domain_access: true
+  field_domain_access: true
   field_domain_all_affiliates: true

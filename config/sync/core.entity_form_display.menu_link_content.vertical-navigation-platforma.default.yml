@@ -3,6 +3,7 @@ langcode: uk
 status: true
 dependencies:
   config:
+    - field.field.menu_link_content.vertical-navigation-platforma.domain_access
     - field.field.menu_link_content.vertical-navigation-platforma.field_svg_icon
     - system.menu.vertical-navigation-platforma
   module:
@@ -15,6 +16,9 @@ bundle: vertical-navigation-platforma
 mode: default
 content:
   domain_access:
+    type: options_buttons
+    weight: 21
+    region: content
     settings: {  }
     third_party_settings: {  }
   field_svg_icon:

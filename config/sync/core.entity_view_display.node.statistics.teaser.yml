@@ -5,7 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.statistics.body
+    - field.field.node.statistics.domain_access
     - field.field.node.statistics.field_date
+    - field.field.node.statistics.field_domain_access
     - field.field.node.statistics.field_domain_all_affiliates
     - field.field.node.statistics.field_file
     - node.type.statistics
@@ -31,7 +33,9 @@ content:
     weight: 100
     region: content
 hidden:
+  domain_access: true
   field_date: true
+  field_domain_access: true
   field_domain_all_affiliates: true
   field_file: true
   langcode: true

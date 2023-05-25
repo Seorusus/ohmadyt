@@ -1,9 +1,0 @@
-adding:
-  dependencies:
-    config:
-      - field.field.user.user.field_domain_access
-      - field.field.user.user.field_domain_admin
-  hidden:
-    field_domain_access: true
-    field_domain_admin: true
-removing: {  }

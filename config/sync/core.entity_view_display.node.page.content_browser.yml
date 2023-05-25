@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.content_browser
     - field.field.node.page.body
+    - field.field.node.page.domain_access
+    - field.field.node.page.field_domain_access
     - field.field.node.page.field_domain_all_affiliates
     - field.field.node.page.field_files
     - field.field.node.page.field_lead
@@ -32,6 +34,8 @@ content:
     weight: 101
     region: content
 hidden:
+  domain_access: true
+  field_domain_access: true
   field_domain_all_affiliates: true
   field_files: true
   field_lead: true

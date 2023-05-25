@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.webinar.body
+    - field.field.node.webinar.domain_access
     - field.field.node.webinar.field_date
+    - field.field.node.webinar.field_domain_access
     - field.field.node.webinar.field_domain_all_affiliates
     - field.field.node.webinar.field_media_image
     - field.field.node.webinar.field_organizer
@@ -186,4 +188,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  domain_access: true
+  field_domain_access: true
   field_domain_all_affiliates: true

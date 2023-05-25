@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.rubric.body
+    - field.field.node.rubric.domain_access
     - field.field.node.rubric.field_children
+    - field.field.node.rubric.field_domain_access
     - field.field.node.rubric.field_domain_all_affiliates
     - field.field.node.rubric.field_layout
     - node.type.rubric
@@ -45,6 +47,8 @@ content:
     weight: 100
     region: content
 hidden:
+  domain_access: true
+  field_domain_access: true
   field_domain_all_affiliates: true
   langcode: true
   search_api_excerpt: true

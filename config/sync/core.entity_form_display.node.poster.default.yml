@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.poster.body
+    - field.field.node.poster.domain_access
+    - field.field.node.poster.field_domain_access
     - field.field.node.poster.field_domain_all_affiliates
     - node.type.poster
   module:
@@ -83,4 +85,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  domain_access: true
+  field_domain_access: true
   field_domain_all_affiliates: true

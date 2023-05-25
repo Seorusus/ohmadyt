@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.material_platform.body
+    - field.field.node.material_platform.domain_access
     - field.field.node.material_platform.field_autor_platform
+    - field.field.node.material_platform.field_domain_access
     - field.field.node.material_platform.field_domain_all_affiliates
     - field.field.node.material_platform.field_files
     - field.field.node.material_platform.field_media_image
@@ -201,4 +203,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  domain_access: true
+  field_domain_access: true
   field_domain_all_affiliates: true

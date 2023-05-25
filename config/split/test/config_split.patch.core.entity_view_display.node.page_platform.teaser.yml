@@ -1,9 +1,0 @@
-adding:
-  dependencies:
-    config:
-      - field.field.node.page_platform.domain_access
-      - field.field.node.page_platform.field_domain_access
-  hidden:
-    domain_access: true
-    field_domain_access: true
-removing: {  }

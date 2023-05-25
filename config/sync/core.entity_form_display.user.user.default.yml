@@ -7,6 +7,8 @@ dependencies:
     - field.field.user.user.field_biography
     - field.field.user.user.field_degree
     - field.field.user.user.field_department
+    - field.field.user.user.field_domain_access
+    - field.field.user.user.field_domain_admin
     - field.field.user.user.field_domain_all_affiliates
     - field.field.user.user.field_duties
     - field.field.user.user.field_education
@@ -125,9 +127,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_domain_access:
+    type: options_buttons
+    weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
   field_domain_admin:
+    type: options_buttons
+    weight: 11
+    region: content
     settings: {  }
     third_party_settings: {  }
   field_domain_all_affiliates:
