@@ -1069,11 +1069,11 @@ h1 {
   margin-left: 5px;
 }
 
-.field.field--name-field-tags {
+.field--name-field-tags {
   margin: 70px 0;
 }
 
-.field.field--name-field-tags a {
+.field--name-field-tags a {
   text-decoration: none;
   background-color: var(--o-gray);
   border-radius: 80px;
@@ -1088,9 +1088,15 @@ h1 {
   transition: background-color 0.5s;
 }
 
-.field.field--name-field-tags a:hover {
+.field--name-field-tags a:hover {
   color: white;
   background-color: #DA393B;
+}
+
+.field--name-field-tags .field__item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .external-systems-title {
@@ -1423,6 +1429,17 @@ h1 {
 .page-node-type-not-found .field--name-field-cta-text a {
   color: #3953A4;
   text-decoration: none;
+}
+
+/*
+* Page Video
+ */
+.page-node-type-video .field--name-body {
+  margin: 60px 0;
+}
+
+.page-node-type-video .field-online {
+  font-weight: 900;
 }
 
 @font-face {

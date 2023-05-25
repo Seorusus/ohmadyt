@@ -35,7 +35,6 @@ function ohmatdyt_preprocess_menu(&$variables) {
  */
 function ohmatdyt_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   if ($form_id === 'user_login_form' ) {
-    $a = 1;
     // Add placeholders.
     $form["name"]["#title"] = t('Логін');
     $form['name']['#attributes']['placeholder'] = t('Логін або email');
@@ -65,9 +64,23 @@ function ohmatdyt_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
   }
 }
 
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
 function ohmatdyt_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
 
   if ($hook === 'form' & !empty($variables['element']['#id'])) {
     $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_block_alter().
+ */
+function ohmatdyt_theme_suggestions_block_alter(array &$suggestions, array $variables)
+{
+  // Block suggestions for custom block types.
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__type__' . $variables['elements']['content']['#block_content']->bundle());
   }
 }
