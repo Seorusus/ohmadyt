@@ -5,7 +5,9 @@ dependencies:
   config:
     - entity_browser.browser.browse_content_iframe
     - field.field.node.rubric.body
+    - field.field.node.rubric.domain_access
     - field.field.node.rubric.field_children
+    - field.field.node.rubric.field_domain_access
     - field.field.node.rubric.field_domain_all_affiliates
     - field.field.node.rubric.field_layout
     - node.type.rubric
@@ -126,4 +128,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  domain_access: true
+  field_domain_access: true
   field_domain_all_affiliates: true

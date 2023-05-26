@@ -1,9 +1,0 @@
-adding:
-  dependencies:
-    config:
-      - field.field.node.statistics.domain_access
-      - field.field.node.statistics.field_domain_access
-  hidden:
-    domain_access: true
-    field_domain_access: true
-removing: {  }

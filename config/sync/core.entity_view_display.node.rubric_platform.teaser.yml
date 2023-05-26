@@ -5,7 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.rubric_platform.body
+    - field.field.node.rubric_platform.domain_access
     - field.field.node.rubric_platform.field_children_platform
+    - field.field.node.rubric_platform.field_domain_access
     - field.field.node.rubric_platform.field_domain_all_affiliates
     - field.field.node.rubric_platform.field_layout
     - node.type.rubric_platform
@@ -31,7 +33,9 @@ content:
     weight: 100
     region: content
 hidden:
+  domain_access: true
   field_children_platform: true
+  field_domain_access: true
   field_domain_all_affiliates: true
   field_layout: true
   langcode: true

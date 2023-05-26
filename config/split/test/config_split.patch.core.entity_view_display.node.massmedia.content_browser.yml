@@ -1,9 +1,0 @@
-adding:
-  dependencies:
-    config:
-      - field.field.node.massmedia.domain_access
-      - field.field.node.massmedia.field_domain_access
-  hidden:
-    domain_access: true
-    field_domain_access: true
-removing: {  }

@@ -5,7 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.content_browser
     - field.field.node.massmedia.body
+    - field.field.node.massmedia.domain_access
     - field.field.node.massmedia.field_author
+    - field.field.node.massmedia.field_domain_access
     - field.field.node.massmedia.field_domain_all_affiliates
     - field.field.node.massmedia.field_gallery
     - field.field.node.massmedia.field_photos
@@ -34,7 +36,9 @@ content:
     weight: 100
     region: content
 hidden:
+  domain_access: true
   field_author: true
+  field_domain_access: true
   field_domain_all_affiliates: true
   field_gallery: true
   field_photos: true

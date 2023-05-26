@@ -5,10 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.content_browser
     - field.field.node.document.body
+    - field.field.node.document.domain_access
     - field.field.node.document.field_date_iso
     - field.field.node.document.field_docauthor
     - field.field.node.document.field_doctheme
     - field.field.node.document.field_doctype
+    - field.field.node.document.field_domain_access
     - field.field.node.document.field_domain_all_affiliates
     - field.field.node.document.field_files
     - field.field.node.document.field_notes
@@ -38,10 +40,12 @@ content:
     weight: 100
     region: content
 hidden:
+  domain_access: true
   field_date_iso: true
   field_docauthor: true
   field_doctheme: true
   field_doctype: true
+  field_domain_access: true
   field_domain_all_affiliates: true
   field_files: true
   field_notes: true

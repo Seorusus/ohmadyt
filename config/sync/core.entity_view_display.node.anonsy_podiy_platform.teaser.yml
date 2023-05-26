@@ -5,9 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.anonsy_podiy_platform.body
+    - field.field.node.anonsy_podiy_platform.domain_access
     - field.field.node.anonsy_podiy_platform.field_address_additional
     - field.field.node.anonsy_podiy_platform.field_address_geolocation
     - field.field.node.anonsy_podiy_platform.field_date_interval
+    - field.field.node.anonsy_podiy_platform.field_domain_access
     - field.field.node.anonsy_podiy_platform.field_domain_all_affiliates
     - field.field.node.anonsy_podiy_platform.field_photos
     - field.field.node.anonsy_podiy_platform.field_tags
@@ -34,9 +36,11 @@ content:
     weight: 100
     region: content
 hidden:
+  domain_access: true
   field_address_additional: true
   field_address_geolocation: true
   field_date_interval: true
+  field_domain_access: true
   field_domain_all_affiliates: true
   field_photos: true
   field_tags: true

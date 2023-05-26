@@ -5,7 +5,9 @@ dependencies:
   config:
     - entity_browser.browser.browse_content
     - field.field.node.massmedia.body
+    - field.field.node.massmedia.domain_access
     - field.field.node.massmedia.field_author
+    - field.field.node.massmedia.field_domain_access
     - field.field.node.massmedia.field_domain_all_affiliates
     - field.field.node.massmedia.field_gallery
     - field.field.node.massmedia.field_photos
@@ -160,4 +162,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  domain_access: true
+  field_domain_access: true
   field_domain_all_affiliates: true

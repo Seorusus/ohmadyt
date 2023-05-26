@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.video_platform.body
+    - field.field.node.video_platform.domain_access
     - field.field.node.video_platform.field_date
+    - field.field.node.video_platform.field_domain_access
     - field.field.node.video_platform.field_domain_all_affiliates
     - field.field.node.video_platform.field_online
     - field.field.node.video_platform.field_organizer
@@ -160,4 +162,6 @@ content:
       placeholder: 'Починайте писати...'
     third_party_settings: {  }
 hidden:
+  domain_access: true
+  field_domain_access: true
   field_domain_all_affiliates: true

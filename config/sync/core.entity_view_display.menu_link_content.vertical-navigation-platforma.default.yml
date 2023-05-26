@@ -3,6 +3,7 @@ langcode: uk
 status: true
 dependencies:
   config:
+    - field.field.menu_link_content.vertical-navigation-platforma.domain_access
     - field.field.menu_link_content.vertical-navigation-platforma.field_svg_icon
     - system.menu.vertical-navigation-platforma
   module:
@@ -35,5 +36,6 @@ content:
     weight: 1
     region: content
 hidden:
+  domain_access: true
   langcode: true
   search_api_excerpt: true

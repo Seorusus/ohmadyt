@@ -1,7 +1,0 @@
-adding:
-  dependencies:
-    config:
-      - field.field.block_content.basic.domain_access
-  hidden:
-    domain_access: true
-removing: {  }
