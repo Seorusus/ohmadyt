@@ -39,12 +39,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  domain_access:
-    type: options_buttons
-    weight: 26
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_address:
     type: address_default
     weight: 2
@@ -52,7 +46,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_date_interval:
-    type: smartdate_inline
+    type: smartdate_default
     weight: 4
     region: content
     settings:
@@ -67,11 +61,10 @@ content:
       show_extra: false
       hide_date: true
       allday: true
-      separator: to
     third_party_settings: {  }
   field_photos:
     type: media_library_widget
-    weight: 3
+    weight: 5
     region: content
     settings:
       media_types: {  }
@@ -139,5 +132,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  domain_access: true
   field_domain_access: true
   field_domain_all_affiliates: true

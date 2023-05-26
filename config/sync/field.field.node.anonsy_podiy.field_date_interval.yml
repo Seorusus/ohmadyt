@@ -1,5 +1,5 @@
-uuid: f113e736-b8b2-4b1c-b9be-54780934f573
-langcode: uk
+uuid: 6a7e8691-933a-4b97-9c6f-a3bd0ef58a0b
+langcode: en
 status: true
 dependencies:
   config:
@@ -13,13 +13,13 @@ entity_type: node
 bundle: anonsy_podiy
 label: Дата
 description: ''
-required: true
-translatable: false
+required: false
+translatable: true
 default_value:
   -
     default_duration: 60
     default_duration_increments: "30\r\n60|1 hour\r\n90\r\n120|2 hours\r\ncustom"
-    default_date_type: ''
+    default_date_type: now
     default_date: ''
     min: ''
     max: ''

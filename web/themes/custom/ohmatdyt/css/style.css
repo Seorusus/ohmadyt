@@ -870,19 +870,29 @@ h1 {
   font-size: 32px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .block-page-title-block {
   position: relative;
 }
 
-.block-page-title-block:after {
+.block-page-title-block h1 {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.block-page-title-block h1:after {
   content: '';
-  position: absolute;
+  position: relative;
   width: 11px;
   height: 11px;
   background-color: #DA393B;
   border-radius: 50%;
-  top: 50%;
-  left: 100%;
+  top: 15px;
+  margin-left: 10px;
 }
 
 .text-right {
@@ -985,6 +995,39 @@ h1 {
   position: absolute;
   left: 77px;
   top: -64px;
+}
+
+.main-content-menu li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto !important;
+}
+
+.main-content-menu li:last-child a:after {
+  content: none;
+}
+
+.main-content-menu li a {
+  font-weight: 600;
+  font-size: 16px;
+  color: #31486c;
+  text-decoration: none;
+}
+
+.main-content-menu li a.is-active {
+  color: #DA393B;
+}
+
+.main-content-menu li a:after {
+  margin: 0 15px 3px;
+  display: inline-block;
+  content: "";
+  border: 1px solid #c2c6cc;
+  background-color: #c2c6cc;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
 }
 
 .menu--vertical-navigation-platforma .menu.menu-level-0 {
@@ -1440,6 +1483,255 @@ h1 {
 
 .page-node-type-video .field-online {
   font-weight: 900;
+}
+
+/*
+* Page News
+ */
+.exposed-form-page-news {
+  margin-bottom: 50px;
+}
+
+.exposed-form-page-news .views-exposed-form {
+  border: none;
+}
+
+.exposed-form-page-news .views-exposed-form #edit-reset {
+  display: none;
+}
+
+.exposed-form-page-news .views-exposed-form label {
+  display: none;
+}
+
+.exposed-form-page-news .views-exposed-form legend {
+  display: none;
+}
+
+.exposed-form-page-news .views-exposed-form .form-item-date-created-min {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 49%;
+  margin: auto;
+  border-right: 1px solid rgba(57, 83, 164, 0.5);
+}
+
+.exposed-form-page-news .views-exposed-form .form-item-date-created-min input {
+  border: none;
+}
+
+.exposed-form-page-news .views-exposed-form .form-item-date-created-min:after {
+  content: "\e908";
+  width: auto;
+  height: 100%;
+  display: block;
+  font-family: 'icomoon', sans-serif !important;
+  font-size: 23px;
+  color: #3953A4;
+  background-color: #fff;
+  border: none;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  position: relative;
+  left: 10px;
+}
+
+.exposed-form-page-news .views-exposed-form .form-item-date-created-max {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 49%;
+  margin: auto;
+}
+
+.exposed-form-page-news .views-exposed-form .form-item-date-created-max input {
+  border: none;
+  margin-left: 10px;
+}
+
+.exposed-form-page-news .views-exposed-form .form-item-search-combine {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-right: 1px solid rgba(57, 83, 164, 0.5);
+}
+
+.exposed-form-page-news .views-exposed-form .form-item-search-combine input {
+  border: none;
+}
+
+.exposed-form-page-news .views-exposed-form .form-actions {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  Width: 86px;
+  Height: 68px;
+  background: #3953A4;
+  border: 1px solid #3953A4;
+  border-radius: 0 6px 6px 0;
+  margin: 0;
+}
+
+.exposed-form-page-news .views-exposed-form .form-actions input[type=submit] {
+  background: url(../images/lupa.svg) no-repeat center center;
+  border: 0;
+  font-size: 0;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.exposed-form-page-news .views-exposed-form .form--inline.clearfix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 8px 0;
+  position: relative;
+  border: 1px solid rgba(57, 83, 164, 0.5);
+  border-radius: 6px;
+  padding: 0 0 0 10px;
+}
+
+.date-list-group h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #3953A4;
+}
+
+.date-list-group ul {
+  list-style-type: none;
+}
+
+.vertical-line-before {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.vertical-line-before:before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #da393b;
+  border: 3px solid rgba(218, 57, 59, 0.3);
+  border-radius: 50%;
+  margin: 0 auto;
+  background-clip: padding-box;
+}
+
+.vertical-line-before:after {
+  content: '';
+  display: block;
+  width: 1px;
+  position: relative;
+  left: -9px;
+  bottom: 0;
+  background-color: rgba(218, 57, 59, 0.3);
+  margin-top: 20px;
+  z-index: 1;
+}
+
+.view-row-totlal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.views-field-title a {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #273043;
+  line-height: 22px;
+}
+
+.views-field-body {
+  margin: 1em 0;
+}
+
+.views-field-field-tags {
+  margin: 20px 0;
+}
+
+.views-field-field-tags .field-content {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.views-field-field-tags .field-content a {
+  text-decoration: none;
+  background-color: var(--o-gray);
+  border-radius: 80px;
+  color: #3953A4;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 900;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.views-field-field-tags .field-content a:hover {
+  color: white;
+  background-color: #DA393B;
+}
+
+#edit-reset-1 {
+  background-color: #3953A4;
+  margin: 0;
+}
+
+.list-announces {
+  list-style: none;
+}
+
+.list-announces .row-announce {
+  padding: 40px;
+  color: white;
+  border-radius: 10px;
+}
+
+.list-announces .row-announce .views-field-title {
+  margin: 20px 0;
+}
+
+.list-announces .row-announce .views-field-title a {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: white;
+}
+
+.list-announces .row-announce:first-child {
+  background-color: #DA393B;
+}
+
+.list-announces .row-announce:nth-child(2) {
+  background-color: #3953A4;
+  margin: 20px 0;
+}
+
+.list-announces .row-announce:nth-child(3) {
+  background-color: var(--o-gray);
+  color: initial;
+}
+
+.list-announces .row-announce:nth-child(3) .views-field-title a {
+  color: initial;
 }
 
 @font-face {
