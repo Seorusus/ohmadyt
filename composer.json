@@ -63,7 +63,8 @@
         "drupal/custom_login_url": "^2.0@RC",
         "drupal/geolocation": "^3.12",
         "drupal/recaptcha_v3": "^2.0@alpha",
-        "drupal/honeypot": "^2.1"
+        "drupal/honeypot": "^2.1",
+        "drupal/better_exposed_filters": "^6.0"
     },
     "require-dev": {
         "drupal/core-dev": "^10"

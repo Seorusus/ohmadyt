@@ -987,6 +987,39 @@ h1 {
   top: -64px;
 }
 
+.main-content-menu li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto !important;
+}
+
+.main-content-menu li:last-child a:after {
+  content: none;
+}
+
+.main-content-menu li a {
+  font-weight: 600;
+  font-size: 16px;
+  color: #31486c;
+  text-decoration: none;
+}
+
+.main-content-menu li a.is-active {
+  color: #DA393B;
+}
+
+.main-content-menu li a:after {
+  margin: 0 15px 3px;
+  display: inline-block;
+  content: "";
+  border: 1px solid #c2c6cc;
+  background-color: #c2c6cc;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+}
+
 .menu--vertical-navigation-platforma .menu.menu-level-0 {
   margin: 0;
 }
@@ -1440,6 +1473,88 @@ h1 {
 
 .page-node-type-video .field-online {
   font-weight: 900;
+}
+
+/*
+* Page News
+ */
+.exposed-form-page-news .views-exposed-form {
+  border: none;
+}
+
+.exposed-form-page-news .views-exposed-form #edit-reset {
+  display: none;
+}
+
+.exposed-form-page-news .views-exposed-form label {
+  display: none;
+}
+
+.exposed-form-page-news .views-exposed-form legend {
+  display: none;
+}
+
+.exposed-form-page-news .views-exposed-form .form-item-date-created-min {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 49%;
+  margin: auto;
+  border-right: 1px solid #dddddd;
+}
+
+.exposed-form-page-news .views-exposed-form .form-item-date-created-min input {
+  border: none;
+}
+
+.exposed-form-page-news .views-exposed-form .form-item-date-created-max {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 49%;
+  margin: auto;
+}
+
+.exposed-form-page-news .views-exposed-form .form-item-date-created-max input {
+  border: none;
+}
+
+.exposed-form-page-news .views-exposed-form .form-item-search-combine {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-right: 1px solid #dddddd;
+}
+
+.exposed-form-page-news .views-exposed-form .form-item-search-combine input {
+  border: none;
+}
+
+.exposed-form-page-news .views-exposed-form .form-actions {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.exposed-form-page-news .views-exposed-form #edit-date-created-wrapper {
+  max-width: 40%;
+}
+
+.exposed-form-page-news .views-exposed-form .form--inline.clearfix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 8px 0;
+  position: relative;
+  border: 1px solid rgba(57, 83, 164, 0.5);
+  border-radius: 6px;
+  padding: 0 0 0 10px;
 }
 
 @font-face {
