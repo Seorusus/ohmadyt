@@ -13,7 +13,7 @@ dependencies:
 id: brandohmatdyt
 theme: ohmatdyt
 region: sidebar_first
-weight: -6
+weight: -8
 provider: null
 plugin: 'block_content:a8adb505-e064-4b4f-8a9c-dfcc1fd3a7f6'
 settings:
