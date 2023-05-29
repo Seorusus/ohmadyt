@@ -244,7 +244,7 @@ a {
 }
 
 .navbar-brand {
-  margin-top: 35px;
+  margin-top: 20px;
 }
 
 .node--type-news {
@@ -599,6 +599,13 @@ a {
     margin-bottom: 150px;
   }
 
+  h1 {
+    display: block;
+    &:after {
+      content: none;
+    }
+  }
+
   .field--name-title {
     font-style: normal;
     font-weight: 700;
@@ -607,7 +614,7 @@ a {
     text-align: center;
     color: $brandblue;
     margin: 0 auto;
-    margin-top: 140px;
+    margin-top: 40px;
     display: block;
   }
 

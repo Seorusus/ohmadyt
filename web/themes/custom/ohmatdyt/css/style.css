@@ -1439,6 +1439,14 @@ a {
   margin-bottom: 150px;
 }
 
+.page-node-type-not-found h1 {
+  display: block;
+}
+
+.page-node-type-not-found h1:after {
+  content: none;
+}
+
 .page-node-type-not-found .field--name-title {
   font-style: normal;
   font-weight: 700;
@@ -1447,7 +1455,7 @@ a {
   text-align: center;
   color: #3953A4;
   margin: 0 auto;
-  margin-top: 140px;
+  margin-top: 40px;
   display: block;
 }
 
