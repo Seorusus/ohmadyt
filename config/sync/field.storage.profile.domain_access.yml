@@ -1,0 +1,20 @@
+uuid: 397fad8d-6dd2-42fd-8e30-85a14e8f26b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - domain
+    - profile
+id: profile.domain_access
+field_name: domain_access
+entity_type: profile
+type: entity_reference
+settings:
+  target_type: domain
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: true
+custom_storage: false
