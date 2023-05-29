@@ -718,7 +718,7 @@ a {
 
     .form-actions {
       display: inline-flex;
-      Width: 86px;
+      min-width: 86px;
       Height: 68px;
       background: $brandblue;
       border: 1px solid $brandblue;
@@ -844,9 +844,10 @@ a {
 
 .list-announces {
   list-style: none;
+  hyphens: auto;
 
   .row-announce {
-    padding: 40px;
+    padding: 25px;
     color: white;
     border-radius: 10px;
 

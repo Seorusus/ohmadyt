@@ -89,7 +89,7 @@ set footer_classes = ' ' ~
           %}
 
           {%
-          set sidebar_second_classes = (page.sidebar_first and page.sidebar_second) ? 'col-12 col-sm-6 col-lg-3' : 'col-12 col-lg-3'
+          set sidebar_second_classes = (page.sidebar_first and page.sidebar_second) ? 'col-12 col-sm-6 col-lg-4' : 'col-12 col-lg-4'
           %}
 
           {%
@@ -99,26 +99,44 @@ set footer_classes = ' ' ~
             {% if page.breadcrumb %}
               {{ page.breadcrumb }}
             {% endif %}
-            <div class="row g-0">
-              {% if page.sidebar_first %}
-                <div class="main-nav order-2 order-lg-1 {{ sidebar_first_classes }}">
-                  {{ page.sidebar_first }}
-                </div>
-              {% endif %}
-              <div class="main-content order-1 order-lg-2 {{ content_classes }}">
-                {{ page.content }}
+              <div class="row">
+                  {% if page.sidebar_first %}
+                      <div class="main-nav col-12 col-lg-2">
+                          {{ page.sidebar_first }}
+                      </div>
+                  {% endif %}
+                  <div class="col-12 col-lg-10 row">
+                      <div class="col-12 text-right top-nav">
+                          {% if logged_in %}
+                              {{ drupal_block('system_menu_block:user-menu') }}
+                          {% else %}
+                              {{ drupal_block('system_menu_block:account') }}
+                          {% endif %}
+
+                      {% if not logged_in %}
+                          <div class="line-container">
+                              <div class="line-bottom-red"></div>
+                              <div class="line-bottom"></div>
+                          </div>
+                      {% endif %}
+                      </div>
+                  <div class="main-content col-12 col-lg-8">
+                      {{ page.content }}
+                  </div>
+                  {% if page.sidebar_second %}
+                      <div class="col-12 col-lg-4">
+                          {{ page.sidebar_second }}
+                      </div>
+                  {% endif %}
+
+
               {% if page.content_bottom %}
-              <div class="content-bottom-region">
-                  {{ page.content_bottom }}
-              </div>
-              </div>
+                  <div class="content-bottom-region col-12 col-lg-12">
+                      {{ page.content_bottom }}
+                  </div>
               {% endif %}
-              {% if page.sidebar_second %}
-                <div class="order-3 {{ sidebar_second_classes }}">
-                  {{ page.sidebar_second }}
-                </div>
-              {% endif %}
-            </div>
+                  </div>
+              </div>
           </div>
 
         </main>
