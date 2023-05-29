@@ -1565,7 +1565,7 @@ a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  Width: 86px;
+  min-width: 86px;
   Height: 68px;
   background: #3953A4;
   border: 1px solid #3953A4;
@@ -1697,10 +1697,13 @@ a {
 
 .list-announces {
   list-style: none;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 .list-announces .row-announce {
-  padding: 40px;
+  padding: 25px;
   color: white;
   border-radius: 10px;
 }
@@ -1875,7 +1878,6 @@ header#navbar .glyphicon-user {
 }
 
 .main-container .main-nav {
-  width: 180px;
   background-color: var(--o-gray);
   border-radius: 10px;
   margin: 5px 0 5px 5px;
@@ -1903,10 +1905,6 @@ header#navbar .glyphicon-user {
   width: 120px;
   height: 43px;
   margin: 0 auto 25px;
-}
-
-.main-container .main-nav .menu.navbar-nav {
-  border-right: 1px solid #E7E7E7;
 }
 
 .main-container .main-nav .menu.navbar-nav li {
@@ -2002,7 +2000,7 @@ header#navbar .glyphicon-user {
 }
 
 .main-container .main-content {
-  padding: 0 30px;
+  padding-left: 30px;
 }
 
 .main-container .main-content > .links {
