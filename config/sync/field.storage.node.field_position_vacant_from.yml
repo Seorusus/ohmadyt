@@ -1,0 +1,20 @@
+uuid: ad6bd747-8c12-453d-b94b-a6badd004d2b
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_position_vacant_from
+field_name: field_position_vacant_from
+entity_type: node
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

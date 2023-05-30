@@ -1,0 +1,21 @@
+uuid: 7abe6249-757b-4d72-8dc7-f43049ddc034
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization_tax
+    - node.type.department
+id: node.department.field_organization_tax
+field_name: field_organization_tax
+entity_type: node
+bundle: department
+label: 'Податковий номер (організація)'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '019940826597'
+default_value_callback: ''
+settings: {  }
+field_type: string

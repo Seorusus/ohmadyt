@@ -1,0 +1,18 @@
+uuid: 6340a396-f7a7-4ce0-bd6c-218c580b0dae
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.department
+id: node.department.title
+field_name: title
+entity_type: node
+bundle: department
+label: 'Назва підрозділу'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

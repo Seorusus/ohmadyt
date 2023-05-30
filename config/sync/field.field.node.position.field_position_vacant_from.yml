@@ -1,0 +1,21 @@
+uuid: ebf04bfc-3b33-4f2f-be9e-92b3aeea5cdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position_vacant_from
+    - node.type.position
+  module:
+    - datetime
+id: node.position.field_position_vacant_from
+field_name: field_position_vacant_from
+entity_type: node
+bundle: position
+label: 'Вакантна з'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

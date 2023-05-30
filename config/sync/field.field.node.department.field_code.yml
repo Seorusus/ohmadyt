@@ -1,0 +1,19 @@
+uuid: b910da85-93c5-4d03-9de9-11f592170a75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_code
+    - node.type.department
+id: node.department.field_code
+field_name: field_code
+entity_type: node
+bundle: department
+label: Код
+description: 'Код підрозділа або посади'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

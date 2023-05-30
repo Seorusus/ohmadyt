@@ -1,0 +1,139 @@
+uuid: 50b77476-cbad-499f-8297-6843cb8bd6af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.position.field_code
+    - field.field.node.position.field_department
+    - field.field.node.position.field_domain_access
+    - field.field.node.position.field_domain_all_affiliates
+    - field.field.node.position.field_idx_num
+    - field.field.node.position.field_object_type
+    - field.field.node.position.field_position_category
+    - field.field.node.position.field_position_id
+    - field.field.node.position.field_position_is_vacant
+    - field.field.node.position.field_position_pay_el
+    - field.field.node.position.field_position_position_type
+    - field.field.node.position.field_position_proffession
+    - field.field.node.position.field_position_staff_cat
+    - field.field.node.position.field_position_vacant_from
+    - node.type.position
+  module:
+    - datetime
+    - user
+id: node.position.default
+targetEntityType: node
+bundle: position
+mode: default
+content:
+  field_code:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_department:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_idx_num:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_object_type:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_position_category:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_position_id:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_position_is_vacant:
+    type: boolean
+    label: inline
+    settings:
+      format: custom
+      format_custom_false: 'Не вакантна'
+      format_custom_true: Вакантна
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_position_pay_el:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_position_position_type:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_position_proffession:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_position_staff_cat:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_position_vacant_from:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  langcode: true
+  search_api_excerpt: true

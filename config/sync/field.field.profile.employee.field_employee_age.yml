@@ -1,0 +1,23 @@
+uuid: 46e60659-6358-4d21-8afe-f4a5d6079085
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_employee_age
+    - profile.type.employee
+id: profile.employee.field_employee_age
+field_name: field_employee_age
+entity_type: profile
+bundle: employee
+label: 'Вік працівника'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

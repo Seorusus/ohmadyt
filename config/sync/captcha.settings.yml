@@ -3,12 +3,12 @@ _core:
 langcode: uk
 enabled_default: 0
 default_challenge: recaptcha_v3/login
-description: 'Мета цього запитання — довести, що ви є реальним відвідувачем і запобігти автоматизованим розсиланням спаму.'
+description: 'This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.'
 administration_mode: false
-allow_on_admin_pages: false
-whitelist_ips: ''
+allow_on_admin_pages: true
+whitelist_ips: 192.168.64.100
 add_captcha_description: true
-wrong_captcha_response_message: 'Відповідь, введена для CAPTCHA є хибною.'
+wrong_captcha_response_message: 'The answer you entered for the CAPTCHA was not correct.'
 default_validation: 1
 persistence: 1
 enable_stats: false
