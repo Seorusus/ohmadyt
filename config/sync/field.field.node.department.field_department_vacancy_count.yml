@@ -1,0 +1,23 @@
+uuid: 650d5519-8142-47cc-bd10-ae320d3c975a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_department_vacancy_count
+    - node.type.department
+id: node.department.field_department_vacancy_count
+field_name: field_department_vacancy_count
+entity_type: node
+bundle: department
+label: 'Кiлькiсть вакансiй'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

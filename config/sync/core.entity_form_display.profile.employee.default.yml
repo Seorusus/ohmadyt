@@ -1,0 +1,134 @@
+uuid: 8976e8ba-5172-4775-9a58-0b522a8f312f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.employee.domain_access
+    - field.field.profile.employee.field_employee_age
+    - field.field.profile.employee.field_employee_appointed_from
+    - field.field.profile.employee.field_employee_education_level
+    - field.field.profile.employee.field_employee_email
+    - field.field.profile.employee.field_employee_first_name
+    - field.field.profile.employee.field_employee_id
+    - field.field.profile.employee.field_employee_last_name
+    - field.field.profile.employee.field_employee_middle_name
+    - field.field.profile.employee.field_employee_phone_mobile
+    - field.field.profile.employee.field_employee_phone_working
+    - field.field.profile.employee.field_employee_photo
+    - field.field.profile.employee.field_employee_sex_type
+    - field.field.profile.employee.field_position
+    - image.style.thumbnail
+    - profile.type.employee
+  module:
+    - datetime
+    - image
+id: profile.employee.default
+targetEntityType: profile
+bundle: employee
+mode: default
+content:
+  field_employee_age:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_employee_appointed_from:
+    type: datetime_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_employee_education_level:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_employee_email:
+    type: email_default
+    weight: 12
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_employee_first_name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_employee_id:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_employee_last_name:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_employee_middle_name:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_employee_phone_mobile:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_employee_phone_working:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_employee_photo:
+    type: image_image
+    weight: 5
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_employee_sex_type:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_position:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  domain_access: true
+  is_default: true

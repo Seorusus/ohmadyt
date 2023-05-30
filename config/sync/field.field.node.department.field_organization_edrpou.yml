@@ -1,0 +1,21 @@
+uuid: c52400f6-1e55-49c0-bf2b-4b3d28a5e5a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization_edrpou
+    - node.type.department
+id: node.department.field_organization_edrpou
+field_name: field_organization_edrpou
+entity_type: node
+bundle: department
+label: 'ЄДРПОУ (організація)'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '01994089'
+default_value_callback: ''
+settings: {  }
+field_type: string

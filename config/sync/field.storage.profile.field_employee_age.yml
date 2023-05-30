@@ -1,0 +1,20 @@
+uuid: d24902c5-f4a6-46ce-8759-84b36e432913
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_employee_age
+field_name: field_employee_age
+entity_type: profile
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,14 @@
+uuid: 3ff81f67-1147-483e-867f-6c5362725548
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.department
+id: node_type_department
+entity_type_id: node_type
+entity_id: department
+action: page_redirect
+allow_override: 1
+redirect: '<front>'
+redirect_code: 301
+redirect_fallback_action: access_denied

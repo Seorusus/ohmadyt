@@ -65,7 +65,10 @@
         "drupal/recaptcha_v3": "^2.0@alpha",
         "drupal/honeypot": "^2.1",
         "drupal/better_exposed_filters": "^6.0",
-        "drupal/profile": "^1.7"
+        "drupal/profile": "^1.7",
+        "drupal/migrate_plus": "^6.0",
+        "drupal/migrate_tools": "^6.0",
+        "drupal/rabbit_hole": "^1.0@beta"
     },
     "require-dev": {
         "drupal/core-dev": "^10"

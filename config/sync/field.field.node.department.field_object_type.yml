@@ -1,0 +1,19 @@
+uuid: 96895559-4ae4-4396-bc4a-55b0a918ed10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_object_type
+    - node.type.department
+id: node.department.field_object_type
+field_name: field_object_type
+entity_type: node
+bundle: department
+label: objectType
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

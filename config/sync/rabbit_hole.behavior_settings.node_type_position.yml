@@ -1,0 +1,14 @@
+uuid: e3c31583-5528-4bfd-ab8a-55f63e5380df
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.position
+id: node_type_position
+entity_type_id: node_type
+entity_id: position
+action: page_redirect
+allow_override: 1
+redirect: '<front>'
+redirect_code: 301
+redirect_fallback_action: access_denied

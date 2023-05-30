@@ -1,0 +1,19 @@
+uuid: 5cc6534e-ac91-46b4-8881-7aa343617dc8
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position_position_type
+    - node.type.position
+id: node.position.field_position_position_type
+field_name: field_position_position_type
+entity_type: node
+bundle: position
+label: 'Тип посади'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

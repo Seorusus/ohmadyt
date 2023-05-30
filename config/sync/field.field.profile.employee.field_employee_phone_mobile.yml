@@ -1,0 +1,19 @@
+uuid: 4e97261e-a378-4513-a42a-6fd80001893b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_employee_phone_mobile
+    - profile.type.employee
+id: profile.employee.field_employee_phone_mobile
+field_name: field_employee_phone_mobile
+entity_type: profile
+bundle: employee
+label: 'Телефон мобільний'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

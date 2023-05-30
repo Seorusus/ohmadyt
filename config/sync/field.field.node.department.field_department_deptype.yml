@@ -1,0 +1,19 @@
+uuid: 8159dda8-0714-40b0-9ba5-3ae8aacc8f58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_department_deptype
+    - node.type.department
+id: node.department.field_department_deptype
+field_name: field_department_deptype
+entity_type: node
+bundle: department
+label: 'Тип підрозділу'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

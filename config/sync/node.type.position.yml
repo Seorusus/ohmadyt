@@ -1,0 +1,17 @@
+uuid: b6957290-3fe1-47eb-9caa-9ff59bc7964f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Посада
+type: position
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false
