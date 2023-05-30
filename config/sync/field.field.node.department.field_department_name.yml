@@ -1,0 +1,19 @@
+uuid: 8a4f12fb-235b-4e6c-b5c1-423124c602a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_department_name
+    - node.type.department
+id: node.department.field_department_name
+field_name: field_department_name
+entity_type: node
+bundle: department
+label: 'Назва підрозділу'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

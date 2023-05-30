@@ -1,0 +1,94 @@
+uuid: d0d2df52-e689-4848-87e6-570747981823
+langcode: uk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: YI_GL0vEm2lh4VX8L6fAP7sbnl4D_lUqxUNiYLrKhpg
+id: ohmatdyt_department
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: ohmatdyt
+label: 'Import departments'
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls:
+    - modules/custom/ohmatdyt_import/src/departments.json
+  item_selector: /data
+  ids:
+    field_department_id:
+      type: integer
+  title:
+    -
+      name: title
+      label: Title
+      selector: department_Name
+  fields:
+    -
+      name: field_department_id
+      label: 'Department ID'
+      selector: mi_data_id
+    -
+      name: field_code
+      label: Code
+      selector: code
+    -
+      name: field_object_type
+      label: 'Object Type'
+      selector: objectType
+    -
+      name: field_parent_department
+      label: 'Parent Department'
+      selector: parentUnitID
+    -
+      name: field_idx_num
+      label: 'Index Number'
+      selector: idxNum
+    -
+      name: title
+      label: Title
+      selector: department_Name
+    -
+      name: field_department_name
+      label: 'Department Name'
+      selector: department_Name
+    -
+      name: field_department_deptype
+      label: 'Department Type'
+      selector: department_DepType
+    -
+      name: field_department_kind
+      label: 'Department Kind'
+      selector: department_Kind
+    -
+      name: field_department_poscount
+      label: 'Position Count'
+      selector: department_PosCount
+    -
+      name: field_department_vacancy_count
+      label: 'Vacancy Count'
+      selector: department_VacancyCount
+process:
+  title: title
+  field_department_id: field_department_id
+  field_code: field_code
+  field_object_type: field_object_type
+  field_parent_department:
+    plugin: migration_lookup
+    migration: ohmatdyt_department
+    source: field_parent_department
+  field_idx_num: field_idx_num
+  field_department_name: field_department_name
+  field_department_deptype: field_department_deptype
+  field_department_kind: field_department_kind
+  field_department_poscount: field_department_poscount
+  field_department_vacancy_count: field_department_vacancy_count
+destination:
+  plugin: 'entity:node'
+  default_bundle: department
+migration_dependencies:
+  required: {  }
+  optional: {  }
