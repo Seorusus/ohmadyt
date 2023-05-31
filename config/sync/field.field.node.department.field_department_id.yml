@@ -1,4 +1,4 @@
-uuid: 6a1da923-7e8f-404b-94ce-9ba29215b524
+uuid: 632f846a-0079-4396-a2a1-a42a9a139623
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ id: node.department.field_department_id
 field_name: field_department_id
 entity_type: node
 bundle: department
-label: 'ID підрозділу'
+label: 'ID пiдроздiлу'
 description: ''
 required: false
 translatable: false

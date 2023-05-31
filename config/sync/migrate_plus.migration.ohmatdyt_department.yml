@@ -1,9 +1,9 @@
-uuid: d0d2df52-e689-4848-87e6-570747981823
+uuid: a2eb3403-33e1-4f55-b5d3-d1cd8335d66b
 langcode: uk
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: YI_GL0vEm2lh4VX8L6fAP7sbnl4D_lUqxUNiYLrKhpg
+  default_config_hash: B0UuOnwGfHeFkqVBOIZC68P0Gz6Nu3q11-TvZa5mvaU
 id: ohmatdyt_department
 class: Drupal\migrate\Plugin\Migration
 field_plugin_method: null
@@ -21,58 +21,52 @@ source:
   ids:
     field_department_id:
       type: integer
-  title:
-    -
-      name: title
-      label: Title
-      selector: department_Name
   fields:
     -
       name: field_department_id
       label: 'Department ID'
-      selector: mi_data_id
+      selector: 0
     -
       name: field_code
       label: Code
-      selector: code
+      selector: 1
     -
       name: field_object_type
       label: 'Object Type'
-      selector: objectType
+      selector: 2
     -
       name: field_parent_department
       label: 'Parent Department'
-      selector: parentUnitID
+      selector: 4
     -
       name: field_idx_num
       label: 'Index Number'
-      selector: idxNum
-    -
-      name: title
-      label: Title
-      selector: department_Name
+      selector: 5
     -
       name: field_department_name
       label: 'Department Name'
-      selector: department_Name
+      selector: 17
     -
       name: field_department_deptype
       label: 'Department Type'
-      selector: department_DepType
+      selector: 18
     -
       name: field_department_kind
       label: 'Department Kind'
-      selector: department_Kind
+      selector: 19
     -
       name: field_department_poscount
       label: 'Position Count'
-      selector: department_PosCount
+      selector: 20
     -
       name: field_department_vacancy_count
       label: 'Vacancy Count'
-      selector: department_VacancyCount
+      selector: 21
 process:
-  title: title
+  uid:
+    plugin: default_value
+    default_value: 1
+  title: field_department_name
   field_department_id: field_department_id
   field_code: field_code
   field_object_type: field_object_type

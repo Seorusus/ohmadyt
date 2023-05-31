@@ -12,69 +12,55 @@ source:
   ids:
     field_department_id:
       type: integer
-  title:
-    -
-      name: title
-      label: 'Title'
-      selector: department_Name
   fields:
     -
       name: field_department_id
       label: 'Department ID'
-      selector: mi_data_id
+      selector: 0
     -
       name: field_code
       label: 'Code'
-      selector: code
+      selector: 1
     -
       name: field_object_type
       label: 'Object Type'
-      selector: objectType
+      selector: 2
     -
       name: field_parent_department
       label: 'Parent Department'
-      selector: parentUnitID
+      selector: 4
     -
       name: field_idx_num
       label: 'Index Number'
-      selector: idxNum
-    -
-      name: title
-      label: 'Title'
-      selector: department_Name
+      selector: 5
     -
       name: field_department_name
       label: 'Department Name'
-      selector: department_Name
+      selector: 17
     -
       name: field_department_deptype
       label: 'Department Type'
-      selector: department_DepType
+      selector: 18
     -
       name: field_department_kind
       label: 'Department Kind'
-      selector: department_Kind
+      selector: 19
     -
       name: field_department_poscount
       label: 'Position Count'
-      selector: department_PosCount
+      selector: 20
     -
       name: field_department_vacancy_count
       label: 'Vacancy Count'
-      selector: department_VacancyCount
+      selector: 21
 destination:
   plugin: 'entity:node'
   default_bundle: department
 process:
-  title:
-    -
-      plugin: skip_on_empty
-      method: process
-      source: department_Name
-    -
-      plugin: migration_lookup
-      migration: ohmatdyt_department
-      source: field_parent_department
+  uid:
+    plugin: default_value
+    default_value: 1
+  title: field_department_name
   field_department_id: field_department_id
   field_code: field_code
   field_object_type: field_object_type
@@ -82,6 +68,7 @@ process:
     plugin: migration_lookup
     migration: ohmatdyt_department
     source: field_parent_department
+#    no_stub: true
   field_idx_num: field_idx_num
   field_department_name: field_department_name
   field_department_deptype: field_department_deptype
