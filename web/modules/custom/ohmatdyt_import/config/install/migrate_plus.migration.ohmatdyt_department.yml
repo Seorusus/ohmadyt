@@ -63,12 +63,24 @@ process:
   title: field_department_name
   field_department_id: field_department_id
   field_code: field_code
-  field_object_type: field_object_type
+  field_object_type:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_object_type
+      message: 'Skipping migration for objects with empty field_object_type.'
+    -
+      plugin: skip_on_value
+      method: process
+      source: field_object_type
+      value:
+      - 'organization'
+      - 'position'
+      message: 'Skipping migration for objects with non-department field_object_type.'
   field_parent_department:
     plugin: migration_lookup
     migration: ohmatdyt_department
     source: field_parent_department
-#    no_stub: true
   field_idx_num: field_idx_num
   field_department_name: field_department_name
   field_department_deptype: field_department_deptype
