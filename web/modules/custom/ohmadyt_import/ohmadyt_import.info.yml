@@ -1,9 +1,0 @@
-name: 'Ohmadyt Import'
-type: module
-description: 'Custom module for importing data from JSON files'
-core_version_requirement: ^9.2 || ^10
-package: Custom
-
-dependencies:
-  - migrate_plus:migrate_plus
-  - migrate_tools:migrate_tools

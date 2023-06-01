@@ -68,7 +68,8 @@
         "drupal/profile": "^1.7",
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_tools": "^6.0",
-        "drupal/rabbit_hole": "^1.0@beta"
+        "drupal/rabbit_hole": "^1.0@beta",
+        "drupal/auto_entitylabel": "^3.0"
     },
     "require-dev": {
         "drupal/core-dev": "^10"

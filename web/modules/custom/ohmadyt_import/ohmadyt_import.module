@@ -1,7 +1,0 @@
-<?php
-
-use Drupal\Core\Serialization\Yaml;
-use Drupal\migrate\Plugin\MigrationPluginManagerInterface;
-use Drupal\migrate\MigrateExecutable;
-use Drupal\migrate\MigrateMessage;
-
