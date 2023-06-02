@@ -1,0 +1,111 @@
+uuid: 3d8f24db-cd9e-47e1-9516-1dfa4bcd4cf1
+langcode: uk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: I1yZ54ZUObF-QLJTjHSlkAMhiZHiprzbsbroGDX3nxY
+id: ohmatdyt_position
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: ohmatdyt
+label: 'Import positions'
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls:
+    - modules/custom/ohmatdyt_import/src/public.json
+  item_selector: /data
+  ids:
+    field_position_id:
+      type: string
+  fields:
+    -
+      name: field_position_id
+      label: 'Department ID'
+      selector: 0
+      type: string
+    -
+      name: field_code
+      label: Code
+      selector: 1
+    -
+      name: field_object_type
+      label: 'Object Type'
+      selector: 2
+    -
+      name: field_department
+      label: Department
+      selector: 4
+    -
+      name: field_idx_num
+      label: 'Index Number'
+      selector: 5
+    -
+      name: field_position_name
+      label: 'Position Name'
+      selector: 22
+    -
+      name: field_position_category
+      label: 'Position category'
+      selector: 23
+    -
+      name: field_position_position_type
+      label: 'Position Type'
+      selector: 26
+    -
+      name: field_position_staff_cat
+      label: 'Position staff category'
+      selector: 27
+    -
+      name: field_position_proffession
+      label: 'Position proffession'
+      selector: 28
+    -
+      name: field_position_pay_el
+      label: 'Position payment type'
+      selector: 32
+    -
+      name: field_position_is_vacant
+      label: 'Position is vacant'
+      selector: 34
+    -
+      name: field_position_vacant_from
+      label: 'Position vacant from'
+      selector: 35
+process:
+  uid:
+    plugin: default_value
+    default_value: 1
+  title: field_position_name
+  field_position_id: field_position_id.value
+  field_code: field_code
+  field_object_type:
+    -
+      plugin: skip_on_value
+      method: row
+      source: field_object_type
+      value:
+        - organization
+        - department
+        - employee
+  field_department:
+    plugin: migration_lookup
+    migration: ohmatdyt_department
+    source: field_department_id
+  field_idx_num: field_idx_num
+  field_position_name: field_position_name
+  field_position_category: field_position_category
+  field_position_position_type: field_position_position_type
+  field_position_staff_cat: field_position_staff_cat
+  field_position_proffession: field_position_proffession
+  field_position_pay_el: field_position_pay_el
+  field_position_is_vacant: field_position_is_vacant
+  field_position_vacant_from: field_position_vacant_from
+destination:
+  plugin: 'entity:node'
+  default_bundle: position
+migration_dependencies:
+  optional: {  }

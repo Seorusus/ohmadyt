@@ -1,5 +1,5 @@
 status: 0
-pattern: '[node:content-type:name]-[node:field_department_name]'
+pattern: '[node:field_department_name]'
 escape: true
 preserve_titles: false
 save: false

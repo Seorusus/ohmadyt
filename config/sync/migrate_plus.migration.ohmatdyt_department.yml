@@ -1,9 +1,9 @@
-uuid: a2eb3403-33e1-4f55-b5d3-d1cd8335d66b
+uuid: 0de5fed4-3e5a-4f86-b8fb-16e4e5a304d2
 langcode: uk
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: B0UuOnwGfHeFkqVBOIZC68P0Gz6Nu3q11-TvZa5mvaU
+  default_config_hash: 3I1asPj8fv6R78eE6JbCnBR9uFFeG_jy4MvZz4Gjggg
 id: ohmatdyt_department
 class: Drupal\migrate\Plugin\Migration
 field_plugin_method: null
@@ -16,7 +16,7 @@ source:
   data_fetcher_plugin: file
   data_parser_plugin: json
   urls:
-    - modules/custom/ohmatdyt_import/src/departments.json
+    - modules/custom/ohmatdyt_import/src/public.json
   item_selector: /data
   ids:
     field_department_id:
@@ -63,13 +63,21 @@ source:
       label: 'Vacancy Count'
       selector: 21
 process:
+  field_object_type:
+    -
+      plugin: skip_on_value
+      method: row
+      source: field_object_type
+      value:
+        - organization
+        - position
+        - employee
   uid:
     plugin: default_value
     default_value: 1
   title: field_department_name
   field_department_id: field_department_id
   field_code: field_code
-  field_object_type: field_object_type
   field_parent_department:
     plugin: migration_lookup
     migration: ohmatdyt_department

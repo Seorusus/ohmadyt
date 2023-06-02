@@ -8,7 +8,7 @@ id: node.position.title
 field_name: title
 entity_type: node
 bundle: position
-label: 'Назва посади'
+label: Назва
 description: ''
 required: true
 translatable: true

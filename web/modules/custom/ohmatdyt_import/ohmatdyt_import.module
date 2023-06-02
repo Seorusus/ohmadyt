@@ -5,57 +5,95 @@
  * Adding migrate preparing.
  */
 
+use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
 use Drupal\migrate\Plugin\MigrateSourceInterface;
 use Drupal\migrate\Row;
 use Drupal\migrate\Plugin\MigrationInterface;
+use Drupal\migrate\MigrateExecutable;
+use Drupal\migrate\MigrateMessage;
 
 /**
  * Implements hook_migrate_prepare_row().
+ *
+ * @throws \Exception
  */
-function ohmatdyt_import_migrate_ohmatdyt_department_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
-  // Получаем базовый путь к модулю
-  $modulePath = \Drupal::service('extension.list.module')->getPath('ohmatdyt_import');
+function ohmatdyt_import_migrate_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+  $dateValue = $row->getSourceProperty('field_position_vacant_from');
 
-  // Формируем путь к файлу departments.json
-  $jsonFilePath = $modulePath . '/src/departments.json';
+  if ($dateValue === null) {
+    $row->setSourceProperty('field_position_vacant_from', null);
+  } else {
+    $dateValue = new \DateTime($dateValue);
+    $dateValue->setTimezone(new \DateTimeZone('UTC'));
+    $formattedDate = $dateValue->format(DateTimeItemInterface::DATETIME_STORAGE_FORMAT);
 
-  $jsonData = file_get_contents($jsonFilePath);
-  // Преобразуем JSON данные в ассоциативный массив
-  $data = json_decode($jsonData, true);
-
-  // Получаем ссылку на массив "data"
-  $dataArray = &$data['data'];
-
-  // Проходимся по каждой записи в массиве "data"
-  foreach ($dataArray as &$record) {
-    // Получаем текущее значение mi_data_id
-    $miDataId = $record[0];
-
-    // Оставляем только последние 7 цифр
-    $miDataId = substr($miDataId, -7);
-
-    // Обновляем значение mi_data_id
-    $record[0] = $miDataId;
-
-    // Получаем текущее значение parentUnitID
-    $parentUnitID = $record[4];
-
-    // Оставляем только последние 7 цифр
-    $parentUnitID = substr($parentUnitID, -7);
-
-    // Обновляем значение parentUnitID
-    $record[4] = $parentUnitID;
+    $row->setSourceProperty('field_position_vacant_from', $formattedDate);
   }
 
-  // Преобразуем данные обратно в JSON формат
-  $newJsonData = json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-
-  // Записываем измененные данные обратно в файл
-  file_put_contents($jsonFilePath, $newJsonData);
-
-  // Получаем сервис Messenger из контейнера сервисов
-  $messenger = \Drupal::service('messenger');
-
-  // Выводим сообщение
-  $messenger->addMessage('Изменения внесены успешно!');
+  //  $modulePath = \Drupal::service('extension.list.module')->getPath('ohmatdyt_import');
+//  $jsonFilePath = $modulePath . '/src/public.json';
+//
+//  $jsonData = file_get_contents($jsonFilePath);
+//  $data = json_decode($jsonData, true);
+//  $replacement = "3";
+//  $dataArray = &$data['data'];
+//
+//  foreach ($dataArray as &$record) {
+//    $miDataId = $record[0];
+//
+//    if ($miDataId !== NULL && $miDataId !== 0) {
+//      $miDataId = $replacement . substr($miDataId, 8);
+//      $record[0] = $miDataId;
+//    }
+//
+//    $parentUnitID = $record[3];
+//    if ($parentUnitID !== NULL && $parentUnitID !== 0) {
+//      $parentUnitID = $replacement . substr($parentUnitID, 8);
+//      $record[3] = $parentUnitID;
+//    }
+//
+//    $parentUnitID = $record[4];
+//    if ($parentUnitID !== NULL && $parentUnitID !== 0) {
+//      $parentUnitID = $replacement . substr($parentUnitID, 8);
+//      $record[4] = $parentUnitID;
+//    }
+//
+//    $parentUnitID = $record[16];
+//    if ($parentUnitID !== NULL && $parentUnitID !== 0) {
+//      $parentUnitID = $replacement . substr($parentUnitID, 8);
+//      $record[16] = $parentUnitID;
+//    }
+//
+//    $parentUnitID = $record[40];
+//    if ($parentUnitID !== NULL && $parentUnitID !== 0) {
+//      $parentUnitID = $replacement . substr($parentUnitID, 8);
+//      $record[40] = $parentUnitID;
+//    }
+//
+//    $parentUnitID = $record[50];
+//    if ($parentUnitID !== NULL && $parentUnitID !== 0) {
+//      $parentUnitID = $replacement . substr($parentUnitID, 8);
+//      $record[50] = $parentUnitID;
+//    }
+//
+//    $fieldValue = $record[2];
+//    if ($fieldValue === 'position') {
+//      // Запуск миграции по идентификатору.
+//      $migrationId = 'ohmatdyt_position';
+//      // Задайте идентификатор миграции, которую вы хотите выполнить.
+//
+//      // Получите экземпляр миграции.
+//      /** @var \Drupal\migrate\Plugin\MigrationInterface $migration */
+//      $migration = \Drupal::service('plugin.manager.migration')->createInstance($migrationId);
+//
+//      // Создайте объект MigrateExecutable и MigrateMessage.
+//      $executable = new MigrateExecutable($migration, new MigrateMessage());
+//
+//      // Запустите миграцию.
+//      $executable->import();
+//    }
+//  }
+//
+//  $newJsonData = json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+//  file_put_contents($jsonFilePath, $newJsonData);
 }

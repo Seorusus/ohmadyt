@@ -1,5 +1,5 @@
-uuid: f7dbf70b-0aa7-41a8-9d57-efa098ce0caf
-langcode: uk
+uuid: 3e7d056c-650a-4ab1-a845-b592c0d2910c
+langcode: en
 status: true
 dependencies:
   config:
@@ -15,9 +15,5 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  min: null
-  max: null
-  prefix: ''
-  suffix: ''
-field_type: integer
+settings: {  }
+field_type: string

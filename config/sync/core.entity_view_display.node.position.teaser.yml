@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.position.field_position_category
     - field.field.node.position.field_position_id
     - field.field.node.position.field_position_is_vacant
+    - field.field.node.position.field_position_name
     - field.field.node.position.field_position_pay_el
     - field.field.node.position.field_position_position_type
     - field.field.node.position.field_position_proffession
@@ -41,6 +42,7 @@ hidden:
   field_position_category: true
   field_position_id: true
   field_position_is_vacant: true
+  field_position_name: true
   field_position_pay_el: true
   field_position_position_type: true
   field_position_proffession: true

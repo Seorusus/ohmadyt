@@ -7,7 +7,7 @@ source:
   data_fetcher_plugin: file
   data_parser_plugin: json
   urls:
-    - modules/custom/ohmatdyt_import/src/departments.json
+    - modules/custom/ohmatdyt_import/src/public.json
   item_selector: /data
   ids:
     field_department_id:
@@ -57,26 +57,20 @@ destination:
   plugin: 'entity:node'
   default_bundle: department
 process:
+  field_object_type:
+    - plugin: skip_on_value
+      method: row
+      source: field_object_type
+      value:
+        - 'organization'
+        - 'position'
+        - 'employee'
   uid:
     plugin: default_value
     default_value: 1
   title: field_department_name
   field_department_id: field_department_id
   field_code: field_code
-  field_object_type:
-    -
-      plugin: skip_on_empty
-      method: process
-      source: field_object_type
-      message: 'Skipping migration for objects with empty field_object_type.'
-    -
-      plugin: skip_on_value
-      method: process
-      source: field_object_type
-      value:
-      - 'organization'
-      - 'position'
-      message: 'Skipping migration for objects with non-department field_object_type.'
   field_parent_department:
     plugin: migration_lookup
     migration: ohmatdyt_department
@@ -88,5 +82,5 @@ process:
   field_department_poscount: field_department_poscount
   field_department_vacancy_count: field_department_vacancy_count
 migration_dependencies:
-  required: {}
-  optional: {}
+  required: []
+  optional: []
