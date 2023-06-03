@@ -1,9 +1,9 @@
-uuid: 3d8f24db-cd9e-47e1-9516-1dfa4bcd4cf1
+uuid: 617dea61-032c-4094-a747-86d4298da2f8
 langcode: uk
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: I1yZ54ZUObF-QLJTjHSlkAMhiZHiprzbsbroGDX3nxY
+  default_config_hash: fpad7DcbHq2YJrirjyMGUgGVriouvUAguQiSgOb6x9U
 id: ohmatdyt_position
 class: Drupal\migrate\Plugin\Migration
 field_plugin_method: null
@@ -80,7 +80,7 @@ process:
     plugin: default_value
     default_value: 1
   title: field_position_name
-  field_position_id: field_position_id.value
+  field_position_id: field_position_id
   field_code: field_code
   field_object_type:
     -

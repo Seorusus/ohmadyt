@@ -50,10 +50,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_department_id:
-    type: number
+    type: string_textfield
     weight: 26
     region: content
     settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_department_kind:

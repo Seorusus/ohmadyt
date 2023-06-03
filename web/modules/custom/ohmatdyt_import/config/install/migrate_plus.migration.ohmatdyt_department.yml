@@ -11,12 +11,13 @@ source:
   item_selector: /data
   ids:
     field_department_id:
-      type: integer
+      type: string
   fields:
     -
       name: field_department_id
       label: 'Department ID'
       selector: 0
+      type: string
     -
       name: field_code
       label: 'Code'
