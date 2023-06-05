@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.department.field_department_deptype
     - field.field.node.department.field_department_id
     - field.field.node.department.field_department_kind
+    - field.field.node.department.field_department_name
     - field.field.node.department.field_department_poscount
     - field.field.node.department.field_department_vacancy_count
     - field.field.node.department.field_domain_access
@@ -80,6 +81,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 8
+    region: content
+  field_department_name:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
     region: content
   field_department_poscount:
     type: number_integer

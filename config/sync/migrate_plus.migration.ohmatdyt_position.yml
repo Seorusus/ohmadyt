@@ -1,9 +1,9 @@
-uuid: 617dea61-032c-4094-a747-86d4298da2f8
+uuid: a1d2530b-5753-4797-b1fd-85749a288ec7
 langcode: uk
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: fpad7DcbHq2YJrirjyMGUgGVriouvUAguQiSgOb6x9U
+  default_config_hash: hZJUYcfu9ZANRtVS-8-88bplhx3PONOETCU7IwrV5mU
 id: ohmatdyt_position
 class: Drupal\migrate\Plugin\Migration
 field_plugin_method: null
@@ -92,9 +92,15 @@ process:
         - department
         - employee
   field_department:
-    plugin: migration_lookup
-    migration: ohmatdyt_department
-    source: field_department_id
+    plugin: entity_generate
+    source: field_department
+    value_key: title
+    entity_type: node
+    bundle_key: type
+    bundle: department
+    no_stub: true
+    ignore_case: true
+  field_department_value: field_department
   field_idx_num: field_idx_num
   field_position_name: field_position_name
   field_position_category: field_position_category

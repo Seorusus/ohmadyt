@@ -1,12 +1,12 @@
-uuid: 453ca82f-4758-4fe4-ae66-4285584c58ec
-langcode: en
+uuid: 6b176303-2f54-4fd8-bd9f-27e37094a0ad
+langcode: uk
 status: true
 dependencies:
   module:
-    - profile
-id: profile.field_employee_id
-field_name: field_employee_id
-entity_type: profile
+    - node
+id: node.field_department_name
+field_name: field_department_name
+entity_type: node
 type: string
 settings:
   max_length: 255

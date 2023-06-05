@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.position.field_code
     - field.field.node.position.field_department
+    - field.field.node.position.field_department_value
     - field.field.node.position.field_domain_access
     - field.field.node.position.field_domain_all_affiliates
     - field.field.node.position.field_idx_num
@@ -35,6 +36,7 @@ content:
 hidden:
   field_code: true
   field_department: true
+  field_department_value: true
   field_domain_access: true
   field_domain_all_affiliates: true
   field_idx_num: true

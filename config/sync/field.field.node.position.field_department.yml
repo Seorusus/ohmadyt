@@ -10,7 +10,7 @@ id: node.position.field_department
 field_name: field_department
 entity_type: node
 bundle: position
-label: Підпорякування
+label: Підпорядкування
 description: ''
 required: false
 translatable: false
@@ -24,6 +24,6 @@ settings:
     sort:
       field: _none
       direction: ASC
-    auto_create: false
+    auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

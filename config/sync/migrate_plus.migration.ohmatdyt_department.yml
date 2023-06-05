@@ -1,9 +1,9 @@
-uuid: c65ee7db-8fbb-4fb2-a7a0-c063352c62a1
+uuid: f1168267-cce1-40f7-9dd2-cac5f91426bb
 langcode: uk
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: CgL18Blo7GZ9AaxA2AtKGr7hcVu1nSPfndI5_ykeBJU
+  default_config_hash: wgfC6MQbYcQvjjagVMYdgaJJ28fVUqyW4iZTcu9I3YQ
 id: ohmatdyt_department
 class: Drupal\migrate\Plugin\Migration
 field_plugin_method: null
@@ -76,7 +76,7 @@ process:
   uid:
     plugin: default_value
     default_value: 1
-  title: field_department_name
+  title: field_department_id
   field_department_id: field_department_id
   field_code: field_code
   field_parent_department:

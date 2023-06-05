@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.position.field_code
     - field.field.node.position.field_department
+    - field.field.node.position.field_department_value
     - field.field.node.position.field_domain_access
     - field.field.node.position.field_domain_all_affiliates
     - field.field.node.position.field_idx_num
@@ -33,13 +34,21 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_department:
     type: entity_reference_label
     label: inline
     settings:
       link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_department_value:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 5
     region: content
@@ -58,7 +67,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
   field_position_category:
     type: string

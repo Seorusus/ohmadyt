@@ -69,7 +69,7 @@ process:
   uid:
     plugin: default_value
     default_value: 1
-  title: field_department_name
+  title: field_department_id
   field_department_id: field_department_id
   field_code: field_code
   field_parent_department:

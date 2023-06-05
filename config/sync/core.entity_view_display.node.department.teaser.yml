@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.department.field_department_deptype
     - field.field.node.department.field_department_id
     - field.field.node.department.field_department_kind
+    - field.field.node.department.field_department_name
     - field.field.node.department.field_department_poscount
     - field.field.node.department.field_department_vacancy_count
     - field.field.node.department.field_domain_access
@@ -38,6 +39,7 @@ hidden:
   field_department_deptype: true
   field_department_id: true
   field_department_kind: true
+  field_department_name: true
   field_department_poscount: true
   field_department_vacancy_count: true
   field_domain_access: true
