@@ -1,16 +1,16 @@
-uuid: 3ad8b9fc-89ac-44df-a96d-8f3c7d63fc6e
-langcode: uk
+uuid: 5c6b0158-d7cb-4f67-a583-47f7d83c1a19
+langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.field_degree
+    - field.storage.user.field_employee_middle_name
   module:
     - user
-id: user.user.field_degree
-field_name: field_degree
+id: user.user.field_employee_middle_name
+field_name: field_employee_middle_name
 entity_type: user
 bundle: user
-label: 'Науковий ступень'
+label: По-батькові
 description: ''
 required: false
 translatable: false

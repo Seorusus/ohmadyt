@@ -1,16 +1,16 @@
-uuid: e1ae9198-ebe5-4a09-bb82-770b05b17e19
-langcode: uk
+uuid: 525f2d08-9239-4ff1-9b92-7572f831ca42
+langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.field_lead
+    - field.storage.user.field_employee_id
   module:
     - user
-id: user.user.field_lead
-field_name: field_lead
+id: user.user.field_employee_id
+field_name: field_employee_id
 entity_type: user
 bundle: user
-label: Посада
+label: 'Персональний ID'
 description: ''
 required: false
 translatable: false

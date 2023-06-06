@@ -6,7 +6,6 @@ dependencies:
     - core.entity_form_mode.user.register
     - field.field.user.user.field_appointment
     - field.field.user.user.field_biography
-    - field.field.user.user.field_degree
     - field.field.user.user.field_department
     - field.field.user.user.field_domain_access
     - field.field.user.user.field_domain_admin
@@ -14,15 +13,22 @@ dependencies:
     - field.field.user.user.field_duties
     - field.field.user.user.field_education
     - field.field.user.user.field_email
-    - field.field.user.user.field_experience
+    - field.field.user.user.field_employee_age
+    - field.field.user.user.field_employee_appointed_from
+    - field.field.user.user.field_employee_education_level
+    - field.field.user.user.field_employee_experience
+    - field.field.user.user.field_employee_first_name
+    - field.field.user.user.field_employee_id
+    - field.field.user.user.field_employee_last_name
+    - field.field.user.user.field_employee_middle_name
+    - field.field.user.user.field_employee_phone_mobile
+    - field.field.user.user.field_employee_phone_working
+    - field.field.user.user.field_employee_range_science
+    - field.field.user.user.field_employee_rank
+    - field.field.user.user.field_employee_sex_type
     - field.field.user.user.field_group
-    - field.field.user.user.field_lead
-    - field.field.user.user.field_name
-    - field.field.user.user.field_origin_id
-    - field.field.user.user.field_phone
+    - field.field.user.user.field_position
     - field.field.user.user.field_rank
-    - field.field.user.user.field_second_name
-    - field.field.user.user.field_surname
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -30,19 +36,13 @@ dependencies:
     - image
     - path
     - profile
-    - telephone
     - text
     - user
 third_party_settings:
   field_group:
     group_personal_data:
       children:
-        - field_name
-        - field_second_name
-        - field_surname
         - user_picture
-        - field_phone
-        - field_origin_id
         - field_email
       label: 'Персональні дані'
       region: content
@@ -62,11 +62,8 @@ third_party_settings:
         - field_group
         - field_duties
         - field_appointment
-        - field_degree
         - field_rank
-        - field_lead
         - field_biography
-        - field_experience
         - field_education
       label: 'Загальні дані'
       region: content
@@ -117,14 +114,6 @@ content:
     region: content
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_degree:
-    type: string_textfield
-    weight: 12
-    region: content
-    settings:
-      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_department:
@@ -178,14 +167,6 @@ content:
       placeholder: ''
       size: 60
     third_party_settings: {  }
-  field_experience:
-    type: string_textfield
-    weight: 16
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_group:
     type: entity_reference_autocomplete
     weight: 6
@@ -196,56 +177,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_lead:
-    type: string_textfield
-    weight: 14
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_name:
-    type: string_textfield
-    weight: 5
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_origin_id:
-    type: string_textfield
-    weight: 10
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_phone:
-    type: telephone_default
-    weight: 9
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
   field_rank:
     type: string_textfield
     weight: 13
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_second_name:
-    type: string_textfield
-    weight: 6
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_surname:
-    type: string_textfield
-    weight: 7
     region: content
     settings:
       size: 60
@@ -276,4 +210,19 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
 hidden:
+  employee_platform_profiles: true
+  field_employee_age: true
+  field_employee_appointed_from: true
+  field_employee_education_level: true
+  field_employee_experience: true
+  field_employee_first_name: true
+  field_employee_id: true
+  field_employee_last_name: true
+  field_employee_middle_name: true
+  field_employee_phone_mobile: true
+  field_employee_phone_working: true
+  field_employee_range_science: true
+  field_employee_rank: true
+  field_employee_sex_type: true
+  field_position: true
   langcode: true

@@ -1,9 +1,9 @@
-uuid: e4eaaa18-0e4b-4271-8926-c56f659d376f
+uuid: ab267d7a-4392-4a59-bbc9-d9fc1fac0493
 langcode: uk
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: Dw5zYrfEPPcmIR3cf6gzVfJ8g8eNxywmzH4HaMIgyDU
+  default_config_hash: ck2lENnxSQaFRT-hWtRzd567IZKZi_713mJmVDHHHms
 id: ohmatdyt_user
 class: null
 field_plugin_method: null
@@ -34,6 +34,58 @@ source:
       name: field_object_type
       label: 'Object Type'
       selector: 2
+    -
+      name: field_employee_first_name
+      label: Імя
+      selector: 36
+    -
+      name: field_employee_middle_name
+      label: По-батькові
+      selector: 38
+    -
+      name: field_employee_last_name
+      label: Прізвище
+      selector: 37
+    -
+      name: field_employee_age
+      label: 'Вік працівника'
+      selector: 45
+    -
+      name: field_employee_sex_type
+      label: 'Стать працівника'
+      selector: 39
+    -
+      name: field_employee_education_level
+      label: 'Освіта працівника'
+      selector: 40
+    -
+      name: field_position
+      label: Підпорякування
+      selector: 4
+    -
+      name: field_employee_appointed_from
+      label: 'Призначений з'
+      selector: 48
+    -
+      name: field_employee_phone_mobile
+      label: 'Телефон мобільний'
+      selector: 41
+    -
+      name: field_employee_phone_working
+      label: 'Телефон робочий'
+      selector: 42
+    -
+      name: field_employee_rank
+      label: 'Ранг працівника'
+      selector: 46
+    -
+      name: field_employee_experience
+      label: 'Стаж державної служби'
+      selector: 47
+    -
+      name: field_employee_range_science
+      label: 'Наукова ступінь'
+      selector: 49
 process:
   field_object_type:
     -
@@ -62,6 +114,23 @@ process:
     -
       plugin: callback
       callable: md5
+  field_position:
+    plugin: migration_lookup
+    migration: ohmatdyt_position
+    source: field_position
+  field_employee_id: field_employee_id
+  field_employee_first_name: field_employee_first_name
+  field_employee_middle_name: field_employee_middle_name
+  field_employee_last_name: field_employee_last_name
+  field_employee_age: field_employee_age
+  field_employee_sex_type: field_employee_sex_type
+  field_employee_education_level: field_employee_education_level
+  field_employee_appointed_from: field_employee_appointed_from
+  field_employee_phone_mobile: field_employee_phone_mobile
+  field_employee_phone_working: field_employee_phone_working
+  field_employee_rank: field_employee_rank
+  field_employee_experience: field_employee_experience
+  field_employee_range_science: field_employee_range_science
 destination:
   plugin: 'entity:user'
   md5_passwords: true

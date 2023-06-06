@@ -1,11 +1,11 @@
-uuid: 852feac2-06a4-4ea3-b226-b614b10d9f5e
-langcode: uk
+uuid: 7cda8ee0-684b-47ff-aaea-b69579ee7f52
+langcode: en
 status: true
 dependencies:
   module:
     - user
-id: user.field_second_name
-field_name: field_second_name
+id: user.field_employee_sex_type
+field_name: field_employee_sex_type
 entity_type: user
 type: string
 settings:

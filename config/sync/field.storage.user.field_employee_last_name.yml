@@ -1,11 +1,11 @@
-uuid: d56b59a2-d6e0-4eac-90ce-ddfc46b0788e
-langcode: uk
+uuid: 48ee3642-9e8d-43cb-b9e9-2daf71f10c4a
+langcode: en
 status: true
 dependencies:
   module:
     - user
-id: user.field_degree
-field_name: field_degree
+id: user.field_employee_last_name
+field_name: field_employee_last_name
 entity_type: user
 type: string
 settings:

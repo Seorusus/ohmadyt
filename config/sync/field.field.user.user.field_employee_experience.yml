@@ -1,0 +1,20 @@
+uuid: 307061c2-de4b-4295-b9d1-654c16b80155
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_employee_experience
+  module:
+    - user
+id: user.user.field_employee_experience
+field_name: field_employee_experience
+entity_type: user
+bundle: user
+label: 'Стаж державної служби'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

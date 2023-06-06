@@ -1,16 +1,16 @@
-uuid: 7fe35012-3685-4b4d-a257-75f45cb9bfa8
-langcode: uk
+uuid: f1c15aa4-423b-4d10-a1e7-ce4544079b33
+langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.field_second_name
+    - field.storage.user.field_employee_last_name
   module:
     - user
-id: user.user.field_second_name
-field_name: field_second_name
+id: user.user.field_employee_last_name
+field_name: field_employee_last_name
 entity_type: user
 bundle: user
-label: По-батькові
+label: Прізвище
 description: ''
 required: false
 translatable: false
