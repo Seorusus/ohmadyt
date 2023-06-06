@@ -1,0 +1,12 @@
+_core:
+  default_config_hash: ByOVf1cU9r5NkZ4ieBJ7k9sUid6jb03ojMN1gjJ0-OU
+langcode: uk
+site_key: 6LeXfTImAAAAAExkQmDqNohxovsRGCEccSfIFqCa
+secret_key: 6LeXfTImAAAAAEP3XkLrlFm0upsewGjYLgTRqN59
+verify_hostname: false
+use_globally: false
+widget:
+  theme: light
+  type: image
+  size: compact
+  noscript: false
