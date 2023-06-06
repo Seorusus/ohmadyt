@@ -1,6 +1,6 @@
 id: ohmatdyt_profile
 label: 'Import profiles'
-class: Drupal\migrate\Plugin\Migration
+#class: Drupal\migrate\Plugin\Migration
 migration_group: ohmatdyt
 source:
   plugin: url
