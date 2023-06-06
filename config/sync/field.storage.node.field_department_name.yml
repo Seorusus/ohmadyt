@@ -1,12 +1,12 @@
-uuid: d56b59a2-d6e0-4eac-90ce-ddfc46b0788e
+uuid: 6b176303-2f54-4fd8-bd9f-27e37094a0ad
 langcode: uk
 status: true
 dependencies:
   module:
-    - user
-id: user.field_degree
-field_name: field_degree
-entity_type: user
+    - node
+id: node.field_department_name
+field_name: field_department_name
+entity_type: node
 type: string
 settings:
   max_length: 255

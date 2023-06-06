@@ -1,12 +1,12 @@
-uuid: c8eca856-f41f-40a8-8ab6-9401f41077db
+uuid: 123144f8-f1e9-4e20-b98f-36a0feee4c92
 langcode: en
 status: true
 dependencies:
   module:
-    - node
-id: node.field_position_id
-field_name: field_position_id
-entity_type: node
+    - user
+id: user.field_employee_range_science
+field_name: field_employee_range_science
+entity_type: user
 type: string
 settings:
   max_length: 255

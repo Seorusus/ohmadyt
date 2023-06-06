@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.user.user.field_appointment
     - field.field.user.user.field_biography
-    - field.field.user.user.field_degree
     - field.field.user.user.field_department
     - field.field.user.user.field_domain_access
     - field.field.user.user.field_domain_admin
@@ -13,18 +12,26 @@ dependencies:
     - field.field.user.user.field_duties
     - field.field.user.user.field_education
     - field.field.user.user.field_email
-    - field.field.user.user.field_experience
+    - field.field.user.user.field_employee_age
+    - field.field.user.user.field_employee_appointed_from
+    - field.field.user.user.field_employee_education_level
+    - field.field.user.user.field_employee_experience
+    - field.field.user.user.field_employee_first_name
+    - field.field.user.user.field_employee_id
+    - field.field.user.user.field_employee_last_name
+    - field.field.user.user.field_employee_middle_name
+    - field.field.user.user.field_employee_phone_mobile
+    - field.field.user.user.field_employee_phone_working
+    - field.field.user.user.field_employee_range_science
+    - field.field.user.user.field_employee_rank
+    - field.field.user.user.field_employee_sex_type
     - field.field.user.user.field_group
-    - field.field.user.user.field_lead
-    - field.field.user.user.field_name
-    - field.field.user.user.field_origin_id
-    - field.field.user.user.field_phone
+    - field.field.user.user.field_position
     - field.field.user.user.field_rank
-    - field.field.user.user.field_second_name
-    - field.field.user.user.field_surname
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
+    - datetime
     - image
     - text
     - user
@@ -51,14 +58,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 15
-    region: content
-  field_degree:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 12
     region: content
   field_department:
     type: string
@@ -90,13 +89,111 @@ content:
     third_party_settings: {  }
     weight: 10
     region: content
-  field_experience:
+  field_employee_age:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_employee_appointed_from:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_employee_education_level:
     type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 14
+    weight: 24
+    region: content
+  field_employee_experience:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 35
+    region: content
+  field_employee_first_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_employee_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_employee_last_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_employee_middle_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_employee_phone_mobile:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_employee_phone_working:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_employee_range_science:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 36
+    region: content
+  field_employee_rank:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  field_employee_sex_type:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 28
     region: content
   field_group:
     type: entity_reference_label
@@ -106,36 +203,13 @@ content:
     third_party_settings: {  }
     weight: 18
     region: content
-  field_lead:
-    type: string
+  field_position:
+    type: entity_reference_label
     label: above
     settings:
-      link_to_entity: false
+      link: true
     third_party_settings: {  }
-    weight: 7
-    region: content
-  field_name:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 20
-    region: content
-  field_origin_id:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 19
-    region: content
-  field_phone:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 9
+    weight: 26
     region: content
   field_rank:
     type: string
@@ -144,22 +218,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 13
-    region: content
-  field_second_name:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 21
-    region: content
-  field_surname:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 22
     region: content
   member_for:
     weight: 5
@@ -176,6 +234,8 @@ content:
     weight: 0
     region: content
 hidden:
+  employee_platform_profiles: true
+  employee_profiles: true
   field_domain_access: true
   field_domain_admin: true
   field_domain_all_affiliates: true

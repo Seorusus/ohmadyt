@@ -1,15 +1,15 @@
-uuid: ffa31fda-8db3-4ced-9988-8c469ccccc9a
-langcode: en
+uuid: a9bee47c-a88b-4fa4-824c-68c1ce0c3899
+langcode: uk
 status: true
 dependencies:
   config:
-    - field.storage.node.field_department_id
+    - field.storage.node.field_department_name
     - node.type.department
-id: node.department.field_department_id
-field_name: field_department_id
+id: node.department.field_department_name
+field_name: field_department_name
 entity_type: node
 bundle: department
-label: 'ID пiдроздiлу'
+label: 'Назва підрозділу'
 description: ''
 required: false
 translatable: false

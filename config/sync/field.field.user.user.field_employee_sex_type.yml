@@ -1,16 +1,16 @@
-uuid: 7fe3bd6b-d2d5-49af-aa44-afdc543ba7a4
-langcode: uk
+uuid: f4a7d732-020d-4596-a3c5-e2a5ecfd570d
+langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.field_origin_id
+    - field.storage.user.field_employee_sex_type
   module:
     - user
-id: user.user.field_origin_id
-field_name: field_origin_id
+id: user.user.field_employee_sex_type
+field_name: field_employee_sex_type
 entity_type: user
 bundle: user
-label: 'Origin ID'
+label: 'Стать працівника'
 description: ''
 required: false
 translatable: false

@@ -1,0 +1,20 @@
+uuid: d390d414-caad-4877-bd84-625e15e9ce1e
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - user
+id: user.field_employee_appointed_from
+field_name: field_employee_appointed_from
+entity_type: user
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

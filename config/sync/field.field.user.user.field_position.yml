@@ -1,16 +1,17 @@
-uuid: 01f40cbd-e311-4ca0-be9b-14387f688af7
-langcode: uk
+uuid: 9419a366-4f56-466a-bbe6-7d4f28721798
+langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_department
-    - node.type.department
+    - field.storage.user.field_position
     - node.type.position
-id: node.position.field_department
-field_name: field_department
-entity_type: node
-bundle: position
-label: Підпорядкування
+  module:
+    - user
+id: user.user.field_position
+field_name: field_position
+entity_type: user
+bundle: user
+label: Посада
 description: ''
 required: false
 translatable: false
@@ -20,10 +21,10 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      department: department
+      position: position
     sort:
       field: _none
       direction: ASC
-    auto_create: true
+    auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

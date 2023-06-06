@@ -1,4 +1,4 @@
-uuid: b2e4d0dc-dfe5-4482-9a83-bb96db0a1da0
+uuid: 453ca82f-4758-4fe4-ae66-4285584c58ec
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,11 @@ dependencies:
 id: profile.field_employee_id
 field_name: field_employee_id
 entity_type: profile
-type: integer
+type: string
 settings:
-  unsigned: false
-  size: normal
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

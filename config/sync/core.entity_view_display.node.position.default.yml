@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.position.field_code
     - field.field.node.position.field_department
+    - field.field.node.position.field_department_value
     - field.field.node.position.field_domain_access
     - field.field.node.position.field_domain_all_affiliates
     - field.field.node.position.field_idx_num
@@ -12,6 +13,7 @@ dependencies:
     - field.field.node.position.field_position_category
     - field.field.node.position.field_position_id
     - field.field.node.position.field_position_is_vacant
+    - field.field.node.position.field_position_name
     - field.field.node.position.field_position_pay_el
     - field.field.node.position.field_position_position_type
     - field.field.node.position.field_position_proffession
@@ -42,6 +44,14 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
+  field_department_value:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
   field_idx_num:
     type: number_integer
     label: inline
@@ -49,7 +59,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_object_type:
     type: string
@@ -65,16 +75,15 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   field_position_id:
-    type: number_integer
-    label: inline
+    type: string
+    label: above
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
+      link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 14
     region: content
   field_position_is_vacant:
     type: boolean
@@ -84,7 +93,15 @@ content:
       format_custom_false: 'Не вакантна'
       format_custom_true: Вакантна
     third_party_settings: {  }
-    weight: 11
+    weight: 12
+    region: content
+  field_position_name:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
     region: content
   field_position_pay_el:
     type: string
@@ -92,7 +109,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 10
+    weight: 11
     region: content
   field_position_position_type:
     type: string
@@ -100,7 +117,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_position_proffession:
     type: string
@@ -108,7 +125,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 9
+    weight: 10
     region: content
   field_position_staff_cat:
     type: string
@@ -116,7 +133,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 8
+    weight: 9
     region: content
   field_position_vacant_from:
     type: datetime_default
@@ -125,7 +142,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 12
+    weight: 13
     region: content
   links:
     settings: {  }

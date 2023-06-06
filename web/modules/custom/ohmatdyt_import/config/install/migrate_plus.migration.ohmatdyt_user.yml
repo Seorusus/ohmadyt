@@ -1,0 +1,129 @@
+id: ohmatdyt_user
+label: 'Import users'
+#class: Drupal\migrate\Plugin\Migration
+migration_group: ohmatdyt
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls:
+    - modules/custom/ohmatdyt_import/src/public.json
+  item_selector: /data
+  ids:
+    field_employee_id:
+      type: string
+  fields:
+    -
+      name: field_employee_email
+      label: 'email працівника'
+      selector: 43
+    -
+      name: field_employee_id
+      label: 'Персональний ID'
+      selector: 50
+    -
+      name: field_object_type
+      label: 'Object Type'
+      selector: 2
+    -
+      name: field_employee_first_name
+      label: 'Імя'
+      selector: 36
+    -
+      name: field_employee_middle_name
+      label: 'По-батькові'
+      selector: 38
+    -
+      name: field_employee_last_name
+      label: 'Прізвище'
+      selector: 37
+    -
+      name: field_employee_age
+      label: 'Вік працівника'
+      selector: 45
+    -
+      name: field_employee_sex_type
+      label: 'Стать працівника'
+      selector: 39
+    -
+      name: field_employee_education_level
+      label: 'Освіта працівника'
+      selector: 40
+    -
+      name: field_position
+      label: 'Підпорякування'
+      selector: 4
+    -
+      name: field_employee_appointed_from
+      label: 'Призначений з'
+      selector: 48
+    -
+      name: field_employee_phone_mobile
+      label: 'Телефон мобільний'
+      selector: 41
+    -
+      name: field_employee_phone_working
+      label: 'Телефон робочий'
+      selector: 42
+    -
+      name: field_employee_rank
+      label: 'Ранг працівника'
+      selector: 46
+    -
+      name: field_employee_experience
+      label: 'Стаж державної служби'
+      selector: 47
+    -
+      name: field_employee_range_science
+      label: 'Наукова ступінь'
+      selector: 49
+
+destination:
+  plugin: entity:user
+  md5_passwords: true
+
+process:
+  field_object_type:
+    - plugin: skip_on_value
+      method: row
+      source: field_object_type
+      value:
+        - 'organization'
+        - 'position'
+        - 'department'
+  type:
+    plugin: default_value
+    default_value: user
+  roles:
+    plugin: default_value
+    default_value: employee
+  status:
+    plugin: default_value
+    default_value: 1
+  name: field_employee_email
+  mail: field_employee_email
+  pass:
+    - plugin: default_value
+      default_value: 12345
+    - plugin: callback
+      callable: md5
+  field_position:
+    plugin: migration_lookup
+    migration: ohmatdyt_position
+    source: field_position
+  field_employee_id: field_employee_id
+  field_employee_first_name: field_employee_first_name
+  field_employee_middle_name: field_employee_middle_name
+  field_employee_last_name: field_employee_last_name
+  field_employee_age: field_employee_age
+  field_employee_sex_type: field_employee_sex_type
+  field_employee_education_level: field_employee_education_level
+  field_employee_appointed_from: field_employee_appointed_from
+  field_employee_phone_mobile: field_employee_phone_mobile
+  field_employee_phone_working: field_employee_phone_working
+  field_employee_rank: field_employee_rank
+  field_employee_experience: field_employee_experience
+  field_employee_range_science: field_employee_range_science
+migration_dependencies:
+  required: []
+  optional: []

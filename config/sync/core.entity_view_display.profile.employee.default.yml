@@ -68,13 +68,12 @@ content:
     weight: 2
     region: content
   field_employee_id:
-    type: number_integer
-    label: inline
+    type: string
+    label: above
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
+      link_to_entity: false
     third_party_settings: {  }
-    weight: 0
+    weight: 13
     region: content
   field_employee_last_name:
     type: string

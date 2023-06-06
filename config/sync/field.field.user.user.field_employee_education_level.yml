@@ -1,0 +1,20 @@
+uuid: 85bf4f60-a00d-4138-b48d-45c811be7e5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_employee_education_level
+  module:
+    - user
+id: user.user.field_employee_education_level
+field_name: field_employee_education_level
+entity_type: user
+bundle: user
+label: 'Освіта працівника'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

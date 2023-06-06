@@ -1,16 +1,16 @@
-uuid: fcb5d34a-4826-4e5a-812f-52b33147dc0f
-langcode: uk
+uuid: e0cc46ee-1fb4-4b66-916b-a9216b175947
+langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.field_experience
+    - field.storage.user.field_employee_rank
   module:
     - user
-id: user.user.field_experience
-field_name: field_experience
+id: user.user.field_employee_rank
+field_name: field_employee_rank
 entity_type: user
 bundle: user
-label: Стаж
+label: 'Ранг працівника'
 description: ''
 required: false
 translatable: false

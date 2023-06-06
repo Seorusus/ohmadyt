@@ -1,15 +1,15 @@
-uuid: 3e7d056c-650a-4ab1-a845-b592c0d2910c
+uuid: 070664c3-0dd8-42b3-821d-cbdb3408422d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_position_id
+    - field.storage.node.field_position_name
     - node.type.position
-id: node.position.field_position_id
-field_name: field_position_id
+id: node.position.field_position_name
+field_name: field_position_name
 entity_type: node
 bundle: position
-label: 'Посада id'
+label: 'Назва посади'
 description: ''
 required: false
 translatable: false
