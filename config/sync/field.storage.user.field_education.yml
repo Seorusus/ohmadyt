@@ -1,5 +1,5 @@
-uuid: ee8e198a-a7db-442c-a469-2d8e95819d62
-langcode: uk
+uuid: ed66d183-ed43-4a57-ae36-ae4b6e2a6e4b
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,14 +7,12 @@ dependencies:
 id: user.field_education
 field_name: field_education
 entity_type: user
-type: string
+type: string_long
 settings:
-  max_length: 255
   case_sensitive: false
-  is_ascii: false
 module: core
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

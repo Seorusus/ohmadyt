@@ -890,3 +890,90 @@ a {
     }
   }
 }
+
+/*
+* Page User Account.
+ */
+.employee-account {
+  .field__label {
+    &:after {
+      content: "";
+    }
+  }
+  .employee-picture {
+    img.image-style-user-picture {
+      border-radius: 8px;
+    }
+  }
+
+  .employee-top {
+    padding: 65px 50px;
+    background-color: var(--o-gray);
+    margin-right: -39px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .employee-center {
+    .whatsapp {
+      img {
+        width: 20px;
+        height: auto;
+      }
+    }
+
+    .field.field--name-field-employee-phone-mobile {
+      display: inline-flex;
+    }
+  }
+
+  .node--view-mode-user-account {
+    h2 {
+      display: none;
+    }
+  }
+
+  .employee-personal {
+    margin: 20px 45px;
+
+    h1 {
+      display: inline-flex;
+
+      span {
+        margin-right: 10px;
+
+        .field__item {
+          display: inline-block;
+
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      &:after {
+        content: '';
+        position: relative;
+        width: 11px;
+        height: 11px;
+        background-color: #DA393B;
+        border-radius: 50%;
+        top: 15px;
+        margin-left: 10px;
+      }
+    }
+    .field--name-field-position-name {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 140%;
+      margin: 20px 0;
+    }
+    //.field--name-field-department-name {
+    //  font-style: normal;
+    //  font-weight: 500;
+    //  font-size: 16px;
+    //  line-height: 140%;
+    //}
+  }
+
+}

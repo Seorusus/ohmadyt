@@ -1,0 +1,10 @@
+uuid: c2056330-8d5a-47f0-a03e-6ac4fdc3c63c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.user_account
+label: 'User account'
+targetEntityType: node
+cache: true

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c82a78f16111692d4fd4e27431c98cf1",
+    "content-hash": "f5f9e73cb5b11988ad03963dbcafdb80",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4702,6 +4702,54 @@
                 "source": "https://git.drupalcode.org/project/libraries",
                 "issues": "http://drupal.org/project/issues/libraries",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/link_description",
+            "version": "1.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/link_description.git",
+                "reference": "1.0.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/link_description-1.0.0-beta3.zip",
+                "reference": "1.0.0-beta3",
+                "shasum": "54e5211f53a5c8ebfcfbe5c7eb18e7b503063eed"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-beta3",
+                    "datestamp": "1685631931",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "dajjen",
+                    "homepage": "https://www.drupal.org/user/394496"
+                },
+                {
+                    "name": "kirkkala",
+                    "homepage": "https://www.drupal.org/user/390806"
+                }
+            ],
+            "description": "Extends core link field module by adding a link description option.",
+            "homepage": "https://www.drupal.org/project/link_description",
+            "support": {
+                "source": "https://git.drupalcode.org/project/link_description"
             }
         },
         {
@@ -16495,7 +16543,8 @@
         "drupal/symfony_mailer": 10,
         "drupal/custom_login_url": 5,
         "drupal/recaptcha_v3": 15,
-        "drupal/rabbit_hole": 10
+        "drupal/rabbit_hole": 10,
+        "drupal/link_description": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

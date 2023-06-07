@@ -1,0 +1,81 @@
+{#
+/**
+ * @file
+ * Theme override to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_user()
+ */
+#}
+<div class="employee-account">
+    <article{{ attributes.addClass('profile') }}>
+        {% if content %}
+            <div class="employee-top">
+                <div class="row justify-content-start">
+                    <div class="col-3 employee-picture">
+                        {{ content.user_picture }}
+                    </div>
+                    <div class="col-6 employee-personal">
+                        <h1>
+                            <span>{{ content.field_employee_first_name }}</span>
+                            <span>{{ content.field_employee_middle_name }}</span>
+                            <span>{{ content.field_employee_last_name }}</span>
+                        </h1>
+                        {{ content.field_position }}
+                    </div>
+                </div>
+            </div>
+            <div class="employee-center">
+                <div class="employee-phone">
+                    <span>
+                        {{ content.field_employee_phone_mobile }}
+                    </span>
+                    <span>
+                    <a class="whatsapp" target="_blank" aria-label="Chat on WhatsApp" href="https://wa.me/{{ content.field_employee_phone_mobile.value }}"> <img alt="Chat on WhatsApp" src="{{ file_url('themes/custom/ohmatdyt/images/whatsapp.svg') }}"/></a>
+                    </span>
+                </div>
+                <div class="employee-phone">
+                    <span>
+                        {{ content.field_employee_phone_working }}
+                    </span>
+                    <span>
+                    <a class="whatsapp" target="_blank" aria-label="Chat on WhatsApp" href="https://wa.me/{{ content.field_employee_phone_working }}"> <img alt="Chat on WhatsApp" src="{{ file_url('themes/custom/ohmatdyt/images/whatsapp.svg') }}"/></a>
+                    </span>
+                </div>
+                <div class="employee-room">
+                    {{ content.field_room }}
+                </div>
+                {{ content.field_email }}
+            </div>
+            {% if content.field_publications|render %}
+                <div class="employee-publications">
+                    <div>{{ 'Освiта'|t }}</div>
+                    {{ content.field_education }}
+                    {{ content.field_employee_education_level }}
+                    {{ content.field_employee_range_science }}
+                    {{ content.field_employee_rank }}
+                    {{ content.field_current_specialisation }}
+                    {{ content.field_experience }}
+                </div>
+            {% endif %}
+            {% if content.field_publications|render %}
+                <div class="employee-publications">
+                    <div>{{ 'Публикації'|t }}</div>
+                    {{ content.field_publications }}
+                </div>
+            {% endif %}
+            {#    {{- content -}}#}
+        {% endif %}
+    </article>
+
+</div>
+

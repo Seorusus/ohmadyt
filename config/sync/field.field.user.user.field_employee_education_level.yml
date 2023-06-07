@@ -10,7 +10,7 @@ id: user.user.field_employee_education_level
 field_name: field_employee_education_level
 entity_type: user
 bundle: user
-label: 'Освіта працівника'
+label: 'Рiвень освіти'
 description: ''
 required: false
 translatable: false

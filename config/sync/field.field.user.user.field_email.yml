@@ -10,7 +10,7 @@ id: user.user.field_email
 field_name: field_email
 entity_type: user
 bundle: user
-label: 'Службовий email'
+label: email
 description: ''
 required: false
 translatable: false

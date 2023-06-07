@@ -10,7 +10,7 @@ id: user.user.field_employee_phone_mobile
 field_name: field_employee_phone_mobile
 entity_type: user
 bundle: user
-label: 'Телефон мобільний'
+label: Телефон
 description: ''
 required: false
 translatable: false

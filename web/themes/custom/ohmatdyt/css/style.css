@@ -1745,6 +1745,81 @@ a {
   color: initial;
 }
 
+/*
+* Page User Account.
+ */
+.employee-account .field__label:after {
+  content: "";
+}
+
+.employee-account .employee-picture img.image-style-user-picture {
+  border-radius: 8px;
+}
+
+.employee-account .employee-top {
+  padding: 65px 50px;
+  background-color: var(--o-gray);
+  margin-right: -39px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.employee-account .employee-center .whatsapp img {
+  width: 20px;
+  height: auto;
+}
+
+.employee-account .employee-center .field.field--name-field-employee-phone-mobile {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.employee-account .node--view-mode-user-account h2 {
+  display: none;
+}
+
+.employee-account .employee-personal {
+  margin: 20px 45px;
+}
+
+.employee-account .employee-personal h1 {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.employee-account .employee-personal h1 span {
+  margin-right: 10px;
+}
+
+.employee-account .employee-personal h1 span .field__item {
+  display: inline-block;
+}
+
+.employee-account .employee-personal h1 span:last-child {
+  margin-right: 0;
+}
+
+.employee-account .employee-personal h1:after {
+  content: '';
+  position: relative;
+  width: 11px;
+  height: 11px;
+  background-color: #DA393B;
+  border-radius: 50%;
+  top: 15px;
+  margin-left: 10px;
+}
+
+.employee-account .employee-personal .field--name-field-position-name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  margin: 20px 0;
+}
+
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
