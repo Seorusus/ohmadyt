@@ -35,26 +35,36 @@
                 </div>
             </div>
             <div class="employee-center">
+                {% if content.field_employee_phone_mobile|render %}
+                    <div class="employee-phone">
+                        <i class="bi bi-telephone"></i>
+                        <span>
+                            <a href="tel:{{ content.field_employee_phone_mobile.value }}">{{ content.field_employee_phone_mobile }}</a>
+                        </span>
+                        <span>
+                        <a class="whatsapp" target="_blank" aria-label="Chat on WhatsApp" href="https://wa.me/{{ content.field_employee_phone_mobile.value }}"> <img alt="Chat on WhatsApp" src="{{ file_url('themes/custom/ohmatdyt/images/whatsapp.svg') }}"/></a>
+                        </span>
+                    </div>
+                {% endif %}
+                {% if content.field_employee_phone_working|render %}
+                    <div class="employee-phone">
+                        <i class="bi bi-telephone"></i>
+                        <span>
+                            <a href="tel:{{ content.field_employee_phone_working.value }}">{{ content.field_employee_phone_working }}</a>
+                        </span>
+                        <span>
+                        <a class="whatsapp" target="_blank" aria-label="Chat on WhatsApp" href="https://wa.me/{{ content.field_employee_phone_working.value }}"> <img alt="Chat on WhatsApp" src="{{ file_url('themes/custom/ohmatdyt/images/whatsapp.svg') }}"/></a>
+                        </span>
+                    </div>
+                {% endif %}
                 <div class="employee-phone">
-                    <span>
-                        {{ content.field_employee_phone_mobile }}
-                    </span>
-                    <span>
-                    <a class="whatsapp" target="_blank" aria-label="Chat on WhatsApp" href="https://wa.me/{{ content.field_employee_phone_mobile.value }}"> <img alt="Chat on WhatsApp" src="{{ file_url('themes/custom/ohmatdyt/images/whatsapp.svg') }}"/></a>
-                    </span>
-                </div>
-                <div class="employee-phone">
-                    <span>
-                        {{ content.field_employee_phone_working }}
-                    </span>
-                    <span>
-                    <a class="whatsapp" target="_blank" aria-label="Chat on WhatsApp" href="https://wa.me/{{ content.field_employee_phone_working }}"> <img alt="Chat on WhatsApp" src="{{ file_url('themes/custom/ohmatdyt/images/whatsapp.svg') }}"/></a>
-                    </span>
-                </div>
-                <div class="employee-room">
+                    <i class="bi bi-geo-alt"></i>
                     {{ content.field_room }}
                 </div>
-                {{ content.field_email }}
+                <div class="employee-email">
+                    <i class="bi bi-envelope"></i>
+                    {{ content.field_email }}
+                </div>
             </div>
             {% if content.field_publications|render %}
                 <div class="employee-publications">

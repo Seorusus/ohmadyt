@@ -98,3 +98,7 @@ function ohmatdyt_theme_suggestions_user_alter(array &$suggestions, array $varia
     $suggestions[] = 'user__role__employee';
   }
 }
+
+function ohmatdyt_preprocess_page(&$variables) {
+  $variables['#attached']['library'][] = 'ohmatdyt/bootstrap-icons';
+}

@@ -1769,10 +1769,47 @@ a {
   height: auto;
 }
 
-.employee-account .employee-center .field.field--name-field-employee-phone-mobile {
+.employee-account .employee-center .employee-phone .field--name-field-employee-phone-mobile {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.employee-account .employee-center .employee-phone .field--name-field-employee-phone {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.employee-account .employee-center .employee-phone .field--name-field-room {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.employee-account .employee-center .employee-phone .bi-telephone::before {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.employee-account .employee-center .employee-phone .bi-geo-alt::before {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.employee-account .employee-center .employee-email .bi-envelope-at {
+  float: right;
+}
+
+.employee-account .employee-center .employee-email .field--name-field-email {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.employee-account .employee-center .employee-email .bi-envelope::before {
+  margin-right: 10px;
+  font-size: 20px;
 }
 
 .employee-account .node--view-mode-user-account h2 {

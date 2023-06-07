@@ -922,8 +922,46 @@ a {
       }
     }
 
-    .field.field--name-field-employee-phone-mobile {
-      display: inline-flex;
+    .employee-phone {
+      //display: inline-flex;
+
+      .field--name-field-employee-phone-mobile {
+        display: inline-flex;
+      }
+
+      .field--name-field-employee-phone {
+        display: inline-flex;
+      }
+
+      .field--name-field-room {
+        display: inline-flex;
+      }
+
+      .bi-telephone::before {
+        //content: "\f5c1";
+        margin-right: 10px;
+        font-size: 20px;
+      }
+
+      .bi-geo-alt::before {
+        margin-right: 10px;
+        font-size: 20px;
+      }
+    }
+
+    .employee-email {
+      .bi-envelope-at {
+        float: right;
+      }
+
+      .field--name-field-email {
+        display: inline-flex;
+      }
+
+      .bi-envelope::before {
+        margin-right: 10px;
+        font-size: 20px;
+      }
     }
   }
 
