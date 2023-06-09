@@ -1,9 +1,9 @@
-uuid: ab267d7a-4392-4a59-bbc9-d9fc1fac0493
+uuid: 45ed8f7b-b6bc-4ee8-8d94-3227d7b9d7bd
 langcode: uk
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: ck2lENnxSQaFRT-hWtRzd567IZKZi_713mJmVDHHHms
+  default_config_hash: fXmmPh56zh1PenXVmKO17I_nZyHUTmICJ-BvGlxUVLw
 id: ohmatdyt_user
 class: null
 field_plugin_method: null
@@ -22,6 +22,10 @@ source:
     field_employee_id:
       type: string
   fields:
+    -
+      name: field_email
+      label: 'email працівника'
+      selector: 43
     -
       name: field_employee_email
       label: 'email працівника'
@@ -119,12 +123,12 @@ process:
     migration: ohmatdyt_position
     source: field_position
   field_employee_id: field_employee_id
+  field_email: field_email
   field_employee_first_name: field_employee_first_name
   field_employee_middle_name: field_employee_middle_name
   field_employee_last_name: field_employee_last_name
   field_employee_age: field_employee_age
   field_employee_sex_type: field_employee_sex_type
-  field_employee_education_level: field_employee_education_level
   field_employee_appointed_from: field_employee_appointed_from
   field_employee_phone_mobile: field_employee_phone_mobile
   field_employee_phone_working: field_employee_phone_working

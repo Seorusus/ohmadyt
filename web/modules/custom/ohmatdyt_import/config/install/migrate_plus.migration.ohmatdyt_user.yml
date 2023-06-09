@@ -14,6 +14,10 @@ source:
       type: string
   fields:
     -
+      name: field_email
+      label: 'email працівника'
+      selector: 43
+    -
       name: field_employee_email
       label: 'email працівника'
       selector: 43
@@ -112,12 +116,13 @@ process:
     migration: ohmatdyt_position
     source: field_position
   field_employee_id: field_employee_id
+  field_email: field_email
   field_employee_first_name: field_employee_first_name
   field_employee_middle_name: field_employee_middle_name
   field_employee_last_name: field_employee_last_name
   field_employee_age: field_employee_age
   field_employee_sex_type: field_employee_sex_type
-  field_employee_education_level: field_employee_education_level
+#  field_employee_education_level: field_employee_education_level
   field_employee_appointed_from: field_employee_appointed_from
   field_employee_phone_mobile: field_employee_phone_mobile
   field_employee_phone_working: field_employee_phone_working

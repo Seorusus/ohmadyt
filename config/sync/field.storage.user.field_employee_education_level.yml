@@ -1,18 +1,33 @@
-uuid: 34165ec6-2487-4615-8638-0c3647f7b7a2
+uuid: 1a6d61d8-2a84-4b07-b867-70536c7c56c2
 langcode: en
 status: true
 dependencies:
   module:
+    - options
     - user
 id: user.field_employee_education_level
 field_name: field_employee_education_level
 entity_type: user
-type: string
+type: list_string
 settings:
-  max_length: 255
-  case_sensitive: false
-  is_ascii: false
-module: core
+  allowed_values:
+    -
+      value: begin
+      label: Начальний
+    -
+      value: middle
+      label: Середнiй
+    -
+      value: middle_spec
+      label: 'Середнiй спецiальний'
+    -
+      value: bacalaver
+      label: Бакалавр
+    -
+      value: magister
+      label: Магiстр
+  allowed_values_function: ''
+module: options
 locked: false
 cardinality: 1
 translatable: true
