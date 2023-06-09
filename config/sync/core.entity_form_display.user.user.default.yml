@@ -59,6 +59,7 @@ third_party_settings:
         - field_room
         - field_biography
         - field_education
+        - field_employee_education_level
         - field_employee_range_science
         - field_current_specialisation
         - field_experience
@@ -109,7 +110,7 @@ content:
     third_party_settings: {  }
   field_appointment:
     type: boolean_checkbox
-    weight: 22
+    weight: 23
     region: content
     settings:
       display_label: true
@@ -124,7 +125,7 @@ content:
     third_party_settings: {  }
   field_current_specialisation:
     type: string_textfield
-    weight: 20
+    weight: 21
     region: content
     settings:
       size: 60
@@ -138,13 +139,13 @@ content:
     third_party_settings: {  }
   field_domain_admin:
     type: options_buttons
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_domain_all_affiliates:
     type: boolean_checkbox
-    weight: 8
+    weight: 9
     region: content
     settings:
       display_label: true
@@ -157,9 +158,15 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_employee_education_level:
+    type: options_select
+    weight: 19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_employee_range_science:
     type: string_textfield
-    weight: 19
+    weight: 20
     region: content
     settings:
       size: 60
@@ -167,7 +174,7 @@ content:
     third_party_settings: {  }
   field_experience:
     type: number
-    weight: 21
+    weight: 22
     region: content
     settings:
       placeholder: 'Введiть значення вiд 0 до 50'
@@ -189,13 +196,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   language:
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -218,7 +225,6 @@ hidden:
   field_email: true
   field_employee_age: true
   field_employee_appointed_from: true
-  field_employee_education_level: true
   field_employee_experience: true
   field_employee_first_name: true
   field_employee_id: true

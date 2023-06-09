@@ -35,6 +35,7 @@ dependencies:
     - email_formatter
     - image
     - link_description
+    - options
     - text
     - user
 _core:
@@ -108,12 +109,11 @@ content:
     weight: 15
     region: content
   field_employee_education_level:
-    type: string
+    type: list_default
     label: inline
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
-    weight: 12
+    weight: 26
     region: content
   field_employee_experience:
     type: string
