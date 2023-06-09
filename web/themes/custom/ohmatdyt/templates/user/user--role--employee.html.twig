@@ -36,7 +36,7 @@
             </div>
             <div class="employee-center">
                 {% if content.field_employee_phone_mobile|render %}
-                    <div class="employee-phone">
+                    <div class="employee_child employee-phone">
                         <i class="bi bi-telephone"></i>
                         <span>
                             <a href="tel:{{ content.field_employee_phone_mobile.value }}">{{ content.field_employee_phone_mobile }}</a>
@@ -47,7 +47,7 @@
                     </div>
                 {% endif %}
                 {% if content.field_employee_phone_working|render %}
-                    <div class="employee-phone">
+                    <div class="employee_child employee-phone">
                         <i class="bi bi-telephone"></i>
                         <span>
                             <a href="tel:{{ content.field_employee_phone_working.value }}">{{ content.field_employee_phone_working }}</a>
@@ -57,35 +57,63 @@
                         </span>
                     </div>
                 {% endif %}
-                <div class="employee-phone">
-                    <i class="bi bi-geo-alt"></i>
-                    {{ content.field_room }}
-                </div>
-                <div class="employee-email">
-                    <i class="bi bi-envelope"></i>
-                    {{ content.field_email }}
-                </div>
+                {% if content.field_room|render %}
+                    <div class="employee_child employee-phone">
+                        <i class="bi bi-geo-alt"></i>
+                        {{ content.field_room }}
+                    </div>
+                {% endif %}
+                {% if content.field_email|render %}
+                    <div class="employee_child employee-email">
+                        <i class="bi bi-envelope"></i>
+                        {{ content.field_email }}
+                    </div>
+                {% endif %}
             </div>
-            {% if content.field_publications|render %}
-                <div class="employee-publications">
-                    <div>{{ 'Освiта'|t }}</div>
-                    {{ content.field_education }}
-                    {{ content.field_employee_education_level }}
-                    {{ content.field_employee_range_science }}
-                    {{ content.field_employee_rank }}
-                    {{ content.field_current_specialisation }}
-                    {{ content.field_experience }}
+            {% if content.field_education|render is not empty or
+                content.field_employee_education_level|render is not empty or
+                content.field_employee_range_science|render is not empty or
+                content.field_employee_rank|render is not empty or
+                content.field_current_specialisation|render is not empty or
+                content.field_experience|render is not empty %}
+                <div class="employee-educations">
+                    <div class="_title">
+                       <span>
+                            <i class="bi-award"></i>
+                           {{ 'Освiта'|t }}</span></div>
+                    <div class="_content">
+                        <div class="employee_child">
+                            {{ content.field_education }}
+                        </div>
+                        <div class="employee_child">
+                            {{ content.field_employee_education_level }}
+                        </div>
+                        <div class="employee_child">
+                            {{ content.field_employee_range_science }}
+                        </div>
+                        <div class="employee_child">
+                            {{ content.field_employee_rank }}
+                        </div>
+                        <div class="employee_child">
+                            {{ content.field_current_specialisation }}
+                        </div>
+                        <div class="employee_child">
+                            {{ content.field_experience }}
+                        </div>
+                    </div>
                 </div>
             {% endif %}
             {% if content.field_publications|render %}
-                <div class="employee-publications">
-                    <div>{{ 'Публикації'|t }}</div>
-                    {{ content.field_publications }}
+                <div class="employee-educations _publications">
+                    <div class="_title">
+                        <span><i class="bi-book"></i>{{ 'Публикації'|t }}</span>
+                    </div>
+                    <div class="_content">
+                        {{ content.field_publications }}
+                    </div>
                 </div>
             {% endif %}
-            {#    {{- content -}}#}
         {% endif %}
     </article>
-
 </div>
 

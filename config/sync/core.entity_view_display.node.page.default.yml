@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.page.field_domain_access
     - field.field.node.page.field_domain_all_affiliates
     - field.field.node.page.field_files
-    - field.field.node.page.field_lead
     - field.field.node.page.field_media_image
     - node.type.page
   module:
@@ -39,13 +38,6 @@ content:
         attribute: lazy
     third_party_settings: {  }
     weight: 104
-    region: content
-  field_lead:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 102
     region: content
   field_media_image:
     type: entity_reference_entity_view

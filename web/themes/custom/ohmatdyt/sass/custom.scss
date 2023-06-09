@@ -915,10 +915,22 @@ a {
   }
 
   .employee-center {
+    margin: 50px 10px;
+
     .whatsapp {
       img {
         width: 20px;
         height: auto;
+      }
+    }
+
+    .employee_child {
+      margin-bottom: 15px;
+
+      .field__label {
+        min-width: 200px;
+        text-transform: uppercase;
+        font-size: 13px;
       }
     }
 
@@ -965,6 +977,114 @@ a {
     }
   }
 
+  .employee-educations {
+    margin: 50px 10px;
+
+    &._publications {
+
+      ._title {
+
+        &:after {
+          left: 200px;
+          width: 80%;
+        }
+      }
+
+      .link-item {
+        margin-bottom: 35px;
+
+        a {
+          font-weight: 900;
+          text-decoration: revert;
+        }
+
+        .link-description {
+          margin-top: 10px;
+          font-size: 13px;
+          text-decoration: underline;
+        }
+
+      }
+    }
+
+    ._title {
+      display: block;
+      align-items: center;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 32px;
+        left: 160px;
+        width: 85%;
+        height: 2px;
+        background-color: $brandblue;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        margin-left: 25px;
+        text-transform: uppercase;
+        color: $brandblue;
+        font-weight: 900;
+        font-size: 13px;
+        position: relative;
+
+        .bi-award {
+          width: 64px;
+          height: 64px;
+          display: block;
+          padding: 9px 18px;
+          margin-right: 10px;
+          font-size: 30px;
+          font-weight: normal;
+          line-height: 1.5em;
+          color: $brandblue;
+          background-color: $brandgrey;
+          border-radius: 50%;
+          -webkit-transition: background-color 0.4s;
+          transition: background-color 0.4s;
+        }
+
+        .bi-book {
+          width: 64px;
+          height: 64px;
+          display: block;
+          padding: 9px 18px;
+          margin-right: 10px;
+          font-size: 30px;
+          font-weight: normal;
+          line-height: 1.5em;
+          color: $brandblue;
+          background-color: $brandgrey;
+          border-radius: 50%;
+          -webkit-transition: background-color 0.4s;
+          transition: background-color 0.4s;
+        }
+      }
+    }
+
+    ._content {
+      padding: 40px 0 0 100px;
+    }
+
+    .employee_child {
+    margin-bottom: 15px;
+
+    .field__label {
+      min-width: 35%;
+      text-transform: uppercase;
+      font-size: 15px;
+      }
+
+      .field__items {
+        max-width: 65%;
+      }
+    }
+  }
+
   .node--view-mode-user-account {
     h2 {
       display: none;
@@ -1006,12 +1126,6 @@ a {
       line-height: 140%;
       margin: 20px 0;
     }
-    //.field--name-field-department-name {
-    //  font-style: normal;
-    //  font-weight: 500;
-    //  font-size: 16px;
-    //  line-height: 140%;
-    //}
   }
 
 }

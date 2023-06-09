@@ -11,7 +11,7 @@ tweet-selected-text:
 fontawesome:
   css:
     theme:
-      css/fontawesome.css: {}
+      css/fontawesome.min.css: {}
 
 bootstrap-icons:
   version: 1.x
