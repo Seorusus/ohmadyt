@@ -1,18 +1,18 @@
-uuid: d3c59390-5f1d-4346-8567-48e8b320158e
+uuid: a916d1f6-2888-46bd-b93f-60282ef10d4d
 langcode: uk
 status: true
 dependencies:
   module:
-    - text
+    - link_description
     - user
-id: user.field_duties
-field_name: field_duties
+id: user.field_publications
+field_name: field_publications
 entity_type: user
-type: text_long
+type: link_description
 settings: {  }
-module: text
+module: link_description
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

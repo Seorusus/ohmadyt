@@ -84,3 +84,21 @@ function ohmatdyt_theme_suggestions_block_alter(array &$suggestions, array $vari
     array_splice($suggestions, 1, 0, 'block__type__' . $variables['elements']['content']['#block_content']->bundle());
   }
 }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for user templates.
+ */
+function ohmatdyt_theme_suggestions_user_alter(array &$suggestions, array $variables) {
+  // Get the user entity from the variables.
+  $user = $variables['elements']['#user'];
+
+  // Check if the user has the 'employee' role.
+  if ($user->hasRole('employee')) {
+    // Add the user role suggestion.
+    $suggestions[] = 'user__role__employee';
+  }
+}
+
+function ohmatdyt_preprocess_page(&$variables) {
+  $variables['#attached']['library'][] = 'ohmatdyt/bootstrap-icons';
+}

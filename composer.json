@@ -71,7 +71,9 @@
         "drupal/rabbit_hole": "^1.0@beta",
         "drupal/auto_entitylabel": "^3.0",
         "drupal/login_emailusername": "^2.1",
-        "drupal/field_permissions": "^1.2"
+        "drupal/field_permissions": "^1.2",
+        "drupal/recaptcha": "^3.2",
+        "drupal/link_description": "^1.0@beta"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
@@ -111,6 +113,9 @@
         },
         "enable-patching": true,
 			"patches": {
+				"drupal/core": {
+					"Remove default colon behind inline labels": "https://www.drupal.org/files/issues/2023-05-19/2838547-23.patch"
+				},
 				"drupal/simple_menu_icons": {
 					"Error: Undefined constant FILE_STATUS_PERMANENT in simple_menu_icons_menu_link_content_form_submit()": "https://www.drupal.org/files/issues/2023-02-07/3328904-5.patch"
 				}

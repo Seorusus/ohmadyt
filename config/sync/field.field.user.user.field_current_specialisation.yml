@@ -1,0 +1,20 @@
+uuid: b26d41c2-e007-4a5f-9f70-90f22fd9eba3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_current_specialisation
+  module:
+    - user
+id: user.user.field_current_specialisation
+field_name: field_current_specialisation
+entity_type: user
+bundle: user
+label: 'Поточна робоча спецiалiзацiя'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.page.field_domain_access
     - field.field.node.page.field_domain_all_affiliates
     - field.field.node.page.field_files
-    - field.field.node.page.field_lead
     - field.field.node.page.field_media_image
     - node.type.page
   module:
@@ -63,14 +62,6 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
-  field_lead:
-    type: text_textfield
-    weight: 2
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_media_image:
     type: media_library_widget

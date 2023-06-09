@@ -890,3 +890,242 @@ a {
     }
   }
 }
+
+/*
+* Page User Account.
+ */
+.employee-account {
+  .field__label {
+    &:after {
+      content: "";
+    }
+  }
+  .employee-picture {
+    img.image-style-user-picture {
+      border-radius: 8px;
+    }
+  }
+
+  .employee-top {
+    padding: 65px 50px;
+    background-color: var(--o-gray);
+    margin-right: -39px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .employee-center {
+    margin: 50px 10px;
+
+    .whatsapp {
+      img {
+        width: 20px;
+        height: auto;
+      }
+    }
+
+    .employee_child {
+      margin-bottom: 15px;
+
+      .field__label {
+        min-width: 200px;
+        text-transform: uppercase;
+        font-size: 13px;
+      }
+    }
+
+    .employee-phone {
+      //display: inline-flex;
+
+      .field--name-field-employee-phone-mobile {
+        display: inline-flex;
+      }
+
+      .field--name-field-employee-phone {
+        display: inline-flex;
+      }
+
+      .field--name-field-room {
+        display: inline-flex;
+      }
+
+      .bi-telephone::before {
+        //content: "\f5c1";
+        margin-right: 10px;
+        font-size: 20px;
+      }
+
+      .bi-geo-alt::before {
+        margin-right: 10px;
+        font-size: 20px;
+      }
+    }
+
+    .employee-email {
+      .bi-envelope-at {
+        float: right;
+      }
+
+      .field--name-field-email {
+        display: inline-flex;
+      }
+
+      .bi-envelope::before {
+        margin-right: 10px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .employee-educations {
+    margin: 50px 10px;
+
+    &._publications {
+
+      ._title {
+
+        &:after {
+          left: 200px;
+          width: 80%;
+        }
+      }
+
+      .link-item {
+        margin-bottom: 35px;
+
+        a {
+          font-weight: 900;
+          text-decoration: revert;
+        }
+
+        .link-description {
+          margin-top: 10px;
+          font-size: 13px;
+          text-decoration: underline;
+        }
+
+      }
+    }
+
+    ._title {
+      display: block;
+      align-items: center;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 32px;
+        left: 160px;
+        width: 85%;
+        height: 2px;
+        background-color: $brandblue;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        margin-left: 25px;
+        text-transform: uppercase;
+        color: $brandblue;
+        font-weight: 900;
+        font-size: 13px;
+        position: relative;
+
+        .bi-award {
+          width: 64px;
+          height: 64px;
+          display: block;
+          padding: 9px 18px;
+          margin-right: 10px;
+          font-size: 30px;
+          font-weight: normal;
+          line-height: 1.5em;
+          color: $brandblue;
+          background-color: $brandgrey;
+          border-radius: 50%;
+          -webkit-transition: background-color 0.4s;
+          transition: background-color 0.4s;
+        }
+
+        .bi-book {
+          width: 64px;
+          height: 64px;
+          display: block;
+          padding: 9px 18px;
+          margin-right: 10px;
+          font-size: 30px;
+          font-weight: normal;
+          line-height: 1.5em;
+          color: $brandblue;
+          background-color: $brandgrey;
+          border-radius: 50%;
+          -webkit-transition: background-color 0.4s;
+          transition: background-color 0.4s;
+        }
+      }
+    }
+
+    ._content {
+      padding: 40px 0 0 100px;
+    }
+
+    .employee_child {
+    margin-bottom: 15px;
+
+    .field__label {
+      min-width: 35%;
+      text-transform: uppercase;
+      font-size: 15px;
+      }
+
+      .field__items {
+        max-width: 65%;
+      }
+    }
+  }
+
+  .node--view-mode-user-account {
+    h2 {
+      display: none;
+    }
+  }
+
+  .employee-personal {
+    margin: 20px 45px;
+
+    h1 {
+      display: inline-flex;
+
+      span {
+        margin-right: 10px;
+
+        .field__item {
+          display: inline-block;
+
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      &:after {
+        content: '';
+        position: relative;
+        width: 11px;
+        height: 11px;
+        background-color: #DA393B;
+        border-radius: 50%;
+        top: 15px;
+        margin-left: 10px;
+      }
+    }
+    .field--name-field-position-name {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 140%;
+      margin: 20px 0;
+    }
+  }
+
+}

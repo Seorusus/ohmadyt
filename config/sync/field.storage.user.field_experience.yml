@@ -1,16 +1,16 @@
-uuid: dd548bc6-4a03-46a9-9340-783ff47543a8
-langcode: uk
+uuid: dec3af95-657b-47da-bbc3-bad215ca8a48
+langcode: en
 status: true
 dependencies:
   module:
-    - taxonomy
     - user
-id: user.field_group
-field_name: field_group
+id: user.field_experience
+field_name: field_experience
 entity_type: user
-type: entity_reference
+type: integer
 settings:
-  target_type: taxonomy_term
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1

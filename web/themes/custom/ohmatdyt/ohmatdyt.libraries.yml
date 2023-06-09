@@ -11,4 +11,14 @@ tweet-selected-text:
 fontawesome:
   css:
     theme:
-      css/fontawesome.css: {}
+      css/fontawesome.min.css: {}
+
+bootstrap-icons:
+  version: 1.x
+  css:
+    theme:
+      node_modules/bootstrap-icons/font/bootstrap-icons.css: { preprocess: false }
+  license:
+    name: 'MIT'
+    url: 'https://opensource.org/licenses/MIT'
+    gpl-compatible: true

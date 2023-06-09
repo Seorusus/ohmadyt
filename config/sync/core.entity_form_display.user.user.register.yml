@@ -6,11 +6,10 @@ dependencies:
     - core.entity_form_mode.user.register
     - field.field.user.user.field_appointment
     - field.field.user.user.field_biography
-    - field.field.user.user.field_department
+    - field.field.user.user.field_current_specialisation
     - field.field.user.user.field_domain_access
     - field.field.user.user.field_domain_admin
     - field.field.user.user.field_domain_all_affiliates
-    - field.field.user.user.field_duties
     - field.field.user.user.field_education
     - field.field.user.user.field_email
     - field.field.user.user.field_employee_age
@@ -26,16 +25,16 @@ dependencies:
     - field.field.user.user.field_employee_range_science
     - field.field.user.user.field_employee_rank
     - field.field.user.user.field_employee_sex_type
-    - field.field.user.user.field_group
+    - field.field.user.user.field_experience
     - field.field.user.user.field_position
-    - field.field.user.user.field_rank
+    - field.field.user.user.field_publications
+    - field.field.user.user.field_room
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - field_group
     - image
     - path
-    - profile
     - text
     - user
 third_party_settings:
@@ -95,11 +94,14 @@ content:
     settings: {  }
     third_party_settings: {  }
   employee_profiles:
-    type: profile_form
-    weight: 90
+    type: entity_reference_autocomplete
+    weight: 91
     region: content
     settings:
-      form_mode: default
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_appointment:
     type: boolean_checkbox
@@ -114,14 +116,6 @@ content:
     region: content
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_department:
-    type: string_textfield
-    weight: 5
-    region: content
-    settings:
-      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_domain_access:
@@ -143,22 +137,6 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-  field_duties:
-    type: text_textarea
-    weight: 7
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_education:
-    type: string_textfield
-    weight: 17
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_email:
     type: email_default
     weight: 11
@@ -166,24 +144,6 @@ content:
     settings:
       placeholder: ''
       size: 60
-    third_party_settings: {  }
-  field_group:
-    type: entity_reference_autocomplete
-    weight: 6
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_rank:
-    type: string_textfield
-    weight: 13
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   language:
     weight: 6
@@ -211,6 +171,8 @@ content:
     third_party_settings: {  }
 hidden:
   employee_platform_profiles: true
+  field_current_specialisation: true
+  field_education: true
   field_employee_age: true
   field_employee_appointed_from: true
   field_employee_education_level: true
@@ -224,5 +186,8 @@ hidden:
   field_employee_range_science: true
   field_employee_rank: true
   field_employee_sex_type: true
+  field_experience: true
   field_position: true
+  field_publications: true
+  field_room: true
   langcode: true

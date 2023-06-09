@@ -5,8 +5,15 @@ dependencies:
   config:
     - field.storage.user.user_picture
   module:
+    - content_translation
     - image
     - user
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 _core:
   default_config_hash: twhm-ZOwSVkUjuLI_pQsaPo_pVLcqFfDmY-ojfqw0yk
 id: user.user.user_picture
@@ -32,9 +39,9 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: null
+    uuid: 30ab8e99-6d00-4a13-9296-13bbd0856cf5
     alt: ''
     title: ''
-    width: null
-    height: null
+    width: 365
+    height: 384
 field_type: image

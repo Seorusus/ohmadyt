@@ -1,12 +1,12 @@
-uuid: 40805650-ec58-470d-8afb-97b4a51a6dce
+uuid: eaf43e11-2b03-401a-85e2-610cacb9b969
 langcode: en
 status: true
 dependencies:
   module:
-    - profile
-id: profile.field_employee_phone_working
-field_name: field_employee_phone_working
-entity_type: profile
+    - user
+id: user.field_current_specialisation
+field_name: field_current_specialisation
+entity_type: user
 type: string
 settings:
   max_length: 255

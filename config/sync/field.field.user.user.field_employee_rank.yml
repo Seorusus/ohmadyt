@@ -10,7 +10,7 @@ id: user.user.field_employee_rank
 field_name: field_employee_rank
 entity_type: user
 bundle: user
-label: 'Ранг працівника'
+label: 'Кваліфікаційна категорія'
 description: ''
 required: false
 translatable: false
