@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: user_picture
-label: 'User picture'
+label: 'User picture 215×282'
 effects:
   427681a9-11a3-4c1d-bd73-132c4f439227:
     uuid: 427681a9-11a3-4c1d-bd73-132c4f439227

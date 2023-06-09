@@ -1,0 +1,15 @@
+uuid: 5f6e369b-1456-4850-a0ef-278084cefd86
+langcode: en
+status: true
+dependencies: {  }
+name: user_picture_list
+label: 'User picture 128*164'
+effects:
+  1bb1cbda-be0b-4842-8aaa-2b740bcb00c5:
+    uuid: 1bb1cbda-be0b-4842-8aaa-2b740bcb00c5
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 128
+      height: 164
+      anchor: center-center

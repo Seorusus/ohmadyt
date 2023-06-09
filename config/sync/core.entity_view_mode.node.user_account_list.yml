@@ -1,0 +1,10 @@
+uuid: 1d6f79ea-e60e-4f8d-9de9-50a407c8e52e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.user_account_list
+label: "User account\tlist"
+targetEntityType: node
+cache: true

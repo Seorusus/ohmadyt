@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      empty:
+        area:
+          content:
+            value: '<p>Результат пошуку вiдсутнiй</p>'
+            format: full_html

@@ -1129,3 +1129,149 @@ a {
   }
 
 }
+
+/*
+* Page Personal.
+ */
+.view-employees {
+  .view-content {
+    margin: 50px 0;
+  }
+
+  .exposed-form-page-news {
+    &._employees {
+      .views-exposed-form {
+        label {
+          display: inline-block;
+        }
+        .form--inline {
+          #edit-field-employee-last-name-value-all {
+            display: none;
+          }
+
+          border: none;
+          display: grid;
+          grid-template-columns: 1fr 1.8fr 0.2fr;
+          grid-template-rows: 1fr 1fr 1fr;
+          gap: 0 0;
+          grid-template-areas:
+    "first first first"
+    "Second Second Second"
+    "Third Third Fourth";
+
+          #edit-field-parent-department-target-id--wrapper {
+            grid-area: first;
+
+            .form--inline {
+              display: inline-block;
+
+              .form-item-field-parent-department-target-id {
+                min-width: 50px;
+                margin-right: 24px;              }
+            }
+          }
+
+          .form-item-field-employee-last-name-value {
+            grid-area: Second;
+
+            .form-select {
+              border: none;
+              background: none;
+
+              li {
+                display: inline;
+                font-weight: 900;
+
+                .bef-link {
+                  padding: 0 7px;
+
+                  &:hover {
+                    color: $brandblue;
+                  }
+
+                  &.bef-link--selected {
+                    color: $brandblue;
+                    background-color: $brandgrey;
+                    padding: 10px 14px;
+                    font-weight: 900;
+                  }
+                }
+
+                &::marker {
+                  content: none;
+                }
+              }
+            }
+
+          }
+
+          .form-item-search-combine {
+            grid-area: Third;
+            border: 1px solid rgba(57, 83, 164, 0.5);
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+            padding: 15px;
+            margin-right: 0;
+          }
+
+          .form-actions {
+            grid-area: Fourth;
+          }
+        }
+      }
+
+      .form-item-search-combine {
+        border: none;
+        //display: contents;
+      }
+    }
+  }
+
+}
+
+.employee_item {
+  .field--name-field-position-name {
+    margin-bottom: 10px;
+    min-height: 50px;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  .personal-data {
+    text-decoration: underline;
+    font-size: 21px;
+    font-weight: 900;
+    margin: 15px 0 10px;
+
+    a {
+      color: $brandblue !important;
+      text-decoration: underline;
+    }
+  }
+
+  .field--name-field-employee-phone-mobile {
+    .field__label {
+      display: inline-flex;
+      text-transform: lowercase;
+      min-width: 150px;
+      color: $brandblue;
+    }
+    .field__item {
+      display: inline-flex;
+    }
+  }
+
+  .field--name-field-room {
+    .field__label {
+      display: inline-flex;
+      text-transform: lowercase;
+      min-width: 150px;
+      color: $brandblue;
+    }
+    .field__item {
+      display: inline-flex;
+    }
+  }
+}
