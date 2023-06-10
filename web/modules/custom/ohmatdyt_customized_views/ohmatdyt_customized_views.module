@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * @file
+ * Contains ohmatdyt_customized_views.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Alters the department options on artwork pages.
+ */
+function ohmatdyt_customized_views_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  // If not the view we are looking, move on
+  if ($form['#id'] !== 'views-exposed-form-employees-page-personal') {
+    return FALSE;
+  }
+
+  // Query nodes
+  $storage = \Drupal::entityTypeManager()->getStorage('node');
+  $query = $storage->getQuery();
+
+  $nids = $query->accessCheck(FALSE)
+    ->condition('type', 'department')
+    ->condition('status', 1)
+    ->sort('field_department_name')
+    ->execute();
+
+  // If there are no nodes, move on
+  if (!$nids) {
+    return FALSE;
+  }
+
+  // Start building out the options for our select list
+  $options = [];
+  $nodes = $storage->loadMultiple($nids);
+
+  // Push field_department_name values into select list
+  foreach ($nodes as $node) {
+    $options[$node->id()] = $node->get('field_department_name')->value;
+  }
+  
+  // Start building out our new form element
+  $departmentField = 'department';
+  $form[$departmentField]['#type'] = 'select';
+  $form[$departmentField]['#multiple'] = FALSE;
+
+  // Specify the empty option for our select list
+  $form[$departmentField]['#empty_option'] = t('Department name');
+
+  // Add the $options from above to our select list
+  $form[$departmentField]['#options'] = $options;
+  unset($form[$departmentField]['#size']);
+}

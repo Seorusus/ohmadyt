@@ -88,7 +88,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-          label: Title
+          label: Заголовок
           exclude: false
           alter:
             alter_text: false
@@ -302,7 +302,7 @@ display:
           entity_type: user
           entity_field: name
           plugin_id: field
-          label: Author
+          label: Автор
           exclude: false
           alter:
             alter_text: false
@@ -421,11 +421,11 @@ display:
         options:
           submit_button: Filter
           reset_button: true
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Скинути
+          exposed_sorts_label: 'Впорядкувати за'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Зрост
+          sort_desc_label: Спад
       access:
         type: domain_content_editor
         options: {  }
@@ -588,7 +588,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Title
+            label: Заголовок
             description: ''
             use_operator: false
             operator: title_op
@@ -922,7 +922,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Title
+            label: Заголовок
             description: ''
             use_operator: false
             operator: title_op
@@ -1136,7 +1136,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Title
+            label: Заголовок
             description: ''
             use_operator: false
             operator: title_op

@@ -17,7 +17,7 @@ base_field: cid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: Базово
     display_plugin: default
     position: 0
     display_options:
@@ -218,7 +218,7 @@ display:
           entity_type: comment
           entity_field: name
           plugin_id: field
-          label: Author
+          label: Автор
           exclude: false
           alter:
             alter_text: false
@@ -534,23 +534,23 @@ display:
             last: 'last »'
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Елементів на сторінку'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Усе -'
             offset: false
-            offset_label: Offset
+            offset_label: Зміщення
           quantity: 9
       exposed_form:
         type: basic
         options:
           submit_button: Filter
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Скинути
+          exposed_sorts_label: 'Впорядкувати за'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Зрост
+          sort_desc_label: Спад
       access:
         type: perm
         options:
@@ -1096,7 +1096,7 @@ display:
           entity_type: comment
           entity_field: name
           plugin_id: field
-          label: Author
+          label: Автор
           exclude: false
           alter:
             alter_text: false

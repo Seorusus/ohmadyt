@@ -1186,6 +1186,52 @@ display:
             field_employee_first_name: field_employee_first_name
             field_employee_middle_name: field_employee_middle_name
             field_employee_last_name: field_employee_last_name
+        field_department_name_value:
+          id: field_department_name_value
+          table: node__field_department_name
+          field: field_department_name_value
+          relationship: field_department
+          group_type: group
+          admin_label: ''
+          plugin_id: string
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_department_name_value_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_department_name_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_department_name_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              manager: '0'
+              employee: '0'
+              content_editor: '0'
+              content_editor_platform: '0'
+              authorized_platform_user: '0'
+              anonymous: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       filter_groups:
         operator: AND
         groups:
@@ -1227,24 +1273,6 @@ display:
           subquery_regenerate: false
           subquery_view: ''
           subquery_namespace: ''
-        field_department:
-          id: field_department
-          table: node__field_department
-          field: field_department
-          relationship: field_position
-          group_type: group
-          admin_label: 'field_department: Content'
-          plugin_id: standard
-          required: false
-        field_parent_department:
-          id: field_parent_department
-          table: node__field_parent_department
-          field: field_parent_department
-          relationship: field_position
-          group_type: group
-          admin_label: 'field_parent_department: Content'
-          plugin_id: standard
-          required: false
         reverse__node__field_department:
           id: reverse__node__field_department
           table: node_field_data
@@ -1255,6 +1283,15 @@ display:
           entity_type: node
           plugin_id: entity_reverse
           required: false
+        field_department:
+          id: field_department
+          table: node__field_department
+          field: field_department
+          relationship: field_position
+          group_type: group
+          admin_label: 'field_department: Content'
+          plugin_id: standard
+          required: false
         reverse__node__field_parent_department:
           id: reverse__node__field_parent_department
           table: node_field_data
@@ -1264,6 +1301,15 @@ display:
           admin_label: field_parent_department
           entity_type: node
           plugin_id: entity_reverse
+          required: false
+        field_parent_department:
+          id: field_parent_department
+          table: node__field_parent_department
+          field: field_parent_department
+          relationship: field_position
+          group_type: group
+          admin_label: 'field_parent_department: Content'
+          plugin_id: standard
           required: false
       header: {  }
       footer: {  }
