@@ -53,6 +53,14 @@ function ohmatdyt_customized_views_form_views_exposed_form_alter(&$form, FormSta
     '#default_value' => isset($_GET['field_department_name']) ? $_GET['field_department_name'] : '',
     '#size' => 1,
     '#empty_option' => t('Всi вiддiлення'),
+    '#attributes' => [
+      'class' => ['chosen-select'],
+    ],
+    '#attached' => [
+      'library' => [
+        'ohmatdyt_customized_views/chosen',
+      ]
+    ]
   ];
 }
 

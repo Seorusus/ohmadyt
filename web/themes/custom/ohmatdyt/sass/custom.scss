@@ -1275,3 +1275,29 @@ a {
     }
   }
 }
+
+.chosen-container.chosen-container-single {
+  .chosen-single {
+    background: none;
+    padding: 7px 9px 10px 20px;
+    height: 40px;
+
+    span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: initial;
+    }
+    div {
+      top: 20%;
+    }
+  }
+
+  .chosen-results {
+    font-size: larger;
+  }
+
+  .chosen-search input[type="text"] {
+    min-height: 35px;
+    background: url("../images/chosen-sprite.png") no-repeat 100% -26px;
+    background-size: 69px;
+  }
+}

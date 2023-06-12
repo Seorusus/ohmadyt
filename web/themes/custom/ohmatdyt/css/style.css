@@ -2117,6 +2117,31 @@ a {
   display: inline-flex;
 }
 
+.chosen-container.chosen-container-single .chosen-single {
+  background: none;
+  padding: 7px 9px 10px 20px;
+  height: 40px;
+}
+
+.chosen-container.chosen-container-single .chosen-single span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: initial;
+}
+
+.chosen-container.chosen-container-single .chosen-single div {
+  top: 20%;
+}
+
+.chosen-container.chosen-container-single .chosen-results {
+  font-size: larger;
+}
+
+.chosen-container.chosen-container-single .chosen-search input[type="text"] {
+  min-height: 35px;
+  background: url("../images/chosen-sprite.png") no-repeat 100% -26px;
+  background-size: 69px;
+}
+
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
