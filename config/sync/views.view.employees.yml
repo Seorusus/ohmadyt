@@ -1,0 +1,1360 @@
+uuid: d2915452-57b2-472a-add6-db7baf81f992
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_department_name
+    - field.storage.node.field_parent_department
+    - field.storage.user.field_employee_first_name
+    - field.storage.user.field_employee_last_name
+    - field.storage.user.field_employee_middle_name
+    - field.storage.user.field_employee_phone_mobile
+    - field.storage.user.field_position
+    - field.storage.user.field_room
+    - field.storage.user.user_picture
+    - image.style.user_picture_list
+    - user.role.employee
+  module:
+    - better_exposed_filters
+    - image
+    - node
+    - user
+id: employees
+label: Користувачi
+module: views
+description: ''
+tag: ''
+base_table: users_field_data
+base_field: uid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: Персонал
+      fields:
+        user_picture:
+          id: user_picture
+          table: user__user_picture
+          field: user_picture
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_link: content
+            image_style: user_picture_list
+            image_loading:
+              attribute: lazy
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_employee_first_name:
+          id: field_employee_first_name
+          table: user__field_employee_first_name
+          field: field_employee_first_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: span
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_employee_middle_name:
+          id: field_employee_middle_name
+          table: user__field_employee_middle_name
+          field: field_employee_middle_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: span
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_employee_last_name:
+          id: field_employee_last_name
+          table: user__field_employee_last_name
+          field: field_employee_last_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: "<div class:\"personal-data\">\r\n{{ field_employee_first_name }}\r\n{{ field_employee_middle_name }}\r\n{{ field_employee_last_name }}\r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: span
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_position:
+          id: field_position
+          table: user__field_position
+          field: field_position
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_entity_view
+          settings:
+            view_mode: user_account_list
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_room:
+          id: field_room
+          table: user__field_room
+          field: field_room
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: кабiнет
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: span
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: true
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: true
+        field_employee_phone_mobile:
+          id: field_employee_phone_mobile
+          table: user__field_employee_phone_mobile
+          field: field_employee_phone_mobile
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: телефон
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: true
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: true
+        uid:
+          id: uid
+          table: users_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: user
+          entity_field: uid
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        name:
+          id: name
+          table: users_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: user
+          entity_field: name
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"row\">\r\n\t<div class=\"col col-4\">\r\n\t\t{{ user_picture }}\r\n\t</div>\r\n\t<div class=\"col col-8\">\r\n\t\t<div class=\"personal-data\"><a href=\"/user/{{ uid }}\">{{ field_employee_last_name }}</a></div>\r\n\t\t<div>{{ field_position }}</div>\r\n\t\t<div>{{ field_room }}</div>\r\n\t\t<div>{{ field_employee_phone_mobile }}</div>\t\t\r\n\t</div>\r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: user_name
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_department_name:
+          id: field_department_name
+          table: node__field_department_name
+          field: field_department_name
+          relationship: field_department
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_parent_department_1:
+          id: field_parent_department_1
+          table: node__field_parent_department
+          field: field_parent_department
+          relationship: field_department
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+      pager:
+        type: mini
+        options:
+          offset: 0
+          items_per_page: 40
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Далi »'
+            previous: '« Повернутись'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Apply
+          reset_button: true
+          reset_button_label: 'Скинути фiльтри'
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          text_input_required_format: full_html
+          bef:
+            general:
+              autosubmit: true
+              autosubmit_exclude_textfield: true
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: false
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              secondary_open: false
+              reset_button_always_show: true
+            filter:
+              field_parent_department_target_id:
+                plugin_id: bef
+                advanced:
+                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: "- Any -|Всi\r\n- Усі -|Всi"
+                  collapsible: false
+                  is_secondary: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: true
+              field_employee_last_name_value:
+                plugin_id: bef_links
+                advanced:
+                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: '- Any -| '
+                  collapsible: false
+                  is_secondary: false
+                select_all_none: false
+              combine:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  collapsible: false
+                  is_secondary: false
+      access:
+        type: perm
+        options:
+          perm: 'access user profiles'
+      cache:
+        type: tag
+        options: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: 'Результат пошуку вiдсутнiй'
+            format: full_html
+          tokenize: false
+      sorts:
+        field_employee_last_name_value:
+          id: field_employee_last_name_value
+          table: user__field_employee_last_name
+          field: field_employee_last_name_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: users_field_data
+          field: status
+          entity_type: user
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        roles_target_id:
+          id: roles_target_id
+          table: user__roles
+          field: roles_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: user
+          entity_field: roles
+          plugin_id: user_roles
+          operator: or
+          value:
+            employee: employee
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        field_parent_department_target_id:
+          id: field_parent_department_target_id
+          table: node__field_parent_department
+          field: field_parent_department_target_id
+          relationship: field_department
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_parent_department_target_id_op
+            label: 'Батьківський відділ (field_parent_department)'
+            description: ''
+            use_operator: false
+            operator: field_parent_department_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_parent_department_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              manager: '0'
+              employee: '0'
+              content_editor: '0'
+              content_editor_platform: '0'
+              authorized_platform_user: '0'
+              anonymous: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: true
+          group_info:
+            label: 'Батьківський відділ (field_parent_department)'
+            description: ''
+            identifier: field_parent_department_target_id
+            optional: true
+            widget: radios
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: Стаціонар
+                operator: '='
+                value:
+                  min: ''
+                  max: ''
+                  value: '36194'
+              2:
+                title: 'По трудовій угоді'
+                operator: '='
+                value:
+                  min: ''
+                  max: ''
+                  value: '36192'
+              3:
+                title: 'Загально - Адміністративні служби'
+                operator: '='
+                value:
+                  min: ''
+                  max: ''
+                  value: '36193'
+              4:
+                title: 'Консультативно-діагностична поліклініка'
+                operator: '='
+                value:
+                  min: ''
+                  max: ''
+                  value: '36182'
+              5:
+                title: 'Методично-організаційний навчально-ресурсний центр'
+                operator: '='
+                value:
+                  min: ''
+                  max: ''
+                  value: '36196'
+        field_employee_last_name_value:
+          id: field_employee_last_name_value
+          table: user__field_employee_last_name
+          field: field_employee_last_name_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: string
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_employee_last_name_value_op
+            label: 'Прізвище (field_employee_last_name)'
+            description: null
+            use_operator: false
+            operator: field_employee_last_name_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_employee_last_name_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: null
+          is_grouped: true
+          group_info:
+            label: ''
+            description: ''
+            identifier: field_employee_last_name_value
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: А
+                operator: starts
+                value: А
+              2:
+                title: Б
+                operator: starts
+                value: Б
+              3:
+                title: В
+                operator: starts
+                value: В
+              4:
+                title: Г
+                operator: starts
+                value: Г
+              5:
+                title: Д
+                operator: starts
+                value: Д
+              6:
+                title: Е
+                operator: starts
+                value: Е
+              7:
+                title: Є
+                operator: starts
+                value: Є
+              8:
+                title: Ж
+                operator: starts
+                value: Ж
+              9:
+                title: З
+                operator: starts
+                value: З
+              10:
+                title: И
+                operator: starts
+                value: И
+              11:
+                title: І
+                operator: starts
+                value: І
+              12:
+                title: К
+                operator: starts
+                value: К
+              13:
+                title: Л
+                operator: starts
+                value: Л
+              14:
+                title: М
+                operator: starts
+                value: М
+              15:
+                title: Н
+                operator: starts
+                value: Н
+              16:
+                title: О
+                operator: starts
+                value: О
+              17:
+                title: П
+                operator: starts
+                value: П
+              18:
+                title: Р
+                operator: starts
+                value: Р
+              19:
+                title: С
+                operator: starts
+                value: С
+              20:
+                title: Т
+                operator: starts
+                value: Т
+              21:
+                title: У
+                operator: starts
+                value: У
+              22:
+                title: Ф
+                operator: starts
+                value: Ф
+              23:
+                title: Х
+                operator: starts
+                value: Х
+              24:
+                title: Ц
+                operator: starts
+                value: Ц
+              25:
+                title: Ч
+                operator: starts
+                value: Ч
+              26:
+                title: Ш
+                operator: starts
+                value: Ш
+              27:
+                title: Щ
+                operator: starts
+                value: Щ
+              28:
+                title: Ю
+                operator: starts
+                value: Ю
+              29:
+                title: Я
+                operator: starts
+                value: Я
+        combine:
+          id: combine
+          table: views
+          field: combine
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: combine
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: combine_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: combine_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: search_combine
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              manager: '0'
+              employee: '0'
+              content_editor: '0'
+              content_editor_platform: '0'
+              authorized_platform_user: '0'
+              anonymous: '0'
+            placeholder: пошук
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          fields:
+            field_employee_first_name: field_employee_first_name
+            field_employee_middle_name: field_employee_middle_name
+            field_employee_last_name: field_employee_last_name
+        field_department_name_value:
+          id: field_department_name_value
+          table: node__field_department_name
+          field: field_department_name_value
+          relationship: field_department
+          group_type: group
+          admin_label: ''
+          plugin_id: string
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_department_name_value_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_department_name_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_department_name_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              manager: '0'
+              employee: '0'
+              content_editor: '0'
+              content_editor_platform: '0'
+              authorized_platform_user: '0'
+              anonymous: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships:
+        field_position:
+          id: field_position
+          table: user__field_position
+          field: field_position
+          relationship: none
+          group_type: group
+          admin_label: 'field_position: Content'
+          plugin_id: standard
+          required: false
+        uid_representative:
+          id: uid_representative
+          table: users_field_data
+          field: uid_representative
+          relationship: none
+          group_type: group
+          admin_label: 'Representative node'
+          entity_type: user
+          plugin_id: groupwise_max
+          required: false
+          subquery_sort: node_field_data.nid
+          subquery_order: DESC
+          subquery_regenerate: false
+          subquery_view: ''
+          subquery_namespace: ''
+        reverse__node__field_department:
+          id: reverse__node__field_department
+          table: node_field_data
+          field: reverse__node__field_department
+          relationship: field_position
+          group_type: group
+          admin_label: field_department
+          entity_type: node
+          plugin_id: entity_reverse
+          required: false
+        field_department:
+          id: field_department
+          table: node__field_department
+          field: field_department
+          relationship: field_position
+          group_type: group
+          admin_label: 'field_department: Content'
+          plugin_id: standard
+          required: false
+        reverse__node__field_parent_department:
+          id: reverse__node__field_parent_department
+          table: node_field_data
+          field: reverse__node__field_parent_department
+          relationship: field_position
+          group_type: group
+          admin_label: field_parent_department
+          entity_type: node
+          plugin_id: entity_reverse
+          required: false
+        field_parent_department:
+          id: field_parent_department
+          table: node__field_parent_department
+          field: field_parent_department
+          relationship: field_position
+          group_type: group
+          admin_label: 'field_parent_department: Content'
+          plugin_id: standard
+          required: false
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_department_name'
+        - 'config:field.storage.node.field_parent_department'
+        - 'config:field.storage.user.field_employee_first_name'
+        - 'config:field.storage.user.field_employee_last_name'
+        - 'config:field.storage.user.field_employee_middle_name'
+        - 'config:field.storage.user.field_employee_phone_mobile'
+        - 'config:field.storage.user.field_position'
+        - 'config:field.storage.user.field_room'
+        - 'config:field.storage.user.user_picture'
+  page_personal:
+    id: page_personal
+    display_title: Page
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: personal
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_department_name'
+        - 'config:field.storage.node.field_parent_department'
+        - 'config:field.storage.user.field_employee_first_name'
+        - 'config:field.storage.user.field_employee_last_name'
+        - 'config:field.storage.user.field_employee_middle_name'
+        - 'config:field.storage.user.field_employee_phone_mobile'
+        - 'config:field.storage.user.field_position'
+        - 'config:field.storage.user.field_room'
+        - 'config:field.storage.user.user_picture'
