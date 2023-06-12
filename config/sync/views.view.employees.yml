@@ -1206,7 +1206,7 @@ display:
             operator: field_department_name_value_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_department_name_value
+            identifier: field_department_name
             required: false
             remember: false
             multiple: false

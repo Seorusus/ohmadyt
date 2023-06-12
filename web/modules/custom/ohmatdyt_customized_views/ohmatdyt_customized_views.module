@@ -24,9 +24,9 @@ function ohmatdyt_customized_views_form_views_exposed_form_alter(&$form, FormSta
   $query = $storage->getQuery();
 
   // Query all Department nodes
-  $nids = $query->accessCheck(FALSE)
-    ->condition('type', 'department')
+  $nids = $query->condition('type', 'department')
     ->condition('status', 1)
+    ->accessCheck(FALSE)
     ->execute();
 
   // If there are no nodes, move on
@@ -37,24 +37,22 @@ function ohmatdyt_customized_views_form_views_exposed_form_alter(&$form, FormSta
   // Load all Department nodes
   $nodes = $storage->loadMultiple($nids);
 
-  // Start building out the options for our select list
-//  $options = ['all' => t('All')]; // Add 'All' option
-
   // Push field_department_name values into select list
+  $options = [];
   foreach ($nodes as $node) {
-    $field_value = $node->get('field_department_name')->getString();
-    $options[$field_value] = $field_value;
+    if ($node->hasField('field_department_name')) {
+      $field_value = $node->get('field_department_name')->getString();
+      $options[$field_value] = $field_value;
+    }
   }
 
-  // Start building out our new form element
-  $departmentField = 'department_name';
-  $form[$departmentField]['#type'] = 'select';
-  $form[$departmentField]['#multiple'] = FALSE;
-
-  // Specify the empty option for our select list
-  $form[$departmentField]['#empty_option'] = t('Department name');
-
-  // Add the $options from above to our select list
-  $form[$departmentField]['#options'] = $options;
-  unset($form[$departmentField]['#size']);
+  // Add the new form element for the filter
+  $form['field_department_name'] = [
+    '#type' => 'select',
+    '#options' => $options,
+    '#default_value' => isset($_GET['field_department_name']) ? $_GET['field_department_name'] : '',
+    '#size' => 1,
+    '#empty_option' => t('Всi вiддiлення'),
+  ];
 }
+
