@@ -663,9 +663,10 @@ a {
 
   .views-exposed-form {
     border: none;
+    padding-left: 0;
 
     #edit-reset {
-      display: none;
+      //display: none;
     }
 
     label {
@@ -725,24 +726,41 @@ a {
 
     .form-actions {
       display: inline-flex;
-      min-width: 86px;
-      Height: 68px;
-      background: $brandblue;
-      border: 1px solid $brandblue;
-      border-radius: 0 6px 6px 0;
-      margin: 0;
+      //min-width: 120px;
+      //Height: 68px;
+      //background: $brandblue;
+      //border: 1px solid $brandblue;
+      //border-radius: 0 6px 6px 0;
+      //margin: 0;
 
-      input[type=submit] {
+      #edit-submit-employees {
         background: url(../images/lupa.svg) no-repeat center center;
-        border: 0;
         font-size: 0;
         display: block;
-        height: auto;
-        width: 100%;
+        width: 50%;
+        min-width: 75px;
+        height: 68px;
+        background-color: $brandblue;
+        border: 1px solid $brandblue;
+        border-radius: 0 6px 6px 0;
+      }
+
+      #edit-reset {
+        background: url(../images/delete.svg) no-repeat center center;
+        font-size: 0;
+        display: block;
+        background-size: 30px;
+        width: 50%;
+        min-width: 50px;
+        height: 68px;
+        background-color: #95A6DA;
+        border: 1px solid #95A6DA;
+        border-radius: 0 6px 6px 0;
       }
     }
 
     .form--inline.clearfix {
+      padding-left: 0;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -750,7 +768,6 @@ a {
       position: relative;
       border: 1px solid rgba(57, 83, 164, 0.5);
       border-radius: 6px;
-      padding: 0 0 0 10px;
     }
   }
 }
@@ -1152,12 +1169,14 @@ a {
           border: none;
           display: grid;
           grid-template-columns: 1fr 1.8fr 0.2fr;
-          grid-template-rows: 1fr 1fr 1fr;
+          grid-template-rows: 80px 80px 80px 80px 80px;
           gap: 0 0;
           grid-template-areas:
     "first first first"
-    "Second Second Second"
-    "Third Third Fourth";
+    "second second third"
+    "fourth fourth fourth"
+    "fifth fifth fifth"
+    "sixth sixth sixth";
 
           #edit-field-parent-department-target-id--wrapper {
             grid-area: first;
@@ -1167,46 +1186,19 @@ a {
 
               .form-item-field-parent-department-target-id {
                 min-width: 50px;
-                margin-right: 24px;              }
-            }
-          }
+                margin-right: 24px;
 
-          .form-item-field-employee-last-name-value {
-            grid-area: Second;
-
-            .form-select {
-              border: none;
-              background: none;
-
-              li {
-                display: inline;
-                font-weight: 900;
-
-                .bef-link {
-                  padding: 0 7px;
-
-                  &:hover {
-                    color: $brandblue;
-                  }
-
-                  &.bef-link--selected {
-                    color: $brandblue;
-                    background-color: $brandgrey;
-                    padding: 10px 14px;
-                    font-weight: 900;
-                  }
-                }
-
-                &::marker {
-                  content: none;
+                input[checked="checked"] + label {
+                  color: $brandblue;
+                  font-weight: 900;
                 }
               }
             }
-
           }
 
+
           .form-item-search-combine {
-            grid-area: Third;
+            grid-area: second;
             border: 1px solid rgba(57, 83, 164, 0.5);
             border-top-left-radius: 6px;
             border-bottom-left-radius: 6px;
@@ -1215,14 +1207,85 @@ a {
           }
 
           .form-actions {
-            grid-area: Fourth;
+            grid-area: third;
+          }
+
+          .form-item-choose-selector {
+            grid-area: fourth;
+            max-width: 25%;
+            display: inline-flex;
+            align-items: center;
+
+            &:before {
+              content: url("../images/choose-icon.svg");
+              width: 20px;
+              height: 20px;
+              display: inline-block;
+              vertical-align: middle;
+              margin-right: 5px;
+            }
+
+            .form-select {
+              text-transform: uppercase;
+              color: $brandblue;
+              font-weight: 900;
+              border: none;
+              padding: 3px 20px 0;
+              background-size: 31px 16px;
+
+              option {
+                font-weight: 900;
+              }
+            }
+          }
+
+          .form-item-field-employee-last-name-value {
+            grid-area: fifth;
+
+            .form-select {
+              border: none;
+              background: none;
+              padding-left: 0;
+
+              ul {
+                padding-left: 0;
+
+                li {
+                  display: inline;
+                  font-weight: 900;
+                  padding-left: 0;
+
+                  .bef-link {
+                    padding: 0 7px;
+
+                    &:hover {
+                      color: $brandblue;
+                    }
+
+                    &.bef-link--selected {
+                      color: $brandblue;
+                      background-color: $brandgrey;
+                      padding: 10px 14px;
+                      font-weight: 900;
+                    }
+                  }
+
+                  &::marker {
+                    content: none;
+                  }
+                }
+              }
+            }
+          }
+
+          .form-item-field-department-name {
+            grid-area: sixth;
           }
         }
       }
 
       .form-item-search-combine {
         border: none;
-        //display: contents;
       }
     }
   }
@@ -1277,6 +1340,9 @@ a {
 }
 
 .chosen-container.chosen-container-single {
+  min-width: 50%;
+  margin-top: -156px;
+
   .chosen-single {
     background: none;
     padding: 7px 9px 10px 20px;

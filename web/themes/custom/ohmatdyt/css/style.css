@@ -1502,10 +1502,7 @@ a {
 
 .exposed-form-page-news .views-exposed-form {
   border: none;
-}
-
-.exposed-form-page-news .views-exposed-form #edit-reset {
-  display: none;
+  padding-left: 0;
 }
 
 .exposed-form-page-news .views-exposed-form label {
@@ -1573,24 +1570,35 @@ a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  min-width: 86px;
-  Height: 68px;
-  background: #3953A4;
-  border: 1px solid #3953A4;
-  border-radius: 0 6px 6px 0;
-  margin: 0;
 }
 
-.exposed-form-page-news .views-exposed-form .form-actions input[type=submit] {
+.exposed-form-page-news .views-exposed-form .form-actions #edit-submit-employees {
   background: url(../images/lupa.svg) no-repeat center center;
-  border: 0;
   font-size: 0;
   display: block;
-  height: auto;
-  width: 100%;
+  width: 50%;
+  min-width: 75px;
+  height: 68px;
+  background-color: #3953A4;
+  border: 1px solid #3953A4;
+  border-radius: 0 6px 6px 0;
+}
+
+.exposed-form-page-news .views-exposed-form .form-actions #edit-reset {
+  background: url(../images/delete.svg) no-repeat center center;
+  font-size: 0;
+  display: block;
+  background-size: 30px;
+  width: 50%;
+  min-width: 50px;
+  height: 68px;
+  background-color: #95A6DA;
+  border: 1px solid #95A6DA;
+  border-radius: 0 6px 6px 0;
 }
 
 .exposed-form-page-news .views-exposed-form .form--inline.clearfix {
+  padding-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1604,7 +1612,6 @@ a {
   position: relative;
   border: 1px solid rgba(57, 83, 164, 0.5);
   border-radius: 6px;
-  padding: 0 0 0 10px;
 }
 
 .date-list-group h3 {
@@ -1994,9 +2001,9 @@ a {
   border: none;
   display: grid;
   grid-template-columns: 1fr 1.8fr 0.2fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 80px 80px 80px 80px 80px;
   gap: 0 0;
-  grid-template-areas: "first first first" "Second Second Second" "Third Third Fourth";
+  grid-template-areas: "first first first" "second second third" "fourth fourth fourth" "fifth fifth fifth" "sixth sixth sixth";
 }
 
 .view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline #edit-field-employee-last-name-value-all {
@@ -2016,41 +2023,13 @@ a {
   margin-right: 24px;
 }
 
-.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value {
-  grid-area: Second;
-}
-
-.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value .form-select {
-  border: none;
-  background: none;
-}
-
-.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value .form-select li {
-  display: inline;
-  font-weight: 900;
-}
-
-.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value .form-select li .bef-link {
-  padding: 0 7px;
-}
-
-.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value .form-select li .bef-link:hover {
+.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline #edit-field-parent-department-target-id--wrapper .form--inline .form-item-field-parent-department-target-id input[checked="checked"] + label {
   color: #3953A4;
-}
-
-.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value .form-select li .bef-link.bef-link--selected {
-  color: #3953A4;
-  background-color: var(--o-gray);
-  padding: 10px 14px;
   font-weight: 900;
-}
-
-.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value .form-select li::marker {
-  content: none;
 }
 
 .view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-search-combine {
-  grid-area: Third;
+  grid-area: second;
   border: 1px solid rgba(57, 83, 164, 0.5);
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
@@ -2059,7 +2038,83 @@ a {
 }
 
 .view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-actions {
-  grid-area: Fourth;
+  grid-area: third;
+}
+
+.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-choose-selector {
+  grid-area: fourth;
+  max-width: 25%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-choose-selector:before {
+  content: url("../images/choose-icon.svg");
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-choose-selector .form-select {
+  text-transform: uppercase;
+  color: #3953A4;
+  font-weight: 900;
+  border: none;
+  padding: 3px 20px 0;
+  background-size: 31px 16px;
+}
+
+.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-choose-selector .form-select option {
+  font-weight: 900;
+}
+
+.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value {
+  grid-area: fifth;
+}
+
+.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value .form-select {
+  border: none;
+  background: none;
+  padding-left: 0;
+}
+
+.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value .form-select ul {
+  padding-left: 0;
+}
+
+.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value .form-select ul li {
+  display: inline;
+  font-weight: 900;
+  padding-left: 0;
+}
+
+.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value .form-select ul li .bef-link {
+  padding: 0 7px;
+}
+
+.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value .form-select ul li .bef-link:hover {
+  color: #3953A4;
+}
+
+.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value .form-select ul li .bef-link.bef-link--selected {
+  color: #3953A4;
+  background-color: var(--o-gray);
+  padding: 10px 14px;
+  font-weight: 900;
+}
+
+.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value .form-select ul li::marker {
+  content: none;
+}
+
+.view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-department-name {
+  grid-area: sixth;
 }
 
 .view-employees .exposed-form-page-news._employees .form-item-search-combine {
@@ -2115,6 +2170,11 @@ a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.chosen-container.chosen-container-single {
+  min-width: 50%;
+  margin-top: -156px;
 }
 
 .chosen-container.chosen-container-single .chosen-single {

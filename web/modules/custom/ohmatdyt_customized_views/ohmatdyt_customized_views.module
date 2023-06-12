@@ -62,5 +62,34 @@ function ohmatdyt_customized_views_form_views_exposed_form_alter(&$form, FormSta
       ]
     ]
   ];
+
+  // Add custom selector field
+  $form['choose_selector'] = [
+    '#type' => 'select',
+    '#options' => [
+      'alphabet' => t('За Алфавiтом'),
+      'department' => t('По вiддiленнях'),
+    ],
+    '#default_value' => 'alphabet',
+    '#ajax' => [
+      'callback' => 'ohmatdyt_customized_views_choose_selector_ajax_callback',
+    ],
+  ];
+
+  // Define the exposed form elements
+  $form['field_department_name']['#states'] = [
+    'visible' => [
+      ':input[name="choose_selector"]' => ['value' => 'department'],
+    ],
+  ];
+
+  $form['field_employee_last_name_value']['#states'] = [
+    'visible' => [
+      ':input[name="choose_selector"]' => ['value' => 'alphabet'],
+    ],
+  ];
 }
 
+function ohmatdyt_customized_views_custom_selector_ajax_callback(array &$form, FormStateInterface $form_state) {
+  return $form['choose_selector'];
+}
