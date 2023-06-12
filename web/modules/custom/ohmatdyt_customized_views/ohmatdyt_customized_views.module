@@ -14,37 +14,40 @@ use Drupal\Core\Form\FormStateInterface;
  */
 function ohmatdyt_customized_views_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
-  // If not the view we are looking, move on
+  // If not the view we are looking for, move on
   if ($form['#id'] !== 'views-exposed-form-employees-page-personal') {
-    return FALSE;
+    return;
   }
 
   // Query nodes
   $storage = \Drupal::entityTypeManager()->getStorage('node');
   $query = $storage->getQuery();
 
+  // Query all Department nodes
   $nids = $query->accessCheck(FALSE)
     ->condition('type', 'department')
     ->condition('status', 1)
-    ->sort('field_department_name')
     ->execute();
 
   // If there are no nodes, move on
   if (!$nids) {
-    return FALSE;
+    return;
   }
 
-  // Start building out the options for our select list
-  $options = [];
+  // Load all Department nodes
   $nodes = $storage->loadMultiple($nids);
+
+  // Start building out the options for our select list
+//  $options = ['all' => t('All')]; // Add 'All' option
 
   // Push field_department_name values into select list
   foreach ($nodes as $node) {
-    $options[$node->id()] = $node->get('field_department_name')->value;
+    $field_value = $node->get('field_department_name')->getString();
+    $options[$field_value] = $field_value;
   }
-  
+
   // Start building out our new form element
-  $departmentField = 'department';
+  $departmentField = 'department_name';
   $form[$departmentField]['#type'] = 'select';
   $form[$departmentField]['#multiple'] = FALSE;
 
