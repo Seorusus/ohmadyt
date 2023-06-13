@@ -14,39 +14,43 @@ use Drupal\Core\Form\FormStateInterface;
  */
 function ohmatdyt_customized_views_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
-  // If not the view we are looking for, move on
+  // If not the view we are looking for, move on.
   if ($form['#id'] !== 'views-exposed-form-employees-page-personal') {
     return;
   }
 
-  // Query nodes
+  // Query nodes.
   $storage = \Drupal::entityTypeManager()->getStorage('node');
   $query = $storage->getQuery();
 
-  // Query all Department nodes
+  // Query all Department nodes.
   $nids = $query->condition('type', 'department')
     ->condition('status', 1)
     ->accessCheck(FALSE)
     ->execute();
 
-  // If there are no nodes, move on
+  // If there are no nodes, move on.
   if (!$nids) {
     return;
   }
 
-  // Load all Department nodes
+  // Load all Department nodes.
   $nodes = $storage->loadMultiple($nids);
 
-  // Push field_department_name values into select list
+  // Push field_department_name values into select list.
   $options = [];
   foreach ($nodes as $node) {
-    if ($node->hasField('field_department_name')) {
+    if ($node->hasField('field_department_name') && $node->hasField('field_department_kind')) {
       $field_value = $node->get('field_department_name')->getString();
-      $options[$field_value] = $field_value;
+      $field_kind = $node->get('field_department_kind')->getString();
+
+      if ($field_kind !== 'Cамостійний') {
+        $options[$field_value] = $field_value;
+      }
     }
   }
 
-  // Add the new form element for the filter
+  // Add the new form element for the filter.
   $form['field_department_name'] = [
     '#type' => 'select',
     '#options' => $options,
@@ -63,7 +67,7 @@ function ohmatdyt_customized_views_form_views_exposed_form_alter(&$form, FormSta
     ]
   ];
 
-  // Add custom selector field
+  // Add custom selector field.
   $form['choose_selector'] = [
     '#type' => 'select',
     '#options' => [
@@ -90,6 +94,9 @@ function ohmatdyt_customized_views_form_views_exposed_form_alter(&$form, FormSta
   ];
 }
 
+/**
+ * Callback custom_selector.
+ */
 function ohmatdyt_customized_views_custom_selector_ajax_callback(array &$form, FormStateInterface $form_state) {
   return $form['choose_selector'];
 }
