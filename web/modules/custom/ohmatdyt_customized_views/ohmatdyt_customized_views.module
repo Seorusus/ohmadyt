@@ -92,6 +92,12 @@ function ohmatdyt_customized_views_form_views_exposed_form_alter(&$form, FormSta
       ':input[name="choose_selector"]' => ['value' => 'alphabet'],
     ],
   ];
+
+  $form['field_parent_department_target_id']['#states'] = [
+    'visible' => [
+      ':input[name="choose_selector"]' => ['value' => 'alphabet'],
+    ],
+  ];
 }
 
 /**
