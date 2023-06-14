@@ -559,7 +559,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"row\">\r\n\t<div class=\"col col-4\">\r\n\t\t{{ user_picture }}\r\n\t</div>\r\n\t<div class=\"col col-8\">\r\n\t\t<div class=\"personal-data\"><a href=\"/user/{{ uid }}\">{{ field_employee_last_name }}</a></div>\r\n\t\t<div>{{ field_position }}</div>\r\n\t\t<div>{{ field_room }}</div>\r\n\t\t<div>{{ field_employee_phone_mobile }}</div>\t\t\r\n\t</div>\r\n</div>"
+            text: "<div class=\"row\">\r\n\t<div class=\"col col-4\">\r\n\t\t{{ user_picture }}\r\n\t</div>\r\n\t<div class=\"col col-8\">\r\n\t\t<div class=\"personal-data\"><a href=\"/enter-portal/user/{{ uid }}\">{{ field_employee_last_name }}</a></div>\r\n\t\t<div>{{ field_position }}</div>\r\n\t\t<div>{{ field_room }}</div>\r\n\t\t<div>{{ field_employee_phone_mobile }}</div>\t\t\r\n\t</div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -952,35 +952,35 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items:
-              1:
+              Стаціонар:
                 title: Стаціонар
                 operator: '='
                 value:
                   min: ''
                   max: ''
                   value: '36194'
-              2:
+              'По трудовій угоді':
                 title: 'По трудовій угоді'
                 operator: '='
                 value:
                   min: ''
                   max: ''
                   value: '36192'
-              3:
+              'Загально - Адміністративні служби':
                 title: 'Загально - Адміністративні служби'
                 operator: '='
                 value:
                   min: ''
                   max: ''
                   value: '36193'
-              4:
+              'Консультативно-діагностична поліклініка':
                 title: 'Консультативно-діагностична поліклініка'
                 operator: '='
                 value:
                   min: ''
                   max: ''
                   value: '36182'
-              5:
+              'Методично-організаційний навчально-ресурсний центр':
                 title: 'Методично-організаційний навчально-ресурсний центр'
                 operator: '='
                 value:
@@ -1026,119 +1026,119 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items:
-              1:
+              А:
                 title: А
                 operator: starts
                 value: А
-              2:
+              Б:
                 title: Б
                 operator: starts
                 value: Б
-              3:
+              В:
                 title: В
                 operator: starts
                 value: В
-              4:
+              Г:
                 title: Г
                 operator: starts
                 value: Г
-              5:
+              Д:
                 title: Д
                 operator: starts
                 value: Д
-              6:
+              Е:
                 title: Е
                 operator: starts
                 value: Е
-              7:
+              Є:
                 title: Є
                 operator: starts
                 value: Є
-              8:
+              Ж:
                 title: Ж
                 operator: starts
                 value: Ж
-              9:
+              З:
                 title: З
                 operator: starts
                 value: З
-              10:
+              И:
                 title: И
                 operator: starts
                 value: И
-              11:
+              І:
                 title: І
                 operator: starts
                 value: І
-              12:
+              К:
                 title: К
                 operator: starts
                 value: К
-              13:
+              Л:
                 title: Л
                 operator: starts
                 value: Л
-              14:
+              М:
                 title: М
                 operator: starts
                 value: М
-              15:
+              Н:
                 title: Н
                 operator: starts
                 value: Н
-              16:
+              О:
                 title: О
                 operator: starts
                 value: О
-              17:
+              П:
                 title: П
                 operator: starts
                 value: П
-              18:
+              Р:
                 title: Р
                 operator: starts
                 value: Р
-              19:
+              С:
                 title: С
                 operator: starts
                 value: С
-              20:
+              Т:
                 title: Т
                 operator: starts
                 value: Т
-              21:
+              У:
                 title: У
                 operator: starts
                 value: У
-              22:
+              Ф:
                 title: Ф
                 operator: starts
                 value: Ф
-              23:
+              Х:
                 title: Х
                 operator: starts
                 value: Х
-              24:
+              Ц:
                 title: Ц
                 operator: starts
                 value: Ц
-              25:
+              Ч:
                 title: Ч
                 operator: starts
                 value: Ч
-              26:
+              Ш:
                 title: Ш
                 operator: starts
                 value: Ш
-              27:
+              Щ:
                 title: Щ
                 operator: starts
                 value: Щ
-              28:
+              Ю:
                 title: Ю
                 operator: starts
                 value: Ю
-              29:
+              Я:
                 title: Я
                 operator: starts
                 value: Я

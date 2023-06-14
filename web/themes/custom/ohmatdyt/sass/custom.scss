@@ -1151,8 +1151,19 @@ a {
 * Page Personal.
  */
 .view-employees {
+  .views-infinite-scroll-content-wrapper {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+  }
+
   .view-content {
-    margin: 50px 0;
+    margin: 0;
+    margin-top: -30px;
   }
 
   .exposed-form-page-news {
@@ -1169,17 +1180,17 @@ a {
           border: none;
           display: grid;
           grid-template-columns: 1fr 1.8fr 0.2fr;
-          grid-template-rows: 80px 80px 80px 80px 80px;
+          grid-template-rows: 80px 80px 80px 80px 30px;
           gap: 0 0;
           grid-template-areas:
-    "first first first"
+    //"first first first"
     "second second third"
     "fourth fourth fourth"
     "fifth fifth fifth"
     "sixth sixth sixth";
 
           #edit-field-parent-department-target-id--wrapper {
-            grid-area: sixth;
+            grid-area: fifth;
 
             .form--inline {
               display: inline-block;
@@ -1240,7 +1251,7 @@ a {
           }
 
           .form-item-field-employee-last-name-value {
-            grid-area: fifth;
+            grid-area: sixth;
 
             .form-select {
               border: none;
@@ -1293,6 +1304,8 @@ a {
 }
 
 .employee_item {
+  margin-bottom: 40px;
+
   .field--name-field-position-name {
     margin-bottom: 10px;
     min-height: 50px;
@@ -1340,7 +1353,7 @@ a {
 }
 
 .chosen-container.chosen-container-single {
-  min-width: 50%;
+  min-width: 100%;
   margin-top: -156px;
 
   .chosen-single {
@@ -1372,5 +1385,49 @@ a {
   ._quantity {
     color: $brandred;
     font-weight: 900;
+  }
+}
+
+.employee-content-label {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  //&:after {
+  //  content: "";
+  //  position: absolute;
+  //  bottom: 32px;
+  //  left: 160px;
+  //  width: 85%;
+  //  height: 2px;
+  //  background-color: $brandred;
+  //}
+
+  ._alphabet {
+    width: 64px;
+    height: 64px;
+    padding: 18px 26px;
+    margin-right: 10px;
+    font-size: inherit;
+    font-weight: 900;
+    line-height: 1.5em;
+    color: $brandred;
+    background-color: var(--o-gray);
+    border-radius: 50%;
+    -webkit-transition: background-color 0.4s;
+    transition: background-color 0.4s;
+  }
+
+  ._second {
+    font-size: inherit;
+    font-weight: 900;
+    line-height: 1.5em;
+    color: $brandred;
+  }
+
+  ._line {
+    height: 2px;
+    background-color: $brandred;
+    width: inherit;
   }
 }

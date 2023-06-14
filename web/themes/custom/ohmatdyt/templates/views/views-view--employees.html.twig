@@ -63,7 +63,24 @@
 
   {% if rows %}
     <div class="view-content row">
-      {{ rows }}
+        <div class="employee-content-label">
+            {% if employee_last_name_value and employee_last_name_value != 'All' %}
+                <span class="_alphabet">{{ employee_last_name_value }}</span>
+            {% endif %}
+            {% if field_parent_department and field_parent_department != 'All' %}
+                <span class="_second">{{ field_parent_department }}</span>
+            {% endif %}
+            {% if field_department_name and field_department_name != 'All' %}
+                <span class="_second">{{ field_department_name }}</span>
+            {% endif %}
+            {% if employee_last_name_value and employee_last_name_value != 'All' %}
+                <span class="_line"></span>
+            {% endif %}
+            {% if field_department_name and field_department_name != 'All' %}
+                <span class="_line"></span>
+            {% endif %}
+        </div>
+        {{ rows }}
     </div>
   {% elseif empty %}
     <div class="view-empty">

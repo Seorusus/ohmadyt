@@ -114,3 +114,19 @@ function ohmatdyt_customized_views_custom_selector_ajax_callback(array &$form, F
 
   return $response;
 }
+
+/**
+ * Implements template_preprocess_views_view_fields().
+ */
+function ohmatdyt_customized_views_preprocess_views_view(&$variables) {
+
+  $request = \Drupal::request();
+  $field_employee_last_name_value = $request->query->get('field_employee_last_name_value');
+  $field_parent_department = $request->query->get('field_parent_department_target_id');
+  $field_department_name = $request->query->get('field_department_name');
+  
+  $variables['employee_last_name_value'] = $field_employee_last_name_value;
+  $variables['field_parent_department'] = $field_parent_department;
+  $variables['field_department_name'] = $field_department_name;
+
+}
