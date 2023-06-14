@@ -2202,6 +2202,11 @@ a {
   background-size: 69px;
 }
 
+.employees-quantity ._quantity {
+  color: #DA393B;
+  font-weight: 900;
+}
+
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;

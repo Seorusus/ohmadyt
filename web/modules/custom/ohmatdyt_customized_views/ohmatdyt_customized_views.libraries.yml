@@ -6,3 +6,4 @@ chosen:
   js:
     libraries/chosen/chosen.jquery.js: {}
     js/chosen-activation.js: {}
+    js/custom-filters.js: {}

@@ -740,7 +740,7 @@ display:
         type: mini
         options:
           offset: 0
-          items_per_page: 40
+          items_per_page: 30
           total_pages: null
           id: 0
           tags:
@@ -1329,7 +1329,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: 'Кiлькiсть спiвробiтникiв: [view:total-rows]'
+            value: '<div class="employees-quantity">Кiлькiсть спiвробiтникiв: <span class="_quantity">[view:total-rows]</span></div>'
             format: full_html
           tokenize: false
       footer: {  }
