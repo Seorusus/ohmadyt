@@ -1329,7 +1329,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: '<div class="employees-quantity">Кiлькiсть спiвробiтникiв: <span class="_quantity">[view:total-rows]</span></div>'
+            value: '[view:total-rows]'
             format: full_html
           tokenize: false
       footer: {  }

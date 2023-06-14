@@ -1989,6 +1989,10 @@ a {
 /*
 * Page Personal.
  */
+.view-employees .view-header {
+  display: none;
+}
+
 .view-employees .views-infinite-scroll-content-wrapper {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -2220,6 +2224,11 @@ a {
   background-size: 69px;
 }
 
+.employees-quantity {
+  width: auto;
+  margin-left: auto;
+}
+
 .employees-quantity ._quantity {
   color: #DA393B;
   font-weight: 900;
@@ -2233,12 +2242,13 @@ a {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  margin-bottom: 40px;
 }
 
 .employee-content-label ._alphabet {
   width: 64px;
   height: 64px;
-  padding: 18px 26px;
+  padding: 20px 26px;
   margin-right: 10px;
   font-size: inherit;
   font-weight: 900;
@@ -2255,6 +2265,7 @@ a {
   font-weight: 900;
   line-height: 1.5em;
   color: #DA393B;
+  margin-right: 10px;
 }
 
 .employee-content-label ._line {
@@ -2403,12 +2414,17 @@ header#navbar .glyphicon-user {
   margin-top: -2px;
 }
 
+.main-container .page-content-main {
+  min-width: 88%;
+}
+
 .main-container .main-nav {
   background-color: var(--o-gray);
   border-radius: 10px;
   margin: 5px 0 5px 5px;
   position: static;
   min-height: 100vh !important;
+  max-width: 12%;
 }
 
 .main-container .main-nav .logo {

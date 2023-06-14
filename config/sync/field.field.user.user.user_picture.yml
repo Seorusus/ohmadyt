@@ -30,7 +30,7 @@ settings:
   handler: 'default:file'
   handler_settings: {  }
   file_directory: 'pictures/[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'png gif jpg jpeg'
+  file_extensions: 'png gif jpg jpeg svg'
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
@@ -39,9 +39,9 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: 30ab8e99-6d00-4a13-9296-13bbd0856cf5
+    uuid: 4ce5b93b-86d1-4457-a180-c885bb5a8a93
     alt: ''
     title: ''
-    width: 365
-    height: 384
+    width: null
+    height: null
 field_type: image

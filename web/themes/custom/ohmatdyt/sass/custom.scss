@@ -1151,6 +1151,10 @@ a {
 * Page Personal.
  */
 .view-employees {
+  .view-header {
+    display: none;
+  }
+
   .views-infinite-scroll-content-wrapper {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
@@ -1382,6 +1386,9 @@ a {
 }
 
 .employees-quantity {
+  width: auto;
+  margin-left: auto;
+
   ._quantity {
     color: $brandred;
     font-weight: 900;
@@ -1392,21 +1399,12 @@ a {
   display: flex;
   align-items: center;
   position: relative;
-
-  //&:after {
-  //  content: "";
-  //  position: absolute;
-  //  bottom: 32px;
-  //  left: 160px;
-  //  width: 85%;
-  //  height: 2px;
-  //  background-color: $brandred;
-  //}
+  margin-bottom: 40px;
 
   ._alphabet {
     width: 64px;
     height: 64px;
-    padding: 18px 26px;
+    padding: 20px 26px;
     margin-right: 10px;
     font-size: inherit;
     font-weight: 900;
@@ -1423,6 +1421,7 @@ a {
     font-weight: 900;
     line-height: 1.5em;
     color: $brandred;
+    margin-right: 10px;
   }
 
   ._line {
