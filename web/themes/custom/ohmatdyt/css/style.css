@@ -1989,8 +1989,26 @@ a {
 /*
 * Page Personal.
  */
+.view-employees .view-header {
+  display: none;
+}
+
+.view-employees .views-infinite-scroll-content-wrapper {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
 .view-employees .view-content {
-  margin: 50px 0;
+  margin: 0;
+  margin-top: -30px;
 }
 
 .view-employees .exposed-form-page-news._employees .views-exposed-form label {
@@ -2001,9 +2019,9 @@ a {
   border: none;
   display: grid;
   grid-template-columns: 1fr 1.8fr 0.2fr;
-  grid-template-rows: 80px 80px 80px 80px 80px;
+  grid-template-rows: 80px 80px 80px 80px 30px;
   gap: 0 0;
-  grid-template-areas: "first first first" "second second third" "fourth fourth fourth" "fifth fifth fifth" "sixth sixth sixth";
+  grid-template-areas: "second second third" "fourth fourth fourth" "fifth fifth fifth" "sixth sixth sixth";
 }
 
 .view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline #edit-field-employee-last-name-value-all {
@@ -2011,7 +2029,7 @@ a {
 }
 
 .view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline #edit-field-parent-department-target-id--wrapper {
-  grid-area: sixth;
+  grid-area: fifth;
 }
 
 .view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline #edit-field-parent-department-target-id--wrapper .form--inline {
@@ -2075,7 +2093,7 @@ a {
 }
 
 .view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value {
-  grid-area: fifth;
+  grid-area: sixth;
 }
 
 .view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value .form-select {
@@ -2119,6 +2137,10 @@ a {
 
 .view-employees .exposed-form-page-news._employees .form-item-search-combine {
   border: none;
+}
+
+.employee_item {
+  margin-bottom: 40px;
 }
 
 .employee_item .field--name-field-position-name {
@@ -2173,7 +2195,7 @@ a {
 }
 
 .chosen-container.chosen-container-single {
-  min-width: 50%;
+  min-width: 100%;
   margin-top: -156px;
 }
 
@@ -2200,6 +2222,56 @@ a {
   min-height: 35px;
   background: url("../images/chosen-sprite.png") no-repeat 100% -26px;
   background-size: 69px;
+}
+
+.employees-quantity {
+  width: auto;
+  margin-left: auto;
+}
+
+.employees-quantity ._quantity {
+  color: #DA393B;
+  font-weight: 900;
+}
+
+.employee-content-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.employee-content-label ._alphabet {
+  width: 64px;
+  height: 64px;
+  padding: 20px 26px;
+  margin-right: 10px;
+  font-size: inherit;
+  font-weight: 900;
+  line-height: 1.5em;
+  color: #DA393B;
+  background-color: var(--o-gray);
+  border-radius: 50%;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+
+.employee-content-label ._second {
+  font-size: inherit;
+  font-weight: 900;
+  line-height: 1.5em;
+  color: #DA393B;
+  margin-right: 10px;
+}
+
+.employee-content-label ._line {
+  height: 2px;
+  background-color: #DA393B;
+  width: inherit;
 }
 
 @font-face {
@@ -2342,12 +2414,17 @@ header#navbar .glyphicon-user {
   margin-top: -2px;
 }
 
+.main-container .page-content-main {
+  min-width: 88%;
+}
+
 .main-container .main-nav {
   background-color: var(--o-gray);
   border-radius: 10px;
   margin: 5px 0 5px 5px;
   position: static;
   min-height: 100vh !important;
+  max-width: 12%;
 }
 
 .main-container .main-nav .logo {

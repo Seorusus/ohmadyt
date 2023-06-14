@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\RedirectCommand;
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -104,5 +106,27 @@ function ohmatdyt_customized_views_form_views_exposed_form_alter(&$form, FormSta
  * Callback custom_selector.
  */
 function ohmatdyt_customized_views_custom_selector_ajax_callback(array &$form, FormStateInterface $form_state) {
-  return $form['choose_selector'];
+  // Create an AjaxResponse object.
+  $response = new AjaxResponse();
+
+  // Perform the redirect.
+  $response->addCommand(new RedirectCommand('/personal'));
+
+  return $response;
+}
+
+/**
+ * Implements template_preprocess_views_view_fields().
+ */
+function ohmatdyt_customized_views_preprocess_views_view(&$variables) {
+
+  $request = \Drupal::request();
+  $field_employee_last_name_value = $request->query->get('field_employee_last_name_value');
+  $field_parent_department = $request->query->get('field_parent_department_target_id');
+  $field_department_name = $request->query->get('field_department_name');
+  
+  $variables['employee_last_name_value'] = $field_employee_last_name_value;
+  $variables['field_parent_department'] = $field_parent_department;
+  $variables['field_department_name'] = $field_department_name;
+
 }

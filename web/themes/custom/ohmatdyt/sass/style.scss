@@ -149,16 +149,18 @@ header {
             }
         }
     }
+  .page-content-main {
+    min-width: 88%;
+  }
+
 
     .main-nav {
-        //width: 180px;
-        background-color: var(--o-gray);
-        border-radius: 10px;
-        margin: 5px 0 5px 5px;
-        // width: 180px;
-        position: static;
-        // top: 0;
-        min-height: 100vh!important;
+      background-color: var(--o-gray);
+      border-radius: 10px;
+      margin: 5px 0 5px 5px;
+      position: static;
+      min-height: 100vh!important;
+      max-width: 12%;
 
         .logo {
             display: block;
@@ -271,7 +273,7 @@ header {
                 }
             }
         }
-    }
+  }
 
     .main-content {
         padding-left: 30px;
