@@ -1430,3 +1430,20 @@ a {
     width: inherit;
   }
 }
+
+.view-empty {
+  margin: 50px auto;
+  font-weight: 900;
+  color: $brandred;
+
+  &.employee-content-label {
+    justify-content: center;
+    ._result {
+      margin: 0 10px;
+    }
+
+    ._line {
+      width: 30px;
+    }
+  }
+}
