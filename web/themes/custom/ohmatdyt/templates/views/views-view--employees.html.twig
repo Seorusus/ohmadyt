@@ -89,9 +89,9 @@
         {{ rows }}
     </div>
   {% elseif empty %}
-    <div class="view-empty">
-      {{ empty }}
-    </div>
+      <div class="view-empty employee-content-label">
+          <span class="_line"></span><span class="_result">{{ empty }}</span><span class="_line"></span>
+      </div>
   {% endif %}
 
   {% if pager %}
