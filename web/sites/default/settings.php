@@ -71,3 +71,4 @@ $config['domain.config.platforma.system.site']['page']['front'] = '/home';
 * Redefine the login base url.
 */
 $settings['custom_login_pattern'] = 'enter-portal/user/';
+$settings['file_private_path'] = __DIR__ . '/files/private';
