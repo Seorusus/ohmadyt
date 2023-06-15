@@ -1,0 +1,21 @@
+uuid: 75b8c8a7-8380-451b-9411-68462417efd1
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_employee_range_science_int
+field_name: field_employee_range_science_int
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

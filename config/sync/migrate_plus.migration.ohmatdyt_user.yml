@@ -1,9 +1,9 @@
-uuid: 45ed8f7b-b6bc-4ee8-8d94-3227d7b9d7bd
+uuid: f5319543-0075-4f65-9e28-1eba714965e3
 langcode: uk
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: fXmmPh56zh1PenXVmKO17I_nZyHUTmICJ-BvGlxUVLw
+  default_config_hash: _QD2nl1bO_trpbOuo7IUUiFVxxHYhPazuotyQv-uCzk
 id: ohmatdyt_user
 class: null
 field_plugin_method: null
@@ -134,7 +134,10 @@ process:
   field_employee_phone_working: field_employee_phone_working
   field_employee_rank: field_employee_rank
   field_employee_experience: field_employee_experience
-  field_employee_range_science: field_employee_range_science
+  field_employee_range_science:
+    plugin: default_value
+    default_value: field_employee_range_science
+  field_employee_range_science_int: field_employee_range_science
 destination:
   plugin: 'entity:user'
   md5_passwords: true

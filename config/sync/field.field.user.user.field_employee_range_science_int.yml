@@ -1,16 +1,16 @@
-uuid: 0a8ed829-8535-49b2-b923-c9bacb813d11
+uuid: 964801c7-4d55-4dea-a07b-cee840ea8236
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.field_room
+    - field.storage.user.field_employee_range_science_int
   module:
     - user
-id: user.user.field_room
-field_name: field_room
+id: user.user.field_employee_range_science_int
+field_name: field_employee_range_science_int
 entity_type: user
 bundle: user
-label: Кабiнет
+label: employee_range_science_int
 description: ''
 required: false
 translatable: false

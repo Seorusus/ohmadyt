@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.register
-    - field.field.user.user.field_appointment
     - field.field.user.user.field_biography
     - field.field.user.user.field_current_specialisation
     - field.field.user.user.field_domain_access
@@ -23,6 +22,7 @@ dependencies:
     - field.field.user.user.field_employee_phone_mobile
     - field.field.user.user.field_employee_phone_working
     - field.field.user.user.field_employee_range_science
+    - field.field.user.user.field_employee_range_science_int
     - field.field.user.user.field_employee_rank
     - field.field.user.user.field_employee_sex_type
     - field.field.user.user.field_experience
@@ -103,13 +103,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_appointment:
-    type: boolean_checkbox
-    weight: 11
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   field_biography:
     type: text_textarea
     weight: 15
@@ -184,6 +177,7 @@ hidden:
   field_employee_phone_mobile: true
   field_employee_phone_working: true
   field_employee_range_science: true
+  field_employee_range_science_int: true
   field_employee_rank: true
   field_employee_sex_type: true
   field_experience: true
