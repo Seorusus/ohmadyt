@@ -68,7 +68,11 @@
         </div>
         <div class="employee-content-label">
             {% if employee_last_name_value and employee_last_name_value != 'All' %}
-                <span class="_alphabet">{{ employee_last_name_value }}</span>
+                <div class="_alphabet">
+                    <span class="_child-alphabet">
+                        {{ employee_last_name_value }}
+                    </span>
+                </div>
             {% endif %}
             {% if field_parent_department and field_parent_department != 'All' %}
                 <span class="_second">{{ field_parent_department }}</span>

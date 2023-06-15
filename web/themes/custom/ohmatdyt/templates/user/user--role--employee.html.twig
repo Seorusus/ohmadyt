@@ -88,9 +88,18 @@
                         <div class="employee_child">
                             {{ content.field_employee_education_level }}
                         </div>
-                        <div class="employee_child">
-                            {{ content.field_employee_range_science }}
-                        </div>
+{#                        <div class="employee_child">#}
+{#                            {{ content.field_employee_range_science }}#}
+{#                        </div>#}
+
+                        {% if range_science_label %}
+                            <div class="employee_child">
+                                <div class="field--label-inline clearfix">
+                                    <div class="field__label">{{ 'Наукова ступінь'|t }}</div>
+                                    <div class="field__item">{{ range_science_label }}</div>
+                                </div>
+                            </div>
+                        {% endif %}
                         <div class="employee_child">
                             {{ content.field_employee_rank }}
                         </div>

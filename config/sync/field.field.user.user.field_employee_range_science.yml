@@ -1,10 +1,11 @@
-uuid: 50556505-502b-4f89-a582-5a5d1a6deb98
-langcode: en
+uuid: 1eee419e-926e-48cf-96c2-d8151521e813
+langcode: uk
 status: true
 dependencies:
   config:
     - field.storage.user.field_employee_range_science
   module:
+    - options
     - user
 id: user.user.field_employee_range_science
 field_name: field_employee_range_science
@@ -17,4 +18,4 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: list_float

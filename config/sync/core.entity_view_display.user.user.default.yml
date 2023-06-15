@@ -3,7 +3,6 @@ langcode: uk
 status: true
 dependencies:
   config:
-    - field.field.user.user.field_appointment
     - field.field.user.user.field_biography
     - field.field.user.user.field_current_specialisation
     - field.field.user.user.field_domain_access
@@ -22,6 +21,7 @@ dependencies:
     - field.field.user.user.field_employee_phone_mobile
     - field.field.user.user.field_employee_phone_working
     - field.field.user.user.field_employee_range_science
+    - field.field.user.user.field_employee_range_science_int
     - field.field.user.user.field_employee_rank
     - field.field.user.user.field_employee_sex_type
     - field.field.user.user.field_experience
@@ -45,16 +45,6 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
-  field_appointment:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 10
-    region: content
   field_biography:
     type: text_default
     label: above
@@ -172,12 +162,19 @@ content:
     weight: 18
     region: content
   field_employee_range_science:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_employee_range_science_int:
     type: string
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 21
+    weight: 28
     region: content
   field_employee_rank:
     type: string

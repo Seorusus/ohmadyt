@@ -1,6 +1,5 @@
 id: ohmatdyt_user
 label: 'Import users'
-#class: Drupal\migrate\Plugin\Migration
 migration_group: ohmatdyt
 source:
   plugin: url
@@ -122,13 +121,15 @@ process:
   field_employee_last_name: field_employee_last_name
   field_employee_age: field_employee_age
   field_employee_sex_type: field_employee_sex_type
-#  field_employee_education_level: field_employee_education_level
   field_employee_appointed_from: field_employee_appointed_from
   field_employee_phone_mobile: field_employee_phone_mobile
   field_employee_phone_working: field_employee_phone_working
   field_employee_rank: field_employee_rank
   field_employee_experience: field_employee_experience
-  field_employee_range_science: field_employee_range_science
+  field_employee_range_science:
+    plugin: default_value
+    default_value: field_employee_range_science
+  field_employee_range_science_int: field_employee_range_science
 migration_dependencies:
   required: []
   optional: []
