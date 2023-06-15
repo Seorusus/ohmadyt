@@ -29,6 +29,7 @@ module:
   dblog: 0
   default_content_deploy: 0
   devel: 0
+  devel_entity_updates: 0
   devel_generate: 0
   domain: 0
   domain_access: 0
