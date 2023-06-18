@@ -1171,8 +1171,8 @@ a {
   padding-left: 11px;
   margin-left: 5px;
   position: absolute;
-  top: 4px;
-  left: 203px;
+  top: 11px;
+  left: 219px;
   width: 9%;
   height: 10%;
   z-index: 1;
@@ -1193,13 +1193,16 @@ a {
   background-color: #4969CC;
 }
 
+.external-systems.other-places .field--name-field-svg-image {
+  margin: 24px auto;
+}
+
 .external-systems.med-system {
   background-color: #DA393B;
 }
 
 .external-systems.med-system .field--name-field-svg-image {
   background-color: #FF808B;
-  margin-bottom: 20px;
 }
 
 .external-systems.med-system .link-title {
@@ -1255,7 +1258,7 @@ a {
   color: white;
   font-size: 21px;
   font-weight: 900;
-  min-height: 65px;
+  min-height: 50px;
 }
 
 .external-systems .field--name-field-link-to-content {
@@ -1808,6 +1811,14 @@ a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  color: #525760;
+}
+
+.employee-account .employee-center .employee-phone .field--name-field-employee-phone-working {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: #525760;
 }
 
 .employee-account .employee-center .employee-phone .field--name-field-employee-phone {
@@ -2113,7 +2124,7 @@ a {
 }
 
 .view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-choose-selector .form-select option {
-  font-weight: 900;
+  font-weight: normal;
 }
 
 .view-employees .exposed-form-page-news._employees .views-exposed-form .form--inline .form-item-field-employee-last-name-value {
@@ -2202,6 +2213,7 @@ a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  color: #525760;
 }
 
 .employee_item .field--name-field-room .field__label {
@@ -2228,6 +2240,8 @@ a {
   background: none;
   padding: 7px 9px 10px 20px;
   height: 40px;
+  border-color: #525760;
+  color: #525760;
 }
 
 .chosen-container.chosen-container-single .chosen-single span {
@@ -2254,6 +2268,9 @@ a {
 .employees-quantity {
   width: auto;
   margin-left: auto;
+  color: #525760;
+  font-weight: 900;
+  font-size: 12px;
 }
 
 .employees-quantity ._quantity {

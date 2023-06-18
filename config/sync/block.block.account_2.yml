@@ -1,29 +1,28 @@
-uuid: 567f57d7-87e2-4c5e-af90-61330afea90a
-langcode: uk
+uuid: 90db8ceb-7bd1-42e1-a5f9-20a5175614a1
+langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:text_image:de8fbeed-6518-43bb-8db1-4ca2a45f952a'
+    - 'block_content:text_image:13dc1e23-e26b-49f1-9754-050794477134'
   module:
     - block_class
     - block_content
     - domain
     - system
-    - user
   theme:
     - ohmatdyt
 third_party_settings:
   block_class:
-    classes: 'external-systems col-12 col-lg-3 a-five'
-id: a5
+    classes: 'external-systems col-12 col-lg-3 external-account'
+id: account_2
 theme: ohmatdyt
 region: content_bottom
-weight: -9
+weight: -4
 provider: null
-plugin: 'block_content:de8fbeed-6518-43bb-8db1-4ca2a45f952a'
+plugin: 'block_content:13dc1e23-e26b-49f1-9754-050794477134'
 settings:
-  id: 'block_content:de8fbeed-6518-43bb-8db1-4ca2a45f952a'
-  label: 'a5 Front'
+  id: 'block_content:13dc1e23-e26b-49f1-9754-050794477134'
+  label: Account
   label_display: '0'
   provider: block_content
   status: true
@@ -37,14 +36,7 @@ visibility:
       domain: '@domain.current_domain_context:domain'
     domains:
       ohmatdyt: ohmatdyt
-  user_role:
-    id: user_role
-    negate: false
-    context_mapping:
-      user: '@user.current_user_context:current_user'
-    roles:
-      authenticated: authenticated
   request_path:
     id: request_path
-    negate: false
+    negate: true
     pages: '<front>'

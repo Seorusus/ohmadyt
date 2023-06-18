@@ -88,11 +88,12 @@ module:
   mysql: 0
   node: 0
   ohmatdyt_customized_views: 0
-  ohmatdyt_domain: 0
   ohmatdyt_import: 0
   openid_connect: 0
   options: 0
   page_cache: 0
+  page_manager: 0
+  page_manager_ui: 0
   path: 0
   path_alias: 0
   rabbit_hole: 0
