@@ -850,6 +850,10 @@ a {
   .field-content {
     display: inline-flex;
 
+    li {
+      display: inline-flex;
+    }
+
     a {
       text-decoration: none;
       background-color: var(--o-gray);

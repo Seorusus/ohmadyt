@@ -10,7 +10,6 @@ dependencies:
     - better_exposed_filters
     - node
     - smart_date
-    - taxonomy
     - text
     - user
     - views_infinite_scroll
@@ -534,7 +533,7 @@ display:
           grouping:
             -
               field: created
-              rendered: false
+              rendered: true
               rendered_strip: false
           row_class: item-list-date
           default_row_class: true
@@ -548,19 +547,10 @@ display:
         options:
           query_comment: ''
           disable_sql_rewrite: false
-          distinct: false
-          replica: false
+          distinct: true
+          replica: true
           query_tags: {  }
-      relationships:
-        field_tags:
-          id: field_tags
-          table: node__field_tags
-          field: field_tags
-          relationship: none
-          group_type: group
-          admin_label: 'field_tags: Taxonomy term'
-          plugin_id: standard
-          required: false
+      relationships: {  }
       header: {  }
       footer: {  }
       display_extenders: {  }
