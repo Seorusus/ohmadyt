@@ -8,6 +8,7 @@ dependencies:
     - block_class
     - block_content
     - domain
+    - system
     - user
   theme:
     - ohmatdyt
@@ -17,12 +18,12 @@ third_party_settings:
 id: account
 theme: ohmatdyt
 region: content_bottom
-weight: -5
+weight: -8
 provider: null
 plugin: 'block_content:baaa4532-e16b-4179-a2e8-3159ea5e084e'
 settings:
   id: 'block_content:baaa4532-e16b-4179-a2e8-3159ea5e084e'
-  label: Account
+  label: 'Account Front'
   label_display: '0'
   provider: block_content
   status: true
@@ -43,3 +44,7 @@ visibility:
       user: '@user.current_user_context:current_user'
     roles:
       authenticated: authenticated
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -3,6 +3,6 @@ langcode: uk
 status: true
 dependencies: {  }
 id: text_image
-label: 'Text and image and link'
+label: 'Content bottom block'
 revision: 0
-description: ''
+description: 'Для створення Iнфо блокiв в Content bottom'

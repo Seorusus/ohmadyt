@@ -8,6 +8,7 @@ dependencies:
   module:
     - comment
     - contextual
+    - domain_entity
     - file
     - node
     - path
@@ -30,7 +31,9 @@ permissions:
   - 'access tour'
   - 'administer url aliases'
   - 'create page content'
+  - 'create tags_platform taxonomy_term content on assigned domains'
   - 'create terms in tags'
+  - 'create text_image block_content content on assigned domains'
   - 'create url aliases'
   - 'delete own page content'
   - 'delete page revisions'
@@ -38,6 +41,7 @@ permissions:
   - 'edit own page content'
   - 'edit terms in tags'
   - 'revert all revisions'
+  - 'update text_image block_content content on assigned domains'
   - 'view all revisions'
   - 'view own unpublished content'
   - 'view the administration theme'

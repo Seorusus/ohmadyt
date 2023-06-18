@@ -8,6 +8,7 @@ dependencies:
     - block_class
     - block_content
     - domain
+    - system
     - user
   theme:
     - ohmatdyt
@@ -17,12 +18,12 @@ third_party_settings:
 id: medsystem
 theme: ohmatdyt
 region: content_bottom
-weight: -7
+weight: -10
 provider: null
 plugin: 'block_content:bef1eb0a-fa0d-4d11-ab35-e7a80f8056a9'
 settings:
   id: 'block_content:bef1eb0a-fa0d-4d11-ab35-e7a80f8056a9'
-  label: 'Med system'
+  label: 'Med system Front'
   label_display: '0'
   provider: block_content
   status: true
@@ -43,3 +44,7 @@ visibility:
       user: '@user.current_user_context:current_user'
     roles:
       authenticated: authenticated
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

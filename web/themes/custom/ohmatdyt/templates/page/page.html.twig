@@ -93,7 +93,7 @@ set footer_classes = ' ' ~
           %}
 
             {%
-                set content_classes = (page.sidebar_first and page.sidebar_second) ? 'col-12 col-lg-8' : (page.sidebar_first or page.sidebar_second) ? 'col-12 col-lg-12' : 'col-12'
+                set content_classes = (page.sidebar_second|render|striptags|trim|length > 0) ? 'col-12 col-lg-8' : 'col-12'
             %}
 
           <div class="{{ b5_top_container }}">
@@ -124,7 +124,7 @@ set footer_classes = ' ' ~
                   <div class="{{ content_classes }}">
                       {{ page.content }}
                   </div>
-                  {% if page.sidebar_second %}
+                  {% if page.sidebar_second|render|striptags|trim|length > 0 %}
                       <div class="col-12 col-lg-4">
                           {{ page.sidebar_second }}
                       </div>
