@@ -12,16 +12,18 @@ a {
 
     h1 {
       display: inline-flex;
+      max-width: 96%;
 
       &:after {
         content: '';
         position: relative;
-        width: 11px;
+        width: 50px;
         height: 11px;
-        background-color: #DA393B;
-        border-radius: 50%;
+        //background-color: #DA393B;
+        background-image: url("../images/red-point.svg");
+        background-size: 11px 11px ;
+        background-repeat: no-repeat;
         top: 15px;
-        //display: inline-flex;
         margin-left: 10px;
       }
     }
