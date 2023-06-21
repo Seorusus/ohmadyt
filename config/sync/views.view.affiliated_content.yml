@@ -15,7 +15,7 @@ _core:
 id: affiliated_content
 label: 'Affiliated content'
 module: node
-description: 'Find and manage content.'
+description: 'Пошук матеріалів і керування ними.'
 tag: domain
 base_table: node_field_data
 base_field: nid
@@ -320,7 +320,7 @@ display:
           entity_type: node
           entity_field: status
           plugin_id: field
-          label: Status
+          label: Стан
           exclude: false
           alter:
             alter_text: false
@@ -333,8 +333,8 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_false: Unpublished
-            format_custom_true: Published
+            format_custom_false: Неопубліковано
+            format_custom_true: Опубліковано
         changed:
           id: changed
           table: node_field_data
@@ -342,7 +342,7 @@ display:
           entity_type: node
           entity_field: changed
           plugin_id: field
-          label: Updated
+          label: Оновлено
           exclude: false
           alter:
             alter_text: false
@@ -365,7 +365,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: entity_operations
-          label: Operations
+          label: Операції
           exclude: false
           alter:
             alter_text: false
@@ -412,14 +412,14 @@ display:
         options:
           items_per_page: 50
           tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
-            first: '« First'
-            last: 'Last »'
+            next: 'Наступна ›'
+            previous: '‹ Попередня'
+            first: '« Перша'
+            last: 'Остання »'
       exposed_form:
         type: basic
         options:
-          submit_button: Filter
+          submit_button: Фільтр
           reset_button: true
           reset_button_label: Скинути
           exposed_sorts_label: 'Впорядкувати за'
@@ -438,7 +438,7 @@ display:
           field: area_text_custom
           plugin_id: text_custom
           empty: true
-          content: 'No content available.'
+          content: 'Матеріали відсутні.'
       sorts: {  }
       arguments:
         field_domain_access_target_id:
@@ -453,7 +453,7 @@ display:
           exception:
             value: all
             title_enable: false
-            title: All
+            title: Все
           title_enable: true
           title: '{{ arguments.field_domain_access_target_id }} content'
           default_argument_type: fixed
@@ -501,7 +501,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Status
+            label: Стан
             description: ''
             use_operator: false
             operator: status_op
@@ -513,7 +513,7 @@ display:
               authenticated: authenticated
           is_grouped: true
           group_info:
-            label: 'Published status'
+            label: 'Стан публікації'
             description: ''
             identifier: status
             optional: true
@@ -524,7 +524,7 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Published
+                title: Опубліковано
                 operator: '='
                 value: '1'
               0:
@@ -547,7 +547,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: Type
+            label: Тип
             description: ''
             use_operator: false
             operator: type_op
@@ -628,7 +628,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Мова
             description: ''
             use_operator: false
             operator: langcode_op
@@ -817,7 +817,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
-      title: Content
+      title: Вміст
       filters:
         status:
           id: status
@@ -835,7 +835,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Status
+            label: Стан
             description: ''
             use_operator: false
             operator: status_op
@@ -847,7 +847,7 @@ display:
               authenticated: authenticated
           is_grouped: true
           group_info:
-            label: 'Published status'
+            label: 'Стан публікації'
             description: ''
             identifier: status
             optional: true
@@ -858,7 +858,7 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Published
+                title: Опубліковано
                 operator: '='
                 value: '1'
               0:
@@ -881,7 +881,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: Type
+            label: Тип
             description: ''
             use_operator: false
             operator: type_op
@@ -962,7 +962,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Мова
             description: ''
             use_operator: false
             operator: langcode_op
@@ -1000,7 +1000,7 @@ display:
       path: admin/content/domain-content/%
       menu:
         type: none
-        title: Content
+        title: Вміст
         description: ''
         weight: -10
         expanded: false
@@ -1009,8 +1009,8 @@ display:
         context: '0'
       tab_options:
         type: normal
-        title: Content
-        description: 'Find and manage content'
+        title: Вміст
+        description: 'Пошук матеріалів та керування ними'
         weight: -10
         menu_name: admin
     cache_metadata:
@@ -1049,7 +1049,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Status
+            label: Стан
             description: ''
             use_operator: false
             operator: status_op
@@ -1061,7 +1061,7 @@ display:
               authenticated: authenticated
           is_grouped: true
           group_info:
-            label: 'Published status'
+            label: 'Стан публікації'
             description: ''
             identifier: status
             optional: true
@@ -1072,7 +1072,7 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Published
+                title: Опубліковано
                 operator: '='
                 value: '1'
               0:
@@ -1095,7 +1095,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: Type
+            label: Тип
             description: ''
             use_operator: false
             operator: type_op
@@ -1176,7 +1176,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Мова
             description: ''
             use_operator: false
             operator: langcode_op
@@ -1251,7 +1251,7 @@ display:
           exposed: true
           expose:
             operator_id: field_domain_access_target_id_op
-            label: Domain
+            label: Домен
             description: ''
             use_operator: false
             operator: field_domain_access_target_id_op

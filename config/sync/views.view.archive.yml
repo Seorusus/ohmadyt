@@ -10,9 +10,9 @@ dependencies:
 _core:
   default_config_hash: ko9GznzNBXHkuz09OCaBQ1YOSJYYjTY0TBpNV3WKnog
 id: archive
-label: Archive
+label: Архів
 module: node
-description: 'All content, by month.'
+description: 'Всі матеріали, за місяцем.'
 tag: default
 base_table: node_field_data
 base_field: nid
@@ -23,7 +23,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Monthly archive'
+      title: 'Щомісячний архів'
       fields: {  }
       pager:
         type: mini
@@ -188,7 +188,7 @@ display:
       tags: {  }
   block_1:
     id: block_1
-    display_title: Block
+    display_title: Блок
     display_plugin: block
     position: 1
     display_options:

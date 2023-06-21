@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e63dc9b1e0847a8bd11fa76368a3c86",
+    "content-hash": "e00850233f98cc211d3c77154dcdda72",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2117,6 +2117,47 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/bootstrap5",
                 "issues": "https://www.drupal.org/project/issues/bootstrap5"
+            }
+        },
+        {
+            "name": "drupal/calendar_view",
+            "version": "dev-2.1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/calendar_view.git",
+                "reference": "ec6cb80b29fc13618caf7c5c7a8e3ef75a2b08a0"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.1.x": "2.1.x-dev"
+                },
+                "drupal": {
+                    "version": "2.1.1+6-dev",
+                    "datestamp": "1687073748",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "matthieuscarset",
+                    "homepage": "https://www.drupal.org/user/3471281"
+                }
+            ],
+            "description": "Display entities in a filterable calendar View",
+            "homepage": "https://www.drupal.org/project/calendar_view",
+            "support": {
+                "source": "https://git.drupalcode.org/project/calendar_view"
             }
         },
         {
@@ -16729,7 +16770,8 @@
         "drupal/recaptcha_v3": 15,
         "drupal/rabbit_hole": 10,
         "drupal/link_description": 10,
-        "drupal/page_manager": 5
+        "drupal/page_manager": 5,
+        "drupal/calendar_view": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

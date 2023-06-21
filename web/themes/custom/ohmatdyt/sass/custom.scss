@@ -974,12 +974,12 @@ a {
 
       .field--name-field-employee-phone-mobile {
         display: inline-flex;
-        color: #525760;
+        color: $brandblack;
       }
 
       .field--name-field-employee-phone-working {
         display: inline-flex;
-        color: #525760;
+        color: $brandblack;
       }
 
       .field--name-field-employee-phone {
@@ -1205,7 +1205,7 @@ a {
       .views-exposed-form {
         label {
           display: inline-block;
-          color: #525760;
+          color: $brandblack;
         }
         .form--inline {
           #edit-field-employee-last-name-value-all {
@@ -1218,7 +1218,6 @@ a {
           grid-template-rows: 80px 80px 80px 80px 30px;
           gap: 0 0;
           grid-template-areas:
-    //"first first first"
     "second second third"
     "fourth fourth fourth"
     "fifth fifth fifth"
@@ -1304,7 +1303,7 @@ a {
 
                   .bef-link {
                     padding: 0 7px;
-                    color: #525760;
+                    color: $brandblack;
 
                     &:hover {
                       color: $brandblue;
@@ -1345,7 +1344,7 @@ a {
 
   .field--name-field-position-name {
     margin-bottom: 10px;
-    color: #525760;
+    color: $brandblack;
 
     &:first-letter {
       text-transform: uppercase;
@@ -1373,7 +1372,7 @@ a {
     }
     .field__item {
       display: inline-flex;
-      color: #525760;
+      color: $brandblack;
     }
   }
 
@@ -1398,13 +1397,13 @@ a {
     background: none;
     padding: 7px 9px 10px 20px;
     height: 40px;
-    border-color: #525760;
-    color: #525760;
+    border-color: $brandblack;
+    color: $brandblack;
 
     span {
       font-family: 'Montserrat', sans-serif;
       font-size: 12px;
-      color: #525760;
+      color: $brandblack;
       font-weight: 700;
     }
     div {
@@ -1426,7 +1425,7 @@ a {
 .employees-quantity {
   width: auto;
   margin-left: auto;
-  color: #525760;
+  color: $brandblack;
   font-weight: 900;
   font-size: 12px;
 
@@ -1494,6 +1493,181 @@ a {
 
     ._line {
       width: 30px;
+    }
+  }
+}
+
+/*
+* Page Calendar.
+ */
+.view-events {
+  .pager-top {
+    .calendar-view-pager__reset {
+      display: inline-flex;
+
+      a {
+        border: 1px solid $brandblue;
+        border-radius: 6px;
+        padding: 5px 12px;
+        color: $brandblue;
+        text-transform: inherit;
+      }
+    }
+
+    .calendar-view-pager {
+      display: inline-flex;
+
+      .pager__current {
+        .form-item {
+          text-transform: capitalize;
+        }
+      }
+
+      .pager__previous {
+        a {
+          .text {
+            display: none;
+          }
+
+
+          &:before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-image: url('../images/arrow-left.svg');
+            background-size: cover;
+            margin-right: 5px;
+            position: relative;
+            top: 3px;
+            color: $brandblack;
+          }
+        }
+      }
+
+      .pager__next {
+        a {
+          .text {
+            display: none;
+          }
+
+
+          &:before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-image: url('../images/arrow-right.svg');
+            background-size: cover;
+            margin-right: 5px;
+            position: relative;
+            top: 3px;
+            color: $brandblack;
+          }
+        }
+      }
+    }
+    &._bottom {
+      width: 30%;
+      margin: 0 auto;
+
+      .calendar-view-pager__reset {
+        display: none;
+      }
+    }
+  }
+
+  .view-calendar {
+
+    thead {
+      max-height: 50px;
+
+      th {
+        color: $brandblack;
+        font-weight: 900;
+      }
+    }
+
+    .calendar-view-day {
+      padding: 0;
+      opacity: 1;
+
+      .calendar-view-day__number {
+        background: none;
+        font-size: 24px;
+        font-weight: 900;
+        color: $brandblack;
+        display: inline-flex;
+        width: 47px;
+        cursor: inherit;
+      }
+
+      .calendar-view-day-wrapper-single {
+        opacity: 1;
+        //overflow-y: scroll;
+        overflow-x: hidden;
+        max-height: 149px;
+
+        &::after {
+          content: "";
+          top: 0;
+          right: 0;
+          bottom: 0;
+          width: 10px; /* Ширина скролл-бара */
+          background-color: #f0f0f0; /* Цвет скролл-бара */
+          opacity: 0.8;
+          overflow-y: auto;
+          overflow-x: hidden;
+          scrollbar-width: thin; /* Толщина скролл-бара */
+          scrollbar-color: #888888 #f0f0f0; /* Цвет ползунка и фона скролл-бара */
+
+          &::-webkit-scrollbar {
+            width: 10px; /* Ширина скролл-бара для WebKit (Chrome, Safari) */
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background-color: #888888; /* Цвет ползунка скролл-бара для WebKit */
+          }
+
+          &::-webkit-scrollbar-track {
+            background-color: #f0f0f0; /* Цвет фона скролл-бара для WebKit */
+          }
+        }
+
+        .calendar-view-day__row {
+          padding: 0 5px;
+
+          .event-interval {
+            font-size: 14px;
+            font-weight: 900;
+            color: $brandblack;
+          }
+
+          .views-field-title {
+            a {
+              font-size: 12px;
+              font-weight: normal;
+            }
+          }
+        }
+
+      }
+    }
+    .calendar-view-table {
+      tr {
+        max-height: 200px;
+        height: 200px;
+
+        td {
+          padding: 0;
+        }
+      }
+
+      &.calendar-view-month {
+        caption {
+          display: none;
+        }
+      }
     }
   }
 }

@@ -11,9 +11,9 @@ dependencies:
 _core:
   default_config_hash: YKgw0f77GEmCu6_6Om9Mbig0mON9JdfVuMxTtd0WQaI
 id: taxonomy_term
-label: 'Taxonomy term'
+label: 'Термін таксономії'
 module: taxonomy
-description: 'Content belonging to a certain taxonomy term.'
+description: 'Матеріали, що стосуються певного терміну таксономії.'
 tag: default
 base_table: node_field_data
 base_field: nid
@@ -102,7 +102,7 @@ display:
           exception:
             value: ''
             title_enable: false
-            title: All
+            title: Все
           title_enable: true
           title: '{{ arguments.tid }}'
           default_argument_type: fixed
@@ -261,7 +261,7 @@ display:
       tags: {  }
   feed_1:
     id: feed_1
-    display_title: Feed
+    display_title: Канал
     display_plugin: feed
     position: 2
     display_options:
