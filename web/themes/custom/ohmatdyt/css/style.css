@@ -2384,6 +2384,11 @@ a {
   text-transform: inherit;
 }
 
+.view-events .pager-top .calendar-view-pager__reset a:hover {
+  color: white;
+  background-color: #3953A4;
+}
+
 .view-events .pager-top .calendar-view-pager {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2444,6 +2449,7 @@ a {
 .view-events .view-calendar thead th {
   color: #525760;
   font-weight: 900;
+  max-height: 50px;
 }
 
 .view-events .view-calendar .calendar-view-day {
@@ -2515,6 +2521,13 @@ a {
 .view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single .calendar-view-day__row .views-field-title a {
   font-size: 12px;
   font-weight: normal;
+}
+
+.view-events .view-calendar .calendar-view-day.not-empty .calendar-view-day__number {
+  border-radius: 50%;
+  background-color: #eef0f3;
+  color: #3953A4;
+  display: block;
 }
 
 .view-events .view-calendar .calendar-view-table tr {
