@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.anonsy_podiy.field_domain_all_affiliates
     - field.field.node.anonsy_podiy.field_photos
     - field.field.node.anonsy_podiy.field_tags
+    - field.field.node.anonsy_podiy.field_webform
     - node.type.anonsy_podiy
   module:
     - text
@@ -42,5 +43,6 @@ hidden:
   field_domain_all_affiliates: true
   field_photos: true
   field_tags: true
+  field_webform: true
   langcode: true
   search_api_excerpt: true

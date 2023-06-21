@@ -1,0 +1,72 @@
+title: 'Demo: Event Registration'
+description: 'A demonstration of an event registration form.'
+categories:
+  - Demo
+elements: |
+  event_information:
+    '#type': fieldset
+    '#title': 'Event Information'
+    event_title:
+      '#type': webform_computed_token
+      '#title': 'Event Title'
+      '#value': '[webform_submission:node:title]'
+    event_date:
+      '#type': webform_computed_token
+      '#title': 'Event Date'
+      '#value': '[webform_submission:node:field_webform_demo_event_date:date:short]'
+  information:
+    '#title': 'Your Information'
+    '#type': fieldset
+    first_name:
+      '#title': 'First Name'
+      '#type': textfield
+      '#required': true
+    last_name:
+      '#title': 'Last Name'
+      '#type': textfield
+      '#required': true
+    email:
+      '#type': email
+      '#title': Email
+      '#required': true
+  other:
+    '#title': 'Other Information'
+    '#type': fieldset
+    teeshirt:
+      '#type': select
+      '#title': 'Tee shirt size'
+      '#options':
+        XS: 'XS - Extra Small'
+        S: 'S - Small'
+        M: 'M - Medium'
+        L: 'L - Large'
+        XL: 'XL - Extra Large'
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': Register
+settings:
+  confirmation_message: 'Thank you for registering.'
+handlers:
+  email_notification:
+    label: 'Email Notification'
+    settings:
+      from_name: '[webform_submission:values:first_name] [webform_submission:values:last_name]'
+      subject: _default
+      body: _default
+  email_reminder:
+    label: 'Email Reminder'
+    settings:
+      from_name: _default
+      subject: '[webform_submission:node:title:value]: Reminder'
+      body: _default
+  submission_limit:
+    label: 'Submission limit'
+  teeshirt_options_limits:
+    label: 'Tee shirt limits'
+    settings:
+      limit_reached_message: 'No more tee shirts are available.'
+      option_multiple_message: '[@remaining shirts remaining]'
+      option_single_message: '[@remaining shirt remaining]'
+      option_unlimited_message: '[Unlimited]'
+      option_error_message: 'Tee shirts in @label are no longer available.'

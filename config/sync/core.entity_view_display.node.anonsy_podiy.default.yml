@@ -11,12 +11,14 @@ dependencies:
     - field.field.node.anonsy_podiy.field_domain_all_affiliates
     - field.field.node.anonsy_podiy.field_photos
     - field.field.node.anonsy_podiy.field_tags
+    - field.field.node.anonsy_podiy.field_webform
     - node.type.anonsy_podiy
   module:
     - address
     - smart_date
     - text
     - user
+    - webform
 id: node.anonsy_podiy.default
 targetEntityType: node
 bundle: anonsy_podiy
@@ -75,6 +77,16 @@ content:
       link: true
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_webform:
+    type: webform_entity_reference_link
+    label: hidden
+    settings:
+      label: 'Go to [webform:title] webform'
+      dialog: ''
+      attributes: {  }
+    third_party_settings: {  }
+    weight: 7
     region: content
   links:
     settings: {  }
