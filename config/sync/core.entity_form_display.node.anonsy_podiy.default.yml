@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.anonsy_podiy.field_domain_all_affiliates
     - field.field.node.anonsy_podiy.field_photos
     - field.field.node.anonsy_podiy.field_tags
+    - field.field.node.anonsy_podiy.field_webform
     - node.type.anonsy_podiy
   module:
     - address
@@ -18,6 +19,7 @@ dependencies:
     - path
     - smart_date
     - text
+    - webform
 id: node.anonsy_podiy.default
 targetEntityType: node
 bundle: anonsy_podiy
@@ -47,7 +49,7 @@ content:
     third_party_settings: {  }
   field_date_interval:
     type: smartdate_default
-    weight: 4
+    weight: 3
     region: content
     settings:
       modal: false
@@ -64,20 +66,28 @@ content:
     third_party_settings: {  }
   field_photos:
     type: media_library_widget
-    weight: 5
+    weight: 4
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 5
     region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_webform:
+    type: webform_entity_reference_select
+    weight: 6
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
     third_party_settings: {  }
   langcode:
     type: language_select

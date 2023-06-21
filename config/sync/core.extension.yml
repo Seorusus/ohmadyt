@@ -130,6 +130,15 @@ module:
   user: 0
   views_infinite_scroll: 0
   views_ui: 0
+  webform: 0
+  webform_demo_event_registration: 0
+  webform_node: 0
+  webform_options_limit: 0
+  webform_scheduled_email: 0
+  webform_schema: 0
+  webform_share: 0
+  webform_templates: 0
+  webform_ui: 0
   youtube: 0
   pathauto: 1
   content_translation: 10

@@ -1,0 +1,32 @@
+uuid: 79f3d47d-482b-4cd3-8c6f-13eba354c497
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_webform
+    - node.type.anonsy_podiy
+    - webform.webform.subscribe_announce
+  module:
+    - webform
+id: node.anonsy_podiy.field_webform
+field_name: field_webform
+entity_type: node
+bundle: anonsy_podiy
+label: Webform
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: e5c7ee54-c4e2-4e32-872d-4bf4db3ea3c4
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

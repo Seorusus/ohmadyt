@@ -1,0 +1,16 @@
+uuid: 77925355-5244-42a2-b048-a579dd954ca7
+langcode: uk
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: W88NYg31DbaVNQx1Uir_dwwXHVtF09QOq4VBGsH1Snk
+id: yes_no
+label: Yes/No
+category: Загальне
+likert: false
+options: |
+  Yes: Yes
+  No: No
