@@ -1,0 +1,8 @@
+name: Ohmatdyt calendar views
+description: 'Custom module for overriding Calendar View functionality.'
+package: Custom
+type: module
+core_version_requirement: ^9.2 || ^10
+
+dependencies:
+  - drupal:calendar_view

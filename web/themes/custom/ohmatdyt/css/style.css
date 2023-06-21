@@ -882,15 +882,17 @@ a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  max-width: 96%;
 }
 
 .block-page-title-block h1:after {
   content: '';
   position: relative;
-  width: 11px;
+  width: 50px;
   height: 11px;
-  background-color: #DA393B;
-  border-radius: 50%;
+  background-image: url("../images/red-point.svg");
+  background-size: 11px 11px;
+  background-repeat: no-repeat;
   top: 15px;
   margin-left: 10px;
 }
@@ -2363,6 +2365,169 @@ a {
 
 .view-empty.employee-content-label ._line {
   width: 30px;
+}
+
+/*
+* Page Calendar.
+ */
+.view-events .pager-top .calendar-view-pager__reset {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.view-events .pager-top .calendar-view-pager__reset a {
+  border: 1px solid #3953A4;
+  border-radius: 6px;
+  padding: 5px 12px;
+  color: #3953A4;
+  text-transform: inherit;
+}
+
+.view-events .pager-top .calendar-view-pager {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.view-events .pager-top .calendar-view-pager .pager__current .form-item {
+  text-transform: capitalize;
+}
+
+.view-events .pager-top .calendar-view-pager .pager__previous a .text {
+  display: none;
+}
+
+.view-events .pager-top .calendar-view-pager .pager__previous a:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/arrow-left.svg");
+  background-size: cover;
+  margin-right: 5px;
+  position: relative;
+  top: 3px;
+  color: #525760;
+}
+
+.view-events .pager-top .calendar-view-pager .pager__next a .text {
+  display: none;
+}
+
+.view-events .pager-top .calendar-view-pager .pager__next a:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/arrow-right.svg");
+  background-size: cover;
+  margin-right: 5px;
+  position: relative;
+  top: 3px;
+  color: #525760;
+}
+
+.view-events .pager-top._bottom {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.view-events .pager-top._bottom .calendar-view-pager__reset {
+  display: none;
+}
+
+.view-events .view-calendar thead {
+  max-height: 50px;
+}
+
+.view-events .view-calendar thead th {
+  color: #525760;
+  font-weight: 900;
+}
+
+.view-events .view-calendar .calendar-view-day {
+  padding: 0;
+  opacity: 1;
+}
+
+.view-events .view-calendar .calendar-view-day .calendar-view-day__number {
+  background: none;
+  font-size: 24px;
+  font-weight: 900;
+  color: #525760;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 47px;
+  cursor: inherit;
+}
+
+.view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single {
+  opacity: 1;
+  overflow-x: hidden;
+  max-height: 149px;
+}
+
+.view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single::after {
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 10px;
+  /* Ширина скролл-бара */
+  background-color: #f0f0f0;
+  /* Цвет скролл-бара */
+  opacity: 0.8;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  /* Толщина скролл-бара */
+  scrollbar-color: #888888 #f0f0f0;
+  /* Цвет ползунка и фона скролл-бара */
+}
+
+.view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single::after::-webkit-scrollbar {
+  width: 10px;
+  /* Ширина скролл-бара для WebKit (Chrome, Safari) */
+}
+
+.view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single::after::-webkit-scrollbar-thumb {
+  background-color: #888888;
+  /* Цвет ползунка скролл-бара для WebKit */
+}
+
+.view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single::after::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+  /* Цвет фона скролл-бара для WebKit */
+}
+
+.view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single .calendar-view-day__row {
+  padding: 0 5px;
+}
+
+.view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single .calendar-view-day__row .event-interval {
+  font-size: 14px;
+  font-weight: 900;
+  color: #525760;
+}
+
+.view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single .calendar-view-day__row .views-field-title a {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.view-events .view-calendar .calendar-view-table tr {
+  max-height: 200px;
+  height: 200px;
+}
+
+.view-events .view-calendar .calendar-view-table tr td {
+  padding: 0;
+}
+
+.view-events .view-calendar .calendar-view-table.calendar-view-month caption {
+  display: none;
 }
 
 @font-face {

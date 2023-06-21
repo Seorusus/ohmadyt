@@ -9,6 +9,7 @@ dependencies:
     - block_content
     - domain
     - system
+    - user
   theme:
     - ohmatdyt
 third_party_settings:
@@ -40,3 +41,14 @@ visibility:
     id: request_path
     negate: true
     pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      manager: manager
+      employee: employee
+      content_editor: content_editor
+      content_editor_platform: content_editor_platform

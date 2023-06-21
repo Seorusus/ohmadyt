@@ -8,9 +8,9 @@ dependencies:
 _core:
   default_config_hash: CgXkKY33fd-yaHz89du2hSw6MJOoIeNUJ-VHE5BiSdQ
 id: comment
-label: Comments
+label: Коментарі
 module: comment
-description: 'Find and manage comments.'
+description: 'Пошук коментарів та керування ними.'
 tag: default
 base_table: comment_field_data
 base_field: cid
@@ -21,7 +21,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Comments
+      title: Коментарі
       fields:
         comment_bulk_form:
           id: comment_bulk_form
@@ -73,7 +73,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: Action
+          action_title: Дія
           include_exclude: include
           selected_actions:
             - comment_delete_action
@@ -88,7 +88,7 @@ display:
           entity_type: comment
           entity_field: subject
           plugin_id: field
-          label: Subject
+          label: Тема
           exclude: false
           alter:
             alter_text: false
@@ -282,7 +282,7 @@ display:
           entity_type: comment
           entity_field: entity_id
           plugin_id: commented_entity
-          label: 'Posted in'
+          label: Опубліковане
           exclude: false
           alter:
             alter_text: false
@@ -347,7 +347,7 @@ display:
           entity_type: comment
           entity_field: changed
           plugin_id: field
-          label: Updated
+          label: Оновлено
           exclude: false
           alter:
             alter_text: false
@@ -413,7 +413,7 @@ display:
           admin_label: ''
           entity_type: comment
           plugin_id: entity_operations
-          label: Operations
+          label: Операції
           exclude: false
           alter:
             alter_text: false
@@ -528,10 +528,10 @@ display:
           total_pages: null
           id: 0
           tags:
-            next: 'next ›'
-            previous: '‹ previous'
-            first: '« first'
-            last: 'last »'
+            next: 'наступна ›'
+            previous: '‹ попередня'
+            first: '« перша'
+            last: 'остання »'
           expose:
             items_per_page: false
             items_per_page_label: 'Елементів на сторінку'
@@ -544,7 +544,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Filter
+          submit_button: Фільтр
           reset_button: false
           reset_button_label: Скинути
           exposed_sorts_label: 'Впорядкувати за'
@@ -568,7 +568,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'No comments available.'
+          content: 'Коментарі відсутні.'
           tokenize: false
       sorts:
         changed:
@@ -645,7 +645,7 @@ display:
           exposed: true
           expose:
             operator_id: subject_op
-            label: Subject
+            label: Тема
             description: ''
             use_operator: false
             operator: subject_op
@@ -685,7 +685,7 @@ display:
           exposed: true
           expose:
             operator_id: combine_op
-            label: 'Author name'
+            label: 'Ім’я автора'
             description: ''
             use_operator: false
             operator: combine_op
@@ -730,7 +730,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Мова
             description: ''
             use_operator: false
             operator: langcode_op
@@ -850,7 +850,7 @@ display:
       show_admin_links: true
       use_more: false
       use_more_always: true
-      use_more_text: more
+      use_more_text: ще
       header: {  }
       footer: {  }
       hide_attachment_summary: false
@@ -867,19 +867,19 @@ display:
       cacheable: false
   page_published:
     id: page_published
-    display_title: 'Published comments'
+    display_title: 'Опубліковані коментарі'
     display_plugin: page
     position: 1
     display_options:
-      display_description: 'The approved comments listing.'
+      display_description: 'Список затверджених коментарів.'
       display_comment: ''
       exposed_block: false
       display_extenders: {  }
       path: admin/content/comment
       menu:
         type: tab
-        title: Comments
-        description: 'Comments published'
+        title: Коментарі
+        description: 'Коментарі опубліковано'
         weight: 0
         menu_name: admin
         parent: ''
@@ -896,7 +896,7 @@ display:
       cacheable: false
   page_unapproved:
     id: page_unapproved
-    display_title: 'Unapproved comments'
+    display_title: 'Несхвалені коментарі'
     display_plugin: page
     position: 2
     display_options:
@@ -951,7 +951,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: Action
+          action_title: Дія
           include_exclude: include
           selected_actions:
             - comment_delete_action
@@ -966,7 +966,7 @@ display:
           entity_type: comment
           entity_field: subject
           plugin_id: field
-          label: Subject
+          label: Тема
           exclude: false
           alter:
             alter_text: false
@@ -1160,7 +1160,7 @@ display:
           entity_type: comment
           entity_field: entity_id
           plugin_id: commented_entity
-          label: 'Posted in'
+          label: Опубліковане
           exclude: false
           alter:
             alter_text: false
@@ -1225,7 +1225,7 @@ display:
           entity_type: comment
           entity_field: changed
           plugin_id: field
-          label: Updated
+          label: Оновлено
           exclude: false
           alter:
             alter_text: false
@@ -1291,7 +1291,7 @@ display:
           admin_label: ''
           entity_type: comment
           plugin_id: entity_operations
-          label: Operations
+          label: Операції
           exclude: false
           alter:
             alter_text: false
@@ -1455,7 +1455,7 @@ display:
           exposed: true
           expose:
             operator_id: subject_op
-            label: Subject
+            label: Тема
             description: ''
             use_operator: false
             operator: subject_op
@@ -1495,7 +1495,7 @@ display:
           exposed: true
           expose:
             operator_id: combine_op
-            label: 'Author Name'
+            label: "Ім'я автора"
             description: ''
             use_operator: false
             operator: combine_op
@@ -1540,7 +1540,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Мова
             description: ''
             use_operator: false
             operator: langcode_op
@@ -1575,13 +1575,13 @@ display:
         fields: false
         filters: false
         filter_groups: false
-      display_description: 'The unapproved comments listing.'
+      display_description: 'Список незатверджених коментарів.'
       display_extenders: {  }
       path: admin/content/comment/approval
       menu:
         type: tab
-        title: 'Unapproved comments'
-        description: 'Comments unapproved'
+        title: 'Несхвалені коментарі'
+        description: 'Коментарі не затверджено'
         weight: 1
         menu_name: admin
         parent: ''

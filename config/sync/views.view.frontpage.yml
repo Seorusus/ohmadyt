@@ -11,9 +11,9 @@ dependencies:
 _core:
   default_config_hash: 6eeliKIydPjqyv5V__QqTfahvJMWkHjOVUUuUIdB1ik
 id: frontpage
-label: Frontpage
+label: 'Головна сторінка'
 module: node
-description: 'All content promoted to the front page.'
+description: 'Всі матеріали винесені на головну сторінку.'
 tag: default
 base_table: node_field_data
 base_field: nid
@@ -34,10 +34,10 @@ display:
           total_pages: 0
           id: 0
           tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
-            first: '« First'
-            last: 'Last »'
+            next: 'Наступна ›'
+            previous: '‹ Попередня'
+            first: '« Перша'
+            last: 'Остання »'
           expose:
             items_per_page: false
             items_per_page_label: 'Елементів на сторінку'
@@ -75,7 +75,7 @@ display:
           plugin_id: text_custom
           label: ''
           empty: true
-          content: 'No front page content has been created yet.<br/>Follow the <a target="_blank" href="https://www.drupal.org/docs/user_guide/en/index.html">User Guide</a> to start building your site.'
+          content: 'Вміст головної сторінки ще не створено.<br />Щоб розпочати створення сайту перегляньте <a target="_blank" href="https://www.drupal.org/docs/user_guide/en/index.html">Посібник користувача</a>.'
           tokenize: false
         node_listing_empty:
           id: node_listing_empty
@@ -98,7 +98,7 @@ display:
           plugin_id: title
           label: ''
           empty: true
-          title: Welcome!
+          title: Вітаємо!
       sorts:
         sticky:
           id: sticky
@@ -261,7 +261,7 @@ display:
       tags: {  }
   feed_1:
     id: feed_1
-    display_title: Feed
+    display_title: Канал
     display_plugin: feed
     position: 2
     display_options:

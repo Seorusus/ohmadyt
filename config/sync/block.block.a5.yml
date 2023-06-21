@@ -43,7 +43,11 @@ visibility:
     context_mapping:
       user: '@user.current_user_context:current_user'
     roles:
-      authenticated: authenticated
+      administrator: administrator
+      manager: manager
+      employee: employee
+      content_editor: content_editor
+      content_editor_platform: content_editor_platform
   request_path:
     id: request_path
     negate: false

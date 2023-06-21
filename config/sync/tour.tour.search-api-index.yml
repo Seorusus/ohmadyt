@@ -29,7 +29,7 @@ tips:
   search-api-index-status:
     id: search-api-index-status
     plugin: text
-    label: Status
+    label: Стан
     weight: 3
     selector: .search-api-index-summary--status
     body: 'Shows whether the index is currently enabled or disabled.'
@@ -43,7 +43,7 @@ tips:
   search-api-index-tracker:
     id: search-api-index-tracker
     plugin: text
-    label: Tracker
+    label: Відстежувач
     weight: 5
     selector: .search-api-index-summary--tracker
     body: 'The tracker used by the index. Only one ("Default") is available by default.'

@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: ructO0IOsghR3CIbNd-0QfLTDiUo8gIJ7mB_nxSil4o
 id: block-layout
-label: 'Block Layout Page'
+label: 'Сторінка схеми блоків'
 module: block
 routes:
   -
@@ -16,33 +16,33 @@ tips:
   block-layout:
     id: block-layout
     plugin: text
-    label: 'Block Layout'
+    label: 'Схема блоків'
     weight: 1
-    body: 'Blocks are boxes of content rendered into an area, or region, of a web page that can be displayed in regions (such as footer or sidebar) on your page.'
+    body: 'Блоки  – це поля вмісту, відтворювані в певній частині або області вебсторінки, які можуть відображатися в областях (наприклад, нижній колонтитул або бічна панель) на сторінці.'
   place-block:
     id: place-block
     plugin: text
-    label: 'Place Blocks'
+    label: 'Розміщення блоків'
     weight: 2
     selector: .button--small
-    body: 'Any custom or contributed block can be added to a particular region by clicking on a button Place block. A new block can also be created by clicking on Place Block'
+    body: 'Будь-який спеціальний або внесений блок можна додати до певної області, натиснувши кнопку Розмістити блок. Також натисканням цієї кнопки можна створити новий блок.'
   block-region:
     id: block-region
     plugin: text
-    label: 'Block Region'
+    label: 'Область блоку'
     weight: 3
     selector: .block-region-select
-    body: 'Assign or change the region of a block by clicking here. A dropdown list with all the regions will appear. You can place one block in multiple regions.'
+    body: 'Призначте або змініть область блоку, натиснувши тут. З’явиться спадний список з усіма областями. Можна розмістити один блок у декількох регіонах'
   configure-block:
     id: configure-block
     plugin: text
-    label: 'Configure Block'
+    label: 'Налаштувати блок'
     weight: 4
     selector: .dropbutton-widget
-    body: 'By Clicking on "Configure" you can go ahead and edit the contents of the block, deal with the visibility settings and even change the placement of where it is on your theme.'
+    body: 'Натиснувши кнопку "Налаштувати" можна продовжувати редагувати вміст блоку, розібратися з налаштуваннями видимості та навіть змінити розташування блоку в темі.'
   custom-block-library:
     id: custom-block-library
     plugin: text
-    label: 'Custom Block Library'
+    label: 'Бібліотека власних блоків'
     weight: 5
-    body: 'The block management screen also has an another tab on the top which is used to add Custom blocks. The name of the tab is "Custom block library". This tab ultimately provides a link to add custom blocks.'
+    body: 'Екран керування блоками також має ще одну вкладку вгорі, яка використовується для додавання Власних блоків. Назва цієї вкладки - "Бібліотека власних блоків". Ця вкладка зрештою містить посилання для додавання власних блоків.'

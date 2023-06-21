@@ -29,14 +29,14 @@ tips:
   search-api-index-fields-label:
     id: search-api-index-fields-label
     plugin: text
-    label: Label
+    label: Мітка
     weight: 3
     selector: '.details-wrapper table thead th:nth-child(1)'
     body: 'A label for the field that will be used to refer to the field in most places in the user interface.'
   search-api-index-fields-machine-name:
     id: search-api-index-fields-machine-name
     plugin: text
-    label: 'Machine name'
+    label: 'Машинна назва'
     weight: 4
     selector: '.details-wrapper table thead th:nth-child(2)'
     body: "The internal ID to use for this field. Can safely be ignored by inexperienced users in most cases. Changing a field's machine name requires reindexing of the index."
@@ -50,7 +50,7 @@ tips:
   search-api-index-fields-type:
     id: search-api-index-fields-type
     plugin: text
-    label: Type
+    label: Тип
     weight: 6
     selector: '.details-wrapper table thead th:nth-child(4)'
     body: 'The data type to use when indexing the field. Determines how a field can be used in searches. For information on the available types, see the <a href="#search-api-data-types-table">"Data types" box</a> at the bottom of the page.'

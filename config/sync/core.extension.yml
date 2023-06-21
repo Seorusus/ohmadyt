@@ -13,6 +13,7 @@ module:
   block_class: 0
   block_content: 0
   breakpoint: 0
+  calendar_view: 0
   captcha: 0
   ckeditor5: 0
   comment: 0
@@ -87,6 +88,7 @@ module:
   migrate_tools: 0
   mysql: 0
   node: 0
+  ohmatdyt_calendar_view: 0
   ohmatdyt_customized_views: 0
   ohmatdyt_import: 0
   openid_connect: 0
