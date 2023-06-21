@@ -1511,6 +1511,13 @@ a {
         padding: 5px 12px;
         color: $brandblue;
         text-transform: inherit;
+
+
+        &:hover {
+          color: white;
+          background-color: $brandblue;
+
+        }
       }
     }
 
@@ -1585,6 +1592,7 @@ a {
       th {
         color: $brandblack;
         font-weight: 900;
+        max-height: 50px;
       }
     }
 
@@ -1651,6 +1659,15 @@ a {
           }
         }
 
+      }
+
+      &.not-empty {
+        .calendar-view-day__number {
+          border-radius: 50%;
+          background-color: #eef0f3;
+          color: #3953A4;
+          display: block;
+        }
       }
     }
     .calendar-view-table {
