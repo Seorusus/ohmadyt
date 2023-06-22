@@ -1615,7 +1615,7 @@ a {
         opacity: 1;
         //overflow-y: scroll;
         overflow-x: hidden;
-        max-height: 183px;
+        max-height: 220px;
 
         &::after {
           content: "";
@@ -1657,7 +1657,14 @@ a {
         .calendar-view-day__row {
           padding: 0 5px;
           margin-left: 6px;
-          width: 100%;
+          width: 94%;
+          border: none;
+
+          &:hover {
+            border: 1px solid $brandblue;
+            background-color: $brandgrey;
+            color: $brandblue;
+          }
 
           .event-interval {
             font-size: 14px;
@@ -1669,6 +1676,10 @@ a {
             a {
               font-size: 12px;
               font-weight: normal;
+
+              &:hover {
+                color: $brandblue;
+              }
             }
           }
         }
@@ -1681,13 +1692,13 @@ a {
           background-color: #eef0f3;
           color: #3953A4;
           display: block;
+          margin: 10px;
         }
       }
     }
     .calendar-view-table {
       tr {
-        max-height: 240px;
-        height: 240px;
+        max-height: 300px;
 
         td {
           padding: 0;
@@ -1698,6 +1709,22 @@ a {
         caption {
           display: none;
         }
+      }
+    }
+  }
+
+  .event-interval {
+    span {
+      display: block;
+
+      &:first-child {
+        i {
+          color: $brandred;
+        }
+      }
+
+      i {
+        color: $brandlightblue;
       }
     }
   }

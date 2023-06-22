@@ -76,7 +76,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           date_format: custom
-          custom_date_format: 'H:i'
+          custom_date_format: 'd m о H:i'
           timezone: ''
         field_date_interval_end_value:
           id: field_date_interval_end_value
@@ -90,7 +90,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<div class="event-interval">{{ field_date_interval_value }} - {{ field_date_interval_end_value }}</div>'
+            text: "<div class=\"event-interval\">\r\n\t<span><i class=\"bi bi-align-start\"> </i>{{ field_date_interval_value }}</span>\r\n\t<span><i class=\"bi bi-align-end\"> </i>{{ field_date_interval_end_value }}</span>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -128,7 +128,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           date_format: custom
-          custom_date_format: 'H:i'
+          custom_date_format: 'd m о H:i'
           timezone: ''
         title:
           id: title
