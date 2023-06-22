@@ -34,9 +34,13 @@
                 <ul class="calendar-view-day__rows">
                     {% for row in rows %}
                         {% set row_classes = [default_row_class ? 'views-row'] %}
+                        {% set node_id = row.content['#row']._entity.get('nid').value %}
+                        {% set node_url = path('entity.node.canonical', {'node': node_id}) %}
+                        <a href="{{ node_url }}">
                         <li{{ row.attributes.addClass(row_classes, 'calendar-view-day__row') }}>
-                            {{- row.content -}}
+                                {{- row.content -}}
                         </li>
+                        </a>
                     {% endfor %}
                 </ul>
             </div>

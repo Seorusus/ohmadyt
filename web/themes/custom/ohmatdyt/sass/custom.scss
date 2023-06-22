@@ -1609,13 +1609,14 @@ a {
         display: inline-flex;
         width: 47px;
         cursor: inherit;
+        margin: 2px 10px;
       }
 
       .calendar-view-day-wrapper-single {
         opacity: 1;
         //overflow-y: scroll;
         overflow-x: hidden;
-        max-height: 220px;
+        max-height: 123px;
 
         &::after {
           content: "";
@@ -1659,6 +1660,7 @@ a {
           margin-left: 6px;
           width: 94%;
           border: none;
+          min-height: 122px ;
 
           &:hover {
             border: 1px solid $brandblue;
@@ -1692,13 +1694,12 @@ a {
           background-color: #eef0f3;
           color: #3953A4;
           display: block;
-          margin: 10px;
         }
       }
     }
     .calendar-view-table {
       tr {
-        max-height: 300px;
+        max-height: 190px;
 
         td {
           padding: 0;
@@ -1728,4 +1729,11 @@ a {
       }
     }
   }
+}
+
+/**
+* Subscribe announce form.
+ */
+.webform-submission-subscribe-announce-form {
+  display: flex;
 }

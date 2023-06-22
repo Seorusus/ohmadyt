@@ -1,7 +1,13 @@
 uuid: e5c7ee54-c4e2-4e32-872d-4bf4db3ea3c4
 langcode: uk
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - honeypot
+    - webform_scheduled_email
+third_party_settings:
+  honeypot:
+    honeypot: true
 weight: 0
 open: null
 close: null
@@ -14,8 +20,13 @@ description: '<p>Пiдписка на Анонси Подiй</p>'
 categories: {  }
 elements: |-
   flexbox:
-    '#type': container
+    '#type': fieldset
     '#title': left
+    '#title_display': invisible
+    '#attributes':
+      class:
+        - col-12
+        - col-sm-6
     '#access_create_roles':
       - authenticated
       - anonymous
@@ -177,8 +188,13 @@ elements: |-
           - btn
           - btn-danger
   flexbox_right:
-    '#type': container
+    '#type': fieldset
     '#title': right
+    '#title_display': invisible
+    '#attributes':
+      class:
+        - col-12
+        - col-sm-6
     '#access_create_roles':
       - authenticated
       - anonymous
@@ -209,11 +225,11 @@ settings:
   ajax_progress_type: ''
   ajax_effect: ''
   ajax_speed: null
-  page: true
+  page: false
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_open_message: ''
   form_close_message: ''
@@ -246,14 +262,14 @@ settings:
   form_method: ''
   form_action: ''
   share: false
-  share_node: false
+  share_node: true
   share_theme_name: ''
   share_title: true
   share_page_body_attributes: {  }
   submission_label: ''
   submission_exception_message: ''
   submission_locked_message: ''
-  submission_log: false
+  submission_log: true
   submission_excluded_elements: {  }
   submission_exclude_empty: false
   submission_exclude_empty_checkbox: false
@@ -340,8 +356,9 @@ settings:
 access:
   create:
     roles:
-      - anonymous
-      - authenticated
+      - administrator
+      - manager
+      - employee
     users: {  }
     permissions: {  }
   view_any:
@@ -384,5 +401,84 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  email_notification:
+    id: email
+    handler_id: email_notification
+    label: Пiдтвердження
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: _default
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: '[webform_submission:values:email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:pib_povne_:raw]'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: _default
+      body: '<p>Дата: [webform_submission:created]</p><p>Користувач: [webform_submission:user]</p><p>Пiдтвердив:</p><p>[webform_submission:values]</p>'
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  nagaduvannya:
+    id: scheduled_email
+    handler_id: nagaduvannya
+    label: Нагадування
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      send: '[webform_submission:node:field_date_interval:value]'
+      days: -1
+      ignore_past: false
+      unschedule: false
+      test_send: false
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: '[webform_submission:node:title]: Нагадування про подiю.'
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
 variants: {  }
