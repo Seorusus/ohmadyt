@@ -1599,6 +1599,7 @@ a {
     .calendar-view-day {
       padding: 0;
       opacity: 1;
+      min-width: 158px;
 
       .calendar-view-day__number {
         background: none;
@@ -1614,7 +1615,7 @@ a {
         opacity: 1;
         //overflow-y: scroll;
         overflow-x: hidden;
-        max-height: 149px;
+        max-height: 183px;
 
         &::after {
           content: "";
@@ -1642,8 +1643,21 @@ a {
           }
         }
 
+        .calendar-view-day__rows {
+          .views-field-field-date-interval-end-value {
+            opacity: 1;
+            pointer-events: auto;
+          }
+
+          .views-field-title {
+            opacity: 1;
+          }
+        }
+
         .calendar-view-day__row {
           padding: 0 5px;
+          margin-left: 6px;
+          width: 100%;
 
           .event-interval {
             font-size: 14px;
@@ -1672,8 +1686,8 @@ a {
     }
     .calendar-view-table {
       tr {
-        max-height: 200px;
-        height: 200px;
+        max-height: 240px;
+        height: 240px;
 
         td {
           padding: 0;
