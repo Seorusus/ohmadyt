@@ -19,14 +19,11 @@ title: 'Subscribe announce'
 description: '<p>Пiдписка на Анонси Подiй</p>'
 categories: {  }
 elements: |-
-  flexbox:
-    '#type': fieldset
-    '#title': left
-    '#title_display': invisible
-    '#attributes':
+  title:
+    '#type': webform_markup
+    '#wrapper_attributes':
       class:
         - col-12
-        - col-sm-6
     '#access_create_roles':
       - authenticated
       - anonymous
@@ -36,176 +33,20 @@ elements: |-
     '#access_view_roles':
       - authenticated
       - anonymous
-    pib_povne_:
-      '#type': textfield
-      '#title': 'ПIБ (повне)'
-      '#placeholder': 'моя вiдповiдь'
-      '#required': true
-      '#default_value': '[current-user:field_employee_first_name] [current-user:field_employee_middle_name] [current-user:field_employee_last_name]'
-      '#access_create_roles':
-        - authenticated
-        - anonymous
-      '#access_update_roles':
-        - authenticated
-        - anonymous
-      '#access_view_roles':
-        - authenticated
-        - anonymous
-    email:
-      '#type': email
-      '#title': 'Електрона пошта'
-      '#autocomplete': ''
-      '#required': true
-      '#required_error': 'Обов`язкове поле'
-      '#default_value': '[current-user:mail]'
-      '#access_create_roles':
-        - authenticated
-        - anonymous
-      '#access_update_roles':
-        - authenticated
-        - anonymous
-      '#access_view_roles':
-        - authenticated
-        - anonymous
-    explane_text:
-      '#type': processed_text
-      '#access_create_roles':
-        - authenticated
-        - anonymous
-      '#access_update_roles':
-        - authenticated
-        - anonymous
-      '#access_view_roles':
-        - authenticated
-        - anonymous
-      '#text': '<div><span style="white-space:pre-wrap;">Поля, позначені * - є обов''язковими до заповнення</span></div>'
-      '#format': full_html
-    working_place:
-      '#type': textfield
-      '#title': 'Мiсце роботи'
-      '#placeholder': 'моя вiдповiдь'
-      '#required': true
-      '#required_error': 'Обов`язкове поле'
-      '#default_value': '[current-user:field_position]'
-      '#access_create_roles':
-        - authenticated
-        - anonymous
-      '#access_update_roles':
-        - authenticated
-        - anonymous
-      '#access_view_roles':
-        - authenticated
-        - anonymous
-    job_title:
-      '#type': textfield
-      '#title': Посада
-      '#placeholder': 'моя вiдповiдь'
-      '#required': true
-      '#default_value': '[current-user:field_current_specialisation]'
-      '#access_create_roles':
-        - authenticated
-        - anonymous
-      '#access_update_roles':
-        - authenticated
-        - anonymous
-      '#access_view_roles':
-        - authenticated
-        - anonymous
-    diploma_number:
-      '#type': textfield
-      '#title': 'Номер диплома'
-      '#placeholder': 'моя вiдповiдь'
-      '#autocomplete': ''
-      '#required': true
-      '#access_create_roles':
-        - authenticated
-        - anonymous
-      '#access_update_roles':
-        - authenticated
-        - anonymous
-      '#access_view_roles':
-        - authenticated
-        - anonymous
-    contact_phone:
-      '#type': tel
-      '#title': 'Контактний телефон'
-      '#placeholder': 'моя вiдповiдь'
-      '#default_value': '[current-user:field_employee_phone_working]'
-      '#access_create_roles':
-        - authenticated
-        - anonymous
-      '#access_update_roles':
-        - authenticated
-        - anonymous
-      '#access_view_roles':
-        - authenticated
-        - anonymous
-    participation_form:
-      '#type': select
-      '#title': 'Форма участi'
-      '#options':
-        online: онлайн
-        offline: офлайн
-      '#access_create_roles':
-        - authenticated
-        - anonymous
-      '#access_update_roles':
-        - authenticated
-        - anonymous
-      '#access_view_roles':
-        - authenticated
-        - anonymous
-      '#required': true
-    terms_of_service:
-      '#type': webform_terms_of_service
-      '#title': 'Я даю згоду на обробку моїх персональних даних'
-      '#required': true
-      '#access_create_roles':
-        - authenticated
-        - anonymous
-      '#access_update_roles':
-        - authenticated
-        - anonymous
-      '#access_view_roles':
-        - authenticated
-        - anonymous
-      '#terms_content': '<div>Я даю згоду на обробку моїх персональних даних</div>'
-    actions:
-      '#type': webform_actions
-      '#title': 'Submit button(s)'
-      '#access_create_roles':
-        - authenticated
-        - anonymous
-      '#access_update_roles':
-        - authenticated
-        - anonymous
-      '#access_view_roles':
-        - authenticated
-        - anonymous
-      '#submit__label': Надіслати
-      '#submit__attributes':
+    '#markup': '<h2><span style="white-space:pre-wrap;">Зареєструватись на подію</span></h2>'
+  form_container:
+    '#type': container
+    '#attributes':
+      class:
+        - form-container
+    flexbox:
+      '#type': container
+      '#title': left
+      '#title_display': invisible
+      '#attributes':
         class:
-          - btn
-          - btn-danger
-  flexbox_right:
-    '#type': fieldset
-    '#title': right
-    '#title_display': invisible
-    '#attributes':
-      class:
-        - col-12
-        - col-sm-6
-    '#access_create_roles':
-      - authenticated
-      - anonymous
-    '#access_update_roles':
-      - authenticated
-      - anonymous
-    '#access_view_roles':
-      - authenticated
-      - anonymous
-    processed_text:
-      '#type': processed_text
+          - col-12
+          - col-sm-6
       '#access_create_roles':
         - authenticated
         - anonymous
@@ -215,8 +56,193 @@ elements: |-
       '#access_view_roles':
         - authenticated
         - anonymous
-      '#text': '<h2><span style="white-space:pre-wrap;">Як це працює?</span></h2><p><span style="white-space:pre-wrap;">Щиро вдячні Вам за бажання приєднатися до події.</span><br><br><span style="white-space:pre-wrap;"><strong>Для реєстрації Вам необхідно:</strong></span><br><br><span style="white-space:pre-wrap;">Обрати із запропонованого переліку подію, яка Вас зацікавила, шляхом введення ключових слів у її назві;</span><br><span style="white-space:pre-wrap;">Заповнити всі обов''язкові поля форми, які позначені *;</span><br><span style="white-space:pre-wrap;">Вибрати форму участі у події - одне із запропонованих значень;</span><br><span style="white-space:pre-wrap;">Надати згоду на обробку і використання персональних даних згідно з законодавством України;</span><br><span style="white-space:pre-wrap;">Натиснути кнопку "Надіслати" для закінчення реєстрації.</span></p><p>&nbsp;</p>'
-      '#format': full_html
+      explane_text:
+        '#type': processed_text
+        '#wrapper_attributes':
+          class:
+            - explane-text
+            - glyphicon
+            - glyphicon-asterisk
+        '#access_create_roles':
+          - authenticated
+          - anonymous
+        '#access_update_roles':
+          - authenticated
+          - anonymous
+        '#access_view_roles':
+          - authenticated
+          - anonymous
+        '#text': '<div><span style="white-space:pre-wrap;">Поля, позначені * - є обов''язковими до заповнення</span></div>'
+        '#format': full_html
+      pib_povne_:
+        '#type': textfield
+        '#title': 'ПIБ (повне)'
+        '#placeholder': 'моя вiдповiдь'
+        '#required': true
+        '#default_value': '[current-user:field_employee_first_name] [current-user:field_employee_middle_name] [current-user:field_employee_last_name]'
+        '#access_create_roles':
+          - authenticated
+          - anonymous
+        '#access_update_roles':
+          - authenticated
+          - anonymous
+        '#access_view_roles':
+          - authenticated
+          - anonymous
+      email:
+        '#type': email
+        '#title': 'Електрона пошта'
+        '#autocomplete': ''
+        '#required': true
+        '#required_error': 'Обов`язкове поле'
+        '#default_value': '[current-user:mail]'
+        '#access_create_roles':
+          - authenticated
+          - anonymous
+        '#access_update_roles':
+          - authenticated
+          - anonymous
+        '#access_view_roles':
+          - authenticated
+          - anonymous
+      working_place:
+        '#type': textfield
+        '#title': 'Мiсце роботи'
+        '#placeholder': 'моя вiдповiдь'
+        '#required': true
+        '#required_error': 'Обов`язкове поле'
+        '#default_value': '[current-user:field_position]'
+        '#access_create_roles':
+          - authenticated
+          - anonymous
+        '#access_update_roles':
+          - authenticated
+          - anonymous
+        '#access_view_roles':
+          - authenticated
+          - anonymous
+      job_title:
+        '#type': textfield
+        '#title': Посада
+        '#placeholder': 'моя вiдповiдь'
+        '#required': true
+        '#default_value': '[current-user:field_current_specialisation]'
+        '#access_create_roles':
+          - authenticated
+          - anonymous
+        '#access_update_roles':
+          - authenticated
+          - anonymous
+        '#access_view_roles':
+          - authenticated
+          - anonymous
+      diploma_number:
+        '#type': textfield
+        '#title': 'Номер диплома'
+        '#placeholder': 'моя вiдповiдь'
+        '#autocomplete': ''
+        '#required': true
+        '#access_create_roles':
+          - authenticated
+          - anonymous
+        '#access_update_roles':
+          - authenticated
+          - anonymous
+        '#access_view_roles':
+          - authenticated
+          - anonymous
+      contact_phone:
+        '#type': tel
+        '#title': 'Контактний телефон'
+        '#placeholder': 'моя вiдповiдь'
+        '#default_value': '[current-user:field_employee_phone_working]'
+        '#access_create_roles':
+          - authenticated
+          - anonymous
+        '#access_update_roles':
+          - authenticated
+          - anonymous
+        '#access_view_roles':
+          - authenticated
+          - anonymous
+      participation_form:
+        '#type': select
+        '#title': 'Форма участi'
+        '#options':
+          online: онлайн
+          offline: офлайн
+        '#access_create_roles':
+          - authenticated
+          - anonymous
+        '#access_update_roles':
+          - authenticated
+          - anonymous
+        '#access_view_roles':
+          - authenticated
+          - anonymous
+        '#required': true
+      terms_of_service:
+        '#type': webform_terms_of_service
+        '#title': 'Я даю згоду на обробку моїх персональних даних'
+        '#required': true
+        '#access_create_roles':
+          - authenticated
+          - anonymous
+        '#access_update_roles':
+          - authenticated
+          - anonymous
+        '#access_view_roles':
+          - authenticated
+          - anonymous
+        '#terms_content': '<div>Я даю згоду на обробку моїх персональних даних</div>'
+      actions:
+        '#type': webform_actions
+        '#title': 'Submit button(s)'
+        '#access_create_roles':
+          - authenticated
+          - anonymous
+        '#access_update_roles':
+          - authenticated
+          - anonymous
+        '#access_view_roles':
+          - authenticated
+          - anonymous
+        '#submit__label': Надіслати
+        '#submit__attributes':
+          class:
+            - btn
+            - btn-danger
+    flexbox_right:
+      '#type': fieldset
+      '#title': right
+      '#title_display': invisible
+      '#attributes':
+        class:
+          - col-12
+          - col-sm-6
+          - flexbox-right
+      '#access_create_roles':
+        - authenticated
+        - anonymous
+      '#access_update_roles':
+        - authenticated
+        - anonymous
+      '#access_view_roles':
+        - authenticated
+        - anonymous
+      processed_text:
+        '#type': processed_text
+        '#access_create_roles':
+          - authenticated
+          - anonymous
+        '#access_update_roles':
+          - authenticated
+          - anonymous
+        '#access_view_roles':
+          - authenticated
+          - anonymous
+        '#text': '<h2><span style="white-space:pre-wrap;">Як це працює?</span></h2><p><span style="white-space:pre-wrap;">Щиро вдячні Вам за бажання приєднатися до події.</span><br><br><span style="white-space:pre-wrap;"><strong>Для реєстрації Вам необхідно:</strong></span><br><br><span style="white-space:pre-wrap;">Обрати із запропонованого переліку подію, яка Вас зацікавила, шляхом введення ключових слів у її назві;</span><br><span style="white-space:pre-wrap;">Заповнити всі обов''язкові поля форми, які позначені *;</span><br><span style="white-space:pre-wrap;">Вибрати форму участі у події - одне із запропонованих значень;</span><br><span style="white-space:pre-wrap;">Надати згоду на обробку і використання персональних даних згідно з законодавством України;</span><br><span style="white-space:pre-wrap;">Натиснути кнопку "Надіслати" для закінчення реєстрації.</span></p><p>&nbsp;</p>'
+        '#format': full_html
 css: ''
 javascript: ''
 settings:
