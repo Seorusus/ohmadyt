@@ -48,7 +48,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_date_interval:
-    type: smartdate_default
+    type: smartdate_inline
     weight: 3
     region: content
     settings:
@@ -61,8 +61,9 @@ content:
         120|2 hours
         custom
       show_extra: false
-      hide_date: true
-      allday: true
+      hide_date: false
+      allday: false
+      separator: до
     third_party_settings: {  }
   field_photos:
     type: media_library_widget

@@ -2455,6 +2455,7 @@ a {
 .view-events .view-calendar .calendar-view-day {
   padding: 0;
   opacity: 1;
+  min-width: 158px;
 }
 
 .view-events .view-calendar .calendar-view-day .calendar-view-day__number {
@@ -2472,7 +2473,7 @@ a {
 .view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single {
   opacity: 1;
   overflow-x: hidden;
-  max-height: 149px;
+  max-height: 183px;
 }
 
 .view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single::after {
@@ -2508,8 +2509,19 @@ a {
   /* Цвет фона скролл-бара для WebKit */
 }
 
+.view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single .calendar-view-day__rows .views-field-field-date-interval-end-value {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single .calendar-view-day__rows .views-field-title {
+  opacity: 1;
+}
+
 .view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single .calendar-view-day__row {
   padding: 0 5px;
+  margin-left: 6px;
+  width: 100%;
 }
 
 .view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single .calendar-view-day__row .event-interval {
@@ -2531,8 +2543,8 @@ a {
 }
 
 .view-events .view-calendar .calendar-view-table tr {
-  max-height: 200px;
-  height: 200px;
+  max-height: 240px;
+  height: 240px;
 }
 
 .view-events .view-calendar .calendar-view-table tr td {

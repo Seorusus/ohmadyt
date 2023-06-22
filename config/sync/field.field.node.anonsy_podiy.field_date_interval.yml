@@ -18,7 +18,7 @@ translatable: true
 default_value:
   -
     default_duration: 60
-    default_duration_increments: "30\r\n60|1 hour\r\n90\r\n120|2 hours\r\ncustom"
+    default_duration_increments: "60|1 година\r\n120|2 години\r\n180|3 години\r\n240|4 години\r\n300|5 годин\r\n360|6 годин\r\n420|7 годин\r\n480|8 годин\r\ncustom|Ввести iнший термiн"
     default_date_type: now
     default_date: ''
     min: ''
