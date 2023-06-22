@@ -2579,6 +2579,15 @@ a {
   color: #4969CC;
 }
 
+/**
+* Subscribe announce form.
+ */
+.webform-submission-subscribe-announce-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;

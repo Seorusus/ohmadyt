@@ -82,9 +82,12 @@ content:
     type: webform_entity_reference_link
     label: hidden
     settings:
-      label: 'Go to [webform:title] webform'
-      dialog: ''
-      attributes: {  }
+      label: Зареєструватись
+      dialog: wide
+      attributes:
+        class:
+          - btn
+          - btn-danger
     third_party_settings: {  }
     weight: 7
     region: content
