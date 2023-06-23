@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a533e94a65e8bfeeb189eb81b617cee",
+    "content-hash": "2e8f09ba295db5048418f49a95863833",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2117,6 +2117,62 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/bootstrap5",
                 "issues": "https://www.drupal.org/project/issues/bootstrap5"
+            }
+        },
+        {
+            "name": "drupal/calendar_link",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/calendar_link.git",
+                "reference": "3.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/calendar_link-3.0.2.zip",
+                "reference": "3.0.2",
+                "shasum": "abf3da022aa90eb19ba987f4b455851a7e87c6e7"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10",
+                "ext-dom": "*",
+                "php": ">=8.0",
+                "spatie/calendar-links": "^1.7.0"
+            },
+            "require-dev": {
+                "drupal/coder": "^8.3",
+                "phpcompatibility/php-compatibility": "^9.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.2",
+                    "datestamp": "1661281025",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Chrsitopher C. Wells (wells)",
+                    "homepage": "https://www.drupal.org/user/2452278",
+                    "email": "drupal.org@chris-wells.net"
+                }
+            ],
+            "description": "Provides Twig functions for generating calendar links.",
+            "homepage": "https://www.drupal.org/project/calendar_link",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/calendar_link",
+                "issues": "https://www.drupal.org/project/issues/calendar_link"
             }
         },
         {
@@ -9747,6 +9803,65 @@
                 "source": "https://github.com/simshaun/recurr/tree/v5.0.1"
             },
             "time": "2022-09-09T05:37:22+00:00"
+        },
+        {
+            "name": "spatie/calendar-links",
+            "version": "1.8.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/calendar-links.git",
+                "reference": "d6f6c5e7ff916e2a55e2160d4db4f15875cb6e07"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/calendar-links/zipball/d6f6c5e7ff916e2a55e2160d4db4f15875cb6e07",
+                "reference": "d6f6c5e7ff916e2a55e2160d4db4f15875cb6e07",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.14",
+                "phpunit/phpunit": "^9.6 || ^10.0",
+                "spatie/phpunit-snapshot-assertions": "^4.2 || ^5.0",
+                "vimeo/psalm": "^5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\CalendarLinks\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Generate add to calendar links for Google, iCal and other calendar systems",
+            "homepage": "https://github.com/spatie/calendar-links",
+            "keywords": [
+                "calendar-links",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/calendar-links/issues",
+                "source": "https://github.com/spatie/calendar-links/tree/1.8.5"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                }
+            ],
+            "time": "2023-03-02T16:05:13+00:00"
         },
         {
             "name": "steverhoades/oauth2-openid-connect-server",
