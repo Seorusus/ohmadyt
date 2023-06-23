@@ -15,7 +15,14 @@ label: Адреса
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    lat: '50.402312012852654'
+    lng: '30.53234964609146'
+    lat_sin: '0.77053896363213'
+    lat_cos: '0.63739289729704'
+    lng_rad: '0.53289002969442'
+    value: '50.402312012852654, 30.53234964609146'
 default_value_callback: ''
 settings: {  }
 field_type: geolocation
