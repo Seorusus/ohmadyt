@@ -5,16 +5,19 @@ dependencies:
   config:
     - field.field.node.anonsy_podiy.body
     - field.field.node.anonsy_podiy.domain_access
-    - field.field.node.anonsy_podiy.field_address
+    - field.field.node.anonsy_podiy.field_address_additional
+    - field.field.node.anonsy_podiy.field_address_geolocation
     - field.field.node.anonsy_podiy.field_date_interval
     - field.field.node.anonsy_podiy.field_domain_access
     - field.field.node.anonsy_podiy.field_domain_all_affiliates
     - field.field.node.anonsy_podiy.field_photos
     - field.field.node.anonsy_podiy.field_tags
     - field.field.node.anonsy_podiy.field_webform
+    - filter.format.full_html
     - node.type.anonsy_podiy
   module:
-    - address
+    - date_augmenter
+    - geolocation
     - smart_date
     - text
     - user
@@ -31,12 +34,23 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-  field_address:
-    type: address_default
+  field_address_additional:
+    type: string
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    weight: 5
+    weight: 8
+    region: content
+  field_address_geolocation:
+    type: geolocation_token
+    label: above
+    settings:
+      tokenized_text:
+        value: "<div><a href=\"https://www.google.com/maps?ll=[geolocation_current_item:lat],[geolocation_current_item:lng]&amp;z=20&amp;t=m&amp;hl=en-US&amp;gl=US\" target=\"_blank\"><button class=\"btn btn-outline-success\" type=\"button\">\r\n        Мiсце проведення\r\n    </button></a></div>"
+        format: full_html
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_date_interval:
     type: smartdate_default
@@ -44,7 +58,7 @@ content:
     settings:
       timezone_override: ''
       format_type: medium
-      format: default
+      format: compact
       force_chronological: false
       add_classes: false
       time_wrapper: true
@@ -58,7 +72,25 @@ content:
         unit: h
         decimals: 2
         suffix: h
-    third_party_settings: {  }
+    third_party_settings:
+      date_augmenter:
+        status:
+          addtocal: '1'
+        weights:
+          order:
+            addtocal:
+              weight: '0'
+        settings:
+          addtocal:
+            label: 'Add to Calendar'
+            event_title: '[current-page:title]'
+            location: '[node:field_address_geolocation]'
+            description: "Додатково:  [node:field_address_additional]\r\nПояснення:\r\n[node:body]\r\n"
+            max_desc: '60'
+            past_events: '1'
+            target: ''
+        augmenter_settings:
+          fields__field_date_interval__settings_edit_form__third_party_settings__date_augmenter__augmenter_settings__active_tab: ''
     weight: 2
     region: content
   field_photos:

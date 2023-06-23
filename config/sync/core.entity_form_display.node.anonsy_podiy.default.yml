@@ -5,7 +5,8 @@ dependencies:
   config:
     - field.field.node.anonsy_podiy.body
     - field.field.node.anonsy_podiy.domain_access
-    - field.field.node.anonsy_podiy.field_address
+    - field.field.node.anonsy_podiy.field_address_additional
+    - field.field.node.anonsy_podiy.field_address_geolocation
     - field.field.node.anonsy_podiy.field_date_interval
     - field.field.node.anonsy_podiy.field_domain_access
     - field.field.node.anonsy_podiy.field_domain_all_affiliates
@@ -14,7 +15,7 @@ dependencies:
     - field.field.node.anonsy_podiy.field_webform
     - node.type.anonsy_podiy
   module:
-    - address
+    - geolocation_google_maps
     - media_library
     - path
     - smart_date
@@ -37,19 +38,56 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 9
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_address:
-    type: address_default
-    weight: 2
+  field_address_additional:
+    type: string_textfield
+    weight: 4
     region: content
-    settings: {  }
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_address_geolocation:
+    type: geolocation_googlegeocoder
+    weight: 3
+    region: content
+    settings:
+      auto_client_location: ''
+      auto_client_location_marker: ''
+      allow_override_map_settings: 0
+      hide_textfield_form: false
+      centre:
+        fit_bounds:
+          enable: true
+      google_map_settings:
+        map_features:
+          marker_infowindow:
+            enabled: true
+          control_locate:
+            enabled: true
+          control_zoom:
+            enabled: true
+          control_maptype:
+            enabled: true
+          control_geocoder:
+            weight: -100
+            enabled: true
+          control_recenter:
+            enabled: true
+        type: ROADMAP
+        zoom: 10
+        minZoom: 0
+        maxZoom: 20
+        height: 400px
+        width: 100%
+        gestureHandling: auto
     third_party_settings: {  }
   field_date_interval:
     type: smartdate_inline
-    weight: 3
+    weight: 5
     region: content
     settings:
       modal: false
@@ -67,14 +105,14 @@ content:
     third_party_settings: {  }
   field_photos:
     type: media_library_widget
-    weight: 4
+    weight: 6
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS
@@ -84,7 +122,7 @@ content:
     third_party_settings: {  }
   field_webform:
     type: webform_entity_reference_select
-    weight: 6
+    weight: 8
     region: content
     settings:
       default_data: true
@@ -92,34 +130,34 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 7
+    weight: 9
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 12
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 10
+    weight: 12
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 13
+    weight: 15
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 11
+    weight: 13
     region: content
     settings:
       display_label: true
@@ -134,7 +172,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 10
     region: content
     settings:
       match_operator: CONTAINS

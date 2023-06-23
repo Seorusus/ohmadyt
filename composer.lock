@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e8f09ba295db5048418f49a95863833",
+    "content-hash": "d339d14b61186aaab9e7126e46ade3a2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1667,6 +1667,66 @@
             "time": "2023-05-17T18:32:04+00:00"
         },
         {
+            "name": "drupal/add_to_calendar",
+            "version": "1.0.0-beta5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/add_to_calendar.git",
+                "reference": "1.0.0-beta5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/add_to_calendar-1.0.0-beta5.zip",
+                "reference": "1.0.0-beta5",
+                "shasum": "30fccc0852a421df10cf08bf7a464bef30829a8a"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10",
+                "spatie/calendar-links": "^1"
+            },
+            "suggest": {
+                "drupal/fontawesome": "^2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-beta5",
+                    "datestamp": "1674584877",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10 || ^11"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Pedro Cambra",
+                    "homepage": "https://drupal.org/u/pcambra",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Manuel Egío",
+                    "homepage": "https://www.drupal.org/u/facine",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provides a computed field for displaying add to calendar links.",
+            "homepage": "http://drupal.org/project/add_to_calendar",
+            "support": {
+                "source": "http://cgit.drupalcode.org/add_to_calendar",
+                "issues": "http://drupal.org/project/issues/add_to_calendar"
+            }
+        },
+        {
             "name": "drupal/address",
             "version": "1.12.0",
             "source": {
@@ -1737,6 +1797,55 @@
             "homepage": "http://drupal.org/project/address",
             "support": {
                 "source": "https://git.drupalcode.org/project/address"
+            }
+        },
+        {
+            "name": "drupal/addtocal_augment",
+            "version": "1.1.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/addtocal_augment.git",
+                "reference": "1.1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/addtocal_augment-1.1.0-beta1.zip",
+                "reference": "1.1.0-beta1",
+                "shasum": "cf1046cc7a83bd7ec7a59bbbbd27c78b51373ab3"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/date_augmenter": "^1.0@alpha"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.1.0-beta1",
+                    "datestamp": "1682761821",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                }
+            ],
+            "description": "Provides a plugin to inject add to calendar links into date displays.",
+            "homepage": "https://www.drupal.org/project/addtocal_augment",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/addtocal_augment",
+                "issues": "https://www.drupal.org/project/issues/addtocal_augment"
             }
         },
         {
@@ -2121,22 +2230,21 @@
         },
         {
             "name": "drupal/calendar_link",
-            "version": "3.0.2",
+            "version": "2.1.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/calendar_link.git",
-                "reference": "3.0.2"
+                "reference": "2.1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/calendar_link-3.0.2.zip",
-                "reference": "3.0.2",
-                "shasum": "abf3da022aa90eb19ba987f4b455851a7e87c6e7"
+                "url": "https://ftp.drupal.org/files/projects/calendar_link-2.1.4.zip",
+                "reference": "2.1.4",
+                "shasum": "ed423feec0e4089555f572104ab20e0a34cffe74"
             },
             "require": {
-                "drupal/core": "^9 || ^10",
+                "drupal/core": "^8.8.0 || ^9.0 || ^10",
                 "ext-dom": "*",
-                "php": ">=8.0",
                 "spatie/calendar-links": "^1.7.0"
             },
             "require-dev": {
@@ -2146,8 +2254,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.2",
-                    "datestamp": "1661281025",
+                    "version": "2.1.4",
+                    "datestamp": "1661280850",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2894,6 +3002,50 @@
             "homepage": "https://www.drupal.org/project/custom_login_url",
             "support": {
                 "source": "https://git.drupalcode.org/project/custom_login_url"
+            }
+        },
+        {
+            "name": "drupal/date_augmenter",
+            "version": "1.1.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/date_augmenter.git",
+                "reference": "1.1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/date_augmenter-1.1.0-beta1.zip",
+                "reference": "1.1.0-beta1",
+                "shasum": "f5c798a593bc2133f48d8bb3260c4078c033d559"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.1.0-beta1",
+                    "datestamp": "1658825721",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                }
+            ],
+            "description": "Provides a plugin class for augmenting the display of dates and times.",
+            "homepage": "https://www.drupal.org/project/date_augmenter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/date_augmenter"
             }
         },
         {
@@ -16997,7 +17149,9 @@
         "drupal/link_description": 10,
         "drupal/page_manager": 5,
         "drupal/calendar_view": 20,
-        "drupal/webform": 10
+        "drupal/webform": 10,
+        "drupal/add_to_calendar": 10,
+        "drupal/addtocal_augment": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,
