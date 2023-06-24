@@ -98,8 +98,44 @@
     </footer>
   {% endif %}
 
-  <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
-    {{ content.field_add_to_calendar }}
+  <div{{ content_attributes.addClass('node__content row') }}>
+      <div class="photo-announce">
+          {{ content.field_photo_announce }}
+      </div>
+
+      {% if node.field_date_interval is not empty %}
+          <div class="date-interval">
+              <div class="start-date">
+                  <span><i class="bi bi-check2-circle"></i></span>
+                  <span>{{ 'Початок:'|t }}</span>
+                  <span>{{ node.field_date_interval.value|date('d-m-o H:i') }}</span>
+              </div>
+              <div class="end-date">
+                  <span>{{ 'Закінчення:'|t }}</span>
+                  <span>{{ node.field_date_interval.end_value|date('d-m-o H:i') }}</span>
+              </div>
+          </div>
+      {% endif %}
+
+      <div class="address-geo">
+          <a href="https://www.google.com/maps/place/{{ node.field_adress_geo.address_line1 }}, {{ node.field_adress_geo.locality }}" target="_blank">
+              <span><i class="bi bi-geo-alt"></i></span><span><button class="btn btn-outline-secondary" type="button">
+            <div>{{ node.field_adress_geo.locality }}, {{ node.field_adress_geo.address_line1 }}. {{ content.field_address_additional }}</div>
+        </button></span>
+          </a>
+      </div>
+      <div class="details">
+          <h2><span>{{ 'Детально'|t }}</span></h2>
+          {{ content|without('field_adress_geo', 'field_address_additional', 'field_photo_announce', 'field_date_interval', 'field_webform', 'field_tags') }}
+      </div>
+          <div class="_bottom row">
+          <div class="col-12 col-sm-6">
+              {{ content.field_date_interval }}
+          </div>
+          <div class="col-12 col-sm-6">
+              {{ content.field_webform }}
+          </div>
+      </div>
+      <div class="tags">{{ content.field_tags }}</div>
   </div>
 </article>

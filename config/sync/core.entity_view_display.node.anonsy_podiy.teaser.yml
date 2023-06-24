@@ -8,11 +8,13 @@ dependencies:
     - field.field.node.anonsy_podiy.domain_access
     - field.field.node.anonsy_podiy.field_address_additional
     - field.field.node.anonsy_podiy.field_address_geolocation
+    - field.field.node.anonsy_podiy.field_adress_geo
     - field.field.node.anonsy_podiy.field_date_interval
     - field.field.node.anonsy_podiy.field_domain_access
     - field.field.node.anonsy_podiy.field_domain_all_affiliates
-    - field.field.node.anonsy_podiy.field_photos
+    - field.field.node.anonsy_podiy.field_photo_announce
     - field.field.node.anonsy_podiy.field_tags
+    - field.field.node.anonsy_podiy.field_top_announce
     - field.field.node.anonsy_podiy.field_webform
     - node.type.anonsy_podiy
   module:
@@ -40,11 +42,13 @@ hidden:
   domain_access: true
   field_address_additional: true
   field_address_geolocation: true
+  field_adress_geo: true
   field_date_interval: true
   field_domain_access: true
   field_domain_all_affiliates: true
-  field_photos: true
+  field_photo_announce: true
   field_tags: true
+  field_top_announce: true
   field_webform: true
   langcode: true
   search_api_excerpt: true

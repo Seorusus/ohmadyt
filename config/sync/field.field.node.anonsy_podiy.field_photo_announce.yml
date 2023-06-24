@@ -1,16 +1,16 @@
-uuid: d213646e-9d68-49af-8a40-15c92acb978b
-langcode: uk
+uuid: 89c36f74-7834-47c7-87fd-3312e82448fb
+langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_photos
+    - field.storage.node.field_photo_announce
     - media.type.photo
     - node.type.anonsy_podiy
-id: node.anonsy_podiy.field_photos
-field_name: field_photos
+id: node.anonsy_podiy.field_photo_announce
+field_name: field_photo_announce
 entity_type: node
 bundle: anonsy_podiy
-label: Фото
+label: 'Фото Анонса'
 description: ''
 required: false
 translatable: false
@@ -25,5 +25,5 @@ settings:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: image
+    auto_create_bundle: ''
 field_type: entity_reference

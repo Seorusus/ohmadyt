@@ -2675,6 +2675,122 @@ a {
   margin-right: 10px;
 }
 
+/*
+* Page Announce.
+ */
+.node--type-anonsy-podiy.node--view-mode-full .address-geo {
+  width: 75%;
+  margin: 0 auto 30px;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full .address-geo span:nth-child(2) {
+  max-width: 95%;
+  display: inline-block;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full .address-geo button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full .address-geo i {
+  color: #DA393B;
+  margin-right: 10px;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full .date-interval {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  width: 75%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 30px auto;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full .date-interval .start-date span {
+  font-weight: 900;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full .date-interval .start-date span:nth-child(2) {
+  margin-right: 20px;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full .date-interval .start-date i {
+  color: #DA393B;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full .date-interval .end-date span {
+  font-weight: 900;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full .date-interval .end-date span:nth-child(1) {
+  margin-right: 20px;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full ._bottom {
+  margin: 30px auto;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full ._bottom .field--name-field-date-interval {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full ._bottom .field--name-field-date-interval time {
+  display: none;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full ._bottom .field--name-field-webform {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full ._bottom .field--name-field-webform a {
+  display: block;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full .details {
+  background-color: var(--o-gray);
+  padding: 40px 80px;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full .details h2 {
+  font-weight: 700;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full .details h2:after {
+  content: '';
+  display: block;
+  width: 50%;
+  border: 1px solid;
+  border-bottom-color: #DA393B;
+  margin-top: 5px;
+}
+
+.node--type-anonsy-podiy.node--view-mode-full .tags .field--name-field-tags {
+  margin: 30px 0 50px;
+}
+
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
