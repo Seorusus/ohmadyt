@@ -9,7 +9,7 @@ id: node.anonsy_podiy.field_address_additional
 field_name: field_address_additional
 entity_type: node
 bundle: anonsy_podiy
-label: 'Адреса додатково'
+label: 'Адреса Події додатково'
 description: ''
 required: false
 translatable: true

@@ -1,0 +1,15 @@
+uuid: d7f7b23b-2bd9-4c69-927e-53e6b161becb
+langcode: en
+status: true
+dependencies: {  }
+name: announce
+label: 'Announce 1141*314'
+effects:
+  f94fd7e9-6262-483f-8402-567bb686605d:
+    uuid: f94fd7e9-6262-483f-8402-567bb686605d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1141
+      height: 314
+      anchor: center-top

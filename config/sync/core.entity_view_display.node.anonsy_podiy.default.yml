@@ -7,17 +7,18 @@ dependencies:
     - field.field.node.anonsy_podiy.domain_access
     - field.field.node.anonsy_podiy.field_address_additional
     - field.field.node.anonsy_podiy.field_address_geolocation
+    - field.field.node.anonsy_podiy.field_adress_geo
     - field.field.node.anonsy_podiy.field_date_interval
     - field.field.node.anonsy_podiy.field_domain_access
     - field.field.node.anonsy_podiy.field_domain_all_affiliates
-    - field.field.node.anonsy_podiy.field_photos
+    - field.field.node.anonsy_podiy.field_photo_announce
     - field.field.node.anonsy_podiy.field_tags
+    - field.field.node.anonsy_podiy.field_top_announce
     - field.field.node.anonsy_podiy.field_webform
-    - filter.format.full_html
     - node.type.anonsy_podiy
   module:
+    - address
     - date_augmenter
-    - geolocation
     - smart_date
     - text
     - user
@@ -36,21 +37,18 @@ content:
     region: content
   field_address_additional:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 8
+    weight: 6
     region: content
-  field_address_geolocation:
-    type: geolocation_token
-    label: above
-    settings:
-      tokenized_text:
-        value: "<div><a href=\"https://www.google.com/maps?ll=[geolocation_current_item:lat],[geolocation_current_item:lng]&amp;z=20&amp;t=m&amp;hl=en-US&amp;gl=US\" target=\"_blank\"><button class=\"btn btn-outline-success\" type=\"button\">\r\n        Мiсце проведення\r\n    </button></a></div>"
-        format: full_html
+  field_adress_geo:
+    type: address_plain
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
-    weight: 9
+    weight: 7
     region: content
   field_date_interval:
     type: smartdate_default
@@ -58,17 +56,17 @@ content:
     settings:
       timezone_override: ''
       format_type: medium
-      format: compact
+      format: date_only
       force_chronological: false
-      add_classes: false
+      add_classes: true
       time_wrapper: true
       localize: false
       parts:
-        start: start
-        end: end
         duration: duration
+        start: '0'
+        end: '0'
       duration:
-        separator: ' | '
+        separator: ''
         unit: h
         decimals: 2
         suffix: h
@@ -82,29 +80,29 @@ content:
               weight: '0'
         settings:
           addtocal:
-            label: 'Add to Calendar'
+            label: 'Додати в календар'
             event_title: '[current-page:title]'
-            location: '[node:field_address_geolocation]'
-            description: "Додатково:  [node:field_address_additional]\r\nПояснення:\r\n[node:body]\r\n"
-            max_desc: '60'
+            location: '[node:field_adress_geo:address_line1], [node:field_adress_geo:locality]'
+            description: "[node:body]\r\n"
+            max_desc: '330'
             past_events: '1'
             target: ''
         augmenter_settings:
           fields__field_date_interval__settings_edit_form__third_party_settings__date_augmenter__augmenter_settings__active_tab: ''
     weight: 2
     region: content
-  field_photos:
+  field_photo_announce:
     type: entity_reference_entity_view
-    label: above
+    label: hidden
     settings:
-      view_mode: default
+      view_mode: full
       link: false
     third_party_settings: {  }
-    weight: 6
+    weight: 1
     region: content
   field_tags:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -121,7 +119,7 @@ content:
           - btn
           - btn-danger
     third_party_settings: {  }
-    weight: 7
+    weight: 5
     region: content
   links:
     settings: {  }
@@ -130,7 +128,9 @@ content:
     region: content
 hidden:
   domain_access: true
+  field_address_geolocation: true
   field_domain_access: true
   field_domain_all_affiliates: true
+  field_top_announce: true
   langcode: true
   search_api_excerpt: true
