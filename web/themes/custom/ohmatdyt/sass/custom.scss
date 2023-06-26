@@ -1656,8 +1656,9 @@ a {
         }
 
         .calendar-view-day__row {
-          padding: 0 5px;
-          margin-left: 6px;
+          margin-top: 0!important;
+          padding: 3px;
+          margin: 6px;
           width: 94%;
           border: none;
           min-height: 122px ;
@@ -1672,6 +1673,7 @@ a {
             font-size: 14px;
             font-weight: 900;
             color: $brandblack;
+            margin-bottom: 10px;
           }
 
           .views-field-title {
@@ -1684,8 +1686,16 @@ a {
               }
             }
           }
-        }
 
+          ._flag {
+            text-align: center;
+
+            i {
+              color: $brandred;
+              font-size: 20px;
+            }
+          }
+        }
       }
 
       &.not-empty {

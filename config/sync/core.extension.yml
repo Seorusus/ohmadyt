@@ -8,6 +8,8 @@ module:
   admin_toolbar_tools: 0
   auto_entitylabel: 0
   automated_cron: 0
+  bamboo_twig: 0
+  bamboo_twig_loader: 0
   better_exposed_filters: 0
   big_pipe: 0
   block: 0
@@ -146,6 +148,7 @@ module:
   webform_share: 0
   webform_templates: 0
   webform_ui: 0
+  webform_views: 0
   youtube: 0
   pathauto: 1
   content_translation: 10
