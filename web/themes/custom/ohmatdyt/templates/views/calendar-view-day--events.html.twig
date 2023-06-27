@@ -1,3 +1,24 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a cell of a Calendar View table.
+ *
+ * Available variables:
+ * - elements: Original variables passed to this template.
+ * - attributes: HTML attributes for the wrapper.
+ * - timestamp: The datetime value.
+ * - empty: Wether or not this day as content.
+ * - content: Custom content.
+ * - rows: A list of view rows including the following:
+ *   - content: The content as a render array.
+ *   - attributes: The date field name used to get this content.
+ *
+ * @see template_preprocess_calendar_view_day()
+ *
+ * @ingroup themeable
+ */
+#}
+
 {%
     set classes = [
     'calendar-view-day',
@@ -5,7 +26,6 @@
     rows ? 'not-empty',
 ]
 %}
-
 <div{{ attributes.addClass(classes) }}>
     {% set html_date = timestamp|format_date('custom', 'd-m-y', 'Europe/Kiev') %}
     {% set count = not rows ? 0 : rows|length %}
@@ -16,12 +36,23 @@
             {{ count }} події вiдбудеться {{ html_date }}
         {% endtrans %}
     {% endset %}
-
     {# The day #}
     {% block day_number %}
-        <time class="calendar-view-day__number" datetime="{{ timestamp|date('Y-m-d\TH:i:s') }}" title="{{ day_title|trim }}">
-            {{ timestamp|date('j') }}
-        </time>
+        <div class="calendar-view-day_top">
+            <div class="_left">
+            {% set user_email = bamboo_load_currentuser().mail.value %}
+            {% set is_user_submission = webform_value == user_email %}
+            {% if is_user_submission %}
+                <div class="_flag" title="{{ 'Ви зареєстрованi на подію'|t }} {{ webform_title }}">
+                    <span><i class="bi bi-check2-circle"></i></span>
+                </div>
+            {% endif %}
+            </div>
+            <div class="_right"><time class="calendar-view-day__number" datetime="{{ timestamp|date('Y-m-d\TH:i:s') }}" title="{{ day_title|trim }}">
+                {{ timestamp|date('j') }}
+            </time>
+            </div>
+        </div>
     {% endblock %}
 
     {% block day_content %}
@@ -36,10 +67,13 @@
                         {% set row_classes = [default_row_class ? 'views-row'] %}
                         {% set node_id = row.content['#row']._entity.get('nid').value %}
                         {% set node_url = path('entity.node.canonical', {'node': node_id}) %}
+                        {% set user_email = bamboo_load_currentuser().mail.value %}
+                        {% set node_id = row.content['#row']._entity.get('nid').value %}
+                        {% set is_user_submission = webform_value == user_email %}
                         <a href="{{ node_url }}">
-                        <li{{ row.attributes.addClass(row_classes, 'calendar-view-day__row') }}>
+                            <li{{ row.attributes.addClass(row_classes, 'calendar-view-day__row') }}>
                                 {{- row.content -}}
-                        </li>
+                            </li>
                         </a>
                     {% endfor %}
                 </ul>

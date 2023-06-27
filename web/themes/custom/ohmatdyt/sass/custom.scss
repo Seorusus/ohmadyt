@@ -1585,6 +1585,13 @@ a {
   }
 
   .view-calendar {
+    th {
+      border: 1px solid $brandgrey!important;
+    }
+
+    td {
+      border: 1px solid $brandgrey!important;
+    }
 
     thead {
       max-height: 50px;
@@ -1593,6 +1600,7 @@ a {
         color: $brandblack;
         font-weight: 900;
         max-height: 50px;
+        border: 1px solid $brandgrey;
       }
     }
 
@@ -1656,11 +1664,12 @@ a {
         }
 
         .calendar-view-day__row {
-          padding: 0 5px;
-          margin-left: 6px;
+          padding: 3px;
+          margin: 0 6px 12px !important;
           width: 94%;
           border: none;
-          min-height: 122px ;
+          min-height: 90px;
+          height: auto;
 
           &:hover {
             border: 1px solid $brandblue;
@@ -1672,6 +1681,7 @@ a {
             font-size: 14px;
             font-weight: 900;
             color: $brandblack;
+            margin-bottom: 10px;
           }
 
           .views-field-title {
@@ -1685,7 +1695,6 @@ a {
             }
           }
         }
-
       }
 
       &.not-empty {
@@ -1696,7 +1705,31 @@ a {
           display: block;
         }
       }
+
+      ._flag {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          color: $brandred;
+          font-size: 20px;
+        }
+      }
+
+      .calendar-view-day_top {
+        display: flex;
+        justify-content: space-between;
+
+        ._left {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
     }
+
     .calendar-view-table {
       tr {
         max-height: 190px;
