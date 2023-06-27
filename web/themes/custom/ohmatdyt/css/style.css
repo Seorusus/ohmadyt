@@ -2442,6 +2442,14 @@ a {
   display: none;
 }
 
+.view-events .view-calendar th {
+  border: 1px solid var(--o-gray) !important;
+}
+
+.view-events .view-calendar td {
+  border: 1px solid var(--o-gray) !important;
+}
+
 .view-events .view-calendar thead {
   max-height: 50px;
 }
@@ -2450,6 +2458,7 @@ a {
   color: #525760;
   font-weight: 900;
   max-height: 50px;
+  border: 1px solid var(--o-gray);
 }
 
 .view-events .view-calendar .calendar-view-day {
@@ -2520,12 +2529,12 @@ a {
 }
 
 .view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single .calendar-view-day__row {
-  margin-top: 0 !important;
   padding: 3px;
-  margin: 6px;
+  margin: 0 6px 12px !important;
   width: 94%;
   border: none;
-  min-height: 122px;
+  min-height: 90px;
+  height: auto;
 }
 
 .view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single .calendar-view-day__row:hover {
@@ -2550,20 +2559,50 @@ a {
   color: #3953A4;
 }
 
-.view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single .calendar-view-day__row ._flag {
-  text-align: center;
-}
-
-.view-events .view-calendar .calendar-view-day .calendar-view-day-wrapper-single .calendar-view-day__row ._flag i {
-  color: #DA393B;
-  font-size: 20px;
-}
-
 .view-events .view-calendar .calendar-view-day.not-empty .calendar-view-day__number {
   border-radius: 50%;
   background-color: #eef0f3;
   color: #3953A4;
   display: block;
+}
+
+.view-events .view-calendar .calendar-view-day ._flag {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.view-events .view-calendar .calendar-view-day ._flag i {
+  color: #DA393B;
+  font-size: 20px;
+}
+
+.view-events .view-calendar .calendar-view-day .calendar-view-day_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.view-events .view-calendar .calendar-view-day .calendar-view-day_top ._left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .view-events .view-calendar .calendar-view-table tr {

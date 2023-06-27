@@ -6,6 +6,9 @@
  */
 
 use Drupal\Core\Url;
+use Drupal\webform\Entity\WebformSubmission;
+use Drupal\views\ViewExecutable;
+
 
 /**
  * Implements hook_preprocess_HOOK() for block templates.
@@ -110,7 +113,6 @@ function ohmatdyt_preprocess_page(&$variables) {
  * Implements hook_preprocess_user().
  */
 function ohmatdyt_preprocess_user(&$variables) {
-  // Здесь вы можете использовать любое имя для вашего массива.
   $rangeScienceValues = [
     '3000002505326' => 'Доктор філософії',
     '3000002505328' => 'Доктор мистецтва',
@@ -121,12 +123,19 @@ function ohmatdyt_preprocess_user(&$variables) {
     '3000067359391' => 'Кандидат медичних наук',
   ];
 
-  // Получите значение поля field_employee_range_science_int из переменных пользователя.
   $rangeScienceValue = $variables['elements']['#user']->field_employee_range_science_int->value;
 
-  // Проверьте, есть ли значение в массиве и установите его в переменную.
   $rangeScienceLabel = isset($rangeScienceValues[$rangeScienceValue]) ? $rangeScienceValues[$rangeScienceValue] : '';
 
-  // Передайте значение в шаблон.
   $variables['range_science_label'] = $rangeScienceLabel;
+}
+
+/**
+ * Prepares variables for a Calendar day template.
+ */
+function ohmatdyt_preprocess_calendar_view_day(&$variables) {
+  foreach ($variables['rows'] as $row) {
+    $variables['webform_value'] = $row["content"]["#row"]->webform_submission_node_field_data_webform_submission_field_;
+    $variables['webform_title'] = $row["#values"]["title"]->render();
+  }
 }
