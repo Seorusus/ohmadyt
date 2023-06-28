@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.document.body
     - field.field.node.document.domain_access
     - field.field.node.document.field_date_iso
+    - field.field.node.document.field_doc_files
     - field.field.node.document.field_docauthor
     - field.field.node.document.field_doctheme
     - field.field.node.document.field_doctype
@@ -19,9 +20,37 @@ dependencies:
     - node.type.document
   module:
     - datetime
+    - field_group
+    - file
     - link
     - text
     - user
+third_party_settings:
+  field_group:
+    group_document_card:
+      children:
+        - field_number
+        - field_date_iso
+        - field_doctype
+        - field_doctheme
+        - field_docauthor
+        - field_url
+      label: 'Картка документа'
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: html_element
+      format_settings:
+        classes: document-card
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: true
+        label_element: h2
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
 id: node.document.default
 targetEntityType: node
 bundle: document
@@ -32,79 +61,78 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   field_date_iso:
     type: datetime_default
-    label: above
+    label: inline
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: base_ohmatdyt
     third_party_settings: {  }
-    weight: 105
+    weight: 4
+    region: content
+  field_doc_files:
+    type: file_table
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_docauthor:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
-    weight: 103
+    weight: 7
     region: content
   field_doctheme:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
-    weight: 106
+    weight: 6
     region: content
   field_doctype:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
-      link: true
-    third_party_settings: {  }
-    weight: 102
-    region: content
-  field_files:
-    type: entity_reference_entity_view
-    label: above
-    settings:
-      view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 107
+    weight: 5
     region: content
   field_notes:
     type: basic_string
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 110
+    weight: 11
     region: content
   field_number:
     type: number_decimal
-    label: above
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 104
+    weight: 3
     region: content
   field_tags:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    weight: 109
+    weight: 10
     region: content
   field_url:
     type: link
-    label: above
+    label: inline
     settings:
       trim_length: 80
       url_only: false
@@ -112,16 +140,17 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 108
+    weight: 8
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
   domain_access: true
   field_domain_access: true
   field_domain_all_affiliates: true
+  field_files: true
   langcode: true
   search_api_excerpt: true

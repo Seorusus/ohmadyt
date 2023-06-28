@@ -10,7 +10,7 @@ id: node.document.field_doctype
 field_name: field_doctype
 entity_type: node
 bundle: document
-label: 'Тип документу'
+label: Тип
 description: ''
 required: true
 translatable: false

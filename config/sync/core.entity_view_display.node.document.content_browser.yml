@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.document.body
     - field.field.node.document.domain_access
     - field.field.node.document.field_date_iso
+    - field.field.node.document.field_doc_files
     - field.field.node.document.field_docauthor
     - field.field.node.document.field_doctheme
     - field.field.node.document.field_doctype
@@ -42,6 +43,7 @@ content:
 hidden:
   domain_access: true
   field_date_iso: true
+  field_doc_files: true
   field_docauthor: true
   field_doctheme: true
   field_doctype: true

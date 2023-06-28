@@ -312,8 +312,9 @@ a {
 }
 
 .external-systems {
-  width: 23%;
-  margin: 0 10px;
+  //width: 23%;
+  //margin: 0 10px;
+  padding: 15px;
   border-radius: 10px;
   position: relative;
 
@@ -421,7 +422,7 @@ a {
     color: white;
     font-size: 21px;
     font-weight: 900;
-    min-height: 50px;
+    min-height: 70px;
   }
 
   .field--name-field-link-to-content {
@@ -2096,6 +2097,102 @@ a {
         font-weight: 900;
         color: $brandblue;
         margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+/*
+* Page Document.
+ */
+.page-node-type-document {
+  h1 {
+    max-width: 82%;
+  }
+
+  .document-card {
+    padding: 50px;
+    background-color: $brandgrey;
+    margin-bottom: 20px;
+    color: $brandblack;
+    border-radius: 10px;
+
+    h2 {
+      margin: 0 40px 40px;
+      font-weight: 900;
+      font-size: 28px;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 9%;
+        border: 1px solid;
+        border-bottom-color: #DA393B;
+        margin-top: 5px;
+      }
+    }
+
+    .field {
+      margin-bottom: 20px;
+
+      .field__label {
+        margin-right: 20px;
+      }
+
+      a {
+        text-decoration: revert;
+      }
+    }
+  }
+
+  .field--name-field-doc-files {
+    .table > :not(caption) > * > * {
+      border: none;
+    }
+
+    table {
+      border: none;
+
+      thead {
+        border-bottom: 2px solid $brandblue;
+        background: none!important;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: $brandblack;
+
+        tr {
+          background: none!important;
+        }
+
+        th {
+          background: none!important;
+          padding-bottom: 10px;
+
+          &:first-child {
+            min-width: 90%;
+            width: 90%;
+          }
+        }
+      }
+
+      tbody {
+        td {
+          padding-top: 20px!important;
+
+          &:first-child {
+            min-width: 90%;
+            width: 90%;
+          }
+
+          .file {
+            padding-left: 33px;
+            background-size: contain;
+
+            a {
+              color: $brandblack;
+            }
+          }
+        }
       }
     }
   }

@@ -10,7 +10,7 @@ id: node.document.field_docauthor
 field_name: field_docauthor
 entity_type: node
 bundle: document
-label: 'Видавник документа'
+label: Видавник
 description: ''
 required: true
 translatable: false

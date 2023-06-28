@@ -4,7 +4,7 @@ langcode: uk
 maxlength_block_class_field: 255
 field_type: multiple_textfields
 default_case: standard
-block_classes_stored: '{"external-systems":"external-systems","col-12":"col-12","col-lg-3":"col-lg-3","col-lg-8":"col-lg-8","offset-lg-2":"offset-lg-2","document-flow":"document-flow","med-system":"med-system","a-five":"a-five","external-account":"external-account"}'
+block_classes_stored: '{"external-systems":"external-systems","col-12":"col-12","col-lg-3":"col-lg-3","col-lg-8":"col-lg-8","offset-lg-2":"offset-lg-2","document-flow":"document-flow","med-system":"med-system","a-five":"a-five","external-account":"external-account","col":"col"}'
 enable_attributes: true
 enable_auto_complete: true
 qty_classes_per_block: 10

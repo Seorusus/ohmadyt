@@ -10,7 +10,7 @@ id: node.document.field_doctheme
 field_name: field_doctheme
 entity_type: node
 bundle: document
-label: 'Тема документа'
+label: Тема
 description: ''
 required: true
 translatable: false

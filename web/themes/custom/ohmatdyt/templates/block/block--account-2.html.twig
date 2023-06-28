@@ -36,16 +36,18 @@
     'other-places',
 ]
 %}
-<div{{ attributes.addClass(classes) }}>
-    {{ title_prefix }}
-    {% if label %}
-        <h2{{ title_attributes }}>{{ label }}</h2>
-    {% endif %}
-    {{ title_suffix }}
-    {% if content.field_link_to_content %}
-        {% set link_url = content.field_link_to_content.0['#url'] %}
-        <a href="{{ link_url }}">
-            {{ content|without('field_link_to_content') }}
-        </a>
-    {% endif %}
+<div class="col">
+    <div{{ attributes.addClass(classes) }}>
+        {{ title_prefix }}
+        {% if label %}
+            <h2{{ title_attributes }}>{{ label }}</h2>
+        {% endif %}
+        {{ title_suffix }}
+        {% if content.field_link_to_content %}
+            {% set link_url = content.field_link_to_content.0['#url'] %}
+            <a href="{{ link_url }}">
+                {{ content|without('field_link_to_content') }}
+            </a>
+        {% endif %}
+    </div>
 </div>

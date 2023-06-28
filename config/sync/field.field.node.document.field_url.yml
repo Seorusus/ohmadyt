@@ -11,7 +11,7 @@ id: node.document.field_url
 field_name: field_url
 entity_type: node
 bundle: document
-label: URL
+label: Посилання
 description: ''
 required: false
 translatable: false

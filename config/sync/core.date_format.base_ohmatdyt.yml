@@ -1,0 +1,8 @@
+uuid: b2521609-1ffc-4e20-ad40-5cf5b14a16b3
+langcode: und
+status: true
+dependencies: {  }
+id: base_ohmatdyt
+label: 'Базова Охматдiт'
+locked: false
+pattern: d.m.Y
