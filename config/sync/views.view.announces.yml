@@ -427,7 +427,7 @@ display:
         type: html_list
         options:
           grouping: {  }
-          row_class: 'row-announce col-md-4 col-sm-12'
+          row_class: 'row-announce col col-sm-12'
           default_row_class: false
           type: ul
           wrapper_class: item-list-announces
@@ -458,7 +458,7 @@ display:
         - 'config:field.storage.node.field_date_interval'
   block_1:
     id: block_1
-    display_title: Block
+    display_title: 'Block News'
     display_plugin: block
     position: 1
     display_options:
@@ -479,6 +479,7 @@ display:
           granularity: second
       defaults:
         sorts: false
+      display_description: ''
       display_extenders: {  }
     cache_metadata:
       max-age: -1
