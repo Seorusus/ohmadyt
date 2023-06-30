@@ -782,7 +782,20 @@ display:
           query_tags: {  }
       relationships: {  }
       header: {  }
-      footer: {  }
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: "<div class=\"additional-links\">\r\n   <div>\r\n      <h5><a href=\"https://moz.gov.ua/nakazi-moz\" target=\"_blank\"><strong>Накази Міністерства&nbsp;охорони здоров'я України</strong></a></h5>\r\n   </div>\r\n   <div>\r\n      <h5><a href=\"https://moz.gov.ua/golovnij-derzhavnij-sanitarnij-likar-ukraini\" target=\"_blank\"><strong>Постанови та розпорядження Головного санітарного лікаря України</strong></a></h5>\r\n   </div>\r\n</div>\r\n"
+            format: full_html
+          tokenize: false
       display_extenders: {  }
     cache_metadata:
       max-age: -1
