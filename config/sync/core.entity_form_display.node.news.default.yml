@@ -6,10 +6,13 @@ dependencies:
     - entity_browser.browser.browse_content
     - field.field.node.news.body
     - field.field.node.news.domain_access
+    - field.field.node.news.field_author
     - field.field.node.news.field_domain_access
     - field.field.node.news.field_domain_all_affiliates
     - field.field.node.news.field_gallery
+    - field.field.node.news.field_material_zmi
     - field.field.node.news.field_media_image
+    - field.field.node.news.field_publish
     - field.field.node.news.field_tags
     - field.field.node.news.field_video
     - node.type.news
@@ -29,7 +32,7 @@ third_party_settings:
       label: Media
       region: content
       parent_name: ''
-      weight: 1
+      weight: 4
       format_type: details
       format_settings:
         classes: ''
@@ -45,7 +48,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 2
+    weight: 5
     region: content
     settings:
       rows: 9
@@ -55,10 +58,34 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_author:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        8d9fd8a6-3d18-413f-b2f9-28d699e9e88a:
+          entity_type: node
+          bundle: news
+          dependee: field_material_zmi
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
   field_gallery:
     type: entity_browser_entity_reference
     weight: 3
@@ -73,6 +100,13 @@ content:
       field_widget_display_settings: {  }
       selection_mode: selection_prepend
     third_party_settings: {  }
+  field_material_zmi:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_media_image:
     type: media_library_widget
     weight: 2
@@ -80,9 +114,35 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
-  field_tags:
+  field_publish:
     type: entity_reference_autocomplete
     weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        985c4132-064a-477e-ac0b-543c23cbe283:
+          entity_type: node
+          bundle: news
+          dependee: field_material_zmi
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_tags:
+    type: entity_reference_autocomplete
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
@@ -106,34 +166,34 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 4
+    weight: 7
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 9
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
-    type: boolean_checkbox
-    weight: 7
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  status:
     type: boolean_checkbox
     weight: 10
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 13
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 8
+    weight: 11
     region: content
     settings:
       display_label: true
@@ -148,7 +208,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 8
     region: content
     settings:
       match_operator: CONTAINS

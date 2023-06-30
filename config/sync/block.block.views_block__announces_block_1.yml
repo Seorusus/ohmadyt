@@ -34,4 +34,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /news
+    pages: "/news\r\n/media"

@@ -1631,6 +1631,22 @@ a {
   border-radius: 6px;
 }
 
+.view-news .views-field-title {
+  min-height: 88px;
+}
+
+.view-news .views-field-created {
+  color: #3953A4;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.view-news .views-field-field-publish {
+  margin: 10px 0 40px;
+  color: #525760;
+}
+
 .date-list-group h3 {
   font-style: normal;
   font-weight: 600;

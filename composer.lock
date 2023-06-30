@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bfcaee2485485de754677c5b585776a7",
+    "content-hash": "f153be734e0a29010dbb2ea0d11b52bc",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2638,6 +2638,93 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/captcha",
                 "issues": "https://www.drupal.org/project/issues/captcha"
+            }
+        },
+        {
+            "name": "drupal/conditional_fields",
+            "version": "4.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/conditional_fields.git",
+                "reference": "4.0.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/conditional_fields-4.0.0-alpha3.zip",
+                "reference": "4.0.0-alpha3",
+                "shasum": "6024d7527bc81e45832e8d1da01792268df94224"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "require-dev": {
+                "drupal/paragraphs": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.0.0-alpha3",
+                    "datestamp": "1683751149",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "colan",
+                    "homepage": "https://www.drupal.org/user/58704"
+                },
+                {
+                    "name": "ergonlogic",
+                    "homepage": "https://www.drupal.org/user/368613"
+                },
+                {
+                    "name": "geek-merlin",
+                    "homepage": "https://www.drupal.org/user/229048"
+                },
+                {
+                    "name": "heddn",
+                    "homepage": "https://www.drupal.org/user/1463982"
+                },
+                {
+                    "name": "itsekhmistro",
+                    "homepage": "https://www.drupal.org/user/928152"
+                },
+                {
+                    "name": "mparker17",
+                    "homepage": "https://www.drupal.org/user/536298"
+                },
+                {
+                    "name": "OlgaRabodzei",
+                    "homepage": "https://www.drupal.org/user/3389198"
+                },
+                {
+                    "name": "peterpoe",
+                    "homepage": "https://www.drupal.org/user/55674"
+                },
+                {
+                    "name": "saurabh-2k17",
+                    "homepage": "https://www.drupal.org/user/3622252"
+                },
+                {
+                    "name": "szhu",
+                    "homepage": "https://www.drupal.org/user/3525295"
+                },
+                {
+                    "name": "thalles",
+                    "homepage": "https://www.drupal.org/user/3589086"
+                }
+            ],
+            "description": "Define dependencies between fields based on their states and values.",
+            "homepage": "https://www.drupal.org/project/conditional_fields",
+            "support": {
+                "source": "https://git.drupalcode.org/project/conditional_fields"
             }
         },
         {
@@ -18028,7 +18115,8 @@
         "drupal/webform": 10,
         "drupal/add_to_calendar": 10,
         "drupal/addtocal_augment": 10,
-        "drupal/entity_clone": 10
+        "drupal/entity_clone": 10,
+        "drupal/conditional_fields": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,

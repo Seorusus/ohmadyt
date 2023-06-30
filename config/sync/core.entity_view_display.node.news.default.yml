@@ -5,10 +5,13 @@ dependencies:
   config:
     - field.field.node.news.body
     - field.field.node.news.domain_access
+    - field.field.node.news.field_author
     - field.field.node.news.field_domain_access
     - field.field.node.news.field_domain_all_affiliates
     - field.field.node.news.field_gallery
+    - field.field.node.news.field_material_zmi
     - field.field.node.news.field_media_image
+    - field.field.node.news.field_publish
     - field.field.node.news.field_tags
     - field.field.node.news.field_video
     - node.type.news
@@ -27,6 +30,14 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  field_author:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
   field_gallery:
     type: entity_reference_label
     label: hidden
@@ -43,6 +54,14 @@ content:
       link: false
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_publish:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
     region: content
   field_tags:
     type: entity_reference_label
@@ -69,5 +88,6 @@ hidden:
   domain_access: true
   field_domain_access: true
   field_domain_all_affiliates: true
+  field_material_zmi: true
   langcode: true
   search_api_excerpt: true

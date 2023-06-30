@@ -784,6 +784,24 @@ a {
   }
 }
 
+.view-news {
+  .views-field-title {
+    min-height: 88px;
+  }
+
+  .views-field-created {
+    color: $brandblue;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  .views-field-field-publish {
+    margin: 10px 0 40px;
+    color: $brandblack;
+  }
+}
+
 .date-list-group {
   h3 {
     font-style: normal;

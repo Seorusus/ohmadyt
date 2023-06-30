@@ -1,0 +1,29 @@
+uuid: 525d79c8-0d00-4ec5-a5c6-63156172e35d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publish
+    - node.type.news
+    - taxonomy.vocabulary.publish
+id: node.news.field_publish
+field_name: field_publish
+entity_type: node
+bundle: news
+label: Видання
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      publish: publish
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
