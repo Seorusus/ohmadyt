@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.document.domain_access
     - field.field.node.document.field_date_iso
     - field.field.node.document.field_doc_files
+    - field.field.node.document.field_doc_number
     - field.field.node.document.field_docauthor
     - field.field.node.document.field_doctheme
     - field.field.node.document.field_doctype
@@ -14,12 +15,11 @@ dependencies:
     - field.field.node.document.field_domain_all_affiliates
     - field.field.node.document.field_files
     - field.field.node.document.field_notes
-    - field.field.node.document.field_number
     - field.field.node.document.field_tags
     - field.field.node.document.field_url
     - node.type.document
   module:
-    - datetime
+    - datetime_flatpickr
     - field_group
     - file
     - link
@@ -29,7 +29,7 @@ third_party_settings:
   field_group:
     group_document_card:
       children:
-        - field_number
+        - field_doc_number
         - field_date_iso
         - field_doctype
         - field_doctheme
@@ -79,15 +79,36 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   field_date_iso:
-    type: datetime_default
+    type: datetime_flatpickr
     weight: 6
     region: content
-    settings: {  }
+    settings:
+      dateFormat: d.m.Y
+      altFormat: 'F j, Y'
+      altInput: false
+      defaultDate: ''
+      defaultHour: ''
+      defaultMinute: ''
+      enableTime: false
+      enableSeconds: false
+      inline: false
+      maxDate: ''
+      minDate: ''
+      maxTime:
+        hour: ''
+        min: ''
+      minTime:
+        hour: ''
+        min: ''
+      minuteIncrement: 5
+      position: auto
+      time_24hr: false
+      weekNumbers: false
     third_party_settings: {  }
   field_doc_files:
     type: file_generic
@@ -95,6 +116,14 @@ content:
     region: content
     settings:
       progress_indicator: throbber
+    third_party_settings: {  }
+  field_doc_number:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_docauthor:
     type: entity_reference_autocomplete
@@ -134,13 +163,6 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_number:
-    type: number
-    weight: 4
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete
     weight: 4
@@ -168,27 +190,27 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 9
+    weight: 10
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 12
+    weight: 13
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 10
+    weight: 11
     region: content
     settings:
       display_label: true
@@ -203,7 +225,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 8
     region: content
     settings:
       match_operator: CONTAINS

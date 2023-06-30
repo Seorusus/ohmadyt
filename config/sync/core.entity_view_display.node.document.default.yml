@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.document.domain_access
     - field.field.node.document.field_date_iso
     - field.field.node.document.field_doc_files
+    - field.field.node.document.field_doc_number
     - field.field.node.document.field_docauthor
     - field.field.node.document.field_doctheme
     - field.field.node.document.field_doctype
@@ -14,7 +15,6 @@ dependencies:
     - field.field.node.document.field_domain_all_affiliates
     - field.field.node.document.field_files
     - field.field.node.document.field_notes
-    - field.field.node.document.field_number
     - field.field.node.document.field_tags
     - field.field.node.document.field_url
     - node.type.document
@@ -30,6 +30,7 @@ third_party_settings:
     group_document_card:
       children:
         - field_number
+        - field_doc_number
         - field_date_iso
         - field_doctype
         - field_doctheme
@@ -70,7 +71,7 @@ content:
       timezone_override: ''
       format_type: base_ohmatdyt
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_doc_files:
     type: file_table
@@ -80,13 +81,21 @@ content:
     third_party_settings: {  }
     weight: 9
     region: content
+  field_doc_number:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
   field_docauthor:
     type: entity_reference_label
     label: inline
     settings:
       link: true
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_doctheme:
     type: entity_reference_label
@@ -94,7 +103,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   field_doctype:
     type: entity_reference_label
@@ -102,7 +111,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_notes:
     type: basic_string
@@ -110,17 +119,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 11
-    region: content
-  field_number:
-    type: number_decimal
-    label: inline
-    settings:
-      thousand_separator: ''
-      decimal_separator: .
-      scale: 2
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 3
     region: content
   field_tags:
     type: entity_reference_label
@@ -140,7 +138,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 8
+    weight: 9
     region: content
   links:
     settings: {  }

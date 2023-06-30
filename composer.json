@@ -87,7 +87,8 @@
         "drupal/webform_views": "^5.1",
         "drupal/bamboo_twig": "^6.0",
         "drupal/entity_clone": "^2.0@beta",
-        "drupal/bootstrap_table": "^1.0"
+        "drupal/bootstrap_table": "^1.0",
+        "drupal/datetime_flatpickr": "^2.0"
     },
     "require-dev": {
         "drupal/core-dev": "^10"

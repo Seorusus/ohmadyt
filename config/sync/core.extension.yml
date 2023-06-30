@@ -33,6 +33,7 @@ module:
   custom_login_url: 0
   date_augmenter: 0
   datetime: 0
+  datetime_flatpickr: 0
   datetime_range: 0
   dblog: 0
   default_content_deploy: 0

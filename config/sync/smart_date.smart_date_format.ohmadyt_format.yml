@@ -1,0 +1,15 @@
+uuid: d8f1f81a-aa5b-4da4-b613-f042cc19b54c
+langcode: und
+status: true
+dependencies: {  }
+id: ohmadyt_format
+label: 'Ohmadyt format'
+date_format: d.m.Y
+time_format: 'H:i'
+time_hour_format: H
+allday_label: 'All day'
+separator: ' - '
+join: ', '
+ampm_reduce: '0'
+date_first: '1'
+site_time_toggle: '0'

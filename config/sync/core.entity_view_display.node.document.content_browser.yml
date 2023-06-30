@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.document.domain_access
     - field.field.node.document.field_date_iso
     - field.field.node.document.field_doc_files
+    - field.field.node.document.field_doc_number
     - field.field.node.document.field_docauthor
     - field.field.node.document.field_doctheme
     - field.field.node.document.field_doctype
@@ -15,7 +16,6 @@ dependencies:
     - field.field.node.document.field_domain_all_affiliates
     - field.field.node.document.field_files
     - field.field.node.document.field_notes
-    - field.field.node.document.field_number
     - field.field.node.document.field_tags
     - field.field.node.document.field_url
     - node.type.document
@@ -44,6 +44,7 @@ hidden:
   domain_access: true
   field_date_iso: true
   field_doc_files: true
+  field_doc_number: true
   field_docauthor: true
   field_doctheme: true
   field_doctype: true
@@ -51,7 +52,6 @@ hidden:
   field_domain_all_affiliates: true
   field_files: true
   field_notes: true
-  field_number: true
   field_tags: true
   field_url: true
   langcode: true

@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_date_iso
+    - field.storage.node.field_doc_number
     - field.storage.node.field_doctype
-    - field.storage.node.field_number
     - node.type.document
     - taxonomy.vocabulary.author
     - taxonomy.vocabulary.doctheme
@@ -33,10 +33,10 @@ display:
     display_options:
       title: 'База документації'
       fields:
-        field_number:
-          id: field_number
-          table: node__field_number
-          field: field_number
+        field_doc_number:
+          id: field_doc_number
+          table: node__field_doc_number
+          field: field_doc_number
           relationship: none
           group_type: group
           admin_label: ''
@@ -83,12 +83,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: number_decimal
+          type: string
           settings:
-            thousand_separator: ''
-            decimal_separator: .
-            scale: null
-            prefix_suffix: false
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -475,7 +472,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           fields:
-            field_number: field_number
+            field_doc_number: field_doc_number
             title: title
         field_doctype_target_id:
           id: field_doctype_target_id
@@ -695,11 +692,19 @@ display:
           summary: ''
           description: ''
           columns:
+            field_doc_number: field_doc_number
             field_number: field_number
             title: title
             field_doctype: field_doctype
             field_date_iso: field_date_iso
           info:
+            field_doc_number:
+              sortable: 1
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
             field_number:
               sortable: 1
               default_sort_order: asc
@@ -809,8 +814,8 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_date_iso'
+        - 'config:field.storage.node.field_doc_number'
         - 'config:field.storage.node.field_doctype'
-        - 'config:field.storage.node.field_number'
   page_documents:
     id: page_documents
     display_title: Page
@@ -831,5 +836,5 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_date_iso'
+        - 'config:field.storage.node.field_doc_number'
         - 'config:field.storage.node.field_doctype'
-        - 'config:field.storage.node.field_number'
