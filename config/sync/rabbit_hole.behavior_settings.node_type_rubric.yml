@@ -1,0 +1,14 @@
+uuid: bcc79b42-ff67-4bd6-a8a9-debb0d54df69
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.rubric
+id: node_type_rubric
+entity_type_id: node_type
+entity_id: rubric
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

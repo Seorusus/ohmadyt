@@ -6,11 +6,13 @@ dependencies:
     - field.field.node.rubric.body
     - field.field.node.rubric.domain_access
     - field.field.node.rubric.field_children
+    - field.field.node.rubric.field_children_mode
     - field.field.node.rubric.field_domain_access
     - field.field.node.rubric.field_domain_all_affiliates
     - field.field.node.rubric.field_layout
     - node.type.rubric
   module:
+    - entity_reference_display
     - options
     - text
     - user
@@ -24,31 +26,34 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   field_children:
-    type: entity_reference_label
-    label: above
+    type: entity_reference_display_default
+    label: hidden
     settings:
-      link: true
+      view_mode: default
+      link: false
+      display_field: ''
     third_party_settings: {  }
-    weight: 103
+    weight: 2
     region: content
-  field_layout:
+  field_children_mode:
     type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 102
+    weight: 3
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
   domain_access: true
   field_domain_access: true
   field_domain_all_affiliates: true
+  field_layout: true
   langcode: true
   search_api_excerpt: true

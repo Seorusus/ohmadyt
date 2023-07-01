@@ -1,0 +1,10 @@
+uuid: d7534303-5a2c-4ae9-87ee-f4ddf325e124
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.list
+label: Перелік
+targetEntityType: node
+cache: true

@@ -1,23 +1,21 @@
-uuid: 753b3766-7031-4e2b-a731-9d219404fb97
+uuid: 8e7220a3-8100-4cfb-9789-2e7f86f82e7a
 langcode: uk
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.rubric.body
-    - field.field.node.rubric.domain_access
-    - field.field.node.rubric.field_children
-    - field.field.node.rubric.field_children_mode
-    - field.field.node.rubric.field_domain_access
-    - field.field.node.rubric.field_domain_all_affiliates
-    - field.field.node.rubric.field_layout
-    - node.type.rubric
+    - field.field.node.page_portal.body
+    - field.field.node.page_portal.field_doc_files
+    - field.field.node.page_portal.field_domain_access
+    - field.field.node.page_portal.field_domain_all_affiliates
+    - field.field.node.page_portal.field_media_image
+    - node.type.page_portal
   module:
     - text
     - user
-id: node.rubric.teaser
+id: node.page_portal.teaser
 targetEntityType: node
-bundle: rubric
+bundle: page_portal
 mode: teaser
 content:
   body:
@@ -34,11 +32,9 @@ content:
     weight: 100
     region: content
 hidden:
-  domain_access: true
-  field_children: true
-  field_children_mode: true
+  field_doc_files: true
   field_domain_access: true
   field_domain_all_affiliates: true
-  field_layout: true
+  field_media_image: true
   langcode: true
   search_api_excerpt: true

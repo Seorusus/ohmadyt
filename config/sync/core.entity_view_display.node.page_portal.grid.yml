@@ -1,0 +1,37 @@
+uuid: 795d67f4-5063-470e-a28e-e0750cd93449
+langcode: uk
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.grid
+    - field.field.node.page_portal.body
+    - field.field.node.page_portal.field_doc_files
+    - field.field.node.page_portal.field_domain_access
+    - field.field.node.page_portal.field_domain_all_affiliates
+    - field.field.node.page_portal.field_media_image
+    - node.type.page_portal
+  module:
+    - user
+id: node.page_portal.grid
+targetEntityType: node
+bundle: page_portal
+mode: grid
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  show_title:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  field_doc_files: true
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_media_image: true
+  langcode: true
+  search_api_excerpt: true

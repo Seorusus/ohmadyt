@@ -1,0 +1,10 @@
+uuid: 7ad5f233-7873-416a-aa70-f49fe93a19c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.grid
+label: Сітка
+targetEntityType: node
+cache: true

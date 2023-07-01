@@ -1,8 +1,9 @@
-uuid: 379bc4cd-348d-4557-b8a8-ae467f625767
+uuid: 699d505f-213c-4ad2-929b-ff36521b352f
 langcode: uk
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.table
     - field.field.node.document.body
     - field.field.node.document.domain_access
     - field.field.node.document.field_date_iso
@@ -51,10 +52,10 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-id: node.document.default
+id: node.document.table
 targetEntityType: node
 bundle: document
-mode: default
+mode: table
 content:
   body:
     type: text_default

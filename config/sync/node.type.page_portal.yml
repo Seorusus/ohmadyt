@@ -1,4 +1,4 @@
-uuid: fe9b89b6-86b8-4f7b-9546-c7f436037325
+uuid: ff18e78d-7ddb-4836-b5aa-939e371dae0a
 langcode: uk
 status: true
 dependencies:
@@ -8,8 +8,8 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Рубріка
-type: rubric
+name: 'Сторінка Портал'
+type: page_portal
 description: ''
 help: ''
 new_revision: true

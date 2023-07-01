@@ -1,0 +1,10 @@
+uuid: dcc961ad-d49f-4b51-8a67-270b6351f286
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.table
+label: Таблиця
+targetEntityType: node
+cache: true

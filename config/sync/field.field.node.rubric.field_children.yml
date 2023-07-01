@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_children
     - node.type.document
-    - node.type.page
+    - node.type.page_portal
     - node.type.rubric
 id: node.rubric.field_children
 field_name: field_children
@@ -22,11 +22,11 @@ settings:
   handler_settings:
     target_bundles:
       document: document
-      page: page
       rubric: rubric
+      page_portal: page_portal
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: page
+    auto_create_bundle: document
 field_type: entity_reference
