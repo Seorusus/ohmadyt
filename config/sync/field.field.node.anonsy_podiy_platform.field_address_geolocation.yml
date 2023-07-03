@@ -1,0 +1,28 @@
+uuid: 128f733a-e99e-4128-9f28-a945974ffce6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address_geolocation
+    - node.type.anonsy_podiy_platform
+  module:
+    - geolocation
+id: node.anonsy_podiy_platform.field_address_geolocation
+field_name: field_address_geolocation
+entity_type: node
+bundle: anonsy_podiy_platform
+label: Адреса
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    lat: '50.402312012852654'
+    lng: '30.53234964609146'
+    lat_sin: '0.77053896363213'
+    lat_cos: '0.63739289729704'
+    lng_rad: '0.53289002969442'
+    value: '50.402312012852654, 30.53234964609146'
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

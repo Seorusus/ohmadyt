@@ -1,0 +1,16 @@
+uuid: cbd67fb5-1b09-4c03-8194-7161fa8fadf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.autor_platform
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.autor_platform
+target_entity_type_id: taxonomy_term
+target_bundle: autor_platform
+default_langcode: site_default
+language_alterable: false

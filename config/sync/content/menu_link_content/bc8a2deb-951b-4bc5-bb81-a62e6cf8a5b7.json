@@ -1,0 +1,110 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/ohmatdyt.docksal\/uk\/admin\/structure\/menu\/item\/37\/edit?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/menu_link_content\/vertical-navigation-ohmatdit"
+        }
+    },
+    "id": [
+        {
+            "value": 37
+        }
+    ],
+    "uuid": [
+        {
+            "value": "bc8a2deb-951b-4bc5-bb81-a62e6cf8a5b7"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "uk",
+            "lang": "uk"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "vertical-navigation-ohmatdit"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2023-05-10T09:26:12+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "enabled": [
+        {
+            "value": true
+        }
+    ],
+    "title": [
+        {
+            "value": "\u0417\u0432\u0456\u0442 \u0444\u043e\u0440\u043c\u0430 007\/\u043e",
+            "lang": "uk"
+        }
+    ],
+    "menu_name": [
+        {
+            "value": "vertical-navigation-ohmatdit"
+        }
+    ],
+    "link": [
+        {
+            "uri": "internal:\/statistics\/zvit-forma-007o",
+            "title": "",
+            "options": []
+        }
+    ],
+    "external": [
+        {
+            "value": false
+        }
+    ],
+    "rediscover": [
+        {
+            "value": true
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "expanded": [
+        {
+            "value": false
+        }
+    ],
+    "parent": [
+        {
+            "value": "menu_link_content:56d69cc1-0ed3-45ca-8b18-8ad4e31b9e8d"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2023-05-10T09:26:12+00:00",
+            "lang": "uk",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "view_mode": [
+        {
+            "value": "default",
+            "lang": "uk"
+        }
+    ]
+}

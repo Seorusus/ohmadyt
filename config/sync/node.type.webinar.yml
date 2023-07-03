@@ -1,0 +1,17 @@
+uuid: c95c40ee-7a2f-41c2-950e-d11d57356c6f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Вебінар Платформа'
+type: webinar
+description: Платформа
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,19 @@
+uuid: 26614a68-84a6-46eb-85e6-dc3e03543908
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position_proffession
+    - node.type.position
+id: node.position.field_position_proffession
+field_name: field_position_proffession
+entity_type: node
+bundle: position
+label: 'Державний класифікатор професій'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

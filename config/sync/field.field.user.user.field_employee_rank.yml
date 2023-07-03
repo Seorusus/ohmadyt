@@ -1,0 +1,20 @@
+uuid: e0cc46ee-1fb4-4b66-916b-a9216b175947
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_employee_rank
+  module:
+    - user
+id: user.user.field_employee_rank
+field_name: field_employee_rank
+entity_type: user
+bundle: user
+label: 'Кваліфікаційна категорія'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: b2ebc33e-997e-473f-abd4-725f83d05697
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cta_text
+    - node.type.not_found
+  module:
+    - text
+id: node.not_found.field_cta_text
+field_name: field_cta_text
+entity_type: node
+bundle: not_found
+label: 'CTA text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

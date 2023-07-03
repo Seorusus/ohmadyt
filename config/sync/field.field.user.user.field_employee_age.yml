@@ -1,0 +1,24 @@
+uuid: 8e915db0-bcc8-449b-b4f0-84cfdb7bce1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_employee_age
+  module:
+    - user
+id: user.user.field_employee_age
+field_name: field_employee_age
+entity_type: user
+bundle: user
+label: 'Вік працівника'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

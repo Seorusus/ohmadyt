@@ -1,0 +1,22 @@
+uuid: c62e4356-4033-4923-8e4a-db10af20d98f
+langcode: uk
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ohmatdyt
+_core:
+  default_config_hash: 1o0W13wt232YmsDYiRA5xtlFq0L2WNS7FmIVbBeuhIY
+id: ohmatdyt_content
+theme: ohmatdyt
+region: content
+weight: -2
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Основний вміст сторінки'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,19 @@
+uuid: 029b0f42-25f7-4590-a0fd-d46c88f55cec
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position_staff_cat
+    - node.type.position
+id: node.position.field_position_staff_cat
+field_name: field_position_staff_cat
+entity_type: node
+bundle: position
+label: 'Категорія персоналу'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

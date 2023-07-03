@@ -1,0 +1,23 @@
+uuid: 46189b4c-d5cb-4fee-ba39-241d8ad5af38
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.page_portal
+  module:
+    - text
+id: node.page_portal.body
+field_name: body
+entity_type: node
+bundle: page_portal
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

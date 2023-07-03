@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: PJP3-sJN2SQZTgCupMBEHry3ui7zsl93xtTovoTanFU
+langcode: uk
+remember_domain: false
+path_pages: "/admin/config/domain/entities\r\n/admin/config/people/simple_oauth/openid-connect"

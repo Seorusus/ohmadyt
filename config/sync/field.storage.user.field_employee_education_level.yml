@@ -1,0 +1,36 @@
+uuid: 1a6d61d8-2a84-4b07-b867-70536c7c56c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_employee_education_level
+field_name: field_employee_education_level
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: begin
+      label: Начальний
+    -
+      value: middle
+      label: Середнiй
+    -
+      value: middle_spec
+      label: 'Середнiй спецiальний'
+    -
+      value: bacalaver
+      label: Бакалавр
+    -
+      value: magister
+      label: Магiстр
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

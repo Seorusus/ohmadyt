@@ -1,0 +1,8 @@
+uuid: bb0b7d4e-2ddc-4a33-b976-9954b038b52a
+langcode: uk
+status: true
+dependencies: {  }
+name: 'Видавник документа'
+vid: author
+description: ''
+weight: -8

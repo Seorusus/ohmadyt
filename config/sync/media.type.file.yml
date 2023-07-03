@@ -1,0 +1,14 @@
+uuid: 656a00d5-99df-402f-82c6-29073798f833
+langcode: uk
+status: true
+dependencies: {  }
+id: file
+label: File
+description: ''
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map:
+  name: name

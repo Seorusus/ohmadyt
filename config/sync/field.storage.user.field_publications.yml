@@ -1,0 +1,19 @@
+uuid: a916d1f6-2888-46bd-b93f-60282ef10d4d
+langcode: uk
+status: true
+dependencies:
+  module:
+    - link_description
+    - user
+id: user.field_publications
+field_name: field_publications
+entity_type: user
+type: link_description
+settings: {  }
+module: link_description
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

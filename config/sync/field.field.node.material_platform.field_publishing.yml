@@ -1,0 +1,29 @@
+uuid: be5bd833-8dbe-49e0-937d-71ca61164616
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publishing
+    - node.type.material_platform
+    - taxonomy.vocabulary.publishing_platform
+id: node.material_platform.field_publishing
+field_name: field_publishing
+entity_type: node
+bundle: material_platform
+label: Видавництво
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      publishing_platform: publishing_platform
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

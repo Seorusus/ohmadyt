@@ -1,0 +1,21 @@
+uuid: 1eee419e-926e-48cf-96c2-d8151521e813
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_employee_range_science
+  module:
+    - options
+    - user
+id: user.user.field_employee_range_science
+field_name: field_employee_range_science
+entity_type: user
+bundle: user
+label: 'Наукова ступінь'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

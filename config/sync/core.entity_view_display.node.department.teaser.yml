@@ -1,0 +1,56 @@
+uuid: ae1fbae2-9626-47a6-be22-0f643fd2496b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.department.field_code
+    - field.field.node.department.field_department_deptype
+    - field.field.node.department.field_department_id
+    - field.field.node.department.field_department_kind
+    - field.field.node.department.field_department_name
+    - field.field.node.department.field_department_poscount
+    - field.field.node.department.field_department_vacancy_count
+    - field.field.node.department.field_domain_access
+    - field.field.node.department.field_domain_all_affiliates
+    - field.field.node.department.field_idx_num
+    - field.field.node.department.field_object_type
+    - field.field.node.department.field_organisation_code
+    - field.field.node.department.field_organization_edrpou
+    - field.field.node.department.field_organization_fullname
+    - field.field.node.department.field_organization_name
+    - field.field.node.department.field_organization_tax
+    - field.field.node.department.field_parent_department
+    - node.type.department
+  module:
+    - user
+id: node.department.teaser
+targetEntityType: node
+bundle: department
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_code: true
+  field_department_deptype: true
+  field_department_id: true
+  field_department_kind: true
+  field_department_name: true
+  field_department_poscount: true
+  field_department_vacancy_count: true
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_idx_num: true
+  field_object_type: true
+  field_organisation_code: true
+  field_organization_edrpou: true
+  field_organization_fullname: true
+  field_organization_name: true
+  field_organization_tax: true
+  field_parent_department: true
+  langcode: true
+  search_api_excerpt: true

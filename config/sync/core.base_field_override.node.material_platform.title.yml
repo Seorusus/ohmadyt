@@ -1,0 +1,18 @@
+uuid: 5ce6ccfb-d3e9-4c2f-bc7f-962b5daa2b2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.material_platform
+id: node.material_platform.title
+field_name: title
+entity_type: node
+bundle: material_platform
+label: Заголовок
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

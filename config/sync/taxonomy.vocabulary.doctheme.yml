@@ -1,0 +1,8 @@
+uuid: 18d5f528-78e3-401f-b272-34c554ad5d17
+langcode: uk
+status: true
+dependencies: {  }
+name: 'Тема документа'
+vid: doctheme
+description: ''
+weight: -4

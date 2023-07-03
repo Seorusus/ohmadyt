@@ -1,0 +1,21 @@
+uuid: fa65dcd3-62cf-4aa1-a1bf-a6f52416e48e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address_geolocation
+    - node.type.anonsy_podiy
+  module:
+    - geolocation
+id: node.anonsy_podiy.field_address_geolocation
+field_name: field_address_geolocation
+entity_type: node
+bundle: anonsy_podiy
+label: 'Адреса Події'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

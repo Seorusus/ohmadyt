@@ -1,0 +1,19 @@
+uuid: 5de577a7-163c-4684-b60e-79815a5a2c22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_number
+    - node.type.document
+id: node.document.field_doc_number
+field_name: field_doc_number
+entity_type: node
+bundle: document
+label: Номер
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

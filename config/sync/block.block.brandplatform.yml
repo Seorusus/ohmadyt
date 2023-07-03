@@ -1,0 +1,33 @@
+uuid: 6b2ba6b3-cb83-4e0c-8635-634b2059d811
+langcode: uk
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0ee32c2d-e9f5-4a82-97fe-593fa0487b8c'
+  module:
+    - block_content
+    - domain
+  theme:
+    - ohmatdyt
+id: brandplatform
+theme: ohmatdyt
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'block_content:0ee32c2d-e9f5-4a82-97fe-593fa0487b8c'
+settings:
+  id: 'block_content:0ee32c2d-e9f5-4a82-97fe-593fa0487b8c'
+  label: 'Brand Platform '
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  domain:
+    id: domain
+    negate: false
+    context_mapping:
+      domain: '@domain.current_domain_context:domain'
+    domains:
+      platforma: platforma

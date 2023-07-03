@@ -1,0 +1,23 @@
+uuid: e58cb8db-a31f-4874-a712-de8135db31db
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_top_announce
+    - node.type.anonsy_podiy
+id: node.anonsy_podiy.field_top_announce
+field_name: field_top_announce
+entity_type: node
+bundle: anonsy_podiy
+label: 'Топ Анонс'
+description: 'Додати в Топ на сторiнцi Анонси'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'on'
+  off_label: 'off'
+field_type: boolean

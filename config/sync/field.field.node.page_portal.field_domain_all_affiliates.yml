@@ -1,0 +1,21 @@
+uuid: 416a0e7d-1bdd-417a-b446-0b37a646c2be
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_domain_all_affiliates
+    - node.type.page_portal
+id: node.page_portal.field_domain_all_affiliates
+field_name: field_domain_all_affiliates
+entity_type: node
+bundle: page_portal
+label: 'Send to all affiliates'
+description: 'Make this content available on all domains.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

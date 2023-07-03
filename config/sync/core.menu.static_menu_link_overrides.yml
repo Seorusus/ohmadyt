@@ -1,0 +1,106 @@
+_core:
+  default_config_hash: CXhei_vpaZk-3f_Mj2cH0YmpK-ZpKHoSzVA3yZrDq0g
+langcode: uk
+definitions:
+  contact__site_page:
+    menu_name: footer
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  'admin_toolbar_tools__extra_links:node__add__anonsy_podiy':
+    menu_name: admin
+    parent: 'menu_link_content:8eafbeff-2e68-47a5-9c3c-4f1e84ba6d75'
+    weight: -10
+    expanded: false
+    enabled: true
+  'admin_toolbar_tools__extra_links:node__add__video':
+    menu_name: admin
+    parent: 'menu_link_content:8eafbeff-2e68-47a5-9c3c-4f1e84ba6d75'
+    weight: -9
+    expanded: false
+    enabled: true
+  'admin_toolbar_tools__extra_links:node__add__document':
+    menu_name: admin
+    parent: 'menu_link_content:8eafbeff-2e68-47a5-9c3c-4f1e84ba6d75'
+    weight: -8
+    expanded: false
+    enabled: true
+  'admin_toolbar_tools__extra_links:node__add__massmedia':
+    menu_name: admin
+    parent: 'menu_link_content:8eafbeff-2e68-47a5-9c3c-4f1e84ba6d75'
+    weight: -7
+    expanded: false
+    enabled: true
+  'admin_toolbar_tools__extra_links:node__add__news':
+    menu_name: admin
+    parent: 'menu_link_content:8eafbeff-2e68-47a5-9c3c-4f1e84ba6d75'
+    weight: -6
+    expanded: false
+    enabled: true
+  'admin_toolbar_tools__extra_links:node__add__poster':
+    menu_name: admin
+    parent: 'menu_link_content:8eafbeff-2e68-47a5-9c3c-4f1e84ba6d75'
+    weight: -5
+    expanded: false
+    enabled: true
+  'admin_toolbar_tools__extra_links:node__add__page':
+    menu_name: admin
+    parent: 'menu_link_content:8eafbeff-2e68-47a5-9c3c-4f1e84ba6d75'
+    weight: -4
+    expanded: false
+    enabled: true
+  'admin_toolbar_tools__extra_links:node__add__rubric':
+    menu_name: admin
+    parent: 'menu_link_content:8eafbeff-2e68-47a5-9c3c-4f1e84ba6d75'
+    weight: -3
+    expanded: false
+    enabled: true
+  'admin_toolbar_tools__extra_links:node__add__statistics':
+    menu_name: admin
+    parent: 'menu_link_content:8eafbeff-2e68-47a5-9c3c-4f1e84ba6d75'
+    weight: -4
+    expanded: false
+    enabled: true
+  'admin_toolbar_tools__extra_links:node__add__photo':
+    menu_name: admin
+    parent: 'menu_link_content:8eafbeff-2e68-47a5-9c3c-4f1e84ba6d75'
+    weight: -3
+    expanded: false
+    enabled: true
+  'admin_toolbar_tools__extra_links:node__add__video_platform':
+    menu_name: admin
+    parent: 'menu_link_content:4faf29a4-d515-4329-b915-7e49d771cdba'
+    weight: -10
+    expanded: false
+    enabled: true
+  'admin_toolbar_tools__extra_links:node__add__anonsy_podiy_platform':
+    menu_name: admin
+    parent: 'menu_link_content:4faf29a4-d515-4329-b915-7e49d771cdba'
+    weight: -9
+    expanded: false
+    enabled: true
+  'admin_toolbar_tools__extra_links:node__add__webinar':
+    menu_name: admin
+    parent: 'menu_link_content:4faf29a4-d515-4329-b915-7e49d771cdba'
+    weight: -8
+    expanded: false
+    enabled: true
+  'admin_toolbar_tools__extra_links:node__add__material_platform':
+    menu_name: admin
+    parent: 'menu_link_content:4faf29a4-d515-4329-b915-7e49d771cdba'
+    weight: -7
+    expanded: false
+    enabled: true
+  'admin_toolbar_tools__extra_links:node__add__rubric_platform':
+    menu_name: admin
+    parent: 'menu_link_content:4faf29a4-d515-4329-b915-7e49d771cdba'
+    weight: -6
+    expanded: false
+    enabled: true
+  'admin_toolbar_tools__extra_links:node__add__page_platform':
+    menu_name: admin
+    parent: 'menu_link_content:4faf29a4-d515-4329-b915-7e49d771cdba'
+    weight: -6
+    expanded: false
+    enabled: true

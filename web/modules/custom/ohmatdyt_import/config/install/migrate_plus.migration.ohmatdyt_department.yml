@@ -1,0 +1,87 @@
+id: ohmatdyt_department
+label: 'Import departments'
+#class: Drupal\migrate\Plugin\Migration
+migration_group: ohmatdyt
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls:
+    - modules/custom/ohmatdyt_import/src/public.json
+  item_selector: /data
+  ids:
+    field_department_id:
+      type: string
+  fields:
+    -
+      name: field_department_id
+      label: 'Department ID'
+      selector: 0
+      type: string
+    -
+      name: field_code
+      label: 'Code'
+      selector: 1
+    -
+      name: field_object_type
+      label: 'Object Type'
+      selector: 2
+    -
+      name: field_parent_department
+      label: 'Parent Department'
+      selector: 4
+    -
+      name: field_idx_num
+      label: 'Index Number'
+      selector: 5
+    -
+      name: field_department_name
+      label: 'Department Name'
+      selector: 17
+    -
+      name: field_department_deptype
+      label: 'Department Type'
+      selector: 18
+    -
+      name: field_department_kind
+      label: 'Department Kind'
+      selector: 19
+    -
+      name: field_department_poscount
+      label: 'Position Count'
+      selector: 20
+    -
+      name: field_department_vacancy_count
+      label: 'Vacancy Count'
+      selector: 21
+destination:
+  plugin: 'entity:node'
+  default_bundle: department
+process:
+  field_object_type:
+    - plugin: skip_on_value
+      method: row
+      source: field_object_type
+      value:
+        - 'organization'
+        - 'position'
+        - 'employee'
+  uid:
+    plugin: default_value
+    default_value: 1
+  title: field_department_id
+  field_department_id: field_department_id
+  field_code: field_code
+  field_parent_department:
+    plugin: migration_lookup
+    migration: ohmatdyt_department
+    source: field_parent_department
+  field_idx_num: field_idx_num
+  field_department_name: field_department_name
+  field_department_deptype: field_department_deptype
+  field_department_kind: field_department_kind
+  field_department_poscount: field_department_poscount
+  field_department_vacancy_count: field_department_vacancy_count
+migration_dependencies:
+  required: []
+  optional: []

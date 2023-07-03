@@ -1,0 +1,23 @@
+uuid: 6145b882-b8b2-4143-bb48-56794f5c4bf4
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position_is_vacant
+    - node.type.position
+id: node.position.field_position_is_vacant
+field_name: field_position_is_vacant
+entity_type: node
+bundle: position
+label: 'Ознака вакантності'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

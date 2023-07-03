@@ -1,0 +1,25 @@
+uuid: 177458f8-6e7c-41e5-b14e-04026606d58e
+langcode: en
+status: true
+dependencies: {  }
+id: employee
+name: employee
+description: 'Employee scope'
+grant_types:
+  refresh_token:
+    status: false
+    description: ''
+  client_credentials:
+    status: true
+    description: 'Employee Credentials'
+  authorization_code:
+    status: false
+    description: 'Employee Code'
+  password:
+    status: false
+    description: ''
+umbrella: false
+parent: _none
+granularity: role
+permission: ''
+role: employee

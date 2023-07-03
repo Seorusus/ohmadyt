@@ -1,0 +1,23 @@
+name: "Ohmatdyt theme"
+type: theme
+description: 'Subtheme with Bootstrap 5'
+core_version_requirement: ^9.4 || ^10
+'base theme': bootstrap5
+
+libraries:
+  - ohmatdyt/global-styling
+  - ohmatdyt/fontawesome
+
+logo: 'themes/custom/ohmatdyt/images/logo.png'
+
+regions:
+  header: 'Header'
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  breadcrumb: 'Breadcrumbs'
+  content: 'Main content'
+  content_bottom: 'Content bottom'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: 'Footer'

@@ -1,0 +1,19 @@
+uuid: e19f532a-4fb3-4adc-8c80-49e2769bacf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address_additional
+    - node.type.anonsy_podiy
+id: node.anonsy_podiy.field_address_additional
+field_name: field_address_additional
+entity_type: node
+bundle: anonsy_podiy
+label: 'Адреса Події додатково'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

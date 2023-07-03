@@ -1,0 +1,13 @@
+uuid: 8485dc0c-19f4-4ff2-87be-c1b0ef6934a3
+langcode: uk
+status: true
+dependencies:
+  enforced:
+    module:
+      - devel
+_core:
+  default_config_hash: 3V-l1uuTcyirYOGLPZV5HWaDfr02uEbWZJIwc8Byz-c
+id: devel
+label: Розробка
+description: 'Links related to Devel module.'
+locked: true

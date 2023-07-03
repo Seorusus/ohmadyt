@@ -1,0 +1,7 @@
+uuid: 0e54e0e3-b976-4a4d-bc4c-f2090e64ccc1
+langcode: uk
+status: false
+dependencies: {  }
+formId: node_video_platform_form
+captchaType: default
+label: node_video_platform_form

@@ -1,0 +1,29 @@
+uuid: 440e0986-7feb-4749-9abb-8531fbd02f42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_files
+    - media.type.file
+    - node.type.page_platform
+id: node.page_platform.field_files
+field_name: field_files
+entity_type: node
+bundle: page_platform
+label: Файли
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

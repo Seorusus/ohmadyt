@@ -1,0 +1,11 @@
+uuid: 16eba3c6-4f0c-4dfd-80ec-d5a8874e1f12
+langcode: uk
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.doctheme
+id: taxonomy_term.doctheme
+target_entity_type_id: taxonomy_term
+target_bundle: doctheme
+default_langcode: site_default
+language_alterable: false

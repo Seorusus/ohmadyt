@@ -1,0 +1,33 @@
+uuid: 317e70b7-0eac-497c-b659-f92591b99abc
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.media.photo.field_media_image_1
+    - image.style.wide
+    - media.type.photo
+  module:
+    - image
+id: media.photo.default
+targetEntityType: media
+bundle: photo
+mode: default
+content:
+  field_media_image_1:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: wide
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,54 @@
+uuid: 59cc9e3e-f3f9-429a-8ac8-b9973f11786b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.vertical-navigation-platforma.domain_access
+    - field.field.menu_link_content.vertical-navigation-platforma.field_svg_icon
+    - system.menu.vertical-navigation-platforma
+  module:
+    - link
+    - menu_item_extras
+    - svg_image_field
+id: menu_link_content.vertical-navigation-platforma.default
+targetEntityType: menu_link_content
+bundle: vertical-navigation-platforma
+mode: default
+content:
+  domain_access:
+    type: options_buttons
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_svg_icon:
+    type: svg_image_field_widget
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_max_width: 300
+      preview_image_max_height: 300
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  view_mode:
+    type: menu_item_extras_view_mode_selector_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

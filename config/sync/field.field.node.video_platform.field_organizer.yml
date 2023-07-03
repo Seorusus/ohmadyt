@@ -1,0 +1,29 @@
+uuid: 134743da-fcf7-49e8-8406-cf6be580171a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organizer
+    - node.type.video_platform
+    - taxonomy.vocabulary.organizer_platform
+id: node.video_platform.field_organizer
+field_name: field_organizer
+entity_type: node
+bundle: video_platform
+label: Організатори
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      organizer_platform: organizer_platform
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

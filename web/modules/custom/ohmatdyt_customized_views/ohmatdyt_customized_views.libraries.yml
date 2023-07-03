@@ -1,0 +1,9 @@
+chosen:
+  version: 1.x
+  css:
+    theme:
+      libraries/chosen/chosen.css: {}
+  js:
+    libraries/chosen/chosen.jquery.js: {}
+    js/chosen-activation.js: {}
+    js/custom-filters.js: {}

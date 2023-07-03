@@ -1,0 +1,159 @@
+uuid: bee198ff-f554-4d42-b07f-5a2e85974b58
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.node.anonsy_podiy.body
+    - field.field.node.anonsy_podiy.domain_access
+    - field.field.node.anonsy_podiy.field_address_additional
+    - field.field.node.anonsy_podiy.field_address_geolocation
+    - field.field.node.anonsy_podiy.field_adress_geo
+    - field.field.node.anonsy_podiy.field_date_interval
+    - field.field.node.anonsy_podiy.field_domain_access
+    - field.field.node.anonsy_podiy.field_domain_all_affiliates
+    - field.field.node.anonsy_podiy.field_photo_announce
+    - field.field.node.anonsy_podiy.field_tags
+    - field.field.node.anonsy_podiy.field_top_announce
+    - field.field.node.anonsy_podiy.field_webform
+    - node.type.anonsy_podiy
+  module:
+    - address
+    - media_library
+    - path
+    - smart_date
+    - text
+id: node.anonsy_podiy.default
+targetEntityType: node
+bundle: anonsy_podiy
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_address_additional:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_adress_geo:
+    type: address_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_interval:
+    type: smartdate_inline
+    weight: 2
+    region: content
+    settings:
+      modal: false
+      default_duration: 60
+      default_duration_increments: |-
+        30
+        60|1 hour
+        90
+        120|2 hours
+        custom
+      show_extra: false
+      hide_date: false
+      allday: false
+      separator: до
+    third_party_settings: {  }
+  field_photo_announce:
+    type: media_library_widget
+    weight: 4
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_tags:
+    type: entity_reference_autocomplete
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_top_announce:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 8
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  domain_access: true
+  field_address_geolocation: true
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_webform: true

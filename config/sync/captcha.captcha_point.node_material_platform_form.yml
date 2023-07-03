@@ -1,0 +1,7 @@
+uuid: 79dd28dd-c93d-4e29-b7b2-4b499b3edb5d
+langcode: uk
+status: false
+dependencies: {  }
+formId: node_material_platform_form
+captchaType: default
+label: node_material_platform_form

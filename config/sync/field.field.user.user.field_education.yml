@@ -1,0 +1,20 @@
+uuid: 17645e8c-8c4c-43d9-a177-e6cfbb661e1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_education
+  module:
+    - user
+id: user.user.field_education
+field_name: field_education
+entity_type: user
+bundle: user
+label: Освіта
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

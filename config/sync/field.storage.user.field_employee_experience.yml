@@ -1,0 +1,21 @@
+uuid: 2ad97c79-0963-4d08-80da-6241b6676a16
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_employee_experience
+field_name: field_employee_experience
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

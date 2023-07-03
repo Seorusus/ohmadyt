@@ -1,0 +1,30 @@
+uuid: 22ebcaa0-9b5f-4f26-984e-d54144628419
+langcode: uk
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.not_found.field_cta_text
+    - field.field.node.not_found.field_domain_access
+    - field.field.node.not_found.field_domain_all_affiliates
+    - field.field.node.not_found.field_lead_text
+    - node.type.not_found
+  module:
+    - user
+id: node.not_found.teaser
+targetEntityType: node
+bundle: not_found
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_cta_text: true
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_lead_text: true
+  langcode: true
+  search_api_excerpt: true

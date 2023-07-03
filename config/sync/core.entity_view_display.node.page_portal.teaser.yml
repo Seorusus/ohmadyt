@@ -1,0 +1,40 @@
+uuid: 8e7220a3-8100-4cfb-9789-2e7f86f82e7a
+langcode: uk
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page_portal.body
+    - field.field.node.page_portal.field_doc_files
+    - field.field.node.page_portal.field_domain_access
+    - field.field.node.page_portal.field_domain_all_affiliates
+    - field.field.node.page_portal.field_media_image
+    - node.type.page_portal
+  module:
+    - text
+    - user
+id: node.page_portal.teaser
+targetEntityType: node
+bundle: page_portal
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_doc_files: true
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_media_image: true
+  langcode: true
+  search_api_excerpt: true

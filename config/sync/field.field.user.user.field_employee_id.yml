@@ -1,0 +1,20 @@
+uuid: 525f2d08-9239-4ff1-9b92-7572f831ca42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_employee_id
+  module:
+    - user
+id: user.user.field_employee_id
+field_name: field_employee_id
+entity_type: user
+bundle: user
+label: 'Персональний ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

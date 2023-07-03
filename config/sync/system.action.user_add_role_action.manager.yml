@@ -1,0 +1,14 @@
+uuid: 57399d4d-1005-4d2e-805e-4c373eab86da
+langcode: uk
+status: true
+dependencies:
+  config:
+    - user.role.manager
+  module:
+    - user
+id: user_add_role_action.manager
+label: 'Додати роль Керівник до вибраних користувачів'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: manager

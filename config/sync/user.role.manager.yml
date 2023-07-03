@@ -1,0 +1,9 @@
+uuid: 4dda651e-7cfd-47e4-8b2a-00f87672a267
+langcode: uk
+status: true
+dependencies: {  }
+id: manager
+label: Керівник
+weight: -9
+is_admin: null
+permissions: {  }

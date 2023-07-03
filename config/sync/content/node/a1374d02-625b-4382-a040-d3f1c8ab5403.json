@@ -1,0 +1,169 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/ohmatdyt.docksal\/uk\/403?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/node\/not_found"
+        },
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/node\/not_found\/revision_uid": [
+            {
+                "href": "http:\/\/ohmatdyt.docksal\/en\/enter-portal\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/node\/not_found\/uid": [
+            {
+                "href": "http:\/\/ohmatdyt.docksal\/en\/enter-portal\/user\/1?_format=hal_json",
+                "lang": "uk"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 168
+        }
+    ],
+    "uuid": [
+        {
+            "value": "a1374d02-625b-4382-a040-d3f1c8ab5403"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "uk",
+            "lang": "uk"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "not_found"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2023-05-24T14:18:28+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/node\/not_found\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/ohmatdyt.docksal\/en\/enter-portal\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4ed408e4-03a5-4b13-a221-79969d1b503b"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/node\/not_found\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/ohmatdyt.docksal\/en\/enter-portal\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4ed408e4-03a5-4b13-a221-79969d1b503b"
+                    }
+                ],
+                "lang": "uk"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "title": [
+        {
+            "value": "403",
+            "lang": "uk"
+        }
+    ],
+    "created": [
+        {
+            "value": "2023-05-24T14:16:54+00:00",
+            "lang": "uk",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2023-05-24T14:19:31+00:00",
+            "lang": "uk",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false,
+            "lang": "uk"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "uk"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/403",
+            "pid": 99,
+            "langcode": "uk",
+            "lang": "uk"
+        }
+    ],
+    "field_cta_text": [
+        {
+            "value": "<p>     <a href=\"\/\"><span>\u043f\u0435\u0440\u0435\u0439\u0434\u0456\u0442\u044c \u043d\u0430 \u0433\u043e\u043b\u043e\u0432\u043d\u0443, \u0442\u0430 \u0441\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0449\u0435 \u0440\u0430\u0437<\/span><\/a> <\/p>",
+            "format": "full_html",
+            "processed": "<p>     <a href=\"\/\"><span>\u043f\u0435\u0440\u0435\u0439\u0434\u0456\u0442\u044c \u043d\u0430 \u0433\u043e\u043b\u043e\u0432\u043d\u0443, \u0442\u0430 \u0441\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0449\u0435 \u0440\u0430\u0437<\/span><\/a> <\/p>"
+        }
+    ],
+    "field_domain_access": [
+        {
+            "target_id": "ohmatdyt",
+            "lang": "uk"
+        }
+    ],
+    "field_domain_all_affiliates": [
+        {
+            "value": false,
+            "lang": "uk"
+        }
+    ],
+    "field_lead_text": [
+        {
+            "value": "\u0443 \u0412\u0430\u0441 \u043d\u0435\u043c\u0430\u0454 \u0434\u043e\u0441\u0442\u0443\u043f\u0443 \u0434\u043e \u0446\u0456\u0454\u0457 \u0441\u0442\u043e\u0440\u0456\u043d\u043a\u0438",
+            "format": "full_html",
+            "processed": "\u0443 \u0412\u0430\u0441 \u043d\u0435\u043c\u0430\u0454 \u0434\u043e\u0441\u0442\u0443\u043f\u0443 \u0434\u043e \u0446\u0456\u0454\u0457 \u0441\u0442\u043e\u0440\u0456\u043d\u043a\u0438"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+uuid: 2b0e6c5e-b1d6-47cf-9d97-75255dc4b403
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.rubric
+id: node.rubric.title
+field_name: title
+entity_type: node
+bundle: rubric
+label: Заголовок
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

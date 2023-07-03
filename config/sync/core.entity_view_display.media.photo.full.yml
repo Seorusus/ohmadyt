@@ -1,0 +1,34 @@
+uuid: 8fb84aee-2c23-42e2-a900-a495c40d7229
+langcode: uk
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.photo.field_media_image_1
+    - image.style.announce
+    - media.type.photo
+  module:
+    - image
+id: media.photo.full
+targetEntityType: media
+bundle: photo
+mode: full
+content:
+  field_media_image_1:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: announce
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

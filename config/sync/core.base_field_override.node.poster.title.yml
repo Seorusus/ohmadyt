@@ -1,0 +1,18 @@
+uuid: 16d53ea0-f076-4f6f-988a-81d0ba5ae9dd
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.poster
+id: node.poster.title
+field_name: title
+entity_type: node
+bundle: poster
+label: Заголовок
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

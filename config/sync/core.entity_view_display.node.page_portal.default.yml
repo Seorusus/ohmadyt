@@ -1,0 +1,53 @@
+uuid: 0eca4ebf-96f7-4640-8cef-17edf1639530
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.node.page_portal.body
+    - field.field.node.page_portal.field_doc_files
+    - field.field.node.page_portal.field_domain_access
+    - field.field.node.page_portal.field_domain_all_affiliates
+    - field.field.node.page_portal.field_media_image
+    - node.type.page_portal
+  module:
+    - file
+    - text
+    - user
+id: node.page_portal.default
+targetEntityType: node
+bundle: page_portal
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_doc_files:
+    type: file_table
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_media_image:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  langcode: true
+  search_api_excerpt: true

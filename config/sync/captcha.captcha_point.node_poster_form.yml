@@ -1,0 +1,7 @@
+uuid: d5bf5cc6-bf5a-4167-9413-381cdaa2e94b
+langcode: uk
+status: false
+dependencies: {  }
+formId: node_poster_form
+captchaType: default
+label: node_poster_form

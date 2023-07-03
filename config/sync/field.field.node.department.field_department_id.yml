@@ -1,0 +1,19 @@
+uuid: ffa31fda-8db3-4ced-9988-8c469ccccc9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_department_id
+    - node.type.department
+id: node.department.field_department_id
+field_name: field_department_id
+entity_type: node
+bundle: department
+label: 'ID пiдроздiлу'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

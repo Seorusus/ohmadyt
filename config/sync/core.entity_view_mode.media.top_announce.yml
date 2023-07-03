@@ -1,0 +1,10 @@
+uuid: 561417fa-1282-47de-92e7-b8b2e091268e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.top_announce
+label: 'Top Announce'
+targetEntityType: media
+cache: true

@@ -1,0 +1,8 @@
+uuid: df6c9aa5-c03f-44bf-a39e-25fcd508d92a
+langcode: uk
+status: true
+dependencies: {  }
+name: 'Тематика Платформа'
+vid: subject_platform
+description: ''
+weight: 2

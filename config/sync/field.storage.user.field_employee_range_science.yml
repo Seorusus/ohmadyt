@@ -1,0 +1,42 @@
+uuid: dad6158d-12fe-40a3-bd8d-78205ce42149
+langcode: uk
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_employee_range_science
+field_name: field_employee_range_science
+entity_type: user
+type: list_float
+settings:
+  allowed_values:
+    -
+      value: 3000002505326.0
+      label: 'Доктор філософії'
+    -
+      value: 3000002505328.0
+      label: 'Доктор мистецтва'
+    -
+      value: 3000002505330.0
+      label: 'Доктор наук'
+    -
+      value: 3000019407062.0
+      label: 'Кандидат наук'
+    -
+      value: 3000019407065.0
+      label: Доктор
+    -
+      value: 3000061477991.0
+      label: 'Кандидат біологічних наук'
+    -
+      value: 3000067359391.0
+      label: 'Кандидат медичних наук'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

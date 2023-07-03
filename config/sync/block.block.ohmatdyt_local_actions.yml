@@ -1,0 +1,20 @@
+uuid: 17f21da8-4f57-4a77-858f-f4c9ce94bade
+langcode: uk
+status: true
+dependencies:
+  theme:
+    - ohmatdyt
+_core:
+  default_config_hash: MBqG1B5mr5-fPSCDyTR6z2zVTRxZ10XeS_pAw6C7za4
+id: ohmatdyt_local_actions
+theme: ohmatdyt
+region: content
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Основні адміністративні дії'
+  label_display: '0'
+  provider: core
+visibility: {  }

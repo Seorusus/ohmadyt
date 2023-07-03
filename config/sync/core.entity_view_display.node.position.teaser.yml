@@ -1,0 +1,54 @@
+uuid: 05acb7b1-6eff-4a05-b578-5d23453326bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.position.field_code
+    - field.field.node.position.field_department
+    - field.field.node.position.field_department_value
+    - field.field.node.position.field_domain_access
+    - field.field.node.position.field_domain_all_affiliates
+    - field.field.node.position.field_idx_num
+    - field.field.node.position.field_object_type
+    - field.field.node.position.field_position_category
+    - field.field.node.position.field_position_id
+    - field.field.node.position.field_position_is_vacant
+    - field.field.node.position.field_position_name
+    - field.field.node.position.field_position_pay_el
+    - field.field.node.position.field_position_position_type
+    - field.field.node.position.field_position_proffession
+    - field.field.node.position.field_position_staff_cat
+    - field.field.node.position.field_position_vacant_from
+    - node.type.position
+  module:
+    - user
+id: node.position.teaser
+targetEntityType: node
+bundle: position
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_code: true
+  field_department: true
+  field_department_value: true
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_idx_num: true
+  field_object_type: true
+  field_position_category: true
+  field_position_id: true
+  field_position_is_vacant: true
+  field_position_name: true
+  field_position_pay_el: true
+  field_position_position_type: true
+  field_position_proffession: true
+  field_position_staff_cat: true
+  field_position_vacant_from: true
+  langcode: true
+  search_api_excerpt: true

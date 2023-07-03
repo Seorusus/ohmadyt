@@ -1,0 +1,33 @@
+uuid: df42b021-ebb3-4460-88d3-9bc5ec66433e
+langcode: uk
+status: true
+dependencies:
+  config:
+    - system.menu.vertical-navigation-platforma
+  module:
+    - domain
+    - system
+  theme:
+    - ohmatdyt
+id: vertikalnanavigaciyaplatforma
+theme: ohmatdyt
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'system_menu_block:vertical-navigation-platforma'
+settings:
+  id: 'system_menu_block:vertical-navigation-platforma'
+  label: 'Вертикальна навiгацiя Платформа'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  domain:
+    id: domain
+    negate: false
+    context_mapping:
+      domain: '@domain.current_domain_context:domain'
+    domains:
+      platforma: platforma

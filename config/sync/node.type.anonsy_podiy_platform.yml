@@ -1,0 +1,17 @@
+uuid: f920e6a1-2042-468e-bb68-afa28531bc61
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Анонси подій Платформа'
+type: anonsy_podiy_platform
+description: Платформа
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

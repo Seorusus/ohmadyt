@@ -1,0 +1,82 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/ohmatdyt.docksal\/uk\/block\/1?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/block_content\/basic"
+        }
+    },
+    "id": [
+        {
+            "value": 1
+        }
+    ],
+    "uuid": [
+        {
+            "value": "cb37dad8-16e1-46e8-98dc-25f2d7e929f6"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "uk",
+            "lang": "uk"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2023-05-10T10:49:12+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "info": [
+        {
+            "value": "Copyright",
+            "lang": "uk"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2023-05-10T11:09:19+00:00",
+            "lang": "uk",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "reusable": [
+        {
+            "value": true
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>[current-date:html_year] \u00a9 \u041d\u0414\u0421\u041b \u041e\u0425\u041c\u0410\u0422\u0414\u0418\u0422<\/p>",
+            "format": "full_html",
+            "processed": "<p>2023 \u00a9 \u041d\u0414\u0421\u041b \u041e\u0425\u041c\u0410\u0422\u0414\u0418\u0422<\/p>",
+            "summary": "",
+            "lang": "uk"
+        }
+    ]
+}

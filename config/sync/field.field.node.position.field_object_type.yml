@@ -1,0 +1,19 @@
+uuid: b4d35ba5-b3bb-49ce-91a6-01730d22085b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_object_type
+    - node.type.position
+id: node.position.field_object_type
+field_name: field_object_type
+entity_type: node
+bundle: position
+label: objectType
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

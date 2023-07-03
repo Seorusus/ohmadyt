@@ -1,0 +1,20 @@
+uuid: f4a7d732-020d-4596-a3c5-e2a5ecfd570d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_employee_sex_type
+  module:
+    - user
+id: user.user.field_employee_sex_type
+field_name: field_employee_sex_type
+entity_type: user
+bundle: user
+label: 'Стать працівника'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

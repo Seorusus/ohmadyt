@@ -1,0 +1,8 @@
+uuid: d2583d45-e3f5-458e-a4bc-8aeae3ef52e5
+langcode: uk
+status: true
+dependencies: {  }
+name: Видання
+vid: publish
+description: ''
+weight: -7

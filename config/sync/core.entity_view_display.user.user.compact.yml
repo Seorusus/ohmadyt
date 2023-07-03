@@ -1,0 +1,85 @@
+uuid: 137a9602-538f-479e-9e45-14876cc5cf86
+langcode: uk
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.compact
+    - field.field.user.user.field_biography
+    - field.field.user.user.field_current_specialisation
+    - field.field.user.user.field_domain_access
+    - field.field.user.user.field_domain_admin
+    - field.field.user.user.field_domain_all_affiliates
+    - field.field.user.user.field_education
+    - field.field.user.user.field_email
+    - field.field.user.user.field_employee_age
+    - field.field.user.user.field_employee_appointed_from
+    - field.field.user.user.field_employee_education_level
+    - field.field.user.user.field_employee_experience
+    - field.field.user.user.field_employee_first_name
+    - field.field.user.user.field_employee_id
+    - field.field.user.user.field_employee_last_name
+    - field.field.user.user.field_employee_middle_name
+    - field.field.user.user.field_employee_phone_mobile
+    - field.field.user.user.field_employee_phone_working
+    - field.field.user.user.field_employee_range_science
+    - field.field.user.user.field_employee_range_science_int
+    - field.field.user.user.field_employee_rank
+    - field.field.user.user.field_employee_sex_type
+    - field.field.user.user.field_experience
+    - field.field.user.user.field_position
+    - field.field.user.user.field_publications
+    - field.field.user.user.field_room
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: 00zr_RBdTjPjBGITD3h4c1ESQZimjdVCcHGt1trLqIY
+id: user.user.compact
+targetEntityType: user
+bundle: user
+mode: compact
+content:
+  user_picture:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  employee_platform_profiles: true
+  employee_profiles: true
+  field_biography: true
+  field_current_specialisation: true
+  field_domain_access: true
+  field_domain_admin: true
+  field_domain_all_affiliates: true
+  field_education: true
+  field_email: true
+  field_employee_age: true
+  field_employee_appointed_from: true
+  field_employee_education_level: true
+  field_employee_experience: true
+  field_employee_first_name: true
+  field_employee_id: true
+  field_employee_last_name: true
+  field_employee_middle_name: true
+  field_employee_phone_mobile: true
+  field_employee_phone_working: true
+  field_employee_range_science: true
+  field_employee_range_science_int: true
+  field_employee_rank: true
+  field_employee_sex_type: true
+  field_experience: true
+  field_position: true
+  field_publications: true
+  field_room: true
+  langcode: true
+  member_for: true
+  search_api_excerpt: true

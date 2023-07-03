@@ -1,0 +1,113 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/ohmatdyt.docksal\/uk\/block\/12?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/block_content\/text_image"
+        },
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/block_content\/text_image\/field_svg_image": [
+            {
+                "href": "http:\/\/ohmatdyt.docksal\/sites\/default\/files\/2023-06\/docks.svg"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 12
+        }
+    ],
+    "uuid": [
+        {
+            "value": "0397ab00-edee-4080-adf2-e419eeee9620"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "uk",
+            "lang": "uk"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "text_image"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2023-06-18T13:43:28+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "info": [
+        {
+            "value": "Document flow",
+            "lang": "uk"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2023-06-18T13:44:35+00:00",
+            "lang": "uk",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "reusable": [
+        {
+            "value": true
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u043e\u043e\u0431i\u0433<\/p>",
+            "format": "full_html",
+            "processed": "<p>\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u043e\u043e\u0431i\u0433<\/p>",
+            "summary": "",
+            "lang": "uk"
+        }
+    ],
+    "field_link_to_content": [
+        {
+            "uri": "internal:\/documents",
+            "title": "",
+            "options": []
+        }
+    ],
+    "_embedded": {
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/block_content\/text_image\/field_svg_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/ohmatdyt.docksal\/sites\/default\/files\/2023-06\/docks.svg"
+                    },
+                    "type": {
+                        "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "79427b0d-c2b4-47bc-a700-0b6e181803c9"
+                    }
+                ]
+            }
+        ]
+    }
+}

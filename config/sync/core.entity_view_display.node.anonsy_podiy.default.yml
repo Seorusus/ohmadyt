@@ -1,0 +1,136 @@
+uuid: fc727034-c312-4945-8998-a98dd8e09550
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.node.anonsy_podiy.body
+    - field.field.node.anonsy_podiy.domain_access
+    - field.field.node.anonsy_podiy.field_address_additional
+    - field.field.node.anonsy_podiy.field_address_geolocation
+    - field.field.node.anonsy_podiy.field_adress_geo
+    - field.field.node.anonsy_podiy.field_date_interval
+    - field.field.node.anonsy_podiy.field_domain_access
+    - field.field.node.anonsy_podiy.field_domain_all_affiliates
+    - field.field.node.anonsy_podiy.field_photo_announce
+    - field.field.node.anonsy_podiy.field_tags
+    - field.field.node.anonsy_podiy.field_top_announce
+    - field.field.node.anonsy_podiy.field_webform
+    - node.type.anonsy_podiy
+  module:
+    - address
+    - date_augmenter
+    - smart_date
+    - text
+    - user
+    - webform
+id: node.anonsy_podiy.default
+targetEntityType: node
+bundle: anonsy_podiy
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_address_additional:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_adress_geo:
+    type: address_plain
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_date_interval:
+    type: smartdate_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+      format: date_only
+      force_chronological: false
+      add_classes: true
+      time_wrapper: true
+      localize: false
+      parts:
+        duration: duration
+        start: '0'
+        end: '0'
+      duration:
+        separator: ''
+        unit: h
+        decimals: 2
+        suffix: h
+    third_party_settings:
+      date_augmenter:
+        status:
+          addtocal: '1'
+        weights:
+          order:
+            addtocal:
+              weight: '0'
+        settings:
+          addtocal:
+            label: 'Додати в календар'
+            event_title: '[current-page:title]'
+            location: '[node:field_adress_geo:address_line1], [node:field_adress_geo:locality]'
+            description: "[node:body]\r\n"
+            max_desc: '330'
+            past_events: '1'
+            target: ''
+        augmenter_settings:
+          fields__field_date_interval__settings_edit_form__third_party_settings__date_augmenter__augmenter_settings__active_tab: ''
+    weight: 2
+    region: content
+  field_photo_announce:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_webform:
+    type: webform_entity_reference_link
+    label: hidden
+    settings:
+      label: Зареєструватись
+      dialog: wide
+      attributes:
+        class:
+          - btn
+          - btn-danger
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  domain_access: true
+  field_address_geolocation: true
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_top_announce: true
+  langcode: true
+  search_api_excerpt: true

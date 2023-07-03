@@ -1,0 +1,17 @@
+uuid: ff18e78d-7ddb-4836-b5aa-939e371dae0a
+langcode: uk
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Сторінка Портал'
+type: page_portal
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

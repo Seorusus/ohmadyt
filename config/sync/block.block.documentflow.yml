@@ -1,0 +1,50 @@
+uuid: 6fd3c9bb-a750-4f91-996e-ea59d91cb531
+langcode: uk
+status: true
+dependencies:
+  content:
+    - 'block_content:text_image:bb8931ef-ce48-4247-80c5-90eafd020c73'
+  module:
+    - block_content
+    - domain
+    - system
+    - user
+  theme:
+    - ohmatdyt
+id: documentflow
+theme: ohmatdyt
+region: content_bottom
+weight: -11
+provider: null
+plugin: 'block_content:bb8931ef-ce48-4247-80c5-90eafd020c73'
+settings:
+  id: 'block_content:bb8931ef-ce48-4247-80c5-90eafd020c73'
+  label: 'Document flow Front'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  domain:
+    id: domain
+    negate: false
+    context_mapping:
+      domain: '@domain.current_domain_context:domain'
+    domains:
+      ohmatdyt: ohmatdyt
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      manager: manager
+      employee: employee
+      content_editor: content_editor
+      content_editor_platform: content_editor_platform
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

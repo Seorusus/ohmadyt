@@ -1,0 +1,42 @@
+uuid: 7d38bb5f-fde4-466d-8862-ad6b151b6de6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.statistics.body
+    - field.field.node.statistics.domain_access
+    - field.field.node.statistics.field_date
+    - field.field.node.statistics.field_domain_access
+    - field.field.node.statistics.field_domain_all_affiliates
+    - field.field.node.statistics.field_file
+    - node.type.statistics
+  module:
+    - text
+    - user
+id: node.statistics.teaser
+targetEntityType: node
+bundle: statistics
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  domain_access: true
+  field_date: true
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_file: true
+  langcode: true
+  search_api_excerpt: true

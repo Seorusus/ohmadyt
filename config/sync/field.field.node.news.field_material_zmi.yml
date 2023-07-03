@@ -1,0 +1,23 @@
+uuid: 890bea61-8baf-4cdd-8281-9a5538cdeb75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_material_zmi
+    - node.type.news
+id: node.news.field_material_zmi
+field_name: field_material_zmi
+entity_type: node
+bundle: news
+label: 'Матеріали ЗМІ'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Так
+  off_label: Нi
+field_type: boolean

@@ -1,0 +1,21 @@
+uuid: 94c06fc4-e506-4759-acad-262fb0496c7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.front
+id: front-block_display-0
+label: 'Block page'
+weight: 0
+variant: block_display
+variant_settings:
+  id: block_display
+  label: null
+  weight: 0
+  uuid: 887fa7a3-84ba-484d-99da-9a000cc50947
+  blocks: {  }
+  page_title: 'Головна сторiнка'
+page: front
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

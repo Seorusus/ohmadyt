@@ -1,0 +1,11 @@
+uuid: 2aeb7647-3b6e-40c5-8971-1c46ea2620ba
+langcode: uk
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.publish
+id: taxonomy_term.publish
+target_entity_type_id: taxonomy_term
+target_bundle: publish
+default_langcode: site_default
+language_alterable: false

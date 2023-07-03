@@ -1,0 +1,20 @@
+uuid: c6751b7c-976c-494c-90ad-b2c0b451efa8
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_docauthor
+field_name: field_docauthor
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

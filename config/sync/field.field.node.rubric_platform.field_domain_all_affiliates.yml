@@ -1,0 +1,21 @@
+uuid: dd257354-cd11-4d63-8ee5-d23bdff49368
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_domain_all_affiliates
+    - node.type.rubric_platform
+id: node.rubric_platform.field_domain_all_affiliates
+field_name: field_domain_all_affiliates
+entity_type: node
+bundle: rubric_platform
+label: 'Send to all affiliates'
+description: 'Make this content available on all domains.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

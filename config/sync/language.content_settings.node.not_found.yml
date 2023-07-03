@@ -1,0 +1,11 @@
+uuid: 754a9992-a297-494d-b4da-44b2ff49cfc4
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.not_found
+id: node.not_found
+target_entity_type_id: node
+target_bundle: not_found
+default_langcode: site_default
+language_alterable: false

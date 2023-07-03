@@ -1,0 +1,132 @@
+<?php
+
+/**
+ * @file
+ * Contains ohmatdyt_customized_views.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\RedirectCommand;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Alters the department options on artwork pages.
+ */
+function ohmatdyt_customized_views_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  // If not the view we are looking for, move on.
+  if ($form['#id'] !== 'views-exposed-form-employees-page-personal') {
+    return;
+  }
+
+  // Query nodes.
+  $storage = \Drupal::entityTypeManager()->getStorage('node');
+  $query = $storage->getQuery();
+
+  // Query all Department nodes.
+  $nids = $query->condition('type', 'department')
+    ->condition('status', 1)
+    ->accessCheck(FALSE)
+    ->execute();
+
+  // If there are no nodes, move on.
+  if (!$nids) {
+    return;
+  }
+
+  // Load all Department nodes.
+  $nodes = $storage->loadMultiple($nids);
+
+  // Push field_department_name values into select list.
+  $options = [];
+  foreach ($nodes as $node) {
+    if ($node->hasField('field_department_name') && $node->hasField('field_department_kind')) {
+      $field_value = $node->get('field_department_name')->getString();
+      $field_kind = $node->get('field_department_kind')->getString();
+
+      if ($field_kind !== 'Cамостійний') {
+        $options[$field_value] = $field_value;
+      }
+    }
+  }
+
+  // Add the new form element for the filter.
+  $form['field_department_name'] = [
+    '#type' => 'select',
+    '#options' => $options,
+    '#default_value' => isset($_GET['field_department_name']) ? $_GET['field_department_name'] : '',
+    '#size' => 1,
+    '#empty_option' => t('Всi вiддiлення'),
+    '#attributes' => [
+      'class' => ['chosen-select'],
+    ],
+    '#attached' => [
+      'library' => [
+        'ohmatdyt_customized_views/chosen',
+      ]
+    ]
+  ];
+
+  // Add custom selector field.
+  $form['choose_selector'] = [
+    '#type' => 'select',
+    '#options' => [
+      'alphabet' => t('За Алфавiтом'),
+      'department' => t('По вiддiленнях'),
+    ],
+    '#default_value' => 'alphabet',
+    '#ajax' => [
+      'callback' => 'ohmatdyt_customized_views_choose_selector_ajax_callback',
+    ],
+  ];
+
+  // Define the exposed form elements
+  $form['field_department_name']['#states'] = [
+    'visible' => [
+      ':input[name="choose_selector"]' => ['value' => 'department'],
+    ],
+  ];
+
+  $form['field_employee_last_name_value']['#states'] = [
+    'visible' => [
+      ':input[name="choose_selector"]' => ['value' => 'alphabet'],
+    ],
+  ];
+
+  $form['field_parent_department_target_id']['#states'] = [
+    'visible' => [
+      ':input[name="choose_selector"]' => ['value' => 'alphabet'],
+    ],
+  ];
+}
+
+/**
+ * Callback custom_selector.
+ */
+function ohmatdyt_customized_views_custom_selector_ajax_callback(array &$form, FormStateInterface $form_state) {
+  // Create an AjaxResponse object.
+  $response = new AjaxResponse();
+
+  // Perform the redirect.
+  $response->addCommand(new RedirectCommand('/personal'));
+
+  return $response;
+}
+
+/**
+ * Implements template_preprocess_views_view_fields().
+ */
+function ohmatdyt_customized_views_preprocess_views_view(&$variables) {
+
+  $request = \Drupal::request();
+  $field_employee_last_name_value = $request->query->get('field_employee_last_name_value');
+  $field_parent_department = $request->query->get('field_parent_department_target_id');
+  $field_department_name = $request->query->get('field_department_name');
+  
+  $variables['employee_last_name_value'] = $field_employee_last_name_value;
+  $variables['field_parent_department'] = $field_parent_department;
+  $variables['field_department_name'] = $field_department_name;
+
+}

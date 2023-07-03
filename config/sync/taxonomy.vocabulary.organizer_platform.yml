@@ -1,0 +1,8 @@
+uuid: b933e5a5-e1da-4c5e-b3d2-4d43acf8cbf4
+langcode: uk
+status: true
+dependencies: {  }
+name: 'Організатор Платформа'
+vid: organizer_platform
+description: ''
+weight: 1

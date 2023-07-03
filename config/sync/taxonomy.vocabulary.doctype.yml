@@ -1,0 +1,8 @@
+uuid: 891f7d10-2ff3-473d-9eff-70b523aa66b8
+langcode: uk
+status: true
+dependencies: {  }
+name: 'Тип документу'
+vid: doctype
+description: ''
+weight: -3

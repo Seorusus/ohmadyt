@@ -1,0 +1,19 @@
+uuid: 3e7d056c-650a-4ab1-a845-b592c0d2910c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position_id
+    - node.type.position
+id: node.position.field_position_id
+field_name: field_position_id
+entity_type: node
+bundle: position
+label: 'Посада id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

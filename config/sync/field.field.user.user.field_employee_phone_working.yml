@@ -1,0 +1,20 @@
+uuid: 986dbb77-0ea4-4c44-b3a0-3de688e84a29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_employee_phone_working
+  module:
+    - user
+id: user.user.field_employee_phone_working
+field_name: field_employee_phone_working
+entity_type: user
+bundle: user
+label: 'Робочий телефон'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

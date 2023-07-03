@@ -1,0 +1,24 @@
+uuid: cbf41c17-f1cb-4e58-9bbd-1d3f5760b956
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.video_platform
+  module:
+    - datetime
+id: node.video_platform.field_date
+field_name: field_date
+entity_type: node
+bundle: video_platform
+label: Дата
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

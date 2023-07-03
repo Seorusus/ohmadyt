@@ -1,0 +1,47 @@
+uuid: 79389876-5f31-49b0-a932-6bea50a1914c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.page
+    - taxonomy.vocabulary.tags
+  module:
+    - comment
+    - contextual
+    - domain_entity
+    - file
+    - node
+    - path
+    - system
+    - taxonomy
+    - toolbar
+    - tour
+_core:
+  default_config_hash: Wur9kcEOwY1Jal81NssKnz3RhVJxAvBwyWQBGcA_1Go
+id: content_editor
+label: 'Редактор вмісту'
+weight: -7
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access toolbar'
+  - 'access tour'
+  - 'administer url aliases'
+  - 'create page content'
+  - 'create tags_platform taxonomy_term content on assigned domains'
+  - 'create terms in tags'
+  - 'create text_image block_content content on assigned domains'
+  - 'create url aliases'
+  - 'delete own page content'
+  - 'delete page revisions'
+  - 'edit own comments'
+  - 'edit own page content'
+  - 'edit terms in tags'
+  - 'revert all revisions'
+  - 'update text_image block_content content on assigned domains'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'

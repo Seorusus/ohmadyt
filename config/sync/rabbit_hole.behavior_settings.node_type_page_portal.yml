@@ -1,0 +1,14 @@
+uuid: 9d7b1c61-5f04-4e24-b2ba-8c53dcff0164
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.page_portal
+id: node_type_page_portal
+entity_type_id: node_type
+entity_id: page_portal
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

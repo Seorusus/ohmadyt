@@ -1,0 +1,19 @@
+uuid: 3a2ae5f9-24d9-41cf-9e1b-a2f5f69f7f15
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position_category
+    - node.type.position
+id: node.position.field_position_category
+field_name: field_position_category
+entity_type: node
+bundle: position
+label: 'Категорія посади'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

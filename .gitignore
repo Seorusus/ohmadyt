@@ -5,9 +5,11 @@
 # Pantheon commits a settings.php for environment-specific settings.
 # Place local settings in settings.local.php
 /web/sites/*/settings.local.php
+/web/sites/*/settings.php
 /web/sites/*/services*.yml
 !/web/sites/*/services.pantheon.*.yml
-!/web/sites/*/services.yml
+/web/sites/*/services.yml
+/web/themes/custom/*/node_modules/
 
 # Ignore paths that contain user-generated content.
 /web/sites/*/files
@@ -63,7 +65,6 @@
 /web/modules/contrib/
 /web/themes/contrib/
 /web/profiles/contrib/
-/web/libraries/
 /web/private/scripts/quicksilver
 
 

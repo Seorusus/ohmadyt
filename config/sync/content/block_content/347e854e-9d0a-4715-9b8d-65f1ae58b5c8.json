@@ -1,0 +1,113 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/ohmatdyt.docksal\/uk\/block\/13?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/block_content\/text_image"
+        },
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/block_content\/text_image\/field_svg_image": [
+            {
+                "href": "http:\/\/ohmatdyt.docksal\/sites\/default\/files\/2023-06\/med-sys.svg"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 13
+        }
+    ],
+    "uuid": [
+        {
+            "value": "347e854e-9d0a-4715-9b8d-65f1ae58b5c8"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "uk",
+            "lang": "uk"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "text_image"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2023-06-18T13:47:13+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "info": [
+        {
+            "value": "Med system",
+            "lang": "uk"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2023-06-18T13:47:51+00:00",
+            "lang": "uk",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "reusable": [
+        {
+            "value": true
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>\u041c\u0435\u0434\u0438\u0447\u043d\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430<\/p>",
+            "format": "full_html",
+            "processed": "<p>\u041c\u0435\u0434\u0438\u0447\u043d\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430<\/p>",
+            "summary": "",
+            "lang": "uk"
+        }
+    ],
+    "field_link_to_content": [
+        {
+            "uri": "internal:\/med-system",
+            "title": "",
+            "options": []
+        }
+    ],
+    "_embedded": {
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/block_content\/text_image\/field_svg_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/ohmatdyt.docksal\/sites\/default\/files\/2023-06\/med-sys.svg"
+                    },
+                    "type": {
+                        "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "9fcec473-893a-4171-9ac8-bb201673465f"
+                    }
+                ]
+            }
+        ]
+    }
+}

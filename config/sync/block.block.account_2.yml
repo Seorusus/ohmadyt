@@ -1,0 +1,54 @@
+uuid: 90db8ceb-7bd1-42e1-a5f9-20a5175614a1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:text_image:13dc1e23-e26b-49f1-9754-050794477134'
+  module:
+    - block_class
+    - block_content
+    - domain
+    - system
+    - user
+  theme:
+    - ohmatdyt
+third_party_settings:
+  block_class:
+    classes: 'external-systems external-account'
+id: account_2
+theme: ohmatdyt
+region: content_bottom
+weight: -4
+provider: null
+plugin: 'block_content:13dc1e23-e26b-49f1-9754-050794477134'
+settings:
+  id: 'block_content:13dc1e23-e26b-49f1-9754-050794477134'
+  label: Account
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  domain:
+    id: domain
+    negate: false
+    context_mapping:
+      domain: '@domain.current_domain_context:domain'
+    domains:
+      ohmatdyt: ohmatdyt
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      manager: manager
+      employee: employee
+      content_editor: content_editor
+      content_editor_platform: content_editor_platform

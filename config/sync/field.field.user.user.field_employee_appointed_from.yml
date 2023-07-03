@@ -1,0 +1,21 @@
+uuid: b87161c1-ab75-486b-a389-44fa398cfe2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_employee_appointed_from
+  module:
+    - datetime
+    - user
+id: user.user.field_employee_appointed_from
+field_name: field_employee_appointed_from
+entity_type: user
+bundle: user
+label: 'Призначений з'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

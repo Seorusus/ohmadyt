@@ -1,0 +1,42 @@
+uuid: e8859c66-232b-4e6d-9f50-9c012e8b0538
+langcode: uk
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.content_browser
+    - field.field.node.page.body
+    - field.field.node.page.domain_access
+    - field.field.node.page.field_domain_access
+    - field.field.node.page.field_domain_all_affiliates
+    - field.field.node.page.field_files
+    - field.field.node.page.field_media_image
+    - node.type.page
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: 8BgdRtLbtQ0F__o0FHSH0Mx5fvXOra9tfT1GmNKbRYw
+id: node.page.content_browser
+targetEntityType: node
+bundle: page
+mode: content_browser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  links:
+    weight: 101
+    region: content
+hidden:
+  domain_access: true
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_files: true
+  field_media_image: true
+  langcode: true
+  search_api_excerpt: true

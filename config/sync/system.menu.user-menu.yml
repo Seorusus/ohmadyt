@@ -1,0 +1,8 @@
+uuid: d4fb2d5f-d041-49fd-992f-01f47b96beea
+langcode: uk
+status: true
+dependencies: {  }
+id: user-menu
+label: 'User menu'
+description: ''
+locked: false

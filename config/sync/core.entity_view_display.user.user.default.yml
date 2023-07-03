@@ -1,0 +1,256 @@
+uuid: d55a40f5-b9b0-420f-bde9-d9c3a63c3436
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_biography
+    - field.field.user.user.field_current_specialisation
+    - field.field.user.user.field_domain_access
+    - field.field.user.user.field_domain_admin
+    - field.field.user.user.field_domain_all_affiliates
+    - field.field.user.user.field_education
+    - field.field.user.user.field_email
+    - field.field.user.user.field_employee_age
+    - field.field.user.user.field_employee_appointed_from
+    - field.field.user.user.field_employee_education_level
+    - field.field.user.user.field_employee_experience
+    - field.field.user.user.field_employee_first_name
+    - field.field.user.user.field_employee_id
+    - field.field.user.user.field_employee_last_name
+    - field.field.user.user.field_employee_middle_name
+    - field.field.user.user.field_employee_phone_mobile
+    - field.field.user.user.field_employee_phone_working
+    - field.field.user.user.field_employee_range_science
+    - field.field.user.user.field_employee_range_science_int
+    - field.field.user.user.field_employee_rank
+    - field.field.user.user.field_employee_sex_type
+    - field.field.user.user.field_experience
+    - field.field.user.user.field_position
+    - field.field.user.user.field_publications
+    - field.field.user.user.field_room
+    - field.field.user.user.user_picture
+    - image.style.user_picture
+  module:
+    - datetime
+    - email_formatter
+    - image
+    - link_description
+    - options
+    - text
+    - user
+_core:
+  default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_biography:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_current_specialisation:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_education:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_email:
+    type: email_formatter
+    label: inline
+    settings:
+      mailto: '1'
+      truncate: '40'
+      text: ''
+      HTML: ''
+      icon: none
+      iconlink: '1'
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_employee_age:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_employee_appointed_from:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_employee_education_level:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_employee_experience:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_employee_first_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_employee_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_employee_last_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_employee_middle_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_employee_phone_mobile:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_employee_phone_working:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_employee_range_science:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_employee_range_science_int:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_employee_rank:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_employee_sex_type:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_experience:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_position:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: user_account
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_publications:
+    type: link_description
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: _blank
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_room:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  member_for:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  user_picture:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: user_picture
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  employee_platform_profiles: true
+  employee_profiles: true
+  field_domain_access: true
+  field_domain_admin: true
+  field_domain_all_affiliates: true
+  langcode: true
+  search_api_excerpt: true

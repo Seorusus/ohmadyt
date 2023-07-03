@@ -1,0 +1,18 @@
+uuid: b0809cc5-86a3-4d81-9d06-d599b8a1828f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page_platform
+id: node.page_platform.title
+field_name: title
+entity_type: node
+bundle: page_platform
+label: Заголовок
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,27 @@
+uuid: c0074142-8998-4f54-bce7-977d67364b0c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_files
+    - node.type.page_portal
+  module:
+    - file
+id: node.page_portal.field_doc_files
+field_name: field_doc_files
+entity_type: node
+bundle: page_portal
+label: Файли
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'documents/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf doc docx xls xlsx ppt pptx'
+  max_filesize: 25MB
+  description_field: true
+field_type: file

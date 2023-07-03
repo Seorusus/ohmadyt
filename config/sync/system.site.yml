@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: uk
+uuid: 6d6ddfbc-36ac-4e47-ab48-e60e8827dc5a
+name: Портал
+mail: seorusus@gmail.com
+slogan: ''
+page:
+  403: /node/168
+  404: /node/167
+  front: /home
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: uk
+mail_notification: ''

@@ -1,0 +1,113 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/ohmatdyt.docksal\/uk\/block\/11?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/block_content\/text_image"
+        },
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/block_content\/text_image\/field_svg_image": [
+            {
+                "href": "http:\/\/ohmatdyt.docksal\/sites\/default\/files\/2023-06\/account.svg"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 11
+        }
+    ],
+    "uuid": [
+        {
+            "value": "13dc1e23-e26b-49f1-9754-050794477134"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "uk",
+            "lang": "uk"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "text_image"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2023-06-16T08:01:09+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "info": [
+        {
+            "value": "Account",
+            "lang": "uk"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2023-06-16T08:02:30+00:00",
+            "lang": "uk",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "reusable": [
+        {
+            "value": true
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>\u041e\u0441\u043e\u0431\u0438\u0441\u0442\u0438\u0439 \u043a\u0430\u0431i\u043d\u0435\u0442<\/p>",
+            "format": "full_html",
+            "processed": "<p>\u041e\u0441\u043e\u0431\u0438\u0441\u0442\u0438\u0439 \u043a\u0430\u0431i\u043d\u0435\u0442<\/p>",
+            "summary": "",
+            "lang": "uk"
+        }
+    ],
+    "field_link_to_content": [
+        {
+            "uri": "internal:\/user",
+            "title": "",
+            "options": []
+        }
+    ],
+    "_embedded": {
+        "http:\/\/ohmatdyt.docksal\/rest\/relation\/block_content\/text_image\/field_svg_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/ohmatdyt.docksal\/sites\/default\/files\/2023-06\/account.svg"
+                    },
+                    "type": {
+                        "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "297c632d-3028-41d1-a432-7a2ca36e9524"
+                    }
+                ]
+            }
+        ]
+    }
+}

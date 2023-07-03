@@ -1,0 +1,16 @@
+uuid: 9bebb15c-6619-4750-9f54-ab097f57ee4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.organizer_platform
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.organizer_platform
+target_entity_type_id: taxonomy_term
+target_bundle: organizer_platform
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,29 @@
+@mixin ListHeader {
+    font-size: 18px;
+    font-weight: 600;
+    color: #212121;
+    line-height: 22px;
+}
+
+@mixin TeaserText {
+    color: #616161;
+    font-size: 14px;
+    margin: 1em 0;
+}
+
+@mixin TagItem {
+    display: inline-block;
+    border-radius: 25px;
+    background-color: #EFF0F2;
+    padding: 6px 15px;
+    line-height: 1;
+    margin-right: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #9A9A9A;
+
+    &:hover {
+        text-decoration: none;
+        color: $secondtext;
+    }
+}

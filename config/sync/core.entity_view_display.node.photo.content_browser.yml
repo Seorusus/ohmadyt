@@ -1,0 +1,42 @@
+uuid: 5db4259d-8c6a-4356-83d2-d23127bbfd85
+langcode: uk
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.content_browser
+    - field.field.node.photo.body
+    - field.field.node.photo.domain_access
+    - field.field.node.photo.field_domain_access
+    - field.field.node.photo.field_domain_all_affiliates
+    - field.field.node.photo.field_photos
+    - field.field.node.photo.field_tags
+    - node.type.photo
+  module:
+    - user
+id: node.photo.content_browser
+targetEntityType: node
+bundle: photo
+mode: content_browser
+content:
+  field_photos:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  domain_access: true
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_tags: true
+  langcode: true
+  search_api_excerpt: true

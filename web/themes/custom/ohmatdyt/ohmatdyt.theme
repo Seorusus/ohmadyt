@@ -1,0 +1,141 @@
+<?php
+
+/**
+ * @file
+ * Ohmatdyt theme file.
+ */
+
+use Drupal\Core\Url;
+use Drupal\webform\Entity\WebformSubmission;
+use Drupal\views\ViewExecutable;
+
+
+/**
+ * Implements hook_preprocess_HOOK() for block templates.
+ */
+function ohmatdyt_preprocess_menu(&$variables) {
+  $current_user = \Drupal::currentUser();
+  $user_picture_url = '';
+
+  if ($current_user->isAuthenticated()) {
+    $user = \Drupal\user\Entity\User::load($current_user->id());
+    if ($user->hasField('user_picture')) {
+      $user_picture = $user->get('user_picture')->entity;
+      if ($user_picture) {
+        $user_picture_url = $user_picture->getFileUri();
+      }
+    }
+  }
+
+  $variables['user_picture_url'] = $user_picture_url;
+}
+
+/**
+ * Implements hook_form_alter().
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+function ohmatdyt_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id === 'user_login_form' ) {
+    // Add placeholders.
+    $form["name"]["#title"] = t('Логін');
+    $form['name']['#attributes']['placeholder'] = t('Логін або email');
+    $form["name"]["#description"] = '';
+    $form["pass"]["#title"] = t('Пароль');
+    $form['pass']['#attributes']['placeholder'] = t('');
+    $form["pass"]["#description"] = '';
+    $form['actions']['submit']['#value'] = t('Увiйти');
+    $form['actions']['#attributes']['class'] = ['align-items-center password-enter'];
+    // Add password reset link.
+    $form['forgot_password'] = [
+      '#type' => 'link',
+      '#title' => t('Забули пароль?'),
+      '#url' => Url::fromRoute('user.pass'),
+      '#attributes' => [
+        'class' => ['forgot-password-link'],
+      ],
+    ];
+  }
+
+  if ($form_id === 'user_pass') {
+    $form["name"]["#title"] = t('Введiть Логiн або адресу електронної пошти');
+    $form["mail"]["#markup"] = t('Інструкції щодо зміни пароля будуть надіслані на вашу електронну адресу, якщо вона зареєстрована.');
+    $form['actions']['submit']['#value'] = t('Надiслати');
+    $form['actions']['#attributes']['class'] = ['align-items-center password-enter'];
+    $form['mail']['#attributes']['class'] = ['mail-markup'];
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+function ohmatdyt_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+
+  if ($hook === 'form' & !empty($variables['element']['#id'])) {
+    $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_block_alter().
+ */
+function ohmatdyt_theme_suggestions_block_alter(array &$suggestions, array $variables)
+{
+  // Block suggestions for custom block types.
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__type__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for user templates.
+ */
+function ohmatdyt_theme_suggestions_user_alter(array &$suggestions, array $variables) {
+  // Get the user entity from the variables.
+  $user = $variables['elements']['#user'];
+
+  // Check if the user has the 'employee' role.
+  if ($user->hasRole('employee')) {
+    // Add the user role suggestion.
+    $suggestions[] = 'user__role__employee';
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function ohmatdyt_preprocess_page(&$variables) {
+  $variables['#attached']['library'][] = 'ohmatdyt/bootstrap-icons';
+}
+
+/**
+ * Implements hook_preprocess_user().
+ */
+function ohmatdyt_preprocess_user(&$variables) {
+  $rangeScienceValues = [
+    '3000002505326' => 'Доктор філософії',
+    '3000002505328' => 'Доктор мистецтва',
+    '3000002505330' => 'Доктор наук',
+    '3000019407062' => 'Кандидат наук',
+    '3000019407065' => 'Доктор',
+    '3000061477991' => 'Кандидат біологічних наук',
+    '3000067359391' => 'Кандидат медичних наук',
+  ];
+
+  $rangeScienceValue = $variables['elements']['#user']->field_employee_range_science_int->value;
+
+  $rangeScienceLabel = isset($rangeScienceValues[$rangeScienceValue]) ? $rangeScienceValues[$rangeScienceValue] : '';
+
+  $variables['range_science_label'] = $rangeScienceLabel;
+}
+
+/**
+ * Prepares variables for a Calendar day template.
+ */
+function ohmatdyt_preprocess_calendar_view_day(&$variables) {
+  foreach ($variables['rows'] as $row) {
+    $variables['webform_value'] = $row["content"]["#row"]->webform_submission_node_field_data_webform_submission_field_;
+    $variables['webform_title'] = $row["#values"]["title"]->render();
+  }
+}

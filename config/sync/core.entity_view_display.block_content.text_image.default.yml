@@ -1,0 +1,57 @@
+uuid: 3a784d2a-5ff2-4f83-bdb0-211a416d1aef
+langcode: uk
+status: true
+dependencies:
+  config:
+    - block_content.type.text_image
+    - field.field.block_content.text_image.body
+    - field.field.block_content.text_image.field_link_to_content
+    - field.field.block_content.text_image.field_svg_image
+  module:
+    - link
+    - svg_image_field
+    - text
+id: block_content.text_image.default
+targetEntityType: block_content
+bundle: text_image
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_link_to_content:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: _blank
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_svg_image:
+    type: svg_image_field_formatter
+    label: hidden
+    settings:
+      inline: false
+      apply_dimensions: true
+      width: 25
+      height: 25
+      enable_alt: true
+      enable_title: true
+      link: ''
+      force_fill: false
+      sanitize: true
+      sanitize_remote: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

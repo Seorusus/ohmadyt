@@ -1,0 +1,54 @@
+uuid: 0df6b42d-83de-4258-ad4b-4de3d47a18c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.material_platform.body
+    - field.field.node.material_platform.domain_access
+    - field.field.node.material_platform.field_autor_platform
+    - field.field.node.material_platform.field_domain_access
+    - field.field.node.material_platform.field_domain_all_affiliates
+    - field.field.node.material_platform.field_files
+    - field.field.node.material_platform.field_media_image
+    - field.field.node.material_platform.field_publishing
+    - field.field.node.material_platform.field_subject
+    - field.field.node.material_platform.field_tags
+    - field.field.node.material_platform.field_type
+    - field.field.node.material_platform.field_year
+    - node.type.material_platform
+  module:
+    - text
+    - user
+id: node.material_platform.teaser
+targetEntityType: node
+bundle: material_platform
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  domain_access: true
+  field_autor_platform: true
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_files: true
+  field_media_image: true
+  field_publishing: true
+  field_subject: true
+  field_tags: true
+  field_type: true
+  field_year: true
+  langcode: true
+  search_api_excerpt: true

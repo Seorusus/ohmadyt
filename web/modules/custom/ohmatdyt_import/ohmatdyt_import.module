@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Adding migrate preparing.
+ */
+
+use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
+use Drupal\migrate\Plugin\MigrateSourceInterface;
+use Drupal\migrate\Row;
+use Drupal\migrate\Plugin\MigrationInterface;
+use Drupal\migrate\MigrateExecutable;
+use Drupal\migrate\MigrateMessage;
+
+/**
+ * Implements hook_migrate_prepare_row().
+ *
+ * @throws \Exception
+ */
+function ohmatdyt_import_migrate_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+  $dateValue = $row->getSourceProperty('field_position_vacant_from');
+
+  if ($dateValue === null) {
+    $row->setSourceProperty('field_position_vacant_from', null);
+  } else {
+    $dateValue = new \DateTime($dateValue);
+    $dateValue->setTimezone(new \DateTimeZone('UTC'));
+    $formattedDate = $dateValue->format(DateTimeItemInterface::DATETIME_STORAGE_FORMAT);
+
+    $row->setSourceProperty('field_position_vacant_from', $formattedDate);
+  }
+
+  $dateAppointedFrom = $row->getSourceProperty('field_employee_appointed_from');
+
+  if ($dateAppointedFrom === null) {
+    $row->setSourceProperty('field_employee_appointed_from', null);
+  } else {
+    $dateAppointedFrom = new \DateTime($dateAppointedFrom);
+    $dateAppointedFrom->setTimezone(new \DateTimeZone('UTC'));
+    $formattedDateAppointedFrom = $dateAppointedFrom->format(DateTimeItemInterface::DATETIME_STORAGE_FORMAT);
+
+    $row->setSourceProperty('field_employee_appointed_from', $formattedDateAppointedFrom);
+  }
+
+  if ($row->getSourceProperty('field_employee_email') === NULL) {
+    $number = $row->getSourceProperty('field_employee_id');
+    $email = $number . '@ohmatdyt.com.ua';
+    $row->setSourceProperty('field_employee_email', $email);
+  }
+}

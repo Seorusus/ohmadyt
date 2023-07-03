@@ -1,0 +1,21 @@
+{%
+    set classes = [
+    'add-to-calendar',
+    'dropdown'
+]
+%}
+<span{{ attributes.addClass(classes) }}>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-calendar"></i> &nbsp;
+            {% if label %}
+                <label class="addtocal__label">{{ label }}</label>
+            {% endif %}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="{{ google }}" target="_blank">Google</a></li>
+            <li><a class="dropdown-item" href="{{ outlook }}" download="event.ics">Outlook</a></li>
+            <li><a class="dropdown-item" href="{{ ical }}" download="event.ics">iCal</a></li>
+        </ul>
+    </div>
+</span>

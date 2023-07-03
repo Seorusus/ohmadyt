@@ -1,0 +1,23 @@
+uuid: 02cba2f3-f6ef-45df-93d9-d72108e9f30a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.video_platform
+  module:
+    - text
+id: node.video_platform.body
+field_name: body
+entity_type: node
+bundle: video_platform
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

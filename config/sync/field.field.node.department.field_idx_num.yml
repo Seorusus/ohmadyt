@@ -1,0 +1,25 @@
+uuid: 5297f382-c15c-48bc-95f2-7d8ec6cc7a5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_idx_num
+    - node.type.department
+id: node.department.field_idx_num
+field_name: field_idx_num
+entity_type: node
+bundle: department
+label: 'Порядковий номер'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

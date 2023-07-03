@@ -1,0 +1,21 @@
+uuid: 14866552-3f63-4018-892e-976c515de174
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organisation_code
+    - node.type.department
+id: node.department.field_organisation_code
+field_name: field_organisation_code
+entity_type: node
+bundle: department
+label: 'Код організації'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '3000000043328'
+default_value_callback: ''
+settings: {  }
+field_type: string

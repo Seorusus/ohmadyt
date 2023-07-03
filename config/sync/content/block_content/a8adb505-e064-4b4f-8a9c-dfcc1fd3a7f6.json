@@ -1,0 +1,88 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/ohmatdyt.docksal\/uk\/block\/2?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/ohmatdyt.docksal\/rest\/type\/block_content\/basic"
+        }
+    },
+    "id": [
+        {
+            "value": 2
+        }
+    ],
+    "uuid": [
+        {
+            "value": "a8adb505-e064-4b4f-8a9c-dfcc1fd3a7f6"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "uk",
+            "lang": "uk"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2023-05-15T15:03:56+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "info": [
+        {
+            "value": "Brand Ohmatdyt ",
+            "lang": "uk"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2023-05-15T15:03:56+00:00",
+            "lang": "uk",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "reusable": [
+        {
+            "value": true
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "uk"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>\u0412\u043d\u0443\u0442\u0440i\u0448\u043di\u0439<\/p><p>\u041f\u043e\u0440\u0442\u0430\u043b<\/p>",
+            "format": "full_html",
+            "processed": "<p>\u0412\u043d\u0443\u0442\u0440i\u0448\u043di\u0439<\/p><p>\u041f\u043e\u0440\u0442\u0430\u043b<\/p>",
+            "summary": "",
+            "lang": "uk"
+        }
+    ],
+    "domain_access": [
+        {
+            "target_id": "ohmatdyt",
+            "lang": "uk"
+        }
+    ]
+}

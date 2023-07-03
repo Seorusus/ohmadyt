@@ -1,0 +1,22 @@
+uuid: 5c6d7138-0be0-4156-b78b-578971e37f24
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.anonsy_podiy_platform
+id: node.anonsy_podiy_platform.promote
+field_name: promote
+entity_type: node
+bundle: anonsy_podiy_platform
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

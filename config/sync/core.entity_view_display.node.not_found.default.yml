@@ -1,0 +1,42 @@
+uuid: 37b83ead-5bd4-4871-ac8b-173c6f9da607
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.node.not_found.field_cta_text
+    - field.field.node.not_found.field_domain_access
+    - field.field.node.not_found.field_domain_all_affiliates
+    - field.field.node.not_found.field_lead_text
+    - node.type.not_found
+  module:
+    - text
+    - user
+id: node.not_found.default
+targetEntityType: node
+bundle: not_found
+mode: default
+content:
+  field_cta_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_lead_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  langcode: true
+  search_api_excerpt: true

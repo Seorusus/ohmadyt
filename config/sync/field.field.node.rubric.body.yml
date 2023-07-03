@@ -1,0 +1,23 @@
+uuid: a0f21b13-ff10-43f5-8162-f79f1c80c1f4
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.rubric
+  module:
+    - text
+id: node.rubric.body
+field_name: body
+entity_type: node
+bundle: rubric
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

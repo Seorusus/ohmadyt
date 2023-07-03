@@ -1,0 +1,11 @@
+uuid: 22598ec3-0da1-42d7-88d0-48b9f1a54281
+langcode: uk
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.newsletter
+id: taxonomy_term.newsletter
+target_entity_type_id: taxonomy_term
+target_bundle: newsletter
+default_langcode: site_default
+language_alterable: false

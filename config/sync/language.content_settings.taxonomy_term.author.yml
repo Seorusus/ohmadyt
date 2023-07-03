@@ -1,0 +1,11 @@
+uuid: d104955d-3016-485c-a1bf-a955ce3bbfc2
+langcode: uk
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.author
+id: taxonomy_term.author
+target_entity_type_id: taxonomy_term
+target_bundle: author
+default_langcode: site_default
+language_alterable: false

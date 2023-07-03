@@ -1,0 +1,20 @@
+uuid: e0bf754f-0e27-4c45-9d9f-354a931d8541
+langcode: uk
+status: true
+dependencies:
+  theme:
+    - ohmatdyt
+_core:
+  default_config_hash: qYppfxaWSy6BwGNKdMch1PeUA24PlRTt39jQft6A6Kg
+id: ohmatdyt_page_title
+theme: ohmatdyt
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Заголовок сторінки'
+  label_display: '0'
+  provider: core
+visibility: {  }

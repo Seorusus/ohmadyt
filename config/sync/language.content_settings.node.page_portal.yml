@@ -1,0 +1,11 @@
+uuid: 90ef1ca5-debd-4e0f-b1ec-5d351d04b502
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.page_portal
+id: node.page_portal
+target_entity_type_id: node
+target_bundle: page_portal
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,15 @@
+uuid: fb51daf1-be5a-4d67-aecb-018e9e898246
+langcode: en
+status: true
+dependencies: {  }
+name: user_picture
+label: 'User picture 215×282'
+effects:
+  427681a9-11a3-4c1d-bd73-132c4f439227:
+    uuid: 427681a9-11a3-4c1d-bd73-132c4f439227
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 215
+      height: 282
+      anchor: center-center

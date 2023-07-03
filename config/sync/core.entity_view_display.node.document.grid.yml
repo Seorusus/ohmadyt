@@ -1,0 +1,82 @@
+uuid: b5e5c5f4-f99d-4cac-b5ad-9ed8a5812f05
+langcode: uk
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.grid
+    - field.field.node.document.body
+    - field.field.node.document.domain_access
+    - field.field.node.document.field_date_iso
+    - field.field.node.document.field_doc_files
+    - field.field.node.document.field_doc_number
+    - field.field.node.document.field_docauthor
+    - field.field.node.document.field_doctheme
+    - field.field.node.document.field_doctype
+    - field.field.node.document.field_domain_access
+    - field.field.node.document.field_domain_all_affiliates
+    - field.field.node.document.field_files
+    - field.field.node.document.field_notes
+    - field.field.node.document.field_tags
+    - field.field.node.document.field_url
+    - node.type.document
+  module:
+    - field_group
+    - user
+third_party_settings:
+  field_group:
+    group_document_card:
+      children:
+        - field_doc_number
+        - field_date_iso
+        - field_doctype
+        - field_doctheme
+        - field_docauthor
+        - field_url
+      label: 'Картка документа'
+      parent_name: ''
+      region: hidden
+      weight: 7
+      format_type: html_element
+      format_settings:
+        classes: document-card
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: true
+        label_element: h2
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: node.document.grid
+targetEntityType: node
+bundle: document
+mode: grid
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  show_title:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  domain_access: true
+  field_date_iso: true
+  field_doc_files: true
+  field_doc_number: true
+  field_docauthor: true
+  field_doctheme: true
+  field_doctype: true
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_files: true
+  field_notes: true
+  field_tags: true
+  field_url: true
+  langcode: true
+  search_api_excerpt: true

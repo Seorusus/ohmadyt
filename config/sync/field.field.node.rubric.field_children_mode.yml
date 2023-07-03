@@ -1,0 +1,28 @@
+uuid: 4c065124-a348-439c-8830-d4de1643faea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_children_mode
+    - node.type.rubric
+  module:
+    - entity_reference_display
+id: node.rubric.field_children_mode
+field_name: field_children_mode
+entity_type: node
+bundle: rubric
+label: 'Дочірні матерiали'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: list
+default_value_callback: ''
+settings:
+  exclude:
+    list: list
+    grid: grid
+    table: table
+  negate: true
+field_type: entity_reference_display

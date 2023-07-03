@@ -1,0 +1,23 @@
+uuid: 197415f0-84e2-49c4-a6cd-39b946e090b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.material_platform
+  module:
+    - text
+id: node.material_platform.body
+field_name: body
+entity_type: node
+bundle: material_platform
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

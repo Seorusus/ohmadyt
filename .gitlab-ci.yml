@@ -1,0 +1,55 @@
+image: kreminskyi/ohmatdyt-8-1:latest
+
+stages:
+  - create_branch
+  - deploy
+
+create_branch:
+  stage: create_branch
+  image: registry.gitlab.com/gitlab-org/gitlab-runner:latest
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "master" && $CI_COMMIT_MESSAGE =~ /#(\d+)/
+  script:
+    - apk add --update --no-cache curl jq
+    - 'ISSUE_ID=$(echo $CI_COMMIT_MESSAGE | grep -oP "(?<=#)\d+")'
+    - 'BRANCH_NAME="issue-$ISSUE_ID"'
+    - 'git checkout -b $BRANCH_NAME'
+    - 'git push -u origin $BRANCH_NAME'
+    - 'curl --request POST --header "PRIVATE-TOKEN: $GITLAB_ACCESS_TOKEN" --data "branch=$BRANCH_NAME" "https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/repository/branches"'
+    - 'BRANCH_URL="https://gitlab.com/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME/-/tree/$BRANCH_NAME"'
+    - 'ISSUE_DESCRIPTION="**Branch:** [$BRANCH_NAME]($BRANCH_URL)\n\n"'
+    - 'curl --request PUT --header "PRIVATE-TOKEN: $GITLAB_ACCESS_TOKEN" --data-urlencode "description=$ISSUE_DESCRIPTION" "https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/issues/$ISSUE_ID"'
+
+before_script:
+  # See https://docs.gitlab.com/ee/ci/ssh_keys/
+  - eval $(ssh-agent -s)
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  - mkdir -p $HOME/.ssh && echo "StrictHostKeyChecking no" >> "$HOME/.ssh/config"
+  - git config --global user.email "$GITLAB_USER_EMAIL"
+  - git config --global user.name "Gitlab CI"
+  # Install Terminus
+  - curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
+  - 'which terminus'
+  - export PATH=$PATH:$HOME/.terminus/bin
+  - terminus auth:login --machine-token=${PANTHEON_MACHINE_TOKEN}
+
+deploy:dev:
+  stage: deploy
+  environment:
+    name: dev
+    url: https://dev-$PANTHEON_SITE.pantheonsite.io/
+  script:
+    - git clone $CI_REPOSITORY_URL repo
+    - cd repo
+    - git checkout main
+    - git remote add pantheon $PANTHEON_GIT_URL
+    - git push pantheon main:master --force
+
+#    - terminus remote:drush $PANTHEON_SITE.dev -- config-split:import pantheon_dev -y
+    - terminus remote:drush $PANTHEON_SITE.dev -- deploy -y
+    - terminus remote:drush $PANTHEON_SITE.dev -- cr -y
+    - terminus remote:drush $PANTHEON_SITE.dev -- cim -y
+    - terminus remote:drush $PANTHEON_SITE.dev -- dcdi -y
+    - terminus remote:drush $PANTHEON_SITE.dev -- cr -y
+  only:
+    - main
