@@ -123,7 +123,6 @@ module:
   search_api_page: 0
   serialization: 0
   shortcut: 0
-  show_title: 0
   simple_menu_icons: 0
   simple_oauth: 0
   simple_oauth_password_grant: 0

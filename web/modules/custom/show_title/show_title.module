@@ -195,21 +195,22 @@ function show_title_theme_registry_alter(&$theme_registry) {
   $active_theme = \Drupal::theme()->getActiveTheme();
 
   // Check if file not exist in active theme.
-  if (!file_exists($active_theme->getPath() . '/templates/node.html.twig')) {
+  if (!file_exists($active_theme->getPath() . '/templates/content/node.html.twig')) {
 
     // Check if theme has base theme to select the right overrided template.
     // Base theme stable is default core template.
-    $base_theme = 'stable';
+    $base_theme = 'bootstrap5';
     if (!empty($active_theme->getExtension()->base_theme)) {
       $base_theme = $active_theme->getExtension()->base_theme;
     }
 
     // Set the branding block template.
-    $module_path = \Drupal::service('extension.list.module')->getPath('show_title');
+    $module_path = \Drupal::service('extension.list.theme')->getPath('bootstrap5');
 
     $theme_registry['node']['path'] = implode(
       '/',
-      [$module_path, 'templates', $base_theme]
+//      [$module_path, 'templates', $base_theme]
+      [$module_path, 'templates', 'content']
     );
   }
 }

@@ -22,6 +22,6 @@ settings:
   handler_settings: {  }
   file_directory: 'documents/[date:custom:Y]-[date:custom:m]'
   file_extensions: 'txt pdf doc docx xls xlsx ppt pptx'
-  max_filesize: 5MB
+  max_filesize: 25MB
   description_field: true
 field_type: file

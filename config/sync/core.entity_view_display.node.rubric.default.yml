@@ -13,7 +13,6 @@ dependencies:
     - node.type.rubric
   module:
     - entity_reference_display
-    - options
     - text
     - user
 id: node.rubric.default
@@ -38,13 +37,6 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  field_children_mode:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -52,6 +44,7 @@ content:
     region: content
 hidden:
   domain_access: true
+  field_children_mode: true
   field_domain_access: true
   field_domain_all_affiliates: true
   field_layout: true

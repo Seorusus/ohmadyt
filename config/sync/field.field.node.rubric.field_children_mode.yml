@@ -15,12 +15,14 @@ label: 'Дочірні матерiали'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: list
 default_value_callback: ''
 settings:
   exclude:
-    default: default
-    full: full
-    teaser: teaser
+    list: list
+    grid: grid
+    table: table
   negate: true
 field_type: entity_reference_display
