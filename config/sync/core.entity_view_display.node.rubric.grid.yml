@@ -1,9 +1,9 @@
-uuid: 753b3766-7031-4e2b-a731-9d219404fb97
+uuid: f6791d1f-123e-49cc-91a1-f7ee4818c871
 langcode: uk
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.grid
     - field.field.node.rubric.body
     - field.field.node.rubric.domain_access
     - field.field.node.rubric.field_children
@@ -12,27 +12,19 @@ dependencies:
     - field.field.node.rubric.field_domain_all_affiliates
     - node.type.rubric
   module:
-    - text
     - user
-id: node.rubric.teaser
+id: node.rubric.grid
 targetEntityType: node
 bundle: rubric
-mode: teaser
+mode: grid
 content:
-  body:
-    type: text_summary_or_trimmed
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 101
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
+  body: true
   domain_access: true
   field_children: true
   field_children_mode: true

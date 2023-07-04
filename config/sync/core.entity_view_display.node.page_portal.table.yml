@@ -11,26 +11,12 @@ dependencies:
     - field.field.node.page_portal.field_media_image
     - node.type.page_portal
   module:
-    - file
     - user
 id: node.page_portal.table
 targetEntityType: node
 bundle: page_portal
 mode: table
 content:
-  field_doc_files:
-    type: file_table
-    label: hidden
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
   show_title:
     settings: {  }
     third_party_settings: {  }
@@ -38,8 +24,10 @@ content:
     region: content
 hidden:
   body: true
+  field_doc_files: true
   field_domain_access: true
   field_domain_all_affiliates: true
   field_media_image: true
   langcode: true
+  links: true
   search_api_excerpt: true

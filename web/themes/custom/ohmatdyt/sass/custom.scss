@@ -2495,6 +2495,7 @@ a {
 .page-node-type-rubric {
   .field--name-field-children {
     font-size: 14px;
+    margin-bottom: 40px;
 
     &.erd-list--list {
 
@@ -2553,6 +2554,10 @@ a {
         }
       }
 
+    }
+
+    &.erd-list--table {
+      display: none;
     }
   }
 

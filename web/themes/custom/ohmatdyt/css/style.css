@@ -3344,6 +3344,7 @@ a {
 
 .page-node-type-rubric .field--name-field-children {
   font-size: 14px;
+  margin-bottom: 40px;
 }
 
 .page-node-type-rubric .field--name-field-children.erd-list--list .field__item {
@@ -3401,6 +3402,10 @@ a {
   padding: 10px;
   display: block;
   font-weight: 900;
+}
+
+.page-node-type-rubric .field--name-field-children.erd-list--table {
+  display: none;
 }
 
 @font-face {

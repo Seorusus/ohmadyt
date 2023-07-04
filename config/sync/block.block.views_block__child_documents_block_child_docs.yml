@@ -1,0 +1,44 @@
+uuid: 1076ea27-1328-4e0c-b3a1-61a355a61ef7
+langcode: uk
+status: true
+dependencies:
+  config:
+    - views.view.child_documents
+  module:
+    - entity_field_condition
+    - node
+    - views
+  theme:
+    - ohmatdyt
+id: views_block__child_documents_block_child_docs
+theme: ohmatdyt
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:child_documents-block_child_docs'
+settings:
+  id: 'views_block:child_documents-block_child_docs'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_field:
+    id: node_field
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    entity_type_id: node
+    entity_bundle: rubric
+    field: field_children_mode
+    value_source: specified
+    value: table
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      rubric: rubric

@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.rubric.field_children_mode
     - field.field.node.rubric.field_domain_access
     - field.field.node.rubric.field_domain_all_affiliates
-    - field.field.node.rubric.field_layout
     - node.type.rubric
   module:
     - field_group
@@ -69,12 +68,6 @@ content:
   field_children_mode:
     type: options_select
     weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_layout:
-    type: options_buttons
-    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
