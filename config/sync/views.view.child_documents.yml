@@ -336,7 +336,7 @@ display:
                   collapsible: false
                   is_secondary: false
               field_date_iso_value:
-                plugin_id: bef_datepicker
+                plugin_id: default
                 advanced:
                   collapsible: false
                   is_secondary: false
@@ -514,6 +514,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+          type: date
       style:
         type: bootstraptable
         options:

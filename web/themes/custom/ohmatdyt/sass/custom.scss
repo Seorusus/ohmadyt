@@ -2486,6 +2486,62 @@ a {
 .view-child-documents {
   margin-bottom: 90px;
 
+  ._inline-form-page-news {
+    h4 {
+      display: none;
+    }
+  }
+
+  .form-item-search-combine {
+    flex: 1;
+
+    input {
+      border: none;
+      margin-left: 15px;
+    }
+  }
+
+
+  #edit-date-created-min {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    max-width: 49%;
+    margin: auto;
+    border-right: 1px solid rgba(57, 83, 164, 0.5);
+
+    &:after {
+      //content: "\e908";
+      content: "";
+      width: auto;
+      height: 100%;
+      display: block;
+      font-family: 'icomoon', sans-serif !important;
+      font-size: 23px;
+      color: #3953A4;
+      background-color: #fff;
+      border: none;
+      -webkit-transition: background-color 0.4s;
+      transition: background-color 0.4s;
+      position: relative;
+      left: 10px;
+    }
+
+    input {
+      border: none;
+    }
+  }
+
+  #edit-date-created-max {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    max-width: 49%;
+    margin: auto;
+
+    input {
+      border: none;
+    }
+  }
+
   .bootstrap-table .fixed-table-container .table thead th {
     border: none;
   }

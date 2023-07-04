@@ -33,6 +33,7 @@ module:
   ctools: 0
   custom_login_url: 0
   date_augmenter: 0
+  date_filter: 0
   datetime: 0
   datetime_flatpickr: 0
   datetime_range: 0

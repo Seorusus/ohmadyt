@@ -3346,6 +3346,62 @@ a {
   margin-bottom: 90px;
 }
 
+.view-child-documents ._inline-form-page-news h4 {
+  display: none;
+}
+
+.view-child-documents .form-item-search-combine {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.view-child-documents .form-item-search-combine input {
+  border: none;
+  margin-left: 15px;
+}
+
+.view-child-documents #edit-date-created-min {
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  max-width: 49%;
+  margin: auto;
+  border-right: 1px solid rgba(57, 83, 164, 0.5);
+}
+
+.view-child-documents #edit-date-created-min:after {
+  content: "";
+  width: auto;
+  height: 100%;
+  display: block;
+  font-family: 'icomoon', sans-serif !important;
+  font-size: 23px;
+  color: #3953A4;
+  background-color: #fff;
+  border: none;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  position: relative;
+  left: 10px;
+}
+
+.view-child-documents #edit-date-created-min input {
+  border: none;
+}
+
+.view-child-documents #edit-date-created-max {
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  max-width: 49%;
+  margin: auto;
+}
+
+.view-child-documents #edit-date-created-max input {
+  border: none;
+}
+
 .view-child-documents .bootstrap-table .fixed-table-container .table thead th {
   border: none;
 }
