@@ -101,7 +101,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-          label: Title
+          label: Назва
           exclude: false
           alter:
             alter_text: false
@@ -216,7 +216,7 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: separator
+          multi_type: ul
           separator: ', '
           field_api_classes: false
         field_date_iso:
@@ -323,22 +323,21 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        created:
-          id: created
+        title:
+          id: title
           table: node_field_data
-          field: created
-          relationship: none
+          field: title
+          relationship: field_children
           group_type: group
           admin_label: ''
           entity_type: node
-          entity_field: created
-          plugin_id: date
-          order: DESC
+          entity_field: title
+          plugin_id: standard
+          order: ASC
           expose:
             label: ''
             field_identifier: ''
           exposed: false
-          granularity: second
       arguments:
         nid:
           id: nid
@@ -390,6 +389,86 @@ display:
             operator: ''
       style:
         type: bootstraptable
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            field_doc_number: field_doc_number
+            title: title
+            field_doc_files: field_doc_files
+            field_date_iso: field_date_iso
+          info:
+            field_doc_number:
+              sortable: 1
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            title:
+              sortable: 1
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_doc_files:
+              align: views-align-left
+              separator: ''
+              empty_column: 0
+              responsive: priority-low
+            field_date_iso:
+              sortable: 1
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+          default: field_date_iso
+          empty_table: 0
+          elements:
+            search_box: 0
+            table_info: 0
+            save_state: 0
+            table_tools: 0
+            show-refresh: 0
+            show-columns-toggle-all: 0
+            show-pagination-switch: 0
+            show-toggle: 0
+            show-fullscreen: 0
+            card-view: 0
+            height: '0'
+          extension:
+            auto-refresh: 0
+            show-copy-rows: 0
+            show-print: 0
+            show-export: 0
+            filter-control: 0
+            group-by: 0
+            show-multi-sort: 0
+            show-jump-to: 0
+            reorderable-rows: 0
+            resizable: 0
+            sticky_header: 0
+            defer_url: ''
+          pages:
+            pagination_style: no_pagination
+            length_change: 0
+            display_length: '10'
+          bootstrap_styles:
+            striped: 0
+            bordered: 0
+            hover: 0
+            sm: 0
+          footer:
+            show-footer: 0
+            sum-field: {  }
+            sum-title: ''
+            sum-title-field: ''
       row:
         type: fields
       query:

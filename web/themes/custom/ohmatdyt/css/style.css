@@ -3326,6 +3326,289 @@ a {
   z-index: 1;
 }
 
+/*
+* Page Rubric.
+ */
+.view-child-documents {
+  margin-bottom: 90px;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form-item-date-created-min:after {
+  content: "\e908";
+  width: auto;
+  height: 100%;
+  display: block;
+  font-family: 'icomoon', sans-serif !important;
+  font-size: 23px;
+  color: #3953A4;
+  background-color: #fff;
+  border: none;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  position: relative;
+  left: 10px;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline {
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1.8fr 0.2fr;
+  grid-template-rows: 80px 80px 80px 80px;
+  gap: 0 0;
+  grid-template-areas: "first first first" "second third third" "fourth fifth fifth" "sixth sixth sixth";
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-control {
+  min-height: 70px;
+  border: 2px solid var(--o-gray);
+  color: #3953A4;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-control option {
+  color: #3953A4;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-control::-webkit-input-placeholder {
+  color: #3953A4;
+  opacity: 50%;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-control::-moz-placeholder {
+  color: #3953A4;
+  opacity: 50%;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-control:-ms-input-placeholder {
+  color: #3953A4;
+  opacity: 50%;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-control::-ms-input-placeholder {
+  color: #3953A4;
+  opacity: 50%;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-control::placeholder {
+  color: #3953A4;
+  opacity: 50%;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-item-combine-docs {
+  grid-area: first;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-item-field-doctype-target-id {
+  grid-area: second;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-item-field-docauthor-target-id {
+  grid-area: third;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline #edit-field-date-iso-value-wrapper {
+  grid-area: fourth;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline #edit-field-date-iso-value-wrapper .fieldset-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid var(--o-gray);
+  border-radius: 8px;
+  min-height: 70px;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline #edit-field-date-iso-value-wrapper .fieldset-wrapper .form-item-field-date-iso-value-min {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 49%;
+  margin: 0;
+  border-right: 2px solid var(--o-gray);
+  height: auto;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline #edit-field-date-iso-value-wrapper .fieldset-wrapper .form-item-field-date-iso-value-min:after {
+  content: "\e908";
+  width: auto;
+  height: 50%;
+  display: block;
+  font-family: 'icomoon', sans-serif !important;
+  font-size: 23px;
+  color: #3953A4;
+  background-color: #fff;
+  border: none;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  position: relative;
+  left: 12px;
+  top: 18px;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline #edit-field-date-iso-value-wrapper .fieldset-wrapper .form-item-field-date-iso-value-max {
+  height: auto;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0 16px;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline #edit-field-date-iso-value-wrapper .fieldset-wrapper input {
+  border: none;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-item-field-doctheme-target-id {
+  grid-area: fifth;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-actions {
+  grid-area: sixth;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  justify-self: end;
+  max-height: 45px;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-actions .form-submit {
+  min-width: 200px;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-actions #edit-submit-document-base {
+  background: url(../images/lupa.svg) no-repeat 25% center #DA393B;
+  border: none;
+  background-size: 18px;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-actions #edit-submit-document-base:hover {
+  opacity: 80%;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-actions #edit-reset {
+  background: none;
+  font-size: inherit;
+  display: block;
+  background-size: 30px;
+  width: 200px;
+  min-width: 200px;
+  max-height: 45px;
+  background-color: #3953A4;
+  border: none;
+  border-radius: 6px;
+}
+
+.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-actions #edit-reset:hover {
+  opacity: 80%;
+}
+
+.view-child-documents .bootstrap-table .fixed-table-container .table thead th {
+  border: none;
+}
+
+.view-child-documents .bootstrap-table {
+  color: #525760;
+}
+
+.view-child-documents .bootstrap-table thead tr {
+  border: none;
+  text-transform: uppercase;
+  color: #525760;
+}
+
+.view-child-documents .bootstrap-table thead tr th {
+  background: none !important;
+  border-bottom: 2px solid #3953A4 !important;
+}
+
+.view-child-documents .bootstrap-table thead tr th .both {
+  background: none !important;
+  font-size: 16px !important;
+  text-transform: uppercase;
+}
+
+.view-child-documents .bootstrap-table tbody tr:nth-of-type(odd) {
+  background-color: transparent;
+}
+
+.view-child-documents .bootstrap-table tbody td {
+  font-size: 14px !important;
+  min-height: 60px;
+  height: 60px;
+}
+
+.view-child-documents .bootstrap-table tbody td .views-field-title a {
+  display: block;
+  color: #273043;
+  line-height: 22px;
+  font-size: 14px !important;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.view-child-documents .bootstrap-table tbody td a {
+  font-size: 14px !important;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.view-child-documents .bootstrap-table tbody td.views-field-title {
+  width: 45%;
+  max-width: 45%;
+}
+
+.view-child-documents .bootstrap-table tbody td.views-field-field-doc-files li {
+  list-style: none;
+}
+
+.view-child-documents .bootstrap-table .views-field-title a {
+  display: block;
+  color: #273043;
+  line-height: 22px;
+  font-size: 16px;
+}
+
+.view-child-documents .bootstrap-table .table-bordered > :not(caption) > * {
+  border: white;
+}
+
+.view-child-documents .view-footer .additional-links {
+  margin: 40px 0;
+}
+
+.view-child-documents .view-footer .additional-links a {
+  font-size: 12px;
+  position: relative;
+}
+
+.view-child-documents .view-footer .additional-links a:after {
+  background-image: url(../images/arrow-up-right.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  content: "";
+  font-size: 20px;
+  padding-left: 11px;
+  margin-left: 5px;
+  width: 9%;
+  height: 10%;
+  z-index: 1;
+}
+
 .node--type-page-portal thead tr {
   background: none;
   border-bottom: 2px solid #3953A4;
