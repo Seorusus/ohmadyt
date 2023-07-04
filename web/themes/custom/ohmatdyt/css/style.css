@@ -1564,6 +1564,7 @@ a {
   display: -ms-inline-flexbox;
   display: inline-flex;
   border-right: 1px solid rgba(57, 83, 164, 0.5);
+  min-width: 40%;
 }
 
 .exposed-form-page-news .views-exposed-form .form-item-search-combine input {
@@ -1590,6 +1591,18 @@ a {
 }
 
 .exposed-form-page-news .views-exposed-form .form-actions #edit-submit-news {
+  background: url(../images/lupa.svg) no-repeat center center;
+  font-size: 0;
+  display: block;
+  width: 50%;
+  min-width: 75px;
+  height: 68px;
+  background-color: #3953A4;
+  border: 1px solid #3953A4;
+  border-radius: 0 6px 6px 0;
+}
+
+.exposed-form-page-news .views-exposed-form .form-actions #edit-submit-child-documents {
   background: url(../images/lupa.svg) no-repeat center center;
   font-size: 0;
   display: block;
@@ -3331,189 +3344,6 @@ a {
  */
 .view-child-documents {
   margin-bottom: 90px;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form-item-date-created-min:after {
-  content: "\e908";
-  width: auto;
-  height: 100%;
-  display: block;
-  font-family: 'icomoon', sans-serif !important;
-  font-size: 23px;
-  color: #3953A4;
-  background-color: #fff;
-  border: none;
-  -webkit-transition: background-color 0.4s;
-  transition: background-color 0.4s;
-  position: relative;
-  left: 10px;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline {
-  border: none;
-  display: grid;
-  grid-template-columns: 1fr 1.8fr 0.2fr;
-  grid-template-rows: 80px 80px 80px 80px;
-  gap: 0 0;
-  grid-template-areas: "first first first" "second third third" "fourth fifth fifth" "sixth sixth sixth";
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-control {
-  min-height: 70px;
-  border: 2px solid var(--o-gray);
-  color: #3953A4;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-control option {
-  color: #3953A4;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-control::-webkit-input-placeholder {
-  color: #3953A4;
-  opacity: 50%;
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 900;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-control::-moz-placeholder {
-  color: #3953A4;
-  opacity: 50%;
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 900;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-control:-ms-input-placeholder {
-  color: #3953A4;
-  opacity: 50%;
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 900;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-control::-ms-input-placeholder {
-  color: #3953A4;
-  opacity: 50%;
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 900;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-control::placeholder {
-  color: #3953A4;
-  opacity: 50%;
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 900;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-item-combine-docs {
-  grid-area: first;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-item-field-doctype-target-id {
-  grid-area: second;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-item-field-docauthor-target-id {
-  grid-area: third;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline #edit-field-date-iso-value-wrapper {
-  grid-area: fourth;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline #edit-field-date-iso-value-wrapper .fieldset-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 2px solid var(--o-gray);
-  border-radius: 8px;
-  min-height: 70px;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline #edit-field-date-iso-value-wrapper .fieldset-wrapper .form-item-field-date-iso-value-min {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 49%;
-  margin: 0;
-  border-right: 2px solid var(--o-gray);
-  height: auto;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline #edit-field-date-iso-value-wrapper .fieldset-wrapper .form-item-field-date-iso-value-min:after {
-  content: "\e908";
-  width: auto;
-  height: 50%;
-  display: block;
-  font-family: 'icomoon', sans-serif !important;
-  font-size: 23px;
-  color: #3953A4;
-  background-color: #fff;
-  border: none;
-  -webkit-transition: background-color 0.4s;
-  transition: background-color 0.4s;
-  position: relative;
-  left: 12px;
-  top: 18px;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline #edit-field-date-iso-value-wrapper .fieldset-wrapper .form-item-field-date-iso-value-max {
-  height: auto;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 0 16px;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline #edit-field-date-iso-value-wrapper .fieldset-wrapper input {
-  border: none;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-item-field-doctheme-target-id {
-  grid-area: fifth;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-actions {
-  grid-area: sixth;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  justify-self: end;
-  max-height: 45px;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-actions .form-submit {
-  min-width: 200px;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-actions #edit-submit-document-base {
-  background: url(../images/lupa.svg) no-repeat 25% center #DA393B;
-  border: none;
-  background-size: 18px;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-actions #edit-submit-document-base:hover {
-  opacity: 80%;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-actions #edit-reset {
-  background: none;
-  font-size: inherit;
-  display: block;
-  background-size: 30px;
-  width: 200px;
-  min-width: 200px;
-  max-height: 45px;
-  background-color: #3953A4;
-  border: none;
-  border-radius: 6px;
-}
-
-.view-child-documents .exposed-form-page-news .views-exposed-form .form--inline .form-actions #edit-reset:hover {
-  opacity: 80%;
 }
 
 .view-child-documents .bootstrap-table .fixed-table-container .table thead th {

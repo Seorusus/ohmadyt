@@ -721,6 +721,7 @@ a {
     .form-item-search-combine {
       display: inline-flex;
       border-right: 1px solid rgba(57, 83, 164, 0.5);
+      min-width: 40%;
 
       input {
         border: none;
@@ -755,7 +756,17 @@ a {
         border-radius: 0 6px 6px 0;
       }
 
-
+      #edit-submit-child-documents {
+        background: url(../images/lupa.svg) no-repeat center center;
+        font-size: 0;
+        display: block;
+        width: 50%;
+        min-width: 75px;
+        height: 68px;
+        background-color: $brandblue;
+        border: 1px solid $brandblue;
+        border-radius: 0 6px 6px 0;
+      }
 
       #edit-reset {
         background: url(../images/delete.svg) no-repeat center center;
@@ -2474,160 +2485,6 @@ a {
  */
 .view-child-documents {
   margin-bottom: 90px;
-
-  .exposed-form-page-news {
-    .views-exposed-form {
-      .form-item-date-created-min {
-        &:after {
-          content: "\e908";
-          width: auto;
-          height: 100%;
-          display: block;
-          font-family: 'icomoon', sans-serif !important;
-          font-size: 23px;
-          color: #3953A4;
-          background-color: #fff;
-          border: none;
-          -webkit-transition: background-color 0.4s;
-          transition: background-color 0.4s;
-          position: relative;
-          left: 10px;
-        }
-      }
-
-      .form--inline {
-        border: none;
-        display: grid;
-        grid-template-columns: 1fr 1.8fr 0.2fr;
-        grid-template-rows: 80px 80px 80px 80px;
-        gap: 0 0;
-        grid-template-areas:
-        "first first first"
-        "second third third"
-        "fourth fifth fifth"
-        "sixth sixth sixth";
-
-        .form-control {
-          min-height: 70px;
-          border: 2px solid $brandgrey;
-          color: $brandblue;
-
-          option {
-            color: $brandblue;
-          }
-
-          &::placeholder {
-            color: $brandblue;
-            opacity: 50%;
-            text-transform: uppercase;
-            font-size: 11px;
-            font-weight: 900;
-          }
-        }
-
-        .form-item-combine-docs {
-          grid-area: first;
-        }
-
-        .form-item-field-doctype-target-id {
-          grid-area: second;
-        }
-
-        .form-item-field-docauthor-target-id {
-          grid-area: third;
-        }
-
-        #edit-field-date-iso-value-wrapper {
-          grid-area: fourth;
-
-          .fieldset-wrapper {
-            display: flex;
-            border: 2px solid $brandgrey;
-            border-radius: 8px ;
-            min-height: 70px;
-
-            .form-item-field-date-iso-value-min {
-              display: inline-flex;
-              max-width: 49%;
-              margin: 0;
-              border-right: 2px solid $brandgrey;
-              height: auto;
-
-              &:after {
-                content: "\e908";
-                width: auto;
-                height: 50%;
-                display: block;
-                font-family: 'icomoon', sans-serif !important;
-                font-size: 23px;
-                color: $brandblue;
-                background-color: #fff;
-                border: none;
-                -webkit-transition: background-color 0.4s;
-                transition: background-color 0.4s;
-                position: relative;
-                left: 12px;
-                top: 18px;
-              }
-            }
-
-            .form-item-field-date-iso-value-max {
-              height: auto;
-              display: inline-flex;
-              margin: 0 16px;
-            }
-
-            input {
-              border: none;
-            }
-          }
-        }
-
-        .form-item-field-doctheme-target-id {
-          grid-area: fifth;
-        }
-
-        .form-actions {
-          grid-area: sixth;
-          display: inline-flex;
-          justify-self: end;
-          max-height: 45px;
-
-
-          .form-submit {
-            min-width: 200px;
-          }
-
-          #edit-submit-document-base {
-            background: url(../images/lupa.svg) no-repeat 25% center #DA393B;
-            border: none;
-            background-size: 18px;
-
-            &:hover {
-              opacity: 80%;
-            }
-          }
-
-          #edit-reset {
-            background: none;
-            font-size: inherit;
-            display: block;
-            background-size: 30px;
-            width: 200px;
-            min-width: 200px;
-            max-height: 45px;
-            background-color: $brandblue;
-            border: none;
-            border-radius: 6px;
-
-            &:hover {
-              opacity: 80%;
-            }
-          }
-        }
-      }
-    }
-  }
 
   .bootstrap-table .fixed-table-container .table thead th {
     border: none;

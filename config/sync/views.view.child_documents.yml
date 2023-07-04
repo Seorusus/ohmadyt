@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.field_doc_files
     - field.storage.node.field_doc_number
   module:
+    - better_exposed_filters
     - bootstrap_table
     - datetime
     - file
@@ -305,15 +306,40 @@ display:
             offset_label: Offset
           quantity: 9
       exposed_form:
-        type: basic
+        type: bef
         options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
+          submit_button: Пошук
+          reset_button: true
+          reset_button_label: 'Очистити фiльтри'
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          text_input_required_format: full_html
+          bef:
+            general:
+              autosubmit: true
+              autosubmit_exclude_textfield: true
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: false
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              secondary_open: false
+              reset_button_always_show: false
+            filter:
+              combine:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  collapsible: false
+                  is_secondary: false
+              field_date_iso_value:
+                plugin_id: bef_datepicker
+                advanced:
+                  collapsible: false
+                  is_secondary: false
       access:
         type: perm
         options:
@@ -387,6 +413,107 @@ display:
           group: 1
           expose:
             operator: ''
+        combine:
+          id: combine
+          table: views
+          field: combine
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: combine
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: combine_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: combine_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: search_combine
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              manager: '0'
+              employee: '0'
+              content_editor: '0'
+              content_editor_platform: '0'
+              authorized_platform_user: '0'
+              anonymous: '0'
+            placeholder: 'Ключове слово в назвi або номер'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          fields:
+            field_doc_number: field_doc_number
+            title: title
+        field_date_iso_value:
+          id: field_date_iso_value
+          table: node__field_date_iso
+          field: field_date_iso_value
+          relationship: field_children
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: between
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_date_iso_value_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_date_iso_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: date_created
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              manager: '0'
+              employee: '0'
+              content_editor: '0'
+              content_editor_platform: '0'
+              authorized_platform_user: '0'
+              anonymous: '0'
+            min_placeholder: 'Дата з'
+            max_placeholder: 'Дата по'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       style:
         type: bootstraptable
         options:
