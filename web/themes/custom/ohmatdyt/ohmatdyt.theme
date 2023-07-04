@@ -5,6 +5,7 @@
  * Ohmatdyt theme file.
  */
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 use Drupal\webform\Entity\WebformSubmission;
 use Drupal\views\ViewExecutable;
@@ -36,7 +37,7 @@ function ohmatdyt_preprocess_menu(&$variables) {
  * @param \Drupal\Core\Form\FormStateInterface $form_state
  * @param $form_id
  */
-function ohmatdyt_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function ohmatdyt_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ($form_id === 'user_login_form' ) {
     // Add placeholders.
     $form["name"]["#title"] = t('Логін');
@@ -65,6 +66,28 @@ function ohmatdyt_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
     $form['actions']['#attributes']['class'] = ['align-items-center password-enter'];
     $form['mail']['#attributes']['class'] = ['mail-markup'];
   }
+
+  $view_names = array('child_documents');
+  $view = $form_state->getStorage('view');
+  if ($form_id === 'views_exposed_form' && in_array($view['view']->id(), $view_names)) {
+
+    $form['date_created']['min']['date']['#date_date_format'] = json_encode('dd/mm/yy');
+    $form['date_created']['max']['date']['#date_date_format'] = json_encode('dd/mm/yy');
+    $form["date_created_wrapper"]["date_created_wrapper"]["date_created"]["min"]["date"]["#date_date_format"] = json_encode('dd.mm.yy');
+    $form["date_created_wrapper"]["date_created_wrapper"]["date_created"]["max"]["date"]["#date_date_format"] = json_encode('dd.mm.yy');
+    $form["date_created_wrapper"]["date_created_wrapper"]["date_created"]["min"]["date"]["#default_value"] = json_encode('dd.mm.yy');
+    $form["date_created_wrapper"]["date_created_wrapper"]["date_created"]["max"]["date"]["#default_value"] = json_encode('dd.mm.yy');
+    $form["date_created_wrapper"]["date_created_wrapper"]["date_created"]["min"]["#default_value"] = json_encode('dd.mm.yy');
+    $form["date_created_wrapper"]["date_created_wrapper"]["date_created"]["max"]["#default_value"] = json_encode('dd.mm.yy');
+    $form['field_date_iso']['#attached']['drupalSettings']['better_exposed_filters']['datepicker_options']['dateFormat'] = 'dd.mm.yy';
+  }
+}
+
+/**
+ * Implements hook_views_exposed_form_alter().
+ */
+function ohmatdyt_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['field_date_iso']['#attached']['drupalSettings']['better_exposed_filters']['datepicker_options']['dateFormat'] = json_encode('dd.mm.yy');
 }
 
 /**
