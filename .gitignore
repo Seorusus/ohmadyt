@@ -18,6 +18,7 @@
 # Ignore SimpleTest multi-site environment.
 /web/sites/simpletest
 
+/keys/
 /dumps/
 /.docksal/
 /.idea/

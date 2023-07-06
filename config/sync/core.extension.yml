@@ -33,6 +33,7 @@ module:
   ctools: 0
   custom_login_url: 0
   date_augmenter: 0
+  date_filter: 0
   datetime: 0
   datetime_flatpickr: 0
   datetime_range: 0
@@ -58,6 +59,7 @@ module:
   entity_browser_entity_form: 0
   entity_clone: 0
   entity_embed: 0
+  entity_field_condition: 0
   entity_reference_display: 0
   environment_indicator: 0
   field: 0
@@ -145,6 +147,7 @@ module:
   user: 0
   views_infinite_scroll: 0
   views_ui: 0
+  viewsreference: 0
   webform: 0
   webform_demo_event_registration: 0
   webform_node: 0

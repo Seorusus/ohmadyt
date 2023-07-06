@@ -13,7 +13,6 @@ dependencies:
     - field.field.node.document.field_doctype
     - field.field.node.document.field_domain_access
     - field.field.node.document.field_domain_all_affiliates
-    - field.field.node.document.field_files
     - field.field.node.document.field_notes
     - field.field.node.document.field_tags
     - field.field.node.document.field_url
@@ -237,4 +236,3 @@ hidden:
   domain_access: true
   field_domain_access: true
   field_domain_all_affiliates: true
-  field_files: true

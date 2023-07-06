@@ -11,7 +11,7 @@ id: node.rubric.field_children_mode
 field_name: field_children_mode
 entity_type: node
 bundle: rubric
-label: 'Дочірні матерiали'
+label: 'Відображення дочірніх матерiалiв'
 description: ''
 required: false
 translatable: false

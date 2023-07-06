@@ -1564,6 +1564,7 @@ a {
   display: -ms-inline-flexbox;
   display: inline-flex;
   border-right: 1px solid rgba(57, 83, 164, 0.5);
+  min-width: 40%;
 }
 
 .exposed-form-page-news .views-exposed-form .form-item-search-combine input {
@@ -1590,6 +1591,18 @@ a {
 }
 
 .exposed-form-page-news .views-exposed-form .form-actions #edit-submit-news {
+  background: url(../images/lupa.svg) no-repeat center center;
+  font-size: 0;
+  display: block;
+  width: 50%;
+  min-width: 75px;
+  height: 68px;
+  background-color: #3953A4;
+  border: 1px solid #3953A4;
+  border-radius: 0 6px 6px 0;
+}
+
+.exposed-form-page-news .views-exposed-form .form-actions #edit-submit-child-documents {
   background: url(../images/lupa.svg) no-repeat center center;
   font-size: 0;
   display: block;
@@ -3326,6 +3339,162 @@ a {
   z-index: 1;
 }
 
+/*
+* Page Rubric.
+ */
+.view-child-documents {
+  margin-bottom: 90px;
+}
+
+.view-child-documents ._inline-form-page-news h4 {
+  display: none;
+}
+
+.view-child-documents .form-item-search-combine {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.view-child-documents .form-item-search-combine input {
+  border: none;
+  margin-left: 15px;
+}
+
+.view-child-documents #edit-date-created-min {
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  max-width: 49%;
+  margin: auto;
+  border-right: 1px solid rgba(57, 83, 164, 0.5);
+}
+
+.view-child-documents #edit-date-created-min:after {
+  content: "";
+  width: auto;
+  height: 100%;
+  display: block;
+  font-family: 'icomoon', sans-serif !important;
+  font-size: 23px;
+  color: #3953A4;
+  background-color: #fff;
+  border: none;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  position: relative;
+  left: 10px;
+}
+
+.view-child-documents #edit-date-created-min input {
+  border: none;
+}
+
+.view-child-documents #edit-date-created-max {
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  max-width: 49%;
+  margin: auto;
+}
+
+.view-child-documents #edit-date-created-max input {
+  border: none;
+}
+
+.view-child-documents .bootstrap-table .fixed-table-container .table thead th {
+  border: none;
+}
+
+.view-child-documents .bootstrap-table {
+  color: #525760;
+}
+
+.view-child-documents .bootstrap-table thead tr {
+  border: none;
+  text-transform: uppercase;
+  color: #525760;
+}
+
+.view-child-documents .bootstrap-table thead tr th {
+  background: none !important;
+  border-bottom: 2px solid #3953A4 !important;
+}
+
+.view-child-documents .bootstrap-table thead tr th .both {
+  background: none !important;
+  font-size: 16px !important;
+  text-transform: uppercase;
+}
+
+.view-child-documents .bootstrap-table tbody tr:nth-of-type(odd) {
+  background-color: transparent;
+}
+
+.view-child-documents .bootstrap-table tbody td {
+  font-size: 14px !important;
+  min-height: 60px;
+  height: 60px;
+}
+
+.view-child-documents .bootstrap-table tbody td .views-field-title a {
+  display: block;
+  color: #273043;
+  line-height: 22px;
+  font-size: 14px !important;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.view-child-documents .bootstrap-table tbody td a {
+  font-size: 14px !important;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.view-child-documents .bootstrap-table tbody td.views-field-title {
+  width: 45%;
+  max-width: 45%;
+}
+
+.view-child-documents .bootstrap-table tbody td.views-field-field-doc-files li {
+  list-style: none;
+}
+
+.view-child-documents .bootstrap-table .views-field-title a {
+  display: block;
+  color: #273043;
+  line-height: 22px;
+  font-size: 16px;
+}
+
+.view-child-documents .bootstrap-table .table-bordered > :not(caption) > * {
+  border: white;
+}
+
+.view-child-documents .view-footer .additional-links {
+  margin: 40px 0;
+}
+
+.view-child-documents .view-footer .additional-links a {
+  font-size: 12px;
+  position: relative;
+}
+
+.view-child-documents .view-footer .additional-links a:after {
+  background-image: url(../images/arrow-up-right.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  content: "";
+  font-size: 20px;
+  padding-left: 11px;
+  margin-left: 5px;
+  width: 9%;
+  height: 10%;
+  z-index: 1;
+}
+
 .node--type-page-portal thead tr {
   background: none;
   border-bottom: 2px solid #3953A4;
@@ -3344,6 +3513,7 @@ a {
 
 .page-node-type-rubric .field--name-field-children {
   font-size: 14px;
+  margin-bottom: 40px;
 }
 
 .page-node-type-rubric .field--name-field-children.erd-list--list .field__item {
@@ -3401,6 +3571,10 @@ a {
   padding: 10px;
   display: block;
   font-weight: 900;
+}
+
+.page-node-type-rubric .field--name-field-children.erd-list--table {
+  display: none;
 }
 
 @font-face {

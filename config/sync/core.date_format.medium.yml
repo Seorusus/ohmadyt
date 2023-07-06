@@ -1,5 +1,5 @@
 uuid: a87ec154-2f71-4052-9ea4-96bcd211a01f
-langcode: uk
+langcode: und
 status: true
 dependencies: {  }
 _core:
@@ -7,4 +7,4 @@ _core:
 id: medium
 label: 'Базова середня дата'
 locked: false
-pattern: 'D, m/d/Y - H:i'
+pattern: 'D, d.m.Y - H:i'

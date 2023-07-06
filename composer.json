@@ -1,6 +1,6 @@
 {
     "name": "pantheon-upstreams/drupal-composer-managed",
-    "description": "Install Drupal 9 with Composer on Pantheon.",
+    "description": "Install Drupal 10",
     "type": "project",
     "license": "MIT",
     "repositories": [
@@ -90,7 +90,10 @@
         "drupal/bootstrap_table": "^1.0",
         "drupal/datetime_flatpickr": "^2.0",
         "drupal/conditional_fields": "^4.0@alpha",
-        "drupal/entity_reference_display": "^2.0"
+        "drupal/entity_reference_display": "^2.0",
+        "drupal/viewsreference": "^2.0@beta",
+        "drupal/entity_field_condition": "^1.4",
+        "drupal/date_filter": "^1.0"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
@@ -138,6 +141,9 @@
 				},
 				"drupal/calendar_view": {
 					"Customized calendar views": "patches/customization_calendar_views.patch"
+				},
+				"drupal/better_exposed_filters": {
+					"Better exposed filter should allow configuring all HTML date element properties": "https://www.drupal.org/files/issues/2022-04-20/3164774-bef_respect_datepicker_opts_date_format.patch"
 				}
 			}
     },
