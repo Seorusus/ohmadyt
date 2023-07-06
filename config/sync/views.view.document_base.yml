@@ -4,11 +4,9 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_date_iso
-    - field.storage.node.field_doc_files
     - field.storage.node.field_doc_number
     - field.storage.node.field_doctype
     - node.type.document
-    - node.type.rubric
     - taxonomy.vocabulary.author
     - taxonomy.vocabulary.doctheme
     - taxonomy.vocabulary.doctype
@@ -16,7 +14,6 @@ dependencies:
     - better_exposed_filters
     - bootstrap_table
     - datetime
-    - file
     - node
     - taxonomy
     - user
@@ -356,7 +353,7 @@ display:
                   collapsible: false
                   is_secondary: false
               field_date_iso_value:
-                plugin_id: bef_datepicker
+                plugin_id: default
                 advanced:
                   collapsible: false
                   is_secondary: false
